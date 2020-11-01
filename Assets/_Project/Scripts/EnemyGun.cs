@@ -1,32 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class EnemyGun : MonoBehaviour
+namespace _Project.Scripts
 {
-    [SerializeField]
-    private float bulletTimer;
-    [SerializeField]
-    private float bulletSpeed;
-    [SerializeField]
-    private GameObject bullet;
-    private float timer;
-    // Start is called before the first frame update
-    void Start()
+    public class EnemyGun : MonoBehaviour
     {
-        timer = bulletTimer;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(bulletTimer <= 0)
+        [SerializeField]
+        private float bulletTimer;
+        [SerializeField]
+        private float bulletSpeed;
+        [SerializeField]
+        private GameObject bullet;
+        private float timer;
+        // Start is called before the first frame update
+        void Start()
         {
-            GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
-            newBullet.GetComponent<Rigidbody>().velocity = transform.up * bulletSpeed;
-            bulletTimer = timer;
+            timer = bulletTimer;
         }
-        bulletTimer -= Time.deltaTime;
+
+        // Update is called once per frame
+        void Update()
+        {
+            if(bulletTimer <= 0)
+            {
+                GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+                newBullet.GetComponent<Rigidbody>().velocity = transform.up * bulletSpeed;
+                bulletTimer = timer;
+            }
+            bulletTimer -= Time.deltaTime;
+        }
     }
 }

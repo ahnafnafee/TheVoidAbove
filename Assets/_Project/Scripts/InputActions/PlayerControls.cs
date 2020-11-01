@@ -6,12 +6,14 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @PlayerControls : IInputActionCollection, IDisposable
+namespace _Project.Scripts.InputActions
 {
-    public InputActionAsset asset { get; }
-    public @PlayerControls()
+    public class @PlayerControls : IInputActionCollection, IDisposable
     {
-        asset = InputActionAsset.FromJson(@"{
+        public InputActionAsset asset { get; }
+        public @PlayerControls()
+        {
+            asset = InputActionAsset.FromJson(@"{
     ""name"": ""PlayerControls"",
     ""maps"": [
         {
@@ -262,189 +264,190 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     ],
     ""controlSchemes"": []
 }");
+            // PlayerStandard
+            m_PlayerStandard = asset.FindActionMap("PlayerStandard", throwIfNotFound: true);
+            m_PlayerStandard_LookY = m_PlayerStandard.FindAction("LookY", throwIfNotFound: true);
+            m_PlayerStandard_LookX = m_PlayerStandard.FindAction("LookX", throwIfNotFound: true);
+            m_PlayerStandard_Gun = m_PlayerStandard.FindAction("Gun", throwIfNotFound: true);
+            m_PlayerStandard_ThrustersX = m_PlayerStandard.FindAction("ThrustersX", throwIfNotFound: true);
+            m_PlayerStandard_ThrustersZ = m_PlayerStandard.FindAction("ThrustersZ", throwIfNotFound: true);
+            m_PlayerStandard_ThrustersY = m_PlayerStandard.FindAction("ThrustersY", throwIfNotFound: true);
+            m_PlayerStandard_Look = m_PlayerStandard.FindAction("Look", throwIfNotFound: true);
+            // RestartMap
+            m_RestartMap = asset.FindActionMap("RestartMap", throwIfNotFound: true);
+            m_RestartMap_restart = m_RestartMap.FindAction("restart", throwIfNotFound: true);
+        }
+
+        public void Dispose()
+        {
+            UnityEngine.Object.Destroy(asset);
+        }
+
+        public InputBinding? bindingMask
+        {
+            get => asset.bindingMask;
+            set => asset.bindingMask = value;
+        }
+
+        public ReadOnlyArray<InputDevice>? devices
+        {
+            get => asset.devices;
+            set => asset.devices = value;
+        }
+
+        public ReadOnlyArray<InputControlScheme> controlSchemes => asset.controlSchemes;
+
+        public bool Contains(InputAction action)
+        {
+            return asset.Contains(action);
+        }
+
+        public IEnumerator<InputAction> GetEnumerator()
+        {
+            return asset.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public void Enable()
+        {
+            asset.Enable();
+        }
+
+        public void Disable()
+        {
+            asset.Disable();
+        }
+
         // PlayerStandard
-        m_PlayerStandard = asset.FindActionMap("PlayerStandard", throwIfNotFound: true);
-        m_PlayerStandard_LookY = m_PlayerStandard.FindAction("LookY", throwIfNotFound: true);
-        m_PlayerStandard_LookX = m_PlayerStandard.FindAction("LookX", throwIfNotFound: true);
-        m_PlayerStandard_Gun = m_PlayerStandard.FindAction("Gun", throwIfNotFound: true);
-        m_PlayerStandard_ThrustersX = m_PlayerStandard.FindAction("ThrustersX", throwIfNotFound: true);
-        m_PlayerStandard_ThrustersZ = m_PlayerStandard.FindAction("ThrustersZ", throwIfNotFound: true);
-        m_PlayerStandard_ThrustersY = m_PlayerStandard.FindAction("ThrustersY", throwIfNotFound: true);
-        m_PlayerStandard_Look = m_PlayerStandard.FindAction("Look", throwIfNotFound: true);
+        private readonly InputActionMap m_PlayerStandard;
+        private IPlayerStandardActions m_PlayerStandardActionsCallbackInterface;
+        private readonly InputAction m_PlayerStandard_LookY;
+        private readonly InputAction m_PlayerStandard_LookX;
+        private readonly InputAction m_PlayerStandard_Gun;
+        private readonly InputAction m_PlayerStandard_ThrustersX;
+        private readonly InputAction m_PlayerStandard_ThrustersZ;
+        private readonly InputAction m_PlayerStandard_ThrustersY;
+        private readonly InputAction m_PlayerStandard_Look;
+        public struct PlayerStandardActions
+        {
+            private @PlayerControls m_Wrapper;
+            public PlayerStandardActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+            public InputAction @LookY => m_Wrapper.m_PlayerStandard_LookY;
+            public InputAction @LookX => m_Wrapper.m_PlayerStandard_LookX;
+            public InputAction @Gun => m_Wrapper.m_PlayerStandard_Gun;
+            public InputAction @ThrustersX => m_Wrapper.m_PlayerStandard_ThrustersX;
+            public InputAction @ThrustersZ => m_Wrapper.m_PlayerStandard_ThrustersZ;
+            public InputAction @ThrustersY => m_Wrapper.m_PlayerStandard_ThrustersY;
+            public InputAction @Look => m_Wrapper.m_PlayerStandard_Look;
+            public InputActionMap Get() { return m_Wrapper.m_PlayerStandard; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(PlayerStandardActions set) { return set.Get(); }
+            public void SetCallbacks(IPlayerStandardActions instance)
+            {
+                if (m_Wrapper.m_PlayerStandardActionsCallbackInterface != null)
+                {
+                    @LookY.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLookY;
+                    @LookY.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLookY;
+                    @LookY.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLookY;
+                    @LookX.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLookX;
+                    @LookX.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLookX;
+                    @LookX.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLookX;
+                    @Gun.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnGun;
+                    @Gun.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnGun;
+                    @Gun.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnGun;
+                    @ThrustersX.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersX;
+                    @ThrustersX.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersX;
+                    @ThrustersX.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersX;
+                    @ThrustersZ.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersZ;
+                    @ThrustersZ.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersZ;
+                    @ThrustersZ.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersZ;
+                    @ThrustersY.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersY;
+                    @ThrustersY.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersY;
+                    @ThrustersY.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersY;
+                    @Look.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLook;
+                    @Look.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLook;
+                    @Look.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLook;
+                }
+                m_Wrapper.m_PlayerStandardActionsCallbackInterface = instance;
+                if (instance != null)
+                {
+                    @LookY.started += instance.OnLookY;
+                    @LookY.performed += instance.OnLookY;
+                    @LookY.canceled += instance.OnLookY;
+                    @LookX.started += instance.OnLookX;
+                    @LookX.performed += instance.OnLookX;
+                    @LookX.canceled += instance.OnLookX;
+                    @Gun.started += instance.OnGun;
+                    @Gun.performed += instance.OnGun;
+                    @Gun.canceled += instance.OnGun;
+                    @ThrustersX.started += instance.OnThrustersX;
+                    @ThrustersX.performed += instance.OnThrustersX;
+                    @ThrustersX.canceled += instance.OnThrustersX;
+                    @ThrustersZ.started += instance.OnThrustersZ;
+                    @ThrustersZ.performed += instance.OnThrustersZ;
+                    @ThrustersZ.canceled += instance.OnThrustersZ;
+                    @ThrustersY.started += instance.OnThrustersY;
+                    @ThrustersY.performed += instance.OnThrustersY;
+                    @ThrustersY.canceled += instance.OnThrustersY;
+                    @Look.started += instance.OnLook;
+                    @Look.performed += instance.OnLook;
+                    @Look.canceled += instance.OnLook;
+                }
+            }
+        }
+        public PlayerStandardActions @PlayerStandard => new PlayerStandardActions(this);
+
         // RestartMap
-        m_RestartMap = asset.FindActionMap("RestartMap", throwIfNotFound: true);
-        m_RestartMap_restart = m_RestartMap.FindAction("restart", throwIfNotFound: true);
-    }
-
-    public void Dispose()
-    {
-        UnityEngine.Object.Destroy(asset);
-    }
-
-    public InputBinding? bindingMask
-    {
-        get => asset.bindingMask;
-        set => asset.bindingMask = value;
-    }
-
-    public ReadOnlyArray<InputDevice>? devices
-    {
-        get => asset.devices;
-        set => asset.devices = value;
-    }
-
-    public ReadOnlyArray<InputControlScheme> controlSchemes => asset.controlSchemes;
-
-    public bool Contains(InputAction action)
-    {
-        return asset.Contains(action);
-    }
-
-    public IEnumerator<InputAction> GetEnumerator()
-    {
-        return asset.GetEnumerator();
-    }
-
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
-    }
-
-    public void Enable()
-    {
-        asset.Enable();
-    }
-
-    public void Disable()
-    {
-        asset.Disable();
-    }
-
-    // PlayerStandard
-    private readonly InputActionMap m_PlayerStandard;
-    private IPlayerStandardActions m_PlayerStandardActionsCallbackInterface;
-    private readonly InputAction m_PlayerStandard_LookY;
-    private readonly InputAction m_PlayerStandard_LookX;
-    private readonly InputAction m_PlayerStandard_Gun;
-    private readonly InputAction m_PlayerStandard_ThrustersX;
-    private readonly InputAction m_PlayerStandard_ThrustersZ;
-    private readonly InputAction m_PlayerStandard_ThrustersY;
-    private readonly InputAction m_PlayerStandard_Look;
-    public struct PlayerStandardActions
-    {
-        private @PlayerControls m_Wrapper;
-        public PlayerStandardActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @LookY => m_Wrapper.m_PlayerStandard_LookY;
-        public InputAction @LookX => m_Wrapper.m_PlayerStandard_LookX;
-        public InputAction @Gun => m_Wrapper.m_PlayerStandard_Gun;
-        public InputAction @ThrustersX => m_Wrapper.m_PlayerStandard_ThrustersX;
-        public InputAction @ThrustersZ => m_Wrapper.m_PlayerStandard_ThrustersZ;
-        public InputAction @ThrustersY => m_Wrapper.m_PlayerStandard_ThrustersY;
-        public InputAction @Look => m_Wrapper.m_PlayerStandard_Look;
-        public InputActionMap Get() { return m_Wrapper.m_PlayerStandard; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(PlayerStandardActions set) { return set.Get(); }
-        public void SetCallbacks(IPlayerStandardActions instance)
+        private readonly InputActionMap m_RestartMap;
+        private IRestartMapActions m_RestartMapActionsCallbackInterface;
+        private readonly InputAction m_RestartMap_restart;
+        public struct RestartMapActions
         {
-            if (m_Wrapper.m_PlayerStandardActionsCallbackInterface != null)
+            private @PlayerControls m_Wrapper;
+            public RestartMapActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+            public InputAction @restart => m_Wrapper.m_RestartMap_restart;
+            public InputActionMap Get() { return m_Wrapper.m_RestartMap; }
+            public void Enable() { Get().Enable(); }
+            public void Disable() { Get().Disable(); }
+            public bool enabled => Get().enabled;
+            public static implicit operator InputActionMap(RestartMapActions set) { return set.Get(); }
+            public void SetCallbacks(IRestartMapActions instance)
             {
-                @LookY.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLookY;
-                @LookY.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLookY;
-                @LookY.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLookY;
-                @LookX.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLookX;
-                @LookX.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLookX;
-                @LookX.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLookX;
-                @Gun.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnGun;
-                @Gun.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnGun;
-                @Gun.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnGun;
-                @ThrustersX.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersX;
-                @ThrustersX.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersX;
-                @ThrustersX.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersX;
-                @ThrustersZ.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersZ;
-                @ThrustersZ.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersZ;
-                @ThrustersZ.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersZ;
-                @ThrustersY.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersY;
-                @ThrustersY.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersY;
-                @ThrustersY.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersY;
-                @Look.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLook;
-                @Look.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLook;
-                @Look.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLook;
-            }
-            m_Wrapper.m_PlayerStandardActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @LookY.started += instance.OnLookY;
-                @LookY.performed += instance.OnLookY;
-                @LookY.canceled += instance.OnLookY;
-                @LookX.started += instance.OnLookX;
-                @LookX.performed += instance.OnLookX;
-                @LookX.canceled += instance.OnLookX;
-                @Gun.started += instance.OnGun;
-                @Gun.performed += instance.OnGun;
-                @Gun.canceled += instance.OnGun;
-                @ThrustersX.started += instance.OnThrustersX;
-                @ThrustersX.performed += instance.OnThrustersX;
-                @ThrustersX.canceled += instance.OnThrustersX;
-                @ThrustersZ.started += instance.OnThrustersZ;
-                @ThrustersZ.performed += instance.OnThrustersZ;
-                @ThrustersZ.canceled += instance.OnThrustersZ;
-                @ThrustersY.started += instance.OnThrustersY;
-                @ThrustersY.performed += instance.OnThrustersY;
-                @ThrustersY.canceled += instance.OnThrustersY;
-                @Look.started += instance.OnLook;
-                @Look.performed += instance.OnLook;
-                @Look.canceled += instance.OnLook;
+                if (m_Wrapper.m_RestartMapActionsCallbackInterface != null)
+                {
+                    @restart.started -= m_Wrapper.m_RestartMapActionsCallbackInterface.OnRestart;
+                    @restart.performed -= m_Wrapper.m_RestartMapActionsCallbackInterface.OnRestart;
+                    @restart.canceled -= m_Wrapper.m_RestartMapActionsCallbackInterface.OnRestart;
+                }
+                m_Wrapper.m_RestartMapActionsCallbackInterface = instance;
+                if (instance != null)
+                {
+                    @restart.started += instance.OnRestart;
+                    @restart.performed += instance.OnRestart;
+                    @restart.canceled += instance.OnRestart;
+                }
             }
         }
-    }
-    public PlayerStandardActions @PlayerStandard => new PlayerStandardActions(this);
-
-    // RestartMap
-    private readonly InputActionMap m_RestartMap;
-    private IRestartMapActions m_RestartMapActionsCallbackInterface;
-    private readonly InputAction m_RestartMap_restart;
-    public struct RestartMapActions
-    {
-        private @PlayerControls m_Wrapper;
-        public RestartMapActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @restart => m_Wrapper.m_RestartMap_restart;
-        public InputActionMap Get() { return m_Wrapper.m_RestartMap; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(RestartMapActions set) { return set.Get(); }
-        public void SetCallbacks(IRestartMapActions instance)
+        public RestartMapActions @RestartMap => new RestartMapActions(this);
+        public interface IPlayerStandardActions
         {
-            if (m_Wrapper.m_RestartMapActionsCallbackInterface != null)
-            {
-                @restart.started -= m_Wrapper.m_RestartMapActionsCallbackInterface.OnRestart;
-                @restart.performed -= m_Wrapper.m_RestartMapActionsCallbackInterface.OnRestart;
-                @restart.canceled -= m_Wrapper.m_RestartMapActionsCallbackInterface.OnRestart;
-            }
-            m_Wrapper.m_RestartMapActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @restart.started += instance.OnRestart;
-                @restart.performed += instance.OnRestart;
-                @restart.canceled += instance.OnRestart;
-            }
+            void OnLookY(InputAction.CallbackContext context);
+            void OnLookX(InputAction.CallbackContext context);
+            void OnGun(InputAction.CallbackContext context);
+            void OnThrustersX(InputAction.CallbackContext context);
+            void OnThrustersZ(InputAction.CallbackContext context);
+            void OnThrustersY(InputAction.CallbackContext context);
+            void OnLook(InputAction.CallbackContext context);
         }
-    }
-    public RestartMapActions @RestartMap => new RestartMapActions(this);
-    public interface IPlayerStandardActions
-    {
-        void OnLookY(InputAction.CallbackContext context);
-        void OnLookX(InputAction.CallbackContext context);
-        void OnGun(InputAction.CallbackContext context);
-        void OnThrustersX(InputAction.CallbackContext context);
-        void OnThrustersZ(InputAction.CallbackContext context);
-        void OnThrustersY(InputAction.CallbackContext context);
-        void OnLook(InputAction.CallbackContext context);
-    }
-    public interface IRestartMapActions
-    {
-        void OnRestart(InputAction.CallbackContext context);
+        public interface IRestartMapActions
+        {
+            void OnRestart(InputAction.CallbackContext context);
+        }
     }
 }

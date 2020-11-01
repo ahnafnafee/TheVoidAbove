@@ -1,35 +1,47 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using _Project.Scripts.InputActions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerWin : MonoBehaviour
+namespace _Project.Scripts
 {
-    // [SerializeField] private GameObject winUI;
-    // [SerializeField] private SceneActions restart;
-    private void Awake()
+    public class PlayerWin : MonoBehaviour
     {
-        // restart.restartMap.restart.performed += _ => restartScene();
-    }
-    
-    // void restartScene()
-    // {
-    //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    // }
-    //
-    // private void OnEnable()
-    // {
-    //     restart.Enable();
-    // }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.transform.tag.Equals("Package"))
+        [SerializeField] private GameObject winUI;
+        private PlayerControls playerControls;
+        private void Awake()
         {
-            // winUI.SetActive(true);
-            print("You win!");
-            Application.Quit();
+            playerControls = new PlayerControls();
+            playerControls.Enable();
+        }
+
+        private void Start()
+        {
+            playerControls.RestartMap.restart.performed += _ => RestartScene();
+        }
+
+        void RestartScene()
+        {
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        }
+    
+        private void OnEnable()
+        {
+            playerControls.Enable();
+        }
+    
+        private void OnDisable()
+        {
+            playerControls.Disable();
+        }
+
+        void OnTriggerEnter(Collider other)
+        {
+            if (other.transform.tag.Equals("Package"))
+            {
+                winUI.SetActive(true);
+                print("You win!");
+                Application.Quit();
+            }
         }
     }
 }

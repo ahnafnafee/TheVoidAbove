@@ -1,30 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class BulletManager : MonoBehaviour
+namespace _Project.Scripts
 {
-    // Start is called before the first frame update
-    void Start()
+    public class BulletManager : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.transform.tag.Equals("Player"))
+        // Start is called before the first frame update
+        void Start()
         {
-            collision.transform.GetComponent<Player>().takeDamage(1);
+        
         }
-        else if(collision.transform.tag.Equals("Enemy"))
+
+        // Update is called once per frame
+        void Update()
         {
-            Destroy(collision.transform);
+        
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if(collision.transform.tag.Equals("Player"))
+            {
+                collision.transform.GetComponent<Player>().TakeDamage(1);
+            }
+            else if(collision.transform.tag.Equals("Enemy"))
+            {
+                Destroy(collision.transform);
+            }
         }
     }
 }

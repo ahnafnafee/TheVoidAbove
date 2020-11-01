@@ -1,21 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Spawnplanet : MonoBehaviour
+namespace _Project.Scripts
 {
+    public class Spawnplanet : MonoBehaviour
+    {
     
 
-    void Start()
-    {
+        void Start()
+        {
         
-    }
+        }
 
    
     
 
-   private void Update()
-    {
+        private void Update()
+        {
         
+        }
     }
 }

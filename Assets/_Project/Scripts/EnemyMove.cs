@@ -1,36 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class EnemyMove : MonoBehaviour
+namespace _Project.Scripts
 {
-    [SerializeField]
-    private float enemySpeed;
-    private bool right; 
-    // Start is called before the first frame update
-    void Start()
+    public class EnemyMove : MonoBehaviour
     {
-        right = false;
-    }
+        [SerializeField]
+        private float enemySpeed;
+        private bool right; 
+        // Start is called before the first frame update
+        void Start()
+        {
+            right = false;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(right)
+        // Update is called once per frame
+        void Update()
         {
-            transform.Translate(0,0, 2 * Time.deltaTime * enemySpeed);
+            if(right)
+            {
+                transform.Translate(0,0, 2 * Time.deltaTime * enemySpeed);
+            }
+            else
+            {
+                transform.Translate(0, 0, -2 * Time.deltaTime * enemySpeed);
+            }
         }
-        else
+        private void OnTriggerEnter(Collider other)
         {
-            transform.Translate(0, 0, -2 * Time.deltaTime * enemySpeed);
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        print("Hello");
-        if (other.transform.tag.Equals("Turn"))
-        {
-            right = !right;
+            print("Hello");
+            if (other.transform.tag.Equals("Turn"))
+            {
+                right = !right;
+            }
         }
     }
 }

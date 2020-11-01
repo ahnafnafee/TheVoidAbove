@@ -1,31 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class randomDebris : MonoBehaviour
+namespace _Project.Scripts
 {
-    [SerializeField]
-    GameObject debris;
-
-    [SerializeField]
-    float distance;
-
-    [SerializeField]
-    int maxDebris;
-
-    Transform thisTransform;
-    void Start()
+    public class randomDebris : MonoBehaviour
     {
-        for (int x = 0; x < maxDebris; x++)
+        [SerializeField]
+        GameObject debris;
+
+        [SerializeField]
+        float distance;
+
+        [SerializeField]
+        int maxDebris;
+
+        Transform thisTransform;
+        void Start()
         {
+            for (int x = 0; x < maxDebris; x++)
+            {
             
-        // Instantiate(debris, Random.insideUnitSphere * distance + thisTransform.position, Random.rotation) as GameObject;
+                // Instantiate(debris, Random.insideUnitSphere * distance + thisTransform.position, Random.rotation) as GameObject;
+            }
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+        // Update is called once per frame
+        void Update()
+        {
         
+        }
     }
 }
