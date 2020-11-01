@@ -1,4 +1,4 @@
-﻿using _Project.Scripts.InputActions;
+﻿//using _Project.Scripts.InputActions;
 using UnityEngine;
 
 namespace _Project.Scripts
@@ -11,7 +11,7 @@ namespace _Project.Scripts
         //Currently unimplemented
         private float thrustermaxspeed;
         [SerializeField]
-        private float gunmovespeed,rotSpeed,maxSpeed;
+        private float gunmovespeed,rotSpeed,maxSpeed,tiltAngle,zSpeed;
         [SerializeField]
         private int playerHealth;
 
@@ -36,24 +36,33 @@ namespace _Project.Scripts
         // Start is called before the first frame update
         void Start()
         {
-        
-        
+            Cursor.lockState = CursorLockMode.Locked;
+
         }
     
         // Update is called once per frame
         void Update()
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, mainCam.transform.rotation, Time.deltaTime * lSpeed);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, mainCam.transform.rotation, Time.deltaTime * lSpeed);
+            PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
+            float x_rot = actions.ThrustersX.ReadValue<float>() * tiltAngle;
+            float z_rot = actions.ThrustersZ.ReadValue<float>() * tiltAngle;
+
+            Quaternion target = Quaternion.Euler(z_rot,0, -x_rot);
+            transform.rotation = Quaternion.Slerp(transform.rotation, mainCam.transform.rotation * target, Time.deltaTime * zSpeed);
+
         }
-    
+
 
         void FixedUpdate()
         {
             PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
 
             //Apply forces based on the wasd/spc/shift controls in character controller
-            _rb.AddForce(thrusteraccel * (actions.ThrustersY.ReadValue<float>()* mainCam.transform.up +  actions.ThrustersX.ReadValue<float>() * mainCam.transform.right + (actions.ThrustersZ.ReadValue<float>() * mainCam.transform.forward)).normalized, ForceMode.Acceleration);
+            _rb.AddForce(thrusteraccel * (actions.ThrustersY.ReadValue<float>() * mainCam.transform.up + actions.ThrustersX.ReadValue<float>() * mainCam.transform.right + (actions.ThrustersZ.ReadValue<float>() * mainCam.transform.forward)).normalized, ForceMode.Acceleration);
 
+            
+         
             if (_rb.velocity.magnitude > maxSpeed)
             {
                 _rb.velocity = _rb.velocity.normalized * maxSpeed;
