@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 792148425}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (22)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 1188245810}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_02 (6)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 3686333008131283546}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_01 (6)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -831,7 +831,7 @@ GameObject:
   - component: {fileID: 3686333008265518034}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_04 (7)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1215,7 +1215,7 @@ GameObject:
   - component: {fileID: 3686333008436624893}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_04 (5)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1311,7 +1311,7 @@ GameObject:
   - component: {fileID: 3686333008449341641}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (20)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1407,7 +1407,7 @@ GameObject:
   - component: {fileID: 3686333008450912085}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (15)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1599,7 +1599,7 @@ GameObject:
   - component: {fileID: 3686333008658193358}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (11)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1791,7 +1791,7 @@ GameObject:
   - component: {fileID: 3686333008711456329}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (9)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1887,7 +1887,7 @@ GameObject:
   - component: {fileID: 3686333008729931302}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_02 (4)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2079,7 +2079,7 @@ GameObject:
   - component: {fileID: 3686333008776106442}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (18)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2383,7 +2383,7 @@ GameObject:
   - component: {fileID: 3686333008860937641}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (8)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2479,7 +2479,7 @@ GameObject:
   - component: {fileID: 3686333008881214614}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (10)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2767,7 +2767,7 @@ GameObject:
   - component: {fileID: 3686333008951112373}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_01 (8)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2959,7 +2959,7 @@ GameObject:
   - component: {fileID: 3686333009106740419}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_01 (5)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3055,7 +3055,7 @@ GameObject:
   - component: {fileID: 3686333009161441026}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_04 (8)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3535,7 +3535,7 @@ GameObject:
   - component: {fileID: 3686333009241982039}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (14)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3743,7 +3743,7 @@ GameObject:
   - component: {fileID: 3686333009427454227}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_02 (3)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4031,7 +4031,7 @@ GameObject:
   - component: {fileID: 3686333009534053359}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_01 (7)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4127,7 +4127,7 @@ GameObject:
   - component: {fileID: 3686333009584538350}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_04 (6)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4223,7 +4223,7 @@ GameObject:
   - component: {fileID: 3686333009613347658}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (16)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4415,7 +4415,7 @@ GameObject:
   - component: {fileID: 3686333009653599805}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (13)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4511,7 +4511,7 @@ GameObject:
   - component: {fileID: 3686333009741955219}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (19)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4607,7 +4607,7 @@ GameObject:
   - component: {fileID: 3686333009764274844}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (14)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5215,7 +5215,7 @@ GameObject:
   - component: {fileID: 3686333009875970767}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_02 (5)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5407,7 +5407,7 @@ GameObject:
   - component: {fileID: 3686333009989687902}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (17)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5599,7 +5599,7 @@ GameObject:
   - component: {fileID: 3686333010035888485}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (15)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5983,7 +5983,7 @@ GameObject:
   - component: {fileID: 3686333010109488036}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (12)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6175,7 +6175,7 @@ GameObject:
   - component: {fileID: 3686333010132675777}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (13)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6271,7 +6271,7 @@ GameObject:
   - component: {fileID: 3686333010157439808}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (21)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6367,7 +6367,7 @@ GameObject:
   - component: {fileID: 3686333010165911695}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (12)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6559,7 +6559,7 @@ GameObject:
   - component: {fileID: 3732814951617674231}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_01
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6655,7 +6655,7 @@ GameObject:
   - component: {fileID: 3732814951581679253}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_01 (2)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6751,7 +6751,7 @@ GameObject:
   - component: {fileID: 3732814952123927639}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_01 (4)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6847,7 +6847,7 @@ GameObject:
   - component: {fileID: 3732814950465923080}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_01 (1)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6943,7 +6943,7 @@ GameObject:
   - component: {fileID: 3732814951280292526}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_01 (3)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8287,7 +8287,7 @@ GameObject:
   - component: {fileID: 3732380927287111943}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (7)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8383,7 +8383,7 @@ GameObject:
   - component: {fileID: 3732380927353931285}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (5)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8396,7 +8396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3687490710198097943}
   m_LocalRotation: {x: 0.26952422, y: 0.27265638, z: -0.43526587, w: 0.8145912}
-  m_LocalPosition: {x: 89.52515, y: -30.00101, z: -3.930053}
+  m_LocalPosition: {x: 80.4, y: -30.00101, z: -10.8}
   m_LocalScale: {x: 0.7745699, y: 0.77457, z: 0.7745699}
   m_Children: []
   m_Father: {fileID: 6659707592102872374}
@@ -8479,7 +8479,7 @@ GameObject:
   - component: {fileID: 3732380927261716794}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (8)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8575,7 +8575,7 @@ GameObject:
   - component: {fileID: 3732380927621722816}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (1)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8671,7 +8671,7 @@ GameObject:
   - component: {fileID: 3732380926832463758}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (2)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8767,7 +8767,7 @@ GameObject:
   - component: {fileID: 3732380926692059603}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (3)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8863,7 +8863,7 @@ GameObject:
   - component: {fileID: 3732380927109728770}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (11)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8959,7 +8959,7 @@ GameObject:
   - component: {fileID: 3732380927127618722}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (9)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9055,7 +9055,7 @@ GameObject:
   - component: {fileID: 3732380928320232870}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (6)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9151,7 +9151,7 @@ GameObject:
   - component: {fileID: 3732380928593279933}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (10)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9247,7 +9247,7 @@ GameObject:
   - component: {fileID: 3732380927669695229}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01 (4)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9343,7 +9343,7 @@ GameObject:
   - component: {fileID: 3732380927701248917}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_01
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9439,7 +9439,7 @@ GameObject:
   - component: {fileID: 3732436329244516009}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (5)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9535,7 +9535,7 @@ GameObject:
   - component: {fileID: 3732436329308261576}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (4)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9631,7 +9631,7 @@ GameObject:
   - component: {fileID: 3732436328733598604}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (2)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9727,7 +9727,7 @@ GameObject:
   - component: {fileID: 3732436327937536569}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (6)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9823,7 +9823,7 @@ GameObject:
   - component: {fileID: 3732436328445814611}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9919,7 +9919,7 @@ GameObject:
   - component: {fileID: 3732436327485776553}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (1)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10015,7 +10015,7 @@ GameObject:
   - component: {fileID: 3732436327602807974}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (7)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10111,7 +10111,7 @@ GameObject:
   - component: {fileID: 3732436327704446668}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_05 (3)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10207,7 +10207,7 @@ GameObject:
   - component: {fileID: 3732718350907403917}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_04 (3)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10303,7 +10303,7 @@ GameObject:
   - component: {fileID: 3732718350896950493}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_04 (2)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10399,7 +10399,7 @@ GameObject:
   - component: {fileID: 3732718350456471388}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_04 (1)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10495,7 +10495,7 @@ GameObject:
   - component: {fileID: 3732718350175563351}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_04
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10591,7 +10591,7 @@ GameObject:
   - component: {fileID: 3732718351503395452}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Holes_04 (4)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11743,7 +11743,7 @@ GameObject:
   - component: {fileID: 3732794693545519696}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_02 (2)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11839,7 +11839,7 @@ GameObject:
   - component: {fileID: 3732794693969196581}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_02 (1)
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11935,7 +11935,7 @@ GameObject:
   - component: {fileID: 3732794694758459084}
   m_Layer: 0
   m_Name: SM_Env_Asteroid_Large_02
-  m_TagString: Untagged
+  m_TagString: Debris
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

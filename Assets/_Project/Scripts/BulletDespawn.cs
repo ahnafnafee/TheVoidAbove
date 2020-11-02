@@ -17,15 +17,15 @@ namespace _Project.Scripts
 
             if(bulletTimer <= 0)
             {
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
         }
         void OnCollisionEnter(Collision other)
         {
-            if(other.transform.tag == "Citizen")
+            if (other.transform.CompareTag("Player"))
             {
                 Destroy(other.gameObject);
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
 
         }

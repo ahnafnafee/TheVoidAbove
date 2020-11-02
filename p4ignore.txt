@@ -28,6 +28,8 @@ ExportedObj/
 *.opendb
 *.VC.db
 
+
+
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
@@ -139,3 +141,5 @@ OVRPlugin.dll
 
 ~*@*.fbx
 ~*@*.fbx.meta
+
+p4iconfig.txt
