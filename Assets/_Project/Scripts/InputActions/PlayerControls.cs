@@ -73,6 +73,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""PickUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""022a9da4-69e4-4330-bcec-45dbd039fa65"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(pressPoint=0.1)""
                 }
             ],
             ""bindings"": [
@@ -229,6 +237,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7f48c8e5-6781-4573-9496-e18688c9d6ef"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PickUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -271,6 +290,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_PlayerStandard_ThrustersZ = m_PlayerStandard.FindAction("ThrustersZ", throwIfNotFound: true);
         m_PlayerStandard_ThrustersY = m_PlayerStandard.FindAction("ThrustersY", throwIfNotFound: true);
         m_PlayerStandard_Look = m_PlayerStandard.FindAction("Look", throwIfNotFound: true);
+        m_PlayerStandard_PickUp = m_PlayerStandard.FindAction("PickUp", throwIfNotFound: true);
         // RestartMap
         m_RestartMap = asset.FindActionMap("RestartMap", throwIfNotFound: true);
         m_RestartMap_restart = m_RestartMap.FindAction("restart", throwIfNotFound: true);
@@ -330,6 +350,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerStandard_ThrustersZ;
     private readonly InputAction m_PlayerStandard_ThrustersY;
     private readonly InputAction m_PlayerStandard_Look;
+    private readonly InputAction m_PlayerStandard_PickUp;
     public struct PlayerStandardActions
     {
         private @PlayerControls m_Wrapper;
@@ -341,6 +362,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @ThrustersZ => m_Wrapper.m_PlayerStandard_ThrustersZ;
         public InputAction @ThrustersY => m_Wrapper.m_PlayerStandard_ThrustersY;
         public InputAction @Look => m_Wrapper.m_PlayerStandard_Look;
+        public InputAction @PickUp => m_Wrapper.m_PlayerStandard_PickUp;
         public InputActionMap Get() { return m_Wrapper.m_PlayerStandard; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -371,6 +393,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Look.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLook;
                 @Look.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLook;
                 @Look.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLook;
+                @PickUp.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnPickUp;
+                @PickUp.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnPickUp;
+                @PickUp.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnPickUp;
             }
             m_Wrapper.m_PlayerStandardActionsCallbackInterface = instance;
             if (instance != null)
@@ -396,6 +421,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Look.started += instance.OnLook;
                 @Look.performed += instance.OnLook;
                 @Look.canceled += instance.OnLook;
+                @PickUp.started += instance.OnPickUp;
+                @PickUp.performed += instance.OnPickUp;
+                @PickUp.canceled += instance.OnPickUp;
             }
         }
     }
@@ -442,6 +470,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnThrustersZ(InputAction.CallbackContext context);
         void OnThrustersY(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnPickUp(InputAction.CallbackContext context);
     }
     public interface IRestartMapActions
     {

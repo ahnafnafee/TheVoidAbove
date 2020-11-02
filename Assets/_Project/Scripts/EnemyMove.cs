@@ -6,7 +6,8 @@ namespace _Project.Scripts
     {
         [SerializeField]
         private float enemySpeed;
-        private bool right; 
+        private bool right;
+        private bool isMoving = true;
         // Start is called before the first frame update
         void Start()
         {
@@ -16,22 +17,35 @@ namespace _Project.Scripts
         // Update is called once per frame
         void Update()
         {
-            if(right)
+            if (isMoving)
             {
-                transform.Translate(0,0, 2 * Time.deltaTime * enemySpeed);
-            }
-            else
-            {
-                transform.Translate(0, 0, -2 * Time.deltaTime * enemySpeed);
+                if (right)
+                {
+                    transform.position += new Vector3(0, 0, 2 * enemySpeed * Time.deltaTime);
+                }
+                else
+                {
+                    transform.position += new Vector3(0, 0, -2 * enemySpeed * Time.deltaTime);
+                }
             }
         }
         private void OnTriggerEnter(Collider other)
         {
-            print("Hello");
             if (other.transform.tag.Equals("Turn"))
             {
-                right = !right;
+                if (other.transform.tag.Equals("Turn"))
+                {
+                    right = !right;
+                }
             }
+        }
+        public void stopMoving()
+        {
+            isMoving = false;
+        }
+        public void startMoving()
+        {
+            isMoving = true;
         }
     }
 }

@@ -7,7 +7,7 @@ namespace _Project.Scripts
         bool hasPackage;
         public GameObject package;
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
             hasPackage = true;
         }
@@ -26,6 +26,8 @@ namespace _Project.Scripts
 
         public void pickUp()
         {
+            package.transform.position = this.transform.GetChild(this.transform.childCount - 1).position;
+            package.transform.rotation = this.transform.GetChild(this.transform.childCount - 1).rotation;
             package.transform.parent = this.transform;
             hasPackage = true;
         }
@@ -35,10 +37,6 @@ namespace _Project.Scripts
             if (collision.transform.tag == "Debris" && hasPackage)
             {
                 drop();
-            }
-            if (collision.transform.tag == "Package" && !hasPackage)
-            {
-                pickUp();
             }
         }
     }
