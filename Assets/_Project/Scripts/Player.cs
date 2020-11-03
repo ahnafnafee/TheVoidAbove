@@ -71,7 +71,8 @@ namespace _Project.Scripts
             // Shooting mechanics
             if (actions.Gun.triggered)
             {
-                weapon.Shoot(SpawnPos(), mainCam.transform.rotation, true);
+                // weapon.Shoot(SpawnPos(), mainCam.transform.rotation, true);
+                weapon.Shoot(SpawnPos2(), mainCam.transform.rotation, true);
             }
         }
 
@@ -123,9 +124,15 @@ namespace _Project.Scripts
             }
         }
 
-        Vector3 SpawnPos()
+        Vector3 SpawnPos2()
         {
             return muzzlePos.transform.position;
+        }
+
+        Vector3 SpawnPos()
+        {
+            var transform1 = mainCam.transform;
+            return transform1.position + (transform1.forward * 5.0f) + (transform1.up * -1.02f);
         }
     }
 }
