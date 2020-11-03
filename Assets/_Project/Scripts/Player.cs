@@ -17,6 +17,8 @@ namespace _Project.Scripts
         
         [SerializeField] private float thrusteraccel;
 
+        public GameObject muzzlePos;
+
         [FormerlySerializedAs("thrustermaxspeed")] [SerializeField]
         //Currently unimplemented
         private float thrusterMaxSpeed;
@@ -60,13 +62,16 @@ namespace _Project.Scripts
 
             #endregion
 
+            if (actions.PushBack.triggered)
+            {
+                //When you click LMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
+                _rb.AddForce(-mainCam.transform.forward * gunMoveSpeed, ForceMode.VelocityChange);
+            }
+
             // Shooting mechanics
             if (actions.Gun.triggered)
             {
-                weapon.Shoot(SpawnPos(), mainCam.transform.rotation, false);
-
-                //When you click LMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
-                _rb.AddForce(-mainCam.transform.forward * gunMoveSpeed, ForceMode.VelocityChange);
+                weapon.Shoot(SpawnPos(), mainCam.transform.rotation, true);
             }
         }
 
@@ -120,8 +125,7 @@ namespace _Project.Scripts
 
         Vector3 SpawnPos()
         {
-            var transform1 = mainCam.transform;
-            return transform1.position + (transform1.forward * 5.0f) + (transform1.up * -1.02f);
+            return muzzlePos.transform.position;
         }
     }
 }

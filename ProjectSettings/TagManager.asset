@@ -9,6 +9,8 @@ TagManager:
   - Package
   - Debris
   - OuterZone
+  - warning
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -13219,6 +13219,7 @@ MonoBehaviour:
   lSpeed: 7
   range: 100
   thrusteraccel: 60
+  muzzlePos: {fileID: 5655106957405692168}
   thrusterMaxSpeed: 1
   mainCam: {fileID: 59289848}
   playerHealth: 3

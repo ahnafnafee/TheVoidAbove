@@ -11,9 +11,5 @@ public class Respawn : MonoBehaviour
         player.transform.position = respawnPoint.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
