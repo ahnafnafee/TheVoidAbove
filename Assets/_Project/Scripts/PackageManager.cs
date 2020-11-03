@@ -26,6 +26,8 @@ namespace _Project.Scripts
 
         public void pickUp()
         {
+            //TODO: Reference child object directly as hierarchical changes will create bugs
+            
             package.transform.position = this.transform.GetChild(this.transform.childCount - 1).position;
             package.transform.rotation = this.transform.GetChild(this.transform.childCount - 1).rotation;
             package.transform.parent = this.transform;

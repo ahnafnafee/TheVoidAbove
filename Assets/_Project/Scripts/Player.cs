@@ -1,29 +1,35 @@
 ﻿//using _Project.Scripts.InputActions;
+
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Project.Scripts
 {
     public class Player : MonoBehaviour
     {
-        [SerializeField]
-        private float thrusteraccel;
-        [SerializeField]
-        //Currently unimplemented
-        private float thrustermaxspeed;
-        [SerializeField]
-        private float gunmovespeed,rotSpeed,maxSpeed,tiltAngle,zSpeed;
-        [SerializeField]
-        private int playerHealth;
+        PlayerControls _playerControls;
 
         private Rigidbody _rb;
-        PlayerControls _playerControls;
+
+        [SerializeField] private float gunMoveSpeed, rotSpeed, maxSpeed, tiltAngle, zSpeed;
+
+        [SerializeField] private float lSpeed = 1f, range = 100f;
+        
+        [SerializeField] private float thrusteraccel;
+
+        [FormerlySerializedAs("thrustermaxspeed")] [SerializeField]
+        //Currently unimplemented
+        private float thrusterMaxSpeed;
+
+        [Header("Camera Controls")] [SerializeField]
+        private Camera mainCam;
+
+        [SerializeField] private int playerHealth;
 
         [Header("Respawn Point")] [SerializeField]
         private GameObject respawnPoint;
-    
-        [Header("Camera Controls")] 
-        [SerializeField] private Camera mainCam;
-        [SerializeField] private float lSpeed = 1f, range = 100f;
+        
+        [Header("Weapon")] public WeaponScript weapon;
 
         void Awake()
         {
@@ -37,22 +43,31 @@ namespace _Project.Scripts
         void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
-
         }
-    
+
         // Update is called once per frame
         void Update()
         {
             #region PlayerRotation
-            
+
             PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
             float x_rot = actions.ThrustersX.ReadValue<float>() * tiltAngle;
             float z_rot = actions.ThrustersZ.ReadValue<float>() * tiltAngle;
 
-            Quaternion target = Quaternion.Euler(z_rot,0, -x_rot);
-            transform.rotation = Quaternion.Slerp(transform.rotation, mainCam.transform.rotation * target, Time.deltaTime * zSpeed);
-            
+            Quaternion target = Quaternion.Euler(z_rot, 0, -x_rot);
+            transform.rotation = Quaternion.Slerp(transform.rotation, mainCam.transform.rotation * target,
+                Time.deltaTime * zSpeed);
+
             #endregion
+
+            // Shooting mechanics
+            if (actions.Gun.triggered)
+            {
+                weapon.Shoot(SpawnPos(), mainCam.transform.rotation, false);
+
+                //When you click LMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
+                _rb.AddForce(-mainCam.transform.forward * gunMoveSpeed, ForceMode.VelocityChange);
+            }
         }
 
 
@@ -61,17 +76,17 @@ namespace _Project.Scripts
             PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
 
             //Apply forces based on the wasd/spc/shift controls in character controller
-            _rb.AddForce(thrusteraccel * (actions.ThrustersY.ReadValue<float>() * mainCam.transform.up + actions.ThrustersX.ReadValue<float>() * mainCam.transform.right + (actions.ThrustersZ.ReadValue<float>() * mainCam.transform.forward)).normalized, ForceMode.Acceleration);
+            _rb.AddForce(
+                thrusteraccel * (actions.ThrustersY.ReadValue<float>() * mainCam.transform.up +
+                                 actions.ThrustersX.ReadValue<float>() * mainCam.transform.right +
+                                 (actions.ThrustersZ.ReadValue<float>() * mainCam.transform.forward)).normalized,
+                ForceMode.Acceleration);
 
-            
-         
+
             if (_rb.velocity.magnitude > maxSpeed)
             {
                 _rb.velocity = _rb.velocity.normalized * maxSpeed;
             }
-        
-            //When you click LMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
-
         }
 
         void Shoot()
@@ -81,7 +96,6 @@ namespace _Project.Scripts
             {
                 Debug.Log(hit.transform.name);
             }
-            // _rb.AddForce(-mainCam.transform.forward * gunmovespeed, ForceMode.VelocityChange);
         }
 
         public void TakeDamage(int damage)
@@ -95,13 +109,19 @@ namespace _Project.Scripts
                 transform.position = respawnPoint.transform.position;
             }
         }
-        
+
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("OuterZone"))
             {
                 transform.position = respawnPoint.transform.position;
             }
+        }
+
+        Vector3 SpawnPos()
+        {
+            var transform1 = mainCam.transform;
+            return transform1.position + (transform1.forward * 5.0f) + (transform1.up * -1.02f);
         }
     }
 }
