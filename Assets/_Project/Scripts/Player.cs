@@ -23,7 +23,7 @@ namespace _Project.Scripts
     
         [Header("Camera Controls")] 
         [SerializeField] private Camera mainCam;
-        [SerializeField] private float lSpeed = 1f;
+        [SerializeField] private float lSpeed = 1f, range = 100f;
 
         void Awake()
         {
@@ -43,14 +43,16 @@ namespace _Project.Scripts
         // Update is called once per frame
         void Update()
         {
-            //transform.rotation = Quaternion.Lerp(transform.rotation, mainCam.transform.rotation, Time.deltaTime * lSpeed);
+            #region PlayerRotation
+            
             PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
             float x_rot = actions.ThrustersX.ReadValue<float>() * tiltAngle;
             float z_rot = actions.ThrustersZ.ReadValue<float>() * tiltAngle;
 
             Quaternion target = Quaternion.Euler(z_rot,0, -x_rot);
             transform.rotation = Quaternion.Slerp(transform.rotation, mainCam.transform.rotation * target, Time.deltaTime * zSpeed);
-
+            
+            #endregion
         }
 
 
@@ -69,14 +71,17 @@ namespace _Project.Scripts
             }
         
             //When you click LMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
-            if (actions.Gun.triggered)
-                Shoot();
 
         }
 
         void Shoot()
         {
-            _rb.AddForce(-mainCam.transform.forward * gunmovespeed, ForceMode.VelocityChange);
+            RaycastHit hit;
+            if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit, range))
+            {
+                Debug.Log(hit.transform.name);
+            }
+            // _rb.AddForce(-mainCam.transform.forward * gunmovespeed, ForceMode.VelocityChange);
         }
 
         public void TakeDamage(int damage)
@@ -87,7 +92,7 @@ namespace _Project.Scripts
             }
             else
             {
-                print("You lose");
+                transform.position = respawnPoint.transform.position;
             }
         }
         

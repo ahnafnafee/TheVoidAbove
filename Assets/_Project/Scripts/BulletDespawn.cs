@@ -20,14 +20,5 @@ namespace _Project.Scripts
                 Destroy(gameObject);
             }
         }
-        void OnCollisionEnter(Collision other)
-        {
-            if (other.transform.CompareTag("Player"))
-            {
-                Destroy(other.gameObject);
-                Destroy(gameObject);
-            }
-
-        }
     }
 }

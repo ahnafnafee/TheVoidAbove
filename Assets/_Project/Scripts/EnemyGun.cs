@@ -23,7 +23,7 @@ namespace _Project.Scripts
             if(bulletTimer <= 0)
             {
                 GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
-                newBullet.GetComponent<Rigidbody>().velocity = transform.up * bulletSpeed;
+                newBullet.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
                 bulletTimer = timer;
             }
             bulletTimer -= Time.deltaTime;
