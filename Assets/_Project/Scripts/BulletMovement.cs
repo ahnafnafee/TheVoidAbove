@@ -21,11 +21,14 @@ namespace _Project.Scripts {
             transform.position += transform.forward * (speed * Time.deltaTime);
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnCollisionEnter(Collision other)
         {
-            if (collision.gameObject.CompareTag("Enemy"))
+            Debug.Log($"Object name: {other.gameObject.name}");
+            if (other.gameObject.CompareTag("Enemy"))
             {
                 Instantiate(hitParticlePrefab, transform.position, transform.rotation);
+                // Destroy(other.gameObject);
+                
             }
         }
     }

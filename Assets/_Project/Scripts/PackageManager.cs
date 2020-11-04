@@ -6,10 +6,13 @@ namespace _Project.Scripts
     {
         bool hasPackage;
         public GameObject package;
+        [SerializeField]
+        private GameObject grabRange;
         // Start is called before the first frame update
         void Awake()
         {
             hasPackage = true;
+            grabRange.SetActive(false);
         }
 
         // Update is called once per frame
@@ -22,6 +25,7 @@ namespace _Project.Scripts
         {
             hasPackage = false;
             package.transform.parent = null;
+            grabRange.SetActive(true);
         }
 
         public void pickUp()
@@ -32,6 +36,7 @@ namespace _Project.Scripts
             package.transform.rotation = this.transform.GetChild(this.transform.childCount - 1).rotation;
             package.transform.parent = this.transform;
             hasPackage = true;
+            grabRange.SetActive(false);
         }
 
         void OnCollisionEnter(Collision collision)

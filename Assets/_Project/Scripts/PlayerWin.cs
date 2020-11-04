@@ -39,7 +39,6 @@ namespace _Project.Scripts
             if (other.transform.tag.Equals("Package"))
             {
                 winUI.SetActive(true);
-                Application.Quit();
             }
         }
     }

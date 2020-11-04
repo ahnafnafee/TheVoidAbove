@@ -29,7 +29,7 @@ namespace _Project.Scripts
         [SerializeField] private int playerHealth;
 
         [Header("Respawn Point")] [SerializeField]
-        private GameObject respawnPoint;
+        private GameObject respawnPoint,warning;
         
         [Header("Weapon")] public WeaponScript weapon;
 
@@ -57,7 +57,7 @@ namespace _Project.Scripts
             float z_rot = actions.ThrustersZ.ReadValue<float>() * tiltAngle;
 
             Quaternion target = Quaternion.Euler(z_rot, 0, -x_rot);
-            transform.rotation = Quaternion.Slerp(transform.rotation, mainCam.transform.rotation * target,
+            transform.rotation = Quaternion.Lerp(transform.rotation, mainCam.transform.rotation * target,
                 Time.deltaTime * zSpeed);
 
             #endregion
@@ -79,6 +79,7 @@ namespace _Project.Scripts
 
         void FixedUpdate()
         {
+            
             PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
 
             //Apply forces based on the wasd/spc/shift controls in character controller
@@ -116,8 +117,20 @@ namespace _Project.Scripts
             }
         }
 
-        private void OnTriggerEnter(Collider other)
+        
+        private void OnTriggerStay(Collider other)
         {
+            if (other.CompareTag("warning"))
+            {
+                warning.SetActive(true);
+            }
+        }
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("warning"))
+            {
+                warning.SetActive(false);            
+            }
             if (other.CompareTag("OuterZone"))
             {
                 transform.position = respawnPoint.transform.position;
