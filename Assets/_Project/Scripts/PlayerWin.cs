@@ -16,7 +16,7 @@ namespace _Project.Scripts
 
         private void Start()
         {
-            playerControls.RestartMap.restart.performed += _ => RestartScene();
+            playerControls.UserInterface.Restart.performed += _ => RestartScene();
         }
 
         void RestartScene()

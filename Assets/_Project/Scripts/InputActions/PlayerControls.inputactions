@@ -258,13 +258,21 @@
             ]
         },
         {
-            "name": "RestartMap",
-            "id": "02f6e21a-41b9-47f7-aa44-5d6ccda98a8f",
+            "name": "UserInterface",
+            "id": "4a9c8d23-82b1-4118-8c24-0e5f0954bdda",
             "actions": [
                 {
-                    "name": "restart",
+                    "name": "Restart",
                     "type": "Button",
-                    "id": "9b2d9b13-18b4-4d6e-b9e0-8f11042fa8db",
+                    "id": "7ad259dc-2c97-4f1f-93b4-a17f47127467",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "5c287c59-f705-4c25-9928-9959f7685510",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press"
@@ -273,12 +281,23 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "982ccc63-bbf9-41f0-9723-6148734e7916",
+                    "id": "afbcf17d-6094-474e-8b5b-8cd9cba4ec8a",
                     "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "restart",
+                    "action": "Restart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "06ad26be-43d5-4d6a-932c-68127e0f7713",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
