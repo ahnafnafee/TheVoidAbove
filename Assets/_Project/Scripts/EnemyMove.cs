@@ -8,6 +8,8 @@ namespace _Project.Scripts
         private float enemySpeed;
         private bool right;
         private bool isMoving = true;
+
+        public GameObject hitParticlePrefab;
         // Start is called before the first frame update
         void Start()
         {
@@ -46,6 +48,15 @@ namespace _Project.Scripts
         public void startMoving()
         {
             isMoving = true;
+        }
+        
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.CompareTag("Bullet"))
+            {
+                Instantiate(hitParticlePrefab, transform.position, transform.rotation);
+                Destroy(gameObject);
+            }
         }
     }
 }

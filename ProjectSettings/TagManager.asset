@@ -11,6 +11,7 @@ TagManager:
   - OuterZone
   - warning
   - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
