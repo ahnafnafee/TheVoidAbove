@@ -69,11 +69,11 @@ namespace _Project.Scripts
             }
 
             // Shooting mechanics
-            if (actions.Gun.triggered)
-            {
-                // weapon.Shoot(SpawnPos(), mainCam.transform.rotation, true);
-                weapon.Shoot(SpawnPos2(), mainCam.transform.rotation, true);
-            }
+            // if (actions.Gun.triggered)
+            // {
+            //     // weapon.Shoot(SpawnPos(), mainCam.transform.rotation, true);
+            //     weapon.Shoot(SpawnPos2(), mainCam.transform.rotation, true);
+            // }
         }
 
 

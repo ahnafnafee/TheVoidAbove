@@ -50,13 +50,23 @@ namespace _Project.Scripts
             isMoving = true;
         }
         
-        private void OnCollisionEnter(Collision other)
+        private void OnCollisionEnter(Collision collision)
         {
-            if (other.gameObject.CompareTag("Bullet"))
+            if (collision.transform.CompareTag("Bullet"))
             {
-                Instantiate(hitParticlePrefab, transform.position, transform.rotation);
+                ContactPoint contact = collision.contacts[0];
+                Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
+                Vector3 position = contact.point;
+                Instantiate(hitParticlePrefab, position, rotation);
                 Destroy(gameObject);
             }
+            
+            
+            // if (collision.gameObject.CompareTag("Bullet"))
+            // {
+            //     Instantiate(hitParticlePrefab, transform.position, transform.rotation);
+            //     Destroy(gameObject);
+            // }
         }
     }
 }
