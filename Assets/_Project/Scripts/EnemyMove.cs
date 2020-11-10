@@ -6,8 +6,10 @@ namespace _Project.Scripts
     {
         [SerializeField]
         private float enemySpeed;
+        [SerializeField]
+        private GameObject target;
         private bool right;
-        private bool isMoving = true;
+        private bool isAiming = false;
 
         public GameObject hitParticlePrefab;
         // Start is called before the first frame update
@@ -19,7 +21,7 @@ namespace _Project.Scripts
         // Update is called once per frame
         void Update()
         {
-            if (isMoving)
+            if (!isAiming)
             {
                 if (right)
                 {
@@ -29,6 +31,10 @@ namespace _Project.Scripts
                 {
                     transform.position += new Vector3(0, 0, -2 * enemySpeed * Time.deltaTime);
                 }
+            }
+            else if(isAiming)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, enemySpeed * Time.deltaTime);
             }
         }
         private void OnTriggerEnter(Collider other)
@@ -40,14 +46,6 @@ namespace _Project.Scripts
                     right = !right;
                 }
             }
-        }
-        public void stopMoving()
-        {
-            isMoving = false;
-        }
-        public void startMoving()
-        {
-            isMoving = true;
         }
         
         private void OnCollisionEnter(Collision collision)
@@ -67,6 +65,17 @@ namespace _Project.Scripts
             //     Instantiate(hitParticlePrefab, transform.position, transform.rotation);
             //     Destroy(gameObject);
             // }
+        }
+
+        public void startAiming()
+        {
+            isAiming = true;
+            this.transform.GetChild(1).GetComponent<EnemyGun>().startShooting();
+        }
+        public void stopAiming()
+        {
+            this.transform.GetChild(1).GetComponent<EnemyGun>().stopShooting();
+            isAiming = false;
         }
     }
 }

@@ -9,38 +9,25 @@ namespace _Project.Scripts
     {
         [SerializeField]
         private GameObject target;
-        private bool isAiming;
+        [SerializeField]
+        private float enemySpeed;
         private Quaternion initialRotation;
         // Start is called before the first frame update
         void Start()
         {
-            isAiming = false;
             initialRotation = this.transform.parent.rotation;
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (isAiming)
-            {
-                this.transform.parent.LookAt(target.transform);
-            }
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.tag.Equals(target.tag))
             {
-                isAiming = true;
-                this.transform.parent.GetComponent<EnemyMove>().stopMoving();
-            }
-        }
-        private void OnTriggerStay(Collider other)
-        {
-            if (other.tag.Equals(target.tag))
-            {
-                isAiming = true;
-                this.transform.parent.GetComponent<EnemyMove>().stopMoving();
+                this.transform.parent.GetComponent<EnemyMove>().startAiming();
             }
         }
         private void OnTriggerExit(Collider other)
@@ -48,8 +35,7 @@ namespace _Project.Scripts
             if (other.tag.Equals(target.tag))
             {
                 this.transform.parent.rotation = initialRotation;
-                isAiming = false;
-                this.transform.parent.GetComponent<EnemyMove>().startMoving();
+                this.transform.parent.GetComponent<EnemyMove>().stopAiming();
             }
         }
     }

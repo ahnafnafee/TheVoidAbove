@@ -13,6 +13,9 @@ namespace _Project.Scripts
         private PlayerControls playerControls;
 
         private bool isPaused, isSettings;
+
+        private static readonly int Rotation = Shader.PropertyToID("_Rotation");
+
         // Start is called before the first frame update
         void Start()
         {
@@ -33,7 +36,7 @@ namespace _Project.Scripts
         void Update()
         {
             // Rotates skybox slowly for a dynamic feel
-            RenderSettings.skybox.SetFloat("_Rotation", Time.time * skyboxRotSpeed);
+            RenderSettings.skybox.SetFloat(Rotation, Time.time * skyboxRotSpeed);
         }
 
         #region Level User Interface
