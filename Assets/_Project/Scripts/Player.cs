@@ -11,13 +11,12 @@ namespace _Project.Scripts
 
         private Rigidbody _rb;
 
-        [SerializeField] private float gunMoveSpeed, rotSpeed, maxSpeed, tiltAngle, zSpeed;
+        [SerializeField] private float gunMoveSpeed, maxSpeed, tiltAngle, zSpeed;
 
-        [SerializeField] private float lSpeed = 1f, range = 100f;
+        [SerializeField] private float range = 100f;
         
         [SerializeField] private float thrusteraccel;
 
-        public GameObject muzzlePos;
 
         [FormerlySerializedAs("thrustermaxspeed")] [SerializeField]
         //Currently unimplemented
@@ -67,13 +66,6 @@ namespace _Project.Scripts
                 //When you click LMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
                 _rb.AddForce(-mainCam.transform.forward * gunMoveSpeed, ForceMode.VelocityChange);
             }
-
-            // Shooting mechanics
-            // if (actions.Gun.triggered)
-            // {
-            //     // weapon.Shoot(SpawnPos(), mainCam.transform.rotation, true);
-            //     weapon.Shoot(SpawnPos2(), mainCam.transform.rotation, true);
-            // }
         }
 
 
@@ -82,7 +74,7 @@ namespace _Project.Scripts
             
             PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
 
-            //Apply forces based on the wasd/spc/shift controls in character controller
+            //Apply forces based on the WASD/spc/shift controls in character controller
             _rb.AddForce(
                 thrusteraccel * (actions.ThrustersY.ReadValue<float>() * mainCam.transform.up +
                                  actions.ThrustersX.ReadValue<float>() * mainCam.transform.right +
@@ -93,15 +85,6 @@ namespace _Project.Scripts
             if (_rb.velocity.magnitude > maxSpeed)
             {
                 _rb.velocity = _rb.velocity.normalized * maxSpeed;
-            }
-        }
-
-        void Shoot()
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit, range))
-            {
-                Debug.Log(hit.transform.name);
             }
         }
 
@@ -135,17 +118,6 @@ namespace _Project.Scripts
             {
                 transform.position = respawnPoint.transform.position;
             }
-        }
-
-        Vector3 SpawnPos2()
-        {
-            return muzzlePos.transform.position;
-        }
-
-        Vector3 SpawnPos()
-        {
-            var transform1 = mainCam.transform;
-            return transform1.position + (transform1.forward * 5.0f) + (transform1.up * -1.02f);
         }
     }
 }

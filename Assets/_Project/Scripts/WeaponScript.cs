@@ -81,13 +81,13 @@ namespace _Project.Scripts
             Vector3 targetPoint;
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
-                // Debug.Log(hit.transform.name);
-                // Debug.Log("OG");
+                Debug.Log(hit.transform.name);
+                Debug.Log("OG");
                 targetPoint = hit.point;
             }
             else
             {
-                // Debug.Log("Artifical");
+                Debug.Log("Artifical");
                 // targetPoint = ray.GetPoint(75); //Just a point far away from the player
                 targetPoint = ray.origin + ray.direction * 10000.0f;
             }
@@ -96,7 +96,7 @@ namespace _Project.Scripts
             Vector3 directionWithoutSpread = targetPoint - attackPoint.position;
             
             // For debugging bullet path
-            // Debug.DrawRay(attackPoint.position, directionWithoutSpread, Color.red, 20, false);
+            Debug.DrawRay(attackPoint.position, directionWithoutSpread, Color.red, 20, false);
 
 
             //Calculate spread

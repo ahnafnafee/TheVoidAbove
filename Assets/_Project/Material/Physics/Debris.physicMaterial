@@ -9,6 +9,6 @@ PhysicMaterial:
   m_Name: Debris
   dynamicFriction: 0.1
   staticFriction: 0.1
-  bounciness: 0.05
+  bounciness: 0.01
   frictionCombine: 0
   bounceCombine: 0

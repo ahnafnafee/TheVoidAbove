@@ -137,6 +137,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""1D Axis Gamepad"",
+                    ""id"": ""fdf0c270-7f71-4b23-9616-53986a2a9b9c"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ThrustersX"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": ""1D Axis"",
                     ""id"": ""dfda0eb2-b0a9-49e5-abe2-9654a62251d4"",
                     ""path"": ""1DAxis"",
@@ -170,6 +181,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""1D Axis Gamepad"",
+                    ""id"": ""dcd28224-9f35-4ac6-8c48-43a7a75b298b"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ThrustersZ"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": """",
                     ""id"": ""c5c46e52-0a20-44ee-ae8d-8fcd5c93d3fc"",
                     ""path"": ""<Mouse>/delta/y"",
@@ -188,17 +210,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""LookX"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a63c8dd6-ed3f-4ba0-a50a-2b34a21d2349"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ThrustersY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -234,6 +245,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""ThrustersY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis Gamepad"",
+                    ""id"": ""11b49996-08fe-4e3c-864b-e98a4c95c0eb"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ThrustersY"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
