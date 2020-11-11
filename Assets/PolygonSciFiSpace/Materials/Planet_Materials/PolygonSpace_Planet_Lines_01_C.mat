@@ -11,7 +11,7 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 27ef9ca2ab5d3dd41b2a27523eaac981,
     type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 0
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -155,3 +155,4 @@ Material:
     - _RimColor: {r: 1, g: 0.18396229, b: 0.9193271, a: 1}
     - _Second_Color: {r: 0.2647059, g: 0.07678082, b: 0.02141004, a: 0}
     - _Size: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

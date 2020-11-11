@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace _Project.Scripts.Utils {
 
@@ -497,15 +498,31 @@ namespace _Project.Scripts.Utils {
 
 
         // Screen Shake
-        public static void ShakeCamera(float intensity, float timer) {
-            Vector3 lastCameraMovement = Vector3.zero;
-            FunctionUpdater.Create(delegate () {
-                timer -= Time.unscaledDeltaTime;
-                Vector3 randomMovement = new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized * intensity;
-                Camera.main.transform.position = Camera.main.transform.position - lastCameraMovement + randomMovement;
-                lastCameraMovement = randomMovement;
-                return timer <= 0f;
-            }, "CAMERA_SHAKE");
+        public static void ShakeCamera(Camera cam, float intensity, float shakeDuration, float decreaseFactor)
+        {
+            Transform camTransform = cam.transform;
+            Vector3 originalPos = camTransform.localPosition;
+            
+            if (shakeDuration > 0)
+            {
+                camTransform.localPosition = originalPos + Random.insideUnitSphere * intensity;
+                shakeDuration -= Time.deltaTime * decreaseFactor;
+            }
+            else
+            {
+                shakeDuration = 0f;
+                camTransform.localPosition = originalPos;
+            }
+            
+            
+            // Vector3 lastCameraMovement = Vector3.zero;
+            // FunctionUpdater.Create(delegate () {
+            //     timer -= Time.unscaledDeltaTime;
+            //     Vector3 randomMovement = new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized * intensity;
+            //     Camera.main.transform.position = Camera.main.transform.position - lastCameraMovement + randomMovement;
+            //     lastCameraMovement = randomMovement;
+            //     return timer <= 0f;
+            // }, "CAMERA_SHAKE");
         }
 
     }

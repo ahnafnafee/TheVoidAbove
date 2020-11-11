@@ -10,12 +10,14 @@ namespace _Project.Scripts
         private GameObject target;
         private bool right;
         private bool isAiming = false;
+        private Health enemyHealth;
 
         public GameObject hitParticlePrefab;
         // Start is called before the first frame update
         void Start()
         {
             right = false;
+            enemyHealth = GetComponent<Health>();
         }
 
         // Update is called once per frame
@@ -56,15 +58,9 @@ namespace _Project.Scripts
                 Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
                 Vector3 position = contact.point;
                 Instantiate(hitParticlePrefab, position, rotation);
-                Destroy(gameObject);
+                
+                enemyHealth.TakeDamage(1);
             }
-            
-            
-            // if (collision.gameObject.CompareTag("Bullet"))
-            // {
-            //     Instantiate(hitParticlePrefab, transform.position, transform.rotation);
-            //     Destroy(gameObject);
-            // }
         }
 
         public void startAiming()

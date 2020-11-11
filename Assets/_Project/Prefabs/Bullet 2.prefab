@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 285334655076656819}
   - component: {fileID: 5937857676343324236}
   - component: {fileID: 5902775928643524832}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bullet 2
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7245286705283116746}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: bc63bc1a8ec8d254a9debcf15355ce87, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -265,6 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada42af054841374cb44fd793361f6a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  lifeDuration: 10
   hitParticlePrefab: {fileID: 2462045763441574653, guid: bc20e11fe125f0c4985a160e93e1a272,
     type: 3}

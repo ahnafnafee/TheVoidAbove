@@ -16,13 +16,16 @@ namespace _Project.Scripts
         
         }
 
+        // TODO: BulletManager, BulletDespawn and BulletScript needs to be combined
         private void OnCollisionEnter(Collision collision)
         {
-            if(collision.transform.tag.Equals("Player"))
+            if(collision.transform.CompareTag("Player"))
             {
-                collision.transform.GetComponent<Player>().TakeDamage(1);
+                collision.transform.GetComponent<Health>().TakeDamage(1);
+                Destroy(gameObject);
+
             }
-            else if(collision.transform.tag.Equals("Enemy"))
+            else if(collision.transform.CompareTag("Enemy"))
             {
                 Destroy(collision.transform);
             }

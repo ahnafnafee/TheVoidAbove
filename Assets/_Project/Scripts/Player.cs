@@ -25,8 +25,6 @@ namespace _Project.Scripts
         [Header("Camera Controls")] [SerializeField]
         private Camera mainCam;
 
-        [SerializeField] private int playerHealth;
-
         [Header("Respawn Point")] [SerializeField]
         private GameObject respawnPoint,warning;
         
@@ -36,17 +34,16 @@ namespace _Project.Scripts
         {
             _playerControls = new PlayerControls();
             _playerControls.Enable();
-
             _rb = GetComponent<Rigidbody>();
         }
-
-        // Start is called before the first frame update
+        
+        
         void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
 
-        // Update is called once per frame
+
         void Update()
         {
             #region PlayerRotation
@@ -88,19 +85,7 @@ namespace _Project.Scripts
             }
         }
 
-        public void TakeDamage(int damage)
-        {
-            if ((playerHealth - damage) > 0)
-            {
-                playerHealth -= damage;
-            }
-            else
-            {
-                transform.position = respawnPoint.transform.position;
-            }
-        }
 
-        
         private void OnTriggerStay(Collider other)
         {
             if (other.CompareTag("warning"))

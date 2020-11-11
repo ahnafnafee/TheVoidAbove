@@ -13,7 +13,12 @@ namespace _Project.Scripts
         private bool shooting;
         private Vector3 playerPos;
         private float timer;
-        // Start is called before the first frame update
+
+        [Header("Weapon Attribute")]
+        //Gun stats
+        public float spread;
+        
+        
         void Start()
         {
             shooting = false;
@@ -27,14 +32,29 @@ namespace _Project.Scripts
             {
                 if (bulletTimer <= 0)
                 {
-                    playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
-                    GameObject newBullet = Instantiate(bullet, transform.position, bullet.transform.rotation);
-                    newBullet.GetComponent<Rigidbody>().velocity = (playerPos - transform.position).normalized * bulletSpeed;        
+                    Shoot();
                     bulletTimer = timer;
                 }
                 bulletTimer -= Time.deltaTime;
             }
         }
+
+        private void Shoot()
+        {
+            //Calculate spread
+            float x = Random.Range(-spread, spread);
+            float y = Random.Range(-spread, spread);
+            
+            playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+
+            Vector3 directionWithoutSpread = playerPos - transform.position;
+            //Calculate new direction with spread
+            Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0);
+                    
+            GameObject newBullet = Instantiate(bullet, transform.position, bullet.transform.rotation);
+            newBullet.GetComponent<Rigidbody>().velocity = directionWithSpread.normalized * bulletSpeed;        
+        }
+        
         public void startShooting()
         {
             shooting = true;

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using _Project.Scripts.Utils;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace _Project.Scripts
@@ -17,10 +18,11 @@ namespace _Project.Scripts
         [SerializeField] private GameObject bullet;
 
         int bulletsLeft, bulletsShot;
-        
-        [Header("Camera")]
-        public float camIntensity, camTimer;
-        public Camera fpsCam;
+
+        [Header("Camera")] 
+        [SerializeField] private float camIntensity; 
+        [SerializeField] private float camTimer;
+        [SerializeField] private Camera mainCam;
 
         [Header("Bullet Attribute")]
         public int magazineSize, bulletsPerTap;
@@ -74,7 +76,7 @@ namespace _Project.Scripts
             // readyToShoot = false;
 
             //Find the exact hit position using a raycast
-            Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)); 
+            Ray ray = mainCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)); 
             RaycastHit hit;
 
             //check if ray hits something
@@ -93,10 +95,11 @@ namespace _Project.Scripts
             }
             
             //Calculate direction from attackPoint to targetPoint
-            Vector3 directionWithoutSpread = targetPoint - attackPoint.position;
+            var position = attackPoint.position;
+            Vector3 directionWithoutSpread = targetPoint - position;
             
             // For debugging bullet path
-            Debug.DrawRay(attackPoint.position, directionWithoutSpread, Color.red, 20, false);
+            Debug.DrawRay(position, directionWithoutSpread, Color.red, 7, false);
 
 
             //Calculate spread
@@ -104,26 +107,24 @@ namespace _Project.Scripts
             float y = Random.Range(-spread, spread);
 
             //Calculate new direction with spread
-            Vector3 directionWithSpread =
-                directionWithoutSpread + new Vector3(x, y, 0); //Just add spread to last direction
+            Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0);
 
-            UtilsClass.ShakeCamera(camIntensity, camTimer);
+            // UtilsClass.ShakeCamera(mainCam, camIntensity, camTimer, 1.0f);
+            
             //Instantiate bullet/projectile
-            GameObject currentBullet = 
-                Instantiate(bullet, attackPoint.position, Quaternion.identity);
-
+            GameObject currentBullet = Instantiate(bullet, position, Quaternion.identity);
             currentBullet.transform.forward = directionWithSpread.normalized;
 
             //Add forces to bullet
-            currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
-            // currentBullet.GetComponent<Rigidbody>().AddForce(directionWithoutSpread.normalized * shootForce, ForceMode.Impulse);
+            // currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
             
-            currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);
+            currentBullet.GetComponent<Rigidbody>().AddForce(directionWithoutSpread.normalized * shootForce, ForceMode.Impulse);
+            currentBullet.GetComponent<Rigidbody>().AddForce(mainCam.transform.up * upwardForce, ForceMode.Impulse);
 
         }
 
 
-        
-        
+
+
     }
 }

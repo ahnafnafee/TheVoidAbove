@@ -11,7 +11,7 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 27ef9ca2ab5d3dd41b2a27523eaac981,
     type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 0
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -105,7 +105,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_42ED4346: 0
+    - Vector1_42ED4346: 0.821
     - Vector1_CBF347CE: 1
     - _ASEOutlineWidth: 0.01
     - _BumpScale: 1
@@ -145,13 +145,14 @@ Material:
     - __dirty: 1
     - _frez: 16.33
     m_Colors:
-    - Color_7C11588D: {r: 0.59367, g: 0.29561228, b: 0.6886792, a: 0}
+    - Color_7C11588D: {r: 0.3301887, g: 0.2552955, b: 0.09189214, a: 0}
     - _ASEOutlineColor: {r: 0.5181034, g: 0.4426903, b: 0.6764706, a: 0}
     - _BaseColor: {r: 0.30882353, g: 0.3005548, b: 0.25432524, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color0: {r: 0, g: 0.7931032, b: 1, a: 0}
     - _Color1: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 1, g: 0.18396229, b: 0.9193271, a: 1}
+    - _RimColor: {r: 0.7735849, g: 0.56723, b: 0, a: 1}
     - _Second_Color: {r: 0.31617647, g: 0.25890556, b: 0.22783305, a: 0}
     - _Size: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
