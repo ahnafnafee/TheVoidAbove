@@ -21,7 +21,7 @@ namespace _Project.Scripts
         {
             if(collision.transform.CompareTag("Player"))
             {
-                collision.transform.GetComponent<Health>().TakeDamage(1);
+                collision.transform.GetComponent<Health>().TakeDamage(10);
                 Destroy(gameObject);
 
             }

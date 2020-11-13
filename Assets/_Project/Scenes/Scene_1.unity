@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 6568717}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.2449913, g: 0.21397513, b: 0.34457478, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -442,7 +442,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59289844}
-  m_LocalRotation: {x: 0.07199824, y: 0.70343184, z: -0.07199825, w: 0.7034317}
+  m_LocalRotation: {x: 0.071998246, y: 0.70343184, z: -0.07199826, w: 0.7034317}
   m_LocalPosition: {x: -56.076393, y: 95.03207, z: -18.469995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -7225,7 +7225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 387423924}
   m_Layer: 0
-  m_Name: -----LIGHTS+CAMERA
+  m_Name: -----SYSTEM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8098,7 +8098,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535265056}
-  m_LocalRotation: {x: 0.065098375, y: 0.7041039, z: -0.065098375, w: 0.7041039}
+  m_LocalRotation: {x: 0.06509838, y: 0.7041039, z: -0.06509838, w: 0.7041039}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8420,7 +8420,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641050807}
-  m_LocalRotation: {x: 0.085371695, y: 0.7019343, z: -0.08537171, w: 0.7019342}
+  m_LocalRotation: {x: 0.08537171, y: 0.70193434, z: -0.08537172, w: 0.7019342}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -15058,7 +15058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2730817af845c1e4a899f67e3a3ffa5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectHealth: 5
+  objectHealth: 100
   respawnPoint: {fileID: 438233529}
 --- !u!54 &897232980
 Rigidbody:
@@ -15088,6 +15088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88aebe4caafd1f46a996c6ee8d67f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  safeSpeed: 25
+  dangerSpeed: 50
   gunMoveSpeed: 20
   maxSpeed: 100
   tiltAngle: 20

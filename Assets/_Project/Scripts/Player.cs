@@ -1,5 +1,6 @@
 ﻿//using _Project.Scripts.InputActions;
 
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -10,7 +11,17 @@ namespace _Project.Scripts
         PlayerControls _playerControls;
 
         private Rigidbody _rb;
+        
+        [Header("Player Collision")]
+        Vector3 normal;
+        //The speed where nothing happens to the player on collision; a safe contact with a surface
+        [SerializeField] float safeSpeed = 25;
+        //The speed where problems occur; between safe and danger is a dangerous hit, above is a lethal hit that's more severe
+        [SerializeField] float dangerSpeed = 50;
+        bool controlsActive = true;
+        private ContactPoint contact;
 
+        [Header("Player Movement")]
         [SerializeField] private float gunMoveSpeed, maxSpeed, tiltAngle, zSpeed;
 
         [SerializeField] private float range = 100f;
@@ -30,6 +41,8 @@ namespace _Project.Scripts
         
         [Header("Weapon")] public WeaponScript weapon;
 
+        [Header("Player")] private Health pHealth;
+
         void Awake()
         {
             _playerControls = new PlayerControls();
@@ -41,6 +54,7 @@ namespace _Project.Scripts
         void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
+            pHealth = GetComponent<Health>();
         }
 
 
@@ -84,6 +98,50 @@ namespace _Project.Scripts
                 _rb.velocity = _rb.velocity.normalized * maxSpeed;
             }
         }
+        
+        void OnCollisionEnter(Collision col)
+        {
+
+            //Add anything you want to happen when the player collides in here. It updates akin to Update
+            //TODO:Produce some conditionals and tag our assets to discriminate in collisions (I.E.: when they hit a big rock vs a tiny rock, the tiny debris should yield instead of the player)
+
+            if(col.relativeVelocity.magnitude <= safeSpeed)
+            {
+                Debug.Log("Safe contact.");
+            }
+
+            else if(col.relativeVelocity.magnitude > safeSpeed & col.relativeVelocity.magnitude <= dangerSpeed)
+            {
+                Debug.Log("Bad contact.");
+                pHealth.TakeDamage(10);
+                Debug.Log(controlsActive);
+                StartCoroutine(ControlLockTimer(1));
+                Debug.Log(controlsActive);
+                Bounce();
+            }
+            //StartCoroutine(ControlLockTimer()); // Where s = the time in seconds to lock controls for            
+            else if (col.relativeVelocity.magnitude > dangerSpeed)
+            {
+                Debug.Log("LETHAL contact.");
+                Debug.Log(controlsActive);
+                pHealth.TakeDamage(10);
+                StartCoroutine(ControlLockTimer(3));
+                Debug.Log(controlsActive);
+                Bounce();
+            }
+            
+            void Bounce(){
+                foreach (ContactPoint contact in col.contacts)
+                {
+                    normal += contact.normal;
+                }
+
+                normal.Normalize();
+                _rb.velocity += Vector3.Reflect(col.relativeVelocity * 0.5f, normal);
+            }
+            //_rb.velocity = Vector3.Reflect(_rb.velocity, normal);
+
+        }
 
 
         private void OnTriggerStay(Collider other)
@@ -103,6 +161,15 @@ namespace _Project.Scripts
             {
                 transform.position = respawnPoint.transform.position;
             }
+        }
+        
+        private IEnumerator ControlLockTimer(float t)
+        {
+            controlsActive = false;
+
+            yield return new WaitForSeconds(t);
+
+            controlsActive = true;
         }
     }
 }
