@@ -1,16 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
     [Header("Health")]
-    [SerializeField] private int objectHealth;
-    private int health;
+    [SerializeField] public float objectHealth;
+    public float health { get; set; }
 
     [Header("Respawn Point")] 
     [SerializeField] private GameObject respawnPoint;
-    
+
     void Start()
     {
         health = objectHealth;

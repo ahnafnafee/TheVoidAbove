@@ -9,10 +9,14 @@ namespace _Project.Scripts
         [SerializeField]
         private float bulletSpeed;
         [SerializeField]
+        private float reloadTime; 
+        [SerializeField]
         private GameObject bullet;
+        [SerializeField]
+        private float bulletCount;
         private bool shooting;
         private Vector3 playerPos;
-        private float timer;
+        private float timer, timer2, counter;
 
         [Header("Weapon Attribute")]
         //Gun stats
@@ -23,6 +27,8 @@ namespace _Project.Scripts
         {
             shooting = false;
             timer = bulletTimer;
+            timer2 = reloadTime;
+            counter = bulletCount;
         }
 
         // Update is called once per frame
@@ -33,12 +39,28 @@ namespace _Project.Scripts
                 if (bulletTimer <= 0)
                 {
                     Shoot();
+                    counter--;
                     bulletTimer = timer;
                 }
                 bulletTimer -= Time.deltaTime;
             }
+            if (counter <= 0)
+            {
+                Reload();
+            }
         }
 
+        private void Reload()
+        {
+            shooting = false;
+            reloadTime -= Time.deltaTime;
+            if(reloadTime <= 0)
+            {
+                reloadTime = timer2;
+                shooting = true;
+                counter = bulletCount;
+            }
+        }
         private void Shoot()
         {
             //Calculate spread

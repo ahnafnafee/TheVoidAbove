@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace _Project.Scripts
 {
@@ -11,6 +12,10 @@ namespace _Project.Scripts
         private bool right;
         private bool isAiming = false;
         private Health enemyHealth;
+        [Tooltip("Image component displaying current health")]
+        public Image healthFillImage;
+
+        public GameObject enemyHealthObj;
 
         public GameObject hitParticlePrefab;
         // Start is called before the first frame update
@@ -38,6 +43,9 @@ namespace _Project.Scripts
             {
                 transform.position = Vector3.MoveTowards(transform.position, target.transform.position, enemySpeed * Time.deltaTime);
             }
+            
+            enemyHealthObj.transform.LookAt(target.transform);
+            healthFillImage.fillAmount = enemyHealth.objectHealth / enemyHealth.health;
         }
         private void OnTriggerEnter(Collider other)
         {

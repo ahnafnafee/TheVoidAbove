@@ -311,6 +311,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Screenshot"",
+                    ""type"": ""Button"",
+                    ""id"": ""1817465e-0b78-4f4d-b5a1-3bb5e2463be6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -335,6 +343,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6a82d803-3d0e-4087-95f7-b7558fe3ebf2"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Screenshot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -356,6 +375,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_UserInterface = asset.FindActionMap("UserInterface", throwIfNotFound: true);
         m_UserInterface_Restart = m_UserInterface.FindAction("Restart", throwIfNotFound: true);
         m_UserInterface_Pause = m_UserInterface.FindAction("Pause", throwIfNotFound: true);
+        m_UserInterface_Screenshot = m_UserInterface.FindAction("Screenshot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -504,12 +524,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private IUserInterfaceActions m_UserInterfaceActionsCallbackInterface;
     private readonly InputAction m_UserInterface_Restart;
     private readonly InputAction m_UserInterface_Pause;
+    private readonly InputAction m_UserInterface_Screenshot;
     public struct UserInterfaceActions
     {
         private @PlayerControls m_Wrapper;
         public UserInterfaceActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Restart => m_Wrapper.m_UserInterface_Restart;
         public InputAction @Pause => m_Wrapper.m_UserInterface_Pause;
+        public InputAction @Screenshot => m_Wrapper.m_UserInterface_Screenshot;
         public InputActionMap Get() { return m_Wrapper.m_UserInterface; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -525,6 +547,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Pause.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnPause;
+                @Screenshot.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnScreenshot;
+                @Screenshot.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnScreenshot;
+                @Screenshot.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnScreenshot;
             }
             m_Wrapper.m_UserInterfaceActionsCallbackInterface = instance;
             if (instance != null)
@@ -535,6 +560,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
+                @Screenshot.started += instance.OnScreenshot;
+                @Screenshot.performed += instance.OnScreenshot;
+                @Screenshot.canceled += instance.OnScreenshot;
             }
         }
     }
@@ -555,5 +583,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     {
         void OnRestart(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnScreenshot(InputAction.CallbackContext context);
     }
 }

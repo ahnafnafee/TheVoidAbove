@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/ControlsScreen.unity
     guid: 5999cdcaa7d09ef46bd1ba1d3062a061
+  - enabled: 1
+    path: Assets/_Project/Scenes/Scene_2.unity
+    guid: 5d83cb50827416d4cbdf4655a7676c69
   m_configObjects: {}

@@ -11,6 +11,8 @@ namespace _Project.Scripts
         [Header("UI")] 
         [SerializeField] private GameObject pauseMenu, firstMenu, settingsMenu;
         private PlayerControls playerControls;
+        
+        [Header("Screenshot")] private TakeScreenshot screenshot;
 
         private bool isPaused, isSettings;
 
@@ -23,9 +25,16 @@ namespace _Project.Scripts
             isPaused = false;
             isSettings = false;
             pauseMenu.SetActive(false);
+            screenshot = GetComponent<TakeScreenshot>();
             playerControls.UserInterface.Pause.performed += _ => PauseScene();
+            playerControls.UserInterface.Screenshot.performed += _ => TakeScreenshot();
         }
-        
+
+        private void TakeScreenshot()
+        {
+            screenshot.OnTakeScreenshotButtonPressed();
+        }
+
         private void Awake()
         {
             playerControls = new PlayerControls();

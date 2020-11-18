@@ -3,6 +3,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace _Project.Scripts
 {
@@ -42,6 +43,8 @@ namespace _Project.Scripts
         [Header("Weapon")] public WeaponScript weapon;
 
         [Header("Player")] private Health pHealth;
+        [Tooltip("Image component displaying current health")]
+        public Image healthFillImage;
 
         void Awake()
         {
@@ -77,72 +80,89 @@ namespace _Project.Scripts
                 //When you click LMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
                 _rb.AddForce(-mainCam.transform.forward * gunMoveSpeed, ForceMode.VelocityChange);
             }
+            
+            healthFillImage.fillAmount = pHealth.objectHealth / pHealth.health;
         }
 
 
         void FixedUpdate()
         {
-            
+
             PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
 
-            //Apply forces based on the WASD/spc/shift controls in character controller
-            _rb.AddForce(
-                thrusteraccel * (actions.ThrustersY.ReadValue<float>() * mainCam.transform.up +
-                                 actions.ThrustersX.ReadValue<float>() * mainCam.transform.right +
-                                 (actions.ThrustersZ.ReadValue<float>() * mainCam.transform.forward)).normalized,
-                ForceMode.Acceleration);
+            //Apply forces based on the WASD/spc/shift controls in character controller 
+            if (controlsActive)
+            {
+                //Set a var equal to the controls
+                Vector3 thrusterForce = thrusteraccel * (actions.ThrustersY.ReadValue<float>() * mainCam.transform.up +
+                                     actions.ThrustersX.ReadValue<float>() * mainCam.transform.right +
+                                     (actions.ThrustersZ.ReadValue<float>() * mainCam.transform.forward)).normalized;
 
+                //If you're going at max speed, don't contribute to the main direction, but allow other directions via projectonplane
+                if (_rb.velocity.magnitude >= thrusterMaxSpeed && Vector3.Dot(thrusterForce, _rb.velocity) > 0)
+                {
+                    thrusterForce = Vector3.ProjectOnPlane(thrusterForce, _rb.velocity);
+                }
 
+                //Apply the force variable
+                _rb.AddForce(thrusterForce, ForceMode.Acceleration);
+            }
+
+            //If you're at top speed, don't go any faster
             if (_rb.velocity.magnitude > maxSpeed)
             {
                 _rb.velocity = _rb.velocity.normalized * maxSpeed;
             }
         }
-        
+
         void OnCollisionEnter(Collision col)
         {
 
-            //Add anything you want to happen when the player collides in here. It updates akin to Update
+            //Add anything you want to happen when the player collides in here. It updates akin to Update()
             //TODO:Produce some conditionals and tag our assets to discriminate in collisions (I.E.: when they hit a big rock vs a tiny rock, the tiny debris should yield instead of the player)
 
-            if(col.relativeVelocity.magnitude <= safeSpeed)
+            if (col.relativeVelocity.magnitude <= safeSpeed)
             {
                 Debug.Log("Safe contact.");
             }
 
-            else if(col.relativeVelocity.magnitude > safeSpeed & col.relativeVelocity.magnitude <= dangerSpeed)
+            else if (col.relativeVelocity.magnitude > safeSpeed & col.relativeVelocity.magnitude <= dangerSpeed)
             {
                 Debug.Log("Bad contact.");
-                pHealth.TakeDamage(10);
-                Debug.Log(controlsActive);
-                StartCoroutine(ControlLockTimer(1));
-                Debug.Log(controlsActive);
-                Bounce();
+                pHealth.TakeDamage(5);
+                if (!col.collider.CompareTag("Package"))
+                {
+                    StartCoroutine(ControlLockTimer(1));
+                    Bounce();
+                }
+                this.GetComponent<PackageManager>().drop(col.relativeVelocity);
             }
             //StartCoroutine(ControlLockTimer()); // Where s = the time in seconds to lock controls for            
             else if (col.relativeVelocity.magnitude > dangerSpeed)
             {
                 Debug.Log("LETHAL contact.");
-                Debug.Log(controlsActive);
                 pHealth.TakeDamage(10);
-                StartCoroutine(ControlLockTimer(3));
-                Debug.Log(controlsActive);
-                Bounce();
+                if (!col.collider.CompareTag("Package"))
+                {
+                    StartCoroutine(ControlLockTimer(3));
+                    Bounce();
+                }
+                this.GetComponent<PackageManager>().drop(col.relativeVelocity);
             }
-            
-            void Bounce(){
+
+            void Bounce()
+            {
                 foreach (ContactPoint contact in col.contacts)
                 {
                     normal += contact.normal;
                 }
 
                 normal.Normalize();
-                _rb.velocity += Vector3.Reflect(col.relativeVelocity * 0.5f, normal);
+                _rb.velocity += Vector3.Reflect(-col.relativeVelocity * 0.5f, normal);
             }
             //_rb.velocity = Vector3.Reflect(_rb.velocity, normal);
 
         }
-
 
         private void OnTriggerStay(Collider other)
         {

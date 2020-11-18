@@ -1,4 +1,6 @@
 ﻿//using _Project.Scripts.InputActions;
+
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +10,8 @@ namespace _Project.Scripts
     {
         [SerializeField] private GameObject winUI;
         private PlayerControls playerControls;
+        public PackageManager pkgManager;
+        [SerializeField] private int nextScene;
         private void Awake()
         {
             playerControls = new PlayerControls();
@@ -36,10 +40,18 @@ namespace _Project.Scripts
 
         void OnTriggerEnter(Collider other)
         {
-            if (other.transform.tag.Equals("Package"))
+            if (pkgManager.hasPackage && other.transform.CompareTag("Player"))
             {
                 winUI.SetActive(true);
+                if (nextScene != 4)
+                    StartCoroutine(LoadScene());
             }
+        }
+
+        IEnumerator LoadScene()
+        {
+            yield return new WaitForSeconds(2.5f);
+            SceneManager.LoadScene(nextScene);
         }
     }
 }
