@@ -23,16 +23,13 @@ namespace _Project.Scripts
         private ContactPoint contact;
 
         [Header("Player Movement")]
-        [SerializeField] private float gunMoveSpeed, maxSpeed, tiltAngle, zSpeed;
-
+        [SerializeField] private float pushBackSpeed;
+        [SerializeField] private float maxSpeed;
+        [SerializeField] private float tiltAngle;
+        [SerializeField] private float zSpeed;
         [SerializeField] private float range = 100f;
-        
-        [SerializeField] private float thrusteraccel;
-
-
-        [FormerlySerializedAs("thrustermaxspeed")] [SerializeField]
-        //Currently unimplemented
-        private float thrusterMaxSpeed;
+        [SerializeField] private float thrusterAcceleration;
+        [SerializeField] private float thrusterMaxSpeed;
 
         [Header("Camera Controls")] [SerializeField]
         private Camera mainCam;
@@ -64,13 +61,17 @@ namespace _Project.Scripts
         void Update()
         {
             #region PlayerRotation
+            
+            var lookPos = mainCam.transform.position - transform.position;
+            lookPos.y = 0;
+            var rotation = Quaternion.LookRotation(lookPos);
 
             PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
-            float x_rot = actions.ThrustersX.ReadValue<float>() * tiltAngle;
-            float z_rot = actions.ThrustersZ.ReadValue<float>() * tiltAngle;
+            float xRot = actions.ThrustersX.ReadValue<float>() * tiltAngle;
+            float zRot = actions.ThrustersZ.ReadValue<float>() * tiltAngle;
 
-            Quaternion target = Quaternion.Euler(z_rot, 0, -x_rot);
-            transform.rotation = Quaternion.Lerp(transform.rotation, mainCam.transform.rotation * target,
+            Quaternion target = Quaternion.Euler(-xRot, 0, -zRot);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotation * Quaternion.AngleAxis(90f, Vector3.up) * target,
                 Time.deltaTime * zSpeed);
 
             #endregion
@@ -78,7 +79,7 @@ namespace _Project.Scripts
             if (actions.PushBack.triggered)
             {
                 //When you click LMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
-                _rb.AddForce(-mainCam.transform.forward * gunMoveSpeed, ForceMode.VelocityChange);
+                _rb.AddForce(-mainCam.transform.forward * pushBackSpeed, ForceMode.VelocityChange);
             }
             
             healthFillImage.fillAmount = pHealth.objectHealth / pHealth.health;
@@ -94,7 +95,7 @@ namespace _Project.Scripts
             if (controlsActive)
             {
                 //Set a var equal to the controls
-                Vector3 thrusterForce = thrusteraccel * (actions.ThrustersY.ReadValue<float>() * mainCam.transform.up +
+                Vector3 thrusterForce = thrusterAcceleration * (actions.ThrustersY.ReadValue<float>() * mainCam.transform.up +
                                      actions.ThrustersX.ReadValue<float>() * mainCam.transform.right +
                                      (actions.ThrustersZ.ReadValue<float>() * mainCam.transform.forward)).normalized;
 
@@ -132,10 +133,10 @@ namespace _Project.Scripts
                 pHealth.TakeDamage(5);
                 if (!col.collider.CompareTag("Package"))
                 {
-                    StartCoroutine(ControlLockTimer(1));
+                    StartCoroutine(ControlLockTimer(0.5f));
                     Bounce();
                 }
-                this.GetComponent<PackageManager>().drop(col.relativeVelocity);
+                this.GetComponent<PackageManager>().Drop(col.relativeVelocity);
             }
             //StartCoroutine(ControlLockTimer()); // Where s = the time in seconds to lock controls for            
             else if (col.relativeVelocity.magnitude > dangerSpeed)
@@ -144,10 +145,10 @@ namespace _Project.Scripts
                 pHealth.TakeDamage(10);
                 if (!col.collider.CompareTag("Package"))
                 {
-                    StartCoroutine(ControlLockTimer(3));
+                    StartCoroutine(ControlLockTimer(2));
                     Bounce();
                 }
-                this.GetComponent<PackageManager>().drop(col.relativeVelocity);
+                this.GetComponent<PackageManager>().Drop(col.relativeVelocity);
             }
 
             void Bounce()
@@ -158,7 +159,7 @@ namespace _Project.Scripts
                 }
 
                 normal.Normalize();
-                _rb.velocity += Vector3.Reflect(-col.relativeVelocity * 0.5f, normal);
+                _rb.velocity += Vector3.Reflect(-col.relativeVelocity * 0.4f, normal);
             }
             //_rb.velocity = Vector3.Reflect(_rb.velocity, normal);
 

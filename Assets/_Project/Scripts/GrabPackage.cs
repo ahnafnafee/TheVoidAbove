@@ -40,7 +40,7 @@ public class GrabPackage : MonoBehaviour
         if (inRange && actions.PickUp.triggered)
         {
             Debug.Log("Picked Up");
-            GameObject.FindGameObjectWithTag("Player").transform.GetComponent<PackageManager>().pickUp();
+            GameObject.FindGameObjectWithTag("Player").transform.GetComponent<PackageManager>().PickUp();
             grabUI.SetActive(false);
         }
     }

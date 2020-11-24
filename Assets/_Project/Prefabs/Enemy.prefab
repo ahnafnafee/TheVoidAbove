@@ -45,7 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletTimer: 0.5
   bulletSpeed: 50
+  reloadTime: 0
   bullet: {fileID: 7245286705283116746, guid: e5f48851c76332049a2c0ae1eaca1ee2, type: 3}
+  bulletCount: 0
+  spread: 0
 --- !u!1 &4302760016068645797
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,6 +64,7 @@ GameObject:
   - component: {fileID: 2537495974722324653}
   - component: {fileID: -7881299578854142096}
   - component: {fileID: -3818388280405966213}
+  - component: {fileID: 3715712635004098083}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -159,9 +163,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e09949844dfbd46a08adad0c67ada5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 30
+  enemySpeed: 10
   target: {fileID: 0}
-  hitParticlePrefab: {fileID: 0}
+  healthFillImage: {fileID: 0}
+  enemyHealthObj: {fileID: 0}
+  hitParticlePrefab: {fileID: 2462045763441574653, guid: 281d425e8bcdde041b783be5ca06d228,
+    type: 3}
 --- !u!114 &-7881299578854142096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +183,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletTimer: 1
   bulletSpeed: 10
+  reloadTime: 0
   bullet: {fileID: 7245286705283116746, guid: e5f48851c76332049a2c0ae1eaca1ee2, type: 3}
+  bulletCount: 0
+  spread: 0
 --- !u!54 &-3818388280405966213
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -193,6 +203,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3715712635004098083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302760016068645797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2730817af845c1e4a899f67e3a3ffa5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectHealth: 3
+  respawnPoint: {fileID: 0}
 --- !u!1 &7016312503227391237
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,4 +275,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  enemySpeed: 0
+  enemySpeed: 0.1

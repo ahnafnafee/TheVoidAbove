@@ -45,7 +45,7 @@ namespace _Project.Scripts
             float offsetY = Random.Range(-bounds.extents.y, bounds.extents.y);
             float offsetZ = Random.Range(-bounds.extents.z, bounds.extents.z);
      
-            GameObject asteroid = Instantiate(objectToSpawn);
+            GameObject asteroid = Instantiate(objectToSpawn, gameObject.transform, true);
             asteroid.transform.position = bounds.center + new Vector3(offsetX, offsetY, offsetZ);
             asteroid.transform.rotation = Random.rotation;
             asteroid.transform.localScale = Vector3.one * Random.Range(minScale, maxScale);

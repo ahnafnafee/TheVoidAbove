@@ -89,6 +89,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""MouseLook"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""ea6ade84-c27a-4dfa-b900-ce2a4b0135e8"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -289,6 +297,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""PushBack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b47f8409-c5e5-4408-8ed9-81fc357a5875"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseLook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -371,6 +390,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_PlayerStandard_Look = m_PlayerStandard.FindAction("Look", throwIfNotFound: true);
         m_PlayerStandard_PickUp = m_PlayerStandard.FindAction("PickUp", throwIfNotFound: true);
         m_PlayerStandard_PushBack = m_PlayerStandard.FindAction("PushBack", throwIfNotFound: true);
+        m_PlayerStandard_MouseLook = m_PlayerStandard.FindAction("MouseLook", throwIfNotFound: true);
         // UserInterface
         m_UserInterface = asset.FindActionMap("UserInterface", throwIfNotFound: true);
         m_UserInterface_Restart = m_UserInterface.FindAction("Restart", throwIfNotFound: true);
@@ -434,6 +454,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerStandard_Look;
     private readonly InputAction m_PlayerStandard_PickUp;
     private readonly InputAction m_PlayerStandard_PushBack;
+    private readonly InputAction m_PlayerStandard_MouseLook;
     public struct PlayerStandardActions
     {
         private @PlayerControls m_Wrapper;
@@ -447,6 +468,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Look => m_Wrapper.m_PlayerStandard_Look;
         public InputAction @PickUp => m_Wrapper.m_PlayerStandard_PickUp;
         public InputAction @PushBack => m_Wrapper.m_PlayerStandard_PushBack;
+        public InputAction @MouseLook => m_Wrapper.m_PlayerStandard_MouseLook;
         public InputActionMap Get() { return m_Wrapper.m_PlayerStandard; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -483,6 +505,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @PushBack.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnPushBack;
                 @PushBack.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnPushBack;
                 @PushBack.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnPushBack;
+                @MouseLook.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnMouseLook;
+                @MouseLook.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnMouseLook;
+                @MouseLook.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnMouseLook;
             }
             m_Wrapper.m_PlayerStandardActionsCallbackInterface = instance;
             if (instance != null)
@@ -514,6 +539,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @PushBack.started += instance.OnPushBack;
                 @PushBack.performed += instance.OnPushBack;
                 @PushBack.canceled += instance.OnPushBack;
+                @MouseLook.started += instance.OnMouseLook;
+                @MouseLook.performed += instance.OnMouseLook;
+                @MouseLook.canceled += instance.OnMouseLook;
             }
         }
     }
@@ -578,6 +606,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnPickUp(InputAction.CallbackContext context);
         void OnPushBack(InputAction.CallbackContext context);
+        void OnMouseLook(InputAction.CallbackContext context);
     }
     public interface IUserInterfaceActions
     {

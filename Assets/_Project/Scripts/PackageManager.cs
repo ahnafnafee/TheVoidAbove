@@ -35,7 +35,7 @@ namespace _Project.Scripts
             }
         }
 
-        public void drop(Vector3 vel)
+        public void Drop(Vector3 vel)
         {
             hasPackage = false;
             package.transform.parent = null;
@@ -46,7 +46,7 @@ namespace _Project.Scripts
             grabRange.SetActive(true);
         }
 
-        public void pickUp()
+        public void PickUp()
         {
             //TODO: Reference child object directly as hierarchical changes will create bugs
             

@@ -6,17 +6,22 @@ namespace _Project.Scripts
 {
     public class GunPickUp : MonoBehaviour
     {
+        PlayerControls _playerControls;
+        private Vector3 dropSize;
+
         [SerializeField]
         private GameObject grabUI;
-        private bool inRange;
-        PlayerControls _playerControls;
+
         private GameObject gun;
-        private Vector3 dropSize;
+
+        private bool inRange;
+
         // Start is called before the first frame update
         void Start()
         {
 
         }
+
         void Awake()
         {
             inRange = false;
@@ -29,11 +34,6 @@ namespace _Project.Scripts
         // Update is called once per frame
         void Update()
         {
-
-        }
-
-        private void FixedUpdate()
-        {
             if (inRange)
             {
                 grabUI.SetActive(true);
@@ -45,13 +45,13 @@ namespace _Project.Scripts
             PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
             if (inRange && actions.PickUp.triggered)
             {
-                pickUp();
+                PickUp();
             }
         }
 
-        private void pickUp()
+        private void PickUp()
         {
-            GameObject dropped = findEquipedGun();
+            GameObject dropped = FindEquippedGun();
             dropped.transform.parent = null;
             gun.transform.parent = this.transform;
             gun.transform.position = this.transform.Find("GunPos").position;
@@ -70,6 +70,7 @@ namespace _Project.Scripts
                 inRange = true;
             }
         }
+
         private void OnTriggerExit(Collider other)
         {
             if (other.transform.name.Contains("Gun") && other.GetComponent<WeaponScript>().isDropped())
@@ -79,7 +80,7 @@ namespace _Project.Scripts
             }
         }
 
-        private GameObject findEquipedGun()
+        private GameObject FindEquippedGun()
         {
             foreach(Transform child in this.transform)
             {

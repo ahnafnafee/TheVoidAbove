@@ -37,6 +37,7 @@ namespace _Project.Scripts
         [Header("Weapon Attribute")]
         //Gun stats
         public float timeBetweenShooting, spread, reloadTime, timeBetweenShots;
+        public LayerMask layerMask;
 
         [SerializeField]
         private bool dropped;
@@ -59,6 +60,8 @@ namespace _Project.Scripts
         // Update is called once per frame
         void Update()
         {
+            
+            
             if(!dropped)
             {
                 PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
@@ -77,9 +80,6 @@ namespace _Project.Scripts
 
         private void Shoot()
         {
-           // Raycast ignores layer 8
-            int layerMask = ~(1 << 8);
-            
             // readyToShoot = false;
 
             //Find the exact hit position using a raycast
@@ -100,6 +100,8 @@ namespace _Project.Scripts
                 // targetPoint = ray.GetPoint(75); //Just a point far away from the player
                 targetPoint = ray.origin + ray.direction * 10000.0f;
             }
+            
+            transform.LookAt(targetPoint);
             
             //Calculate direction from attackPoint to targetPoint
             var position = attackPoint.position;

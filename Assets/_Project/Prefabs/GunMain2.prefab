@@ -61,6 +61,9 @@ MonoBehaviour:
   spread: 3
   reloadTime: 1.5
   timeBetweenShots: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
   dropped: 1
 --- !u!65 &7439397437403816212
 BoxCollider:
