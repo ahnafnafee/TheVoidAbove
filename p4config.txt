@@ -1,6 +1,0 @@
-P4CONFIG=p4config.txt
-P4CLIENT=Ahnaf-PC
-P4IGNORE=D:\Nafee\Perforce\The_Void_Above\p4ignore.txt
-P4PASSWD=aa4247ChangeMe
-P4PORT=perforce.westphal.drexel.edu:1666
-P4USER=aa4247

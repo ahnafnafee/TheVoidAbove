@@ -43,6 +43,8 @@ namespace _Project.Scripts
         [Tooltip("Image component displaying current health")]
         public Image healthFillImage;
 
+        [Header("GUI")] [SerializeField] private GameObject pkgPointer;
+
         void Awake()
         {
             _playerControls = new PlayerControls();
@@ -55,6 +57,7 @@ namespace _Project.Scripts
         {
             Cursor.lockState = CursorLockMode.Locked;
             pHealth = GetComponent<Health>();
+            pkgPointer.SetActive(true);
         }
 
 

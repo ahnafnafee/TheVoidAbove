@@ -12,6 +12,7 @@ TagManager:
   - warning
   - Enemy
   - Bullet
+  - Goal
   layers:
   - Default
   - TransparentFX
