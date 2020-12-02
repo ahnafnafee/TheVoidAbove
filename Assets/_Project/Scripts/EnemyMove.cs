@@ -17,8 +17,9 @@ namespace _Project.Scripts
         public GameObject enemyHealthObj;
 
         public GameObject hitParticlePrefab;
-
         [SerializeField] private GameObject gun;
+
+
         // Start is called before the first frame update
         void Start()
         {
@@ -44,6 +45,7 @@ namespace _Project.Scripts
             else if(isAiming)
             {
                 transform.position = Vector3.MoveTowards(transform.position, target.transform.position, enemySpeed * Time.deltaTime);
+                transform.Find("Anvil Enemy Gun up").LookAt(target.transform);
             }
             
             enemyHealthObj.transform.LookAt(target.transform);
