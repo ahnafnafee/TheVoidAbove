@@ -7,7 +7,6 @@ namespace _Project.Scripts
     {
         [SerializeField]
         private float enemySpeed;
-        [SerializeField]
         private GameObject target;
         private bool right;
         private bool isAiming = false;
@@ -18,9 +17,12 @@ namespace _Project.Scripts
         public GameObject enemyHealthObj;
 
         public GameObject hitParticlePrefab;
+
+        [SerializeField] private GameObject gun;
         // Start is called before the first frame update
         void Start()
         {
+            target = GameObject.FindWithTag("Player");
             right = false;
             enemyHealth = GetComponent<Health>();
         }
@@ -71,14 +73,14 @@ namespace _Project.Scripts
             }
         }
 
-        public void startAiming()
+        public void StartAiming()
         {
             isAiming = true;
-            this.transform.GetChild(1).GetComponent<EnemyGun>().startShooting();
+            gun.GetComponent<EnemyGun>().startShooting();
         }
-        public void stopAiming()
+        public void StopAiming()
         {
-            this.transform.GetChild(1).GetComponent<EnemyGun>().stopShooting();
+            gun.GetComponent<EnemyGun>().stopShooting();
             isAiming = false;
         }
     }

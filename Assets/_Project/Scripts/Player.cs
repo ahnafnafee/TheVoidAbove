@@ -184,6 +184,7 @@ namespace _Project.Scripts
             if (other.CompareTag("OuterZone"))
             {
                 transform.position = respawnPoint.transform.position;
+                transform.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             }
         }
         

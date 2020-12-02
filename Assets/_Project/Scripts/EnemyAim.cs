@@ -7,36 +7,42 @@ namespace _Project.Scripts
 {
     public class EnemyAim : MonoBehaviour
     {
-        [SerializeField]
         private GameObject target;
+        [SerializeField] private GameObject enemyModel;
         [SerializeField]
         private float enemySpeed;
         private Quaternion initialRotation;
-        // Start is called before the first frame update
+        private Quaternion modelRotation;
+
+
         void Start()
         {
-            initialRotation = this.transform.parent.rotation;
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
+            target = GameObject.FindWithTag("Player");
+            initialRotation = transform.parent.rotation;
+            modelRotation = enemyModel.transform.rotation;
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.tag.Equals(target.tag))
             {
-                this.transform.parent.GetComponent<EnemyMove>().startAiming();
+                Quaternion.Lerp(transform.rotation, target.transform.rotation, 0.2f);
+                transform.parent.GetComponent<EnemyMove>().StartAiming();
             }
         }
         private void OnTriggerExit(Collider other)
         {
             if (other.tag.Equals(target.tag))
             {
-                this.transform.parent.rotation = initialRotation;
-                this.transform.parent.GetComponent<EnemyMove>().stopAiming();
+                Quaternion.Lerp(enemyModel.transform.rotation, modelRotation, 0.5f);
+                var parent = transform.parent;
+                parent.rotation = initialRotation;
+                parent.GetComponent<EnemyMove>().StopAiming();
             }
+        }
+
+        private void SmoothLookAt(Vector3 newDirection){
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(newDirection), 0.2f);
         }
     }
 }

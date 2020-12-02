@@ -11,11 +11,10 @@ public class Compass : MonoBehaviour
     public bool package = true;
     public Transform target;
     
-    
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     void Awake()
@@ -27,7 +26,7 @@ public class Compass : MonoBehaviour
     {
         package = player.GetComponent<PackageManager>().hasPackage;
         checkTarget();
-        transform.LookAt(target);   
+        transform.forward = (target.position - player.transform.position).normalized;   
     }
 
     public void checkTarget()
