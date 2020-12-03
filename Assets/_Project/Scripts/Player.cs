@@ -38,6 +38,7 @@ namespace _Project.Scripts
         private GameObject respawnPoint,warning;
         
         [Header("Weapon")] public WeaponScript weapon;
+        [SerializeField] GameObject rightClickFX,targetPoint;
 
         [Header("Player")] private Health pHealth;
         [Tooltip("Image component displaying current health")]
@@ -58,6 +59,7 @@ namespace _Project.Scripts
             Cursor.lockState = CursorLockMode.Locked;
             pHealth = GetComponent<Health>();
             pkgPointer.SetActive(true);
+            
         }
 
 
@@ -81,8 +83,11 @@ namespace _Project.Scripts
 
             if (actions.PushBack.triggered)
             {
+                Debug.Log("Asdas");
                 //When you click LMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
                 _rb.AddForce(-mainCam.transform.forward * pushBackSpeed, ForceMode.VelocityChange);
+                GameObject fx = Instantiate(rightClickFX, targetPoint.transform.position, targetPoint.transform.rotation);
+                Destroy(fx, 5);
             }
             
             healthFillImage.fillAmount = pHealth.objectHealth / pHealth.health;
@@ -125,6 +130,12 @@ namespace _Project.Scripts
             //Add anything you want to happen when the player collides in here. It updates akin to Update()
             //TODO:Produce some conditionals and tag our assets to discriminate in collisions (I.E.: when they hit a big rock vs a tiny rock, the tiny debris should yield instead of the player)
 
+            if (col.collider.CompareTag("Mine"))
+            {
+                pHealth.TakeDamage(30);
+                Destroy(col.gameObject);
+                
+            }
             if (col.relativeVelocity.magnitude <= safeSpeed)
             {
                 Debug.Log("Safe contact.");
@@ -185,6 +196,8 @@ namespace _Project.Scripts
             {
                 transform.position = respawnPoint.transform.position;
                 transform.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+                _rb.velocity = Vector3.zero;
+                _rb.angularVelocity = Vector3.zero;
             }
         }
         

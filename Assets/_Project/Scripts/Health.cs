@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
 
     [Header("Respawn Point")] 
     [SerializeField] private GameObject respawnPoint;
+    [SerializeField] private GameObject explosionFx;
+    [SerializeField] private GameObject enemyCenter;
 
     void Start()
     {
@@ -30,10 +32,15 @@ public class Health : MonoBehaviour
 
             if (gameObject.CompareTag("Player"))
             {
+                Rigidbody _rb = GetComponent<Rigidbody>();
                 transform.position = respawnPoint.transform.position;
+                _rb.velocity = Vector3.zero;
+                _rb.angularVelocity = Vector3.zero;
             }
             else
             {
+                var transform1 = enemyCenter.transform;
+                Instantiate(explosionFx, transform1.position, transform1.rotation);
                 Destroy(gameObject);
             }
             

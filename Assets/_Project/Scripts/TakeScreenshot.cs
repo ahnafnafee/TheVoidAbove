@@ -13,7 +13,7 @@ namespace _Project.Scripts
         
         private static Random random = new Random();
 
-        public CanvasGroup m_MenuCanvas = null;
+        // public CanvasGroup m_MenuCanvas = null;
         Texture2D m_Texture;
 
         bool m_TakeScreenshot;
@@ -31,7 +31,7 @@ namespace _Project.Scripts
 
             if (m_TakeScreenshot)
             {
-                m_MenuCanvas.alpha = 0;
+                // m_MenuCanvas.alpha = 0;
                 ScreenCapture.CaptureScreenshot(getPath());
                 m_TakeScreenshot = false;
                 m_ScreenshotTaken = true;
@@ -45,7 +45,7 @@ namespace _Project.Scripts
                 AssetDatabase.Refresh();
 #endif
 
-                m_MenuCanvas.alpha = 1;
+                // m_MenuCanvas.alpha = 1;
                 m_ScreenshotTaken = false;
             }
         }

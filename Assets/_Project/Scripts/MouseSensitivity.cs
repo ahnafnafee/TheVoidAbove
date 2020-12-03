@@ -1,5 +1,6 @@
 ﻿using System;
 using Cinemachine;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -20,6 +21,10 @@ namespace _Project.Scripts
         [SerializeField] private float lSpeed = default;
         private const double Tolerance = 0.001f;
 
+        [Header("GUI Texts")]
+        [SerializeField] private TextMeshProUGUI xVal;
+        [SerializeField] private TextMeshProUGUI yVal;
+
         UnityEvent mEvent = new UnityEvent();
 
         public void Start()
@@ -27,6 +32,10 @@ namespace _Project.Scripts
             _freeLookComponent = GetComponent<CinemachineFreeLook>();
             lookSpeedX = _freeLookComponent.m_XAxis.m_MaxSpeed;
             lookSpeedY = _freeLookComponent.m_YAxis.m_MaxSpeed;
+
+            xVal.text = Convert.ToString(lookSpeedX);
+            yVal.text = Convert.ToString(lookSpeedY);
+
             mEvent.AddListener(UpdateAxis);
 
         }
@@ -51,11 +60,13 @@ namespace _Project.Scripts
 
         public void MouseSensitivityX (float speed)
         {
+            xVal.text = Convert.ToString(speed);
             lookSpeedX = speed;
         }
         
         public void MouseSensitivityY (float speed)
         {
+            yVal.text = Convert.ToString(speed);
             lookSpeedY = speed;
         }
     }

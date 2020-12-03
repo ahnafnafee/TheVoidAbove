@@ -64,7 +64,7 @@ namespace _Project.Scripts
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.transform.name.Contains("Gun") && other.GetComponent<WeaponScript>().isDropped())
+            if (other.transform.name.Contains("Gun") && !other.CompareTag("Enemy") && other.GetComponent<WeaponScript>().isDropped())
             {
                 gun = other.gameObject;
                 inRange = true;
@@ -73,7 +73,7 @@ namespace _Project.Scripts
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.transform.name.Contains("Gun") && other.GetComponent<WeaponScript>().isDropped())
+            if (other.transform.name.Contains("Gun") && !other.CompareTag("Enemy") && other.GetComponent<WeaponScript>().isDropped())
             {
                 gun = null;
                 inRange = false;

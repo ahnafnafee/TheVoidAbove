@@ -2,18 +2,30 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\nafee\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\nafee\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_The_Void_Above.207273288.00" t="ExcludeRecursive" />
-    <e p="D:\Perforce\The_Void_Above" t="IncludeRecursive">
+    <e p="C:\Users\nafee\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_The_Void_Above.-2068558469.00" t="ExcludeRecursive" />
+    <e p="D:\PF\aa4247_PC2\The_Void_Above" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_Project" t="Include">
+          <e p="Models" t="Include">
+            <e p="Exported" t="Include">
+              <e p="Integrations" t="Include">
+                <e p="Autodesk" t="Include">
+                  <e p="maya" t="Include">
+                    <e p="UnityFbxForMaya.txt" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
           <e p="Scripts" t="Include">
             <e p="BulletManager.cs" t="Include" />
             <e p="BulletScript.cs" t="Include" />
             <e p="ButtonManager.cs" t="Include" />
             <e p="CombineMesh.cs" t="Include" />
             <e p="Compass.cs" t="Include" />
+            <e p="DestroyFX.cs" t="Include" />
             <e p="EnemyAim.cs" t="Include" />
             <e p="EnemyGun.cs" t="Include" />
             <e p="EnemyMove.cs" t="Include" />
@@ -27,6 +39,7 @@
             <e p="InputActions" t="Include">
               <e p="PlayerControls.cs" t="Include" />
             </e>
+            <e p="Mines.cs" t="Include" />
             <e p="MouseSensitivity.cs" t="Include" />
             <e p="Old" t="Include">
               <e p="CameraControl.cs" t="Include" />
@@ -38,6 +51,7 @@
             <e p="randomDebris.cs" t="Include" />
             <e p="Respawn.cs" t="Include" />
             <e p="Spawn planet.cs" t="Include" />
+            <e p="SpawnField.cs" t="Include" />
             <e p="SpawningArea.cs" t="Include" />
             <e p="StarField.cs" t="Include" />
             <e p="TakeScreenshot.cs" t="Include" />
@@ -49,98 +63,12 @@
             <e p="WeaponScript.cs" t="Include" />
           </e>
           <e p="Shader" t="Include">
+            <e p="Add2.shader" t="Include" />
             <e p="Lit2.shader" t="Include" />
-          </e>
-        </e>
-        <e p="External" t="Include">
-          <e p="PathCreator" t="Include">
-            <e p="Core" t="Include">
-              <e p="Editor" t="Include">
-                <e p="Helper" t="Include">
-                  <e p="MouseUtility.cs" t="Include" />
-                  <e p="PathHandle.cs" t="Include" />
-                  <e p="ScreenSpacePolyLine.cs" t="Include" />
-                </e>
-                <e p="PathCreatorEditor.asmdef" t="Include" />
-                <e p="PathEditor.cs" t="Include" />
-              </e>
-              <e p="Runtime" t="Include">
-                <e p="Objects" t="Include">
-                  <e p="BezierPath.cs" t="Include" />
-                  <e p="EndOfPathInstruction.cs" t="Include" />
-                  <e p="GlobalDisplaySettings.cs" t="Include" />
-                  <e p="MinMax3D.cs" t="Include" />
-                  <e p="PathCreator.cs" t="Include" />
-                  <e p="PathCreatorData.cs" t="Include" />
-                  <e p="PathSpace.cs" t="Include" />
-                  <e p="VertexPath.cs" t="Include" />
-                </e>
-                <e p="PathCreator.asmdef" t="Include" />
-                <e p="Utility" t="Include">
-                  <e p="CubicBezierUtility.cs" t="Include" />
-                  <e p="MathUtility.cs" t="Include" />
-                  <e p="VertexPathUtility.cs" t="Include" />
-                </e>
-              </e>
-            </e>
-            <e p="Examples" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="Editor" t="Include">
-                  <e p="PathSceneToolEditor.cs" t="Include" />
-                </e>
-                <e p="GeneratePathExample.cs" t="Include" />
-                <e p="PathFollower.cs" t="Include" />
-                <e p="PathPlacer.cs" t="Include" />
-                <e p="PathSceneTool.cs" t="Include" />
-                <e p="PathSpawner.cs" t="Include" />
-                <e p="RoadMeshCreator.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-          <e p="PolygonSciFiSpace" t="Include">
-            <e p="Shaders" t="Include">
-              <e p="POLYGON_SpaceShip_Rim.shader" t="Include" />
-              <e p="POLYGON_Triplanar.shader" t="Include" />
-              <e p="SyntyStudios_Asteroid.shader" t="Include" />
-              <e p="SyntyStudios_Planet.shader" t="Include" />
-              <e p="SyntyStudios_Planet_Lines.shader" t="Include" />
-              <e p="SyntyStudios_Triplanar_ObjectSpace.shader" t="Include" />
-            </e>
-          </e>
-          <e p="Real Stars Skybox" t="Include">
-            <e p="Demo Scene" t="Include">
-              <e p="Documentation.txt" t="Include" />
-            </e>
-          </e>
-          <e p="TextMesh Pro" t="Include">
-            <e p="Fonts" t="Include">
-              <e p="LiberationSans - OFL.txt" t="Include" />
-            </e>
-            <e p="Resources" t="Include">
-              <e p="LineBreaking Following Characters.txt" t="Include" />
-              <e p="LineBreaking Leading Characters.txt" t="Include" />
-            </e>
-            <e p="Shaders" t="Include">
-              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
-              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
-              <e p="TMP_Bitmap.shader" t="Include" />
-              <e p="TMP_SDF Overlay.shader" t="Include" />
-              <e p="TMP_SDF SSD.shader" t="Include" />
-              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
-              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
-              <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
-              <e p="TMP_SDF-Mobile.shader" t="Include" />
-              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
-              <e p="TMP_SDF-Surface.shader" t="Include" />
-              <e p="TMP_SDF.shader" t="Include" />
-              <e p="TMP_Sprite.shader" t="Include" />
-              <e p="TMPro.cginc" t="Include" />
-              <e p="TMPro_Mobile.cginc" t="Include" />
-              <e p="TMPro_Properties.cginc" t="Include" />
-              <e p="TMPro_Surface.cginc" t="Include" />
-            </e>
-            <e p="Sprites" t="Include">
-              <e p="EmojiOne Attribution.txt" t="Include" />
+            <e p="Toon" t="Include">
+              <e p="SimpleURPToonLitOutlineExample.shader" t="Include" />
+              <e p="SimpleURPToonLitOutlineExample_LightingEquation.hlsl" t="Include" />
+              <e p="SimpleURPToonLitOutlineExample_Shared.hlsl" t="Include" />
             </e>
           </e>
         </e>
@@ -378,6 +306,91 @@
               <e p="Simple Sine Wave.shader" t="Include" />
               <e p="Snow.shader" t="Include" />
             </e>
+          </e>
+        </e>
+        <e p="PathCreator" t="Include">
+          <e p="Core" t="Include">
+            <e p="Editor" t="Include">
+              <e p="Helper" t="Include">
+                <e p="MouseUtility.cs" t="Include" />
+                <e p="PathHandle.cs" t="Include" />
+                <e p="ScreenSpacePolyLine.cs" t="Include" />
+              </e>
+              <e p="PathCreatorEditor.asmdef" t="Include" />
+              <e p="PathEditor.cs" t="Include" />
+            </e>
+            <e p="Runtime" t="Include">
+              <e p="Objects" t="Include">
+                <e p="BezierPath.cs" t="Include" />
+                <e p="EndOfPathInstruction.cs" t="Include" />
+                <e p="GlobalDisplaySettings.cs" t="Include" />
+                <e p="MinMax3D.cs" t="Include" />
+                <e p="PathCreator.cs" t="Include" />
+                <e p="PathCreatorData.cs" t="Include" />
+                <e p="PathSpace.cs" t="Include" />
+                <e p="VertexPath.cs" t="Include" />
+              </e>
+              <e p="PathCreator.asmdef" t="Include" />
+              <e p="Utility" t="Include">
+                <e p="CubicBezierUtility.cs" t="Include" />
+                <e p="MathUtility.cs" t="Include" />
+                <e p="VertexPathUtility.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Examples" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Editor" t="Include">
+                <e p="PathSceneToolEditor.cs" t="Include" />
+              </e>
+              <e p="GeneratePathExample.cs" t="Include" />
+              <e p="PathFollower.cs" t="Include" />
+              <e p="PathPlacer.cs" t="Include" />
+              <e p="PathSceneTool.cs" t="Include" />
+              <e p="PathSpawner.cs" t="Include" />
+              <e p="RoadMeshCreator.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PolygonSciFiSpace" t="Include">
+          <e p="Shaders" t="Include">
+            <e p="POLYGON_SpaceShip_Rim.shader" t="Include" />
+            <e p="POLYGON_Triplanar.shader" t="Include" />
+            <e p="SyntyStudios_Asteroid.shader" t="Include" />
+            <e p="SyntyStudios_Planet.shader" t="Include" />
+            <e p="SyntyStudios_Planet_Lines.shader" t="Include" />
+            <e p="SyntyStudios_Triplanar_ObjectSpace.shader" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
       </e>

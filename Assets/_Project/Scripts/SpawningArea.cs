@@ -14,24 +14,14 @@ namespace _Project.Scripts
    
         private float nextSpawn = 0;
         public int astCount;
- 
-        // Update is called once per frame
-        // void Update () {           
-        //
-        //     if(Time.time > nextSpawn)
-        //     {
-        //         nextSpawn = Time.time + rateOfSpawn;
-        //    
-        //         // Random position within this transform
-        //         Vector3 rndPosWithin;
-        //         rndPosWithin = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-        //         rndPosWithin = transform.TransformPoint(rndPosWithin * .5f);
-        //         Instantiate(objectToSpawn, rndPosWithin, transform.rotation);      
-        //     }
-        // }
+        float offsetX, offsetY, offsetZ;
+        Bounds bounds;
+
 
         private void Start()
         {
+            bounds = GetComponent<Collider>().bounds;
+           
             for (int i = 0; i < astCount; i++)
             {
                 Spawn();
@@ -40,11 +30,10 @@ namespace _Project.Scripts
 
         void Spawn()
         {
-            Bounds bounds = GetComponent<Collider>().bounds;
-            float offsetX = Random.Range(-bounds.extents.x, bounds.extents.x);
-            float offsetY = Random.Range(-bounds.extents.y, bounds.extents.y);
-            float offsetZ = Random.Range(-bounds.extents.z, bounds.extents.z);
-     
+            offsetX = Random.Range(-bounds.extents.x, bounds.extents.x);
+            offsetY = Random.Range(-bounds.extents.y, bounds.extents.y);
+            offsetZ = Random.Range(-bounds.extents.z, bounds.extents.z);
+
             GameObject asteroid = Instantiate(objectToSpawn, gameObject.transform, true);
             asteroid.transform.position = bounds.center + new Vector3(offsetX, offsetY, offsetZ);
             asteroid.transform.rotation = Random.rotation;
