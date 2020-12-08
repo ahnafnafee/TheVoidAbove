@@ -44,8 +44,10 @@ namespace _Project.Scripts
             }
             else if(isAiming)
             {
+                Vector3 direction = target.transform.position - transform.position;
                 transform.position = Vector3.MoveTowards(transform.position, target.transform.position, enemySpeed * Time.deltaTime);
-                transform.Find("Anvil Enemy Gun up").LookAt(target.transform);
+                transform.Find("Anvil Enemy Gun up").rotation = Quaternion.Slerp(transform.Find("Anvil Enemy Gun up").rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * enemySpeed);
+                //transform.Find("Anvil Enemy Gun up").LookAt(target.transform);
             }
             
             enemyHealthObj.transform.LookAt(target.transform);
@@ -55,10 +57,7 @@ namespace _Project.Scripts
         {
             if (other.transform.tag.Equals("Turn"))
             {
-                if (other.transform.tag.Equals("Turn"))
-                {
-                    right = !right;
-                }
+                right = !right;
             }
         }
         

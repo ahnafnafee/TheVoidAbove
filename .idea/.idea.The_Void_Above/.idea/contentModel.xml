@@ -26,6 +26,7 @@
             <e p="CombineMesh.cs" t="Include" />
             <e p="Compass.cs" t="Include" />
             <e p="DestroyFX.cs" t="Include" />
+            <e p="DissolveEffect.cs" t="Include" />
             <e p="EnemyAim.cs" t="Include" />
             <e p="EnemyGun.cs" t="Include" />
             <e p="EnemyMove.cs" t="Include" />
@@ -40,6 +41,9 @@
               <e p="PlayerControls.cs" t="Include" />
             </e>
             <e p="Mines.cs" t="Include" />
+            <e p="Misc" t="Include">
+              <e p="DestroyTunnel.cs" t="Include" />
+            </e>
             <e p="MouseSensitivity.cs" t="Include" />
             <e p="Old" t="Include">
               <e p="CameraControl.cs" t="Include" />
@@ -53,8 +57,10 @@
             <e p="Spawn planet.cs" t="Include" />
             <e p="SpawnField.cs" t="Include" />
             <e p="SpawningArea.cs" t="Include" />
+            <e p="SpawnTutorial.cs" t="Include" />
             <e p="StarField.cs" t="Include" />
             <e p="TakeScreenshot.cs" t="Include" />
+            <e p="Tutorial.cs" t="Include" />
             <e p="Utils" t="Include">
               <e p="FunctionUpdater.cs" t="Include" />
               <e p="UtilsClass.cs" t="Include" />
