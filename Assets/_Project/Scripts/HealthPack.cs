@@ -8,11 +8,10 @@ namespace _Project.Scripts
     {
         [SerializeField]
         private float gainedHealth;
-        // Start is called before the first frame update
-        void Start()
-        {
+        [SerializeField]
+        private float rotSpeed;
 
-        }
+        private float enemyHealth;
 
         // Update is called once per frame
         void Update()
@@ -21,6 +20,8 @@ namespace _Project.Scripts
             //var roty = transform.rotation.y;
             //var rotz = transform.rotation.z;
             //transform.Rotate(rotx, roty, rotz);
+
+            transform.Rotate(0, rotSpeed * Time.deltaTime, 0, Space.World);
         }
 
         private void OnTriggerEnter(Collider other)

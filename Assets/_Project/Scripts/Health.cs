@@ -53,7 +53,7 @@ public class Health : MonoBehaviour
             {
                 var transform1 = enemyCenter.transform;
                 Instantiate(explosionFx, transform1.position, transform1.rotation);
-                Instantiate(healthPack, transform1.position, transform1.rotation);
+                Instantiate(healthPack, transform1.position, Quaternion.identity);
                 Destroy(gameObject);
             }
             

@@ -71,7 +71,10 @@
             <e p="TakeScreenshot.cs" t="Include" />
             <e p="Tutorial.cs" t="Include" />
             <e p="Utils" t="Include">
+              <e p="DontGoThroughThings.cs" t="Include" />
               <e p="FunctionUpdater.cs" t="Include" />
+              <e p="GlobalVar.cs" t="Include" />
+              <e p="MoveAlong.cs" t="Include" />
               <e p="UtilsClass.cs" t="Include" />
             </e>
             <e p="Warning.cs" t="Include" />
@@ -258,6 +261,66 @@
               <e p="Fast UI Blur.shader" t="Include" />
               <e p="Masked UI Blur.shader" t="Include" />
               <e p="UI Blur.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Plugins" t="Include">
+            <e p="VolumetricLightBeam" t="Include">
+              <e p="Editor" t="Include">
+                <e p="ConfigEditor.cs" t="Include" />
+                <e p="ConfigOverrideEditor.cs" t="Include" />
+                <e p="DynamicOcclusionEditor.cs" t="Include" />
+                <e p="EditorCommon.cs" t="Include" />
+                <e p="EditorExtensions.cs" t="Include" />
+                <e p="EditorStrings.cs" t="Include" />
+                <e p="ReflectionUtils.cs" t="Include" />
+                <e p="TriggerZoneEditor.cs" t="Include" />
+                <e p="VolumetricDustParticlesEditor.cs" t="Include" />
+                <e p="VolumetricLightBeamEditor.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+              <e p="Resources" t="Include">
+                <e p="Shaders" t="Include">
+                  <e p="ShaderIncludes.cginc" t="Include" />
+                  <e p="ShaderMaths.cginc" t="Include" />
+                  <e p="ShaderSRP.cginc" t="Include" />
+                  <e p="ShaderUtils.cginc" t="Include" />
+                  <e p="VolumetricLightBeam1Pass.shader" t="Include" />
+                  <e p="VolumetricLightBeam2Pass.shader" t="Include" />
+                  <e p="VolumetricLightBeamShared.cginc" t="Include" />
+                </e>
+              </e>
+              <e p="Samples" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="CameraToggleBeamVisibility.cs" t="Include" />
+                  <e p="CheckIfInsideBeam.cs" t="Include" />
+                  <e p="FeaturesNotSupportedMessage.cs" t="Include" />
+                  <e p="FreeCameraController.cs" t="Include" />
+                  <e p="LightGenerator.cs" t="Include" />
+                  <e p="Rotater.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="BeamGeometry.cs" t="Include" />
+                <e p="CachedLightProperties.cs" t="Include" />
+                <e p="Config.cs" t="Include" />
+                <e p="ConfigOverride.cs" t="Include" />
+                <e p="Consts.cs" t="Include" />
+                <e p="DynamicOcclusion.cs" t="Include" />
+                <e p="Enums.cs" t="Include" />
+                <e p="GlobalMesh.cs" t="Include" />
+                <e p="GpuInstancing.cs" t="Include" />
+                <e p="HighlightNullAttribute.cs" t="Include" />
+                <e p="MaterialKeywordSRP.cs" t="Include" />
+                <e p="MaterialManager.cs" t="Include" />
+                <e p="MeshGenerator.cs" t="Include" />
+                <e p="Noise3D.cs" t="Include" />
+                <e p="ShaderProperties.cs" t="Include" />
+                <e p="TriggerZone.cs" t="Include" />
+                <e p="Utils.cs" t="Include" />
+                <e p="Version.cs" t="Include" />
+                <e p="VolumetricDustParticles.cs" t="Include" />
+                <e p="VolumetricLightBeam.cs" t="Include" />
+              </e>
             </e>
           </e>
           <e p="PolygonParticles" t="Include">

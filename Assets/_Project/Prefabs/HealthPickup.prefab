@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6188982617957943217}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -147.03879, y: 106.3, z: -22.1}
-  m_LocalScale: {x: 25.275953, y: 25.275953, z: 25.275953}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 1468817684748407633}
   m_Father: {fileID: 0}
@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gainedHealth: 30
+  rotSpeed: 40
 --- !u!135 &883994817871292702
 SphereCollider:
   m_ObjectHideFlags: 0
