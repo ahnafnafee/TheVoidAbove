@@ -101,7 +101,7 @@ namespace _Project.Scripts
                 targetPoint = ray.origin + ray.direction * 10000.0f;
             }
             
-            transform.LookAt(targetPoint);
+            // transform.LookAt(targetPoint);
             
             //Calculate direction from attackPoint to targetPoint
             var position = attackPoint.position;

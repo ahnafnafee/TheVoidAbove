@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CartoonWaterTut01
+  m_Shader: {fileID: 4800000, guid: 331e1efadb234114ebb79d1deed48026, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - Vector1_13644CCE: 0.86
+    - Vector1_1B7C48: 5
+    - Vector1_4D9760F1: 0.1
+    - Vector1_6E16716E: 0.7
+    - Vector1_6F0A222B: 4.2
+    - Vector1_74A80DE6: 0.75
+    - Vector1_7811432D: 2
+    - Vector1_83940822: 0.7
+    - Vector1_88491516: 5
+    - Vector1_8EF7882E: 0.5
+    - Vector1_99316EC6: 0.75
+    - Vector1_9C3C4275: 4.2
+    - Vector1_A285FA0E: 0.75
+    - Vector1_A906F155: 0.77
+    - Vector1_C40F9452: 0.75
+    - Vector1_D42F1576: 1.3
+    - Vector1_D5487F0: 0.5
+    - Vector1_DBE88377: 0.1
+    - Vector1_EC89DE30: 1.3
+    - Vector1_FA6D3FBF: -0.12
+    m_Colors:
+    - Color_2BD67D6D: {r: 0.29803923, g: 1.1137255, b: 1.4980392, a: 1}
+    - Color_2F4791C7: {r: 0.13587542, g: 0.601734, b: 0.6516474, a: 0}
+    - Color_43EA408F: {r: 0.23424439, g: 1.7207954, b: 0.85589296, a: 1}
+    - Color_4792B631: {r: 0.7578583, g: 0.7578583, b: 0.7578583, a: 0}
+    - Color_56C00BF: {r: 0, g: 2.6117253, b: 6.173169, a: 0}
+    - Color_6A8BD63: {r: 0.6337277, g: 1.2893355, b: 1.4142135, a: 1}
+    - Color_773A9FD1: {r: 0.36870375, g: 2.6218934, b: 1.3109467, a: 1}
+    - Color_B90166E3: {r: 0, g: 4.3698225, b: 10.487574, a: 1}
+    - Vector2_50DC9007: {r: 0.05, g: -0.01, b: 0, a: 0}
+    - Vector2_D69CD8CD: {r: 0.05, g: -0.01, b: 0, a: 0}

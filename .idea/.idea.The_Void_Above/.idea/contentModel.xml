@@ -37,12 +37,21 @@
             <e p="GunPickUp.cs" t="Include" />
             <e p="GunScript.cs" t="Include" />
             <e p="Health.cs" t="Include" />
+            <e p="HealthPack.cs" t="Include" />
+            <e p="HUD" t="Include">
+              <e p="Hud.cs" t="Include" />
+              <e p="HudInfo.cs" t="Include" />
+              <e p="HUDManager.cs" t="Include" />
+              <e p="HudType.cs" t="Include" />
+              <e p="HudUtility.cs" t="Include" />
+            </e>
             <e p="InputActions" t="Include">
               <e p="PlayerControls.cs" t="Include" />
             </e>
             <e p="Mines.cs" t="Include" />
             <e p="Misc" t="Include">
               <e p="DestroyTunnel.cs" t="Include" />
+              <e p="DissolveScript.cs" t="Include" />
             </e>
             <e p="MouseSensitivity.cs" t="Include" />
             <e p="Old" t="Include">
@@ -70,6 +79,7 @@
           </e>
           <e p="Shader" t="Include">
             <e p="Add2.shader" t="Include" />
+            <e p="FF_Shader.shader" t="Include" />
             <e p="Lit2.shader" t="Include" />
             <e p="Toon" t="Include">
               <e p="SimpleURPToonLitOutlineExample.shader" t="Include" />

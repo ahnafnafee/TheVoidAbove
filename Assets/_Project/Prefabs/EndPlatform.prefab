@@ -4677,6 +4677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5756708597985216084}
+  - component: {fileID: 4105120487536933125}
   m_Layer: 0
   m_Name: EndPlatform
   m_TagString: Untagged
@@ -4699,6 +4700,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4105120487536933125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5756708597985216085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846c8cb6d8cfbca40aafb3c42198143e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hudInfo:
+    m_Text: Portal
+    m_Target: {fileID: 6535171641283749145}
+    m_Icon: {fileID: 2800000, guid: e5dee08939d6a804bb7397dc3557d01a, type: 3}
+    m_Color: {r: 0.02352939, g: 0.91796786, b: 0.972549, a: 1}
+    Offset: {x: 0, y: 0, z: 0}
+    m_HudType: 1
+    m_MaxSize: 50
+    HideOnCloseDistance: 150
+    HideOnLargeDistance: 0
+    ShowDistance: 1
+    ShowDynamically: 0
+    isPalpitin: 0
+    Arrow:
+      ShowArrow: 1
+      ArrowIcon: {fileID: 2800000, guid: 17555e9dc8bbfaa45a049cfb9ff5e6c9, type: 3}
+      ArrowOffset: {x: 0, y: 0, z: 0}
+      ArrowSize: 30
+    tip: 0
+    Hide: 0
 --- !u!1 &5756708598966001600
 GameObject:
   m_ObjectHideFlags: 0

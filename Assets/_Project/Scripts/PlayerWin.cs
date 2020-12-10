@@ -3,15 +3,17 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace _Project.Scripts
 {
     public class PlayerWin : MonoBehaviour
     {
-        [SerializeField] private GameObject winUI;
         private PlayerControls playerControls;
         public PackageManager pkgManager;
         [SerializeField] private int nextScene;
+        [SerializeField] private GameObject levelChangeInterface;
+        [SerializeField] private GameObject gameHud;
         private void Awake()
         {
             playerControls = new PlayerControls();
@@ -27,7 +29,7 @@ namespace _Project.Scripts
         {
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         }
-    
+
         private void OnEnable()
         {
             playerControls.Enable();
@@ -42,16 +44,18 @@ namespace _Project.Scripts
         {
             if (pkgManager.hasPackage && other.transform.CompareTag("Player"))
             {
-                winUI.SetActive(true);
                 if (nextScene != 4)
-                    StartCoroutine(LoadScene());
+                    StartCoroutine(LoadInterface());
             }
         }
 
-        IEnumerator LoadScene()
+        IEnumerator LoadInterface()
         {
-            yield return new WaitForSeconds(2.5f);
-            SceneManager.LoadScene(nextScene);
+            yield return new WaitForSeconds(3f);
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+            gameHud.SetActive(false);
+            levelChangeInterface.SetActive(true);
         }
     }
 }

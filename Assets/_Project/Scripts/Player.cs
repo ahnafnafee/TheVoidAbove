@@ -29,13 +29,13 @@ namespace _Project.Scripts
         [SerializeField] private float zSpeed;
         [SerializeField] private float range = 100f;
         [SerializeField] private float thrusterAcceleration;
-        [SerializeField] private float thrusterMaxSpeed;
+        [SerializeField] private float thrusterMaxSpeed,velocity,velocityThreshold,breakForce;
 
         [Header("Camera Controls")] [SerializeField]
         private Camera mainCam;
 
         [Header("Respawn Point")] [SerializeField]
-        private GameObject respawnPoint,warning;
+        private GameObject respawnPoint;
         
         [Header("Weapon")] public WeaponScript weapon;
         [SerializeField] GameObject rightClickFX,targetPoint;
@@ -44,7 +44,12 @@ namespace _Project.Scripts
         [Tooltip("Image component displaying current health")]
         public Image healthFillImage;
 
-        [Header("GUI")] [SerializeField] private GameObject pkgPointer;
+        [Header("Feedback Flash")]
+        [SerializeField] private Image feedFlash;
+
+        [SerializeField] private GameObject gameOverUI;
+ 
+        private IEnumerator coroutine;
 
         void Awake()
         {
@@ -58,7 +63,6 @@ namespace _Project.Scripts
         {
             Cursor.lockState = CursorLockMode.Locked;
             pHealth = GetComponent<Health>();
-            pkgPointer.SetActive(true);
             
         }
 
@@ -83,22 +87,26 @@ namespace _Project.Scripts
 
             if (actions.PushBack.triggered)
             {
-                Debug.Log("Asdas");
                 //When you click LMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
                 _rb.AddForce(-mainCam.transform.forward * pushBackSpeed, ForceMode.VelocityChange);
                 GameObject fx = Instantiate(rightClickFX, targetPoint.transform.position, targetPoint.transform.rotation);
                 Destroy(fx, 5);
             }
-            
+
+            var tempColor = feedFlash.color;
+            tempColor.a = 1f - (pHealth.objectHealth / pHealth.health);
+            feedFlash.color = tempColor;
+
             healthFillImage.fillAmount = pHealth.objectHealth / pHealth.health;
         }
 
 
         void FixedUpdate()
         {
-
+            var velocity1 = _rb.velocity;
+            velocity = velocity1.magnitude;
             PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
-
+            Vector3 oppVelo = -velocity1;
             //Apply forces based on the WASD/spc/shift controls in character controller 
             if (controlsActive)
             {
@@ -122,82 +130,92 @@ namespace _Project.Scripts
             {
                 _rb.velocity = _rb.velocity.normalized * maxSpeed;
             }
+
+            if (_rb.velocity.magnitude < velocityThreshold
+                && actions.ThrustersY.ReadValue<float>() == 0
+                && actions.ThrustersX.ReadValue<float>() == 0
+                && actions.ThrustersZ.ReadValue<float>() == 0)
+            {
+                _rb.AddForce(oppVelo.normalized * breakForce);
+            }
         }
 
         void OnCollisionEnter(Collision col)
         {
 
             //Add anything you want to happen when the player collides in here. It updates akin to Update()
-            //TODO:Produce some conditionals and tag our assets to discriminate in collisions (I.E.: when they hit a big rock vs a tiny rock, the tiny debris should yield instead of the player)
-
-            if (col.collider.CompareTag("Mine"))
+            if (col.collider.CompareTag("Mine") || col.collider.CompareTag("Mine") || col.collider.CompareTag("Debris"))
             {
-                pHealth.TakeDamage(30);
-                Destroy(col.gameObject);
-                
-            }
-            if (col.relativeVelocity.magnitude <= safeSpeed)
-            {
-                Debug.Log("Safe contact.");
-            }
-
-            else if (col.relativeVelocity.magnitude > safeSpeed & col.relativeVelocity.magnitude <= dangerSpeed)
-            {
-                Debug.Log("Bad contact.");
-                pHealth.TakeDamage(5);
-                if (!col.collider.CompareTag("Package"))
+                if (col.collider.CompareTag("Mine"))
                 {
+                    pHealth.TakeDamage(30);
+                    _rb.AddExplosionForce(10000f, transform.position, 100);
                     StartCoroutine(ControlLockTimer(0.5f));
-                    Bounce();
+                    this.GetComponent<PackageManager>().Drop(col.relativeVelocity);
+
+                    Destroy(col.gameObject);
+                    // if (!col.collider.CompareTag("Package"))
+                    // {
+                    //     StartCoroutine(ControlLockTimer(1.5f));
+                    //     Bounce();
+                    // }
+                    // GetComponent<PackageManager>().Drop(col.relativeVelocity);
+
                 }
-                this.GetComponent<PackageManager>().Drop(col.relativeVelocity);
-            }
-            //StartCoroutine(ControlLockTimer()); // Where s = the time in seconds to lock controls for            
-            else if (col.relativeVelocity.magnitude > dangerSpeed)
-            {
-                Debug.Log("LETHAL contact.");
-                pHealth.TakeDamage(10);
-                if (!col.collider.CompareTag("Package"))
+                if (col.relativeVelocity.magnitude <= safeSpeed)
                 {
-                    StartCoroutine(ControlLockTimer(2));
-                    Bounce();
+                    Debug.Log("Safe contact.");
                 }
-                this.GetComponent<PackageManager>().Drop(col.relativeVelocity);
-            }
 
-            void Bounce()
-            {
-                foreach (ContactPoint contact in col.contacts)
+                else if (col.relativeVelocity.magnitude > safeSpeed & col.relativeVelocity.magnitude <= dangerSpeed)
                 {
-                    normal += contact.normal;
+                    Debug.Log("Bad contact.");
+                    pHealth.TakeDamage(5);
+                    if (!col.collider.CompareTag("Package"))
+                    {
+                        StartCoroutine(ControlLockTimer(0.5f));
+                        Bounce();
+                    }
+                    this.GetComponent<PackageManager>().Drop(col.relativeVelocity);
+                }
+                //StartCoroutine(ControlLockTimer()); // Where s = the time in seconds to lock controls for            
+                else if (col.relativeVelocity.magnitude > dangerSpeed)
+                {
+                    Debug.Log("LETHAL contact.");
+                    pHealth.TakeDamage(10);
+                    if (!col.collider.CompareTag("Package"))
+                    {
+                        StartCoroutine(ControlLockTimer(2));
+                        Bounce();
+                    }
+                    this.GetComponent<PackageManager>().Drop(col.relativeVelocity);
                 }
 
-                normal.Normalize();
-                _rb.velocity += Vector3.Reflect(-col.relativeVelocity * 0.4f, normal);
-            }
-            //_rb.velocity = Vector3.Reflect(_rb.velocity, normal);
+                void Bounce()
+                {
+                    foreach (ContactPoint contact in col.contacts)
+                    {
+                        normal += contact.normal;
+                    }
 
+                    normal.Normalize();
+                    _rb.velocity += Vector3.Reflect(-col.relativeVelocity * 0.4f, normal);
+                }
+                //_rb.velocity = Vector3.Reflect(_rb.velocity, normal);
+            }
         }
 
-        private void OnTriggerStay(Collider other)
-        {
-            if (other.CompareTag("warning"))
-            {
-                warning.SetActive(true);
-            }
-        }
         private void OnTriggerExit(Collider other)
         {
-            if (other.CompareTag("warning"))
-            {
-                warning.SetActive(false);            
-            }
             if (other.CompareTag("OuterZone"))
             {
-                transform.position = respawnPoint.transform.position;
-                transform.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+                coroutine = gameOver(2);
+                StartCoroutine(coroutine);
+                transform.Find("PlayerBase").gameObject.SetActive(false);
+                Rigidbody _rb = GetComponent<Rigidbody>();
                 _rb.velocity = Vector3.zero;
                 _rb.angularVelocity = Vector3.zero;
+                gameOverUI.SetActive(true);
             }
         }
         
@@ -208,6 +226,17 @@ namespace _Project.Scripts
             yield return new WaitForSeconds(t);
 
             controlsActive = true;
+        }
+
+        private IEnumerator gameOver(float respawnTime)
+        {
+            yield return new WaitForSeconds(respawnTime);
+            transform.Find("PlayerBase").gameObject.SetActive(true);
+            Rigidbody _rb = GetComponent<Rigidbody>();
+            transform.position = respawnPoint.transform.position;
+            _rb.velocity = Vector3.zero;
+            _rb.angularVelocity = Vector3.zero;
+            gameOverUI.SetActive(false);
         }
     }
 }

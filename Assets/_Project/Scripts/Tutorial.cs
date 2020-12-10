@@ -32,12 +32,12 @@ namespace _Project.Scripts
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.tag.Equals("Player"))
-            {
-                Destroy(transform.GetChild(0).gameObject);
-                StartDissolve();
-                StartCoroutine(DestroyObject());
-            }
+            if (!other.tag.Equals("Player")) return;
+            if (transform.GetChild(0).gameObject == null) return;
+
+            Destroy(transform.GetChild(0).gameObject);
+            StartDissolve();
+            StartCoroutine(DestroyObject());
         }
 
         IEnumerator DestroyObject()

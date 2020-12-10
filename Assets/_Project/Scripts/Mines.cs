@@ -46,9 +46,18 @@ public class Mines : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (!col.collider.CompareTag("Player")) return;
-        var transform1 = transform;
-        GameObject fx = Instantiate(explosion, transform1.position, transform1.rotation);
-        Destroy(fx, 5.0f);
+        if (col.collider.CompareTag("Bullet"))
+        {
+            var transform1 = transform;
+            GameObject fx = Instantiate(explosion, transform1.position, transform1.rotation);
+            Destroy(fx, 5.0f);
+            Destroy(this.gameObject);
+        }
+        if (col.collider.CompareTag("Player"))
+        {
+            var transform1 = transform;
+            GameObject fx = Instantiate(explosion, transform1.position, transform1.rotation);
+            Destroy(fx, 5.0f);
+        }
     }
 }

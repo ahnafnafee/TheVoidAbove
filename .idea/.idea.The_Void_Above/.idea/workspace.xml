@@ -21,16 +21,44 @@
   <component name="ChangeListManager">
     <list default="true" id="9b97dfe6-8e2b-4066-9c65-3dd6ee961227" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/RedMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/RedMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/FPSMicroGame/FPS/Art/Materials/VFX/M_HealthPickup.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/FPSMicroGame/FPS/Art/Materials/VFX/M_HealthPickup.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Animation/warning_anim.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Animation/warning_anim.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/SpaceSkybox_v3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/SpaceSkybox_v3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/mat_bullet_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/mat_bullet_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/asteroid_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/asteroid_mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Bullet 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Bullet 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/EndPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/EndPlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Fx_EnemyExplosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Fx_EnemyExplosion.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/GameHUD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/GameHUD.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Mine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Mine.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Sun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Sun.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/ControlsScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/ControlsScreen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1/ReflectionProbe-0.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_2/ReflectionProbe-0.exr.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_2/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/TitleScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/TitleScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Mines.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Mines.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PlayerWin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PlayerWin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Tutorial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Tutorial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/WeaponScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/WeaponScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Shader/DissolveMat_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Shader/DissolveMat_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Shader/LightGreyBloom.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Shader/LightGreyBloom.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Shader/SunBloom.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Shader/SunBloom.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Shader/WhiteBloom.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Shader/WhiteBloom.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sprites/Crosshair_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Sprites/Crosshair_02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sprites/HexagonBorder.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Sprites/HexagonBorder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sprites/Keys/SHIFT.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Sprites/Keys/SHIFT.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/FbxExportSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/FbxExportSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.progrids/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.progrids/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +69,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Misc/DissolveScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/DestroyFX.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2500DD07-8A54-4A69-B6C9-23861AF6CD15/03/a52a2470/GUIStyle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/DissolveEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Misc/DestroyTunnel.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -54,7 +84,6 @@
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/GunPickUp.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/MouseSensitivity.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/TakeScreenshot.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Mines.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/DestroyFX.cs" />
@@ -62,6 +91,13 @@
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/SpawnTutorial.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Misc/DestroyTunnel.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Tutorial.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/HUD/HudInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PlayerWin.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Misc/DissolveScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/WeaponScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Textures/FF_Shader.shader" />
       </list>
     </option>
   </component>
@@ -118,6 +154,7 @@
       <workItem from="1606975680132" duration="2214000" />
       <workItem from="1606978995190" duration="641000" />
       <workItem from="1607438647335" duration="5353000" />
+      <workItem from="1607486490986" duration="14296000" />
     </task>
     <servers />
   </component>

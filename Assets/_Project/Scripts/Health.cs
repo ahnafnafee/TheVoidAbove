@@ -14,6 +14,15 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject explosionFx;
     [SerializeField] private GameObject enemyCenter;
 
+    [Header("Health Pack")]
+    [SerializeField]
+    private GameObject healthPack;
+
+    [SerializeField]
+    private GameObject gameOverUI; 
+
+    private IEnumerator coroutine;
+
     void Start()
     {
         health = objectHealth;
@@ -32,18 +41,33 @@ public class Health : MonoBehaviour
 
             if (gameObject.CompareTag("Player"))
             {
+                transform.Find("PlayerBase").gameObject.SetActive(false);   
+                coroutine = gameOver(2);
+                StartCoroutine(coroutine);
                 Rigidbody _rb = GetComponent<Rigidbody>();
-                transform.position = respawnPoint.transform.position;
                 _rb.velocity = Vector3.zero;
                 _rb.angularVelocity = Vector3.zero;
+                gameOverUI.SetActive(true);
             }
             else
             {
                 var transform1 = enemyCenter.transform;
                 Instantiate(explosionFx, transform1.position, transform1.rotation);
+                Instantiate(healthPack, transform1.position, transform1.rotation);
                 Destroy(gameObject);
             }
             
         }
+    }
+
+    private IEnumerator gameOver(float respawnTime)
+    {
+        yield return new WaitForSeconds(respawnTime);
+        transform.Find("PlayerBase").gameObject.SetActive(true);
+        Rigidbody _rb = GetComponent<Rigidbody>();
+        transform.position = respawnPoint.transform.position;
+        _rb.velocity = Vector3.zero;
+        _rb.angularVelocity = Vector3.zero;
+        gameOverUI.SetActive(false);
     }
 }
