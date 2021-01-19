@@ -31,6 +31,7 @@
             <e p="EnemyGun.cs" t="Include" />
             <e p="EnemyMove.cs" t="Include" />
             <e p="EnemyScript.cs" t="Include" />
+            <e p="FlowControl.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="GrabPackage.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
