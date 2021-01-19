@@ -70,8 +70,11 @@ namespace _Project.Scripts
                 {
                     if (actions.Gun.triggered)
                     {
-                        Shoot();
-                        bulletTimer = timer;
+                        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().controlsActive)
+                        {
+                            Shoot();
+                            bulletTimer = timer;
+                        }
                     }
                 }
                 bulletTimer -= Time.deltaTime;

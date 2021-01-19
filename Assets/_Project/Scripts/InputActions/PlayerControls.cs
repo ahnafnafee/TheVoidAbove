@@ -97,6 +97,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""debugStun"",
+                    ""type"": ""Button"",
+                    ""id"": ""e3aad9f1-c645-4e11-abdc-be2dbf280f69"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -308,6 +316,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""MouseLook"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7ac1f96a-e847-4eca-afc9-e83ccfb9d2d5"",
+                    ""path"": ""<Keyboard>/equals"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""debugStun"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -391,6 +410,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_PlayerStandard_PickUp = m_PlayerStandard.FindAction("PickUp", throwIfNotFound: true);
         m_PlayerStandard_PushBack = m_PlayerStandard.FindAction("PushBack", throwIfNotFound: true);
         m_PlayerStandard_MouseLook = m_PlayerStandard.FindAction("MouseLook", throwIfNotFound: true);
+        m_PlayerStandard_debugStun = m_PlayerStandard.FindAction("debugStun", throwIfNotFound: true);
         // UserInterface
         m_UserInterface = asset.FindActionMap("UserInterface", throwIfNotFound: true);
         m_UserInterface_Restart = m_UserInterface.FindAction("Restart", throwIfNotFound: true);
@@ -455,6 +475,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerStandard_PickUp;
     private readonly InputAction m_PlayerStandard_PushBack;
     private readonly InputAction m_PlayerStandard_MouseLook;
+    private readonly InputAction m_PlayerStandard_debugStun;
     public struct PlayerStandardActions
     {
         private @PlayerControls m_Wrapper;
@@ -469,6 +490,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @PickUp => m_Wrapper.m_PlayerStandard_PickUp;
         public InputAction @PushBack => m_Wrapper.m_PlayerStandard_PushBack;
         public InputAction @MouseLook => m_Wrapper.m_PlayerStandard_MouseLook;
+        public InputAction @debugStun => m_Wrapper.m_PlayerStandard_debugStun;
         public InputActionMap Get() { return m_Wrapper.m_PlayerStandard; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -508,6 +530,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @MouseLook.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnMouseLook;
                 @MouseLook.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnMouseLook;
                 @MouseLook.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnMouseLook;
+                @debugStun.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnDebugStun;
+                @debugStun.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnDebugStun;
+                @debugStun.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnDebugStun;
             }
             m_Wrapper.m_PlayerStandardActionsCallbackInterface = instance;
             if (instance != null)
@@ -542,6 +567,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @MouseLook.started += instance.OnMouseLook;
                 @MouseLook.performed += instance.OnMouseLook;
                 @MouseLook.canceled += instance.OnMouseLook;
+                @debugStun.started += instance.OnDebugStun;
+                @debugStun.performed += instance.OnDebugStun;
+                @debugStun.canceled += instance.OnDebugStun;
             }
         }
     }
@@ -607,6 +635,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnPickUp(InputAction.CallbackContext context);
         void OnPushBack(InputAction.CallbackContext context);
         void OnMouseLook(InputAction.CallbackContext context);
+        void OnDebugStun(InputAction.CallbackContext context);
     }
     public interface IUserInterfaceActions
     {

@@ -45,7 +45,10 @@ namespace _Project.Scripts
             PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
             if (inRange && actions.PickUp.triggered)
             {
-                PickUp();
+                if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().controlsActive)
+                {
+                    PickUp();
+                }
             }
         }
 

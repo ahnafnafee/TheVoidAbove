@@ -19,7 +19,7 @@ namespace _Project.Scripts
         [SerializeField] float safeSpeed = 25;
         //The speed where problems occur; between safe and danger is a dangerous hit, above is a lethal hit that's more severe
         [SerializeField] float dangerSpeed = 50;
-        bool controlsActive = true;
+        public bool controlsActive = true;
         private ContactPoint contact;
 
         [Header("Player Movement")]
@@ -84,13 +84,20 @@ namespace _Project.Scripts
                 Time.deltaTime * zSpeed);
 
             #endregion
-
+            if (actions.debugStun.triggered)
+            {
+                debugStun();
+            }
             if (actions.PushBack.triggered)
             {
-                //When you click LMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
-                _rb.AddForce(-mainCam.transform.forward * pushBackSpeed, ForceMode.VelocityChange);
-                GameObject fx = Instantiate(rightClickFX, targetPoint.transform.position, targetPoint.transform.rotation);
-                Destroy(fx, 5);
+                //If you're not stunned, allow to process
+                if (controlsActive)
+                {
+                    //When you click LMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
+                    _rb.AddForce(-mainCam.transform.forward * pushBackSpeed, ForceMode.VelocityChange);
+                    GameObject fx = Instantiate(rightClickFX, targetPoint.transform.position, targetPoint.transform.rotation);
+                    Destroy(fx, 5);
+                }
             }
 
             var tempColor = feedFlash.color;
@@ -237,6 +244,14 @@ namespace _Project.Scripts
             _rb.velocity = Vector3.zero;
             _rb.angularVelocity = Vector3.zero;
             gameOverUI.SetActive(false);
+        }
+
+        private void debugStun()
+        {
+            Debug.Log("DEBUG Player stunned");
+            StartCoroutine(ControlLockTimer(10));
+            Debug.Log("DEBUG Forcing package drop");
+            this.GetComponent<PackageManager>().Drop(Vector3.zero);
         }
     }
 }

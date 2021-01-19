@@ -27,7 +27,7 @@ namespace _Project.Scripts
         {
             if (other.tag.Equals(target.tag))
             {
-                this.transform.parent.GetComponent<EnemyMove>().StartAiming();
+                this.transform.parent.parent.GetComponent<EnemyMove>().StartAiming();
             }
         }
         private void OnTriggerExit(Collider other)

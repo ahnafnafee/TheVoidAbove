@@ -84,6 +84,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "Press"
+                },
+                {
+                    "name": "debugStun",
+                    "type": "Button",
+                    "id": "e3aad9f1-c645-4e11-abdc-be2dbf280f69",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -293,6 +301,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "MouseLook",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7ac1f96a-e847-4eca-afc9-e83ccfb9d2d5",
+                    "path": "<Keyboard>/equals",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "debugStun",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
