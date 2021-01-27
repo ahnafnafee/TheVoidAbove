@@ -357,6 +357,22 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Save"",
+                    ""type"": ""Button"",
+                    ""id"": ""14fa623d-6586-4fa0-b30b-e9f027869eb1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Load"",
+                    ""type"": ""Button"",
+                    ""id"": ""8af43037-b5fd-46c7-bdb1-91f4f7939874"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -392,6 +408,28 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Screenshot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e14ae8e8-e247-41f2-ad0f-c4cea6031348"",
+                    ""path"": ""<Keyboard>/numpad5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Save"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""93453345-c7ad-4fbf-abef-56c19dbbb9ef"",
+                    ""path"": ""<Keyboard>/numpad6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Load"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -416,6 +454,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_UserInterface_Restart = m_UserInterface.FindAction("Restart", throwIfNotFound: true);
         m_UserInterface_Pause = m_UserInterface.FindAction("Pause", throwIfNotFound: true);
         m_UserInterface_Screenshot = m_UserInterface.FindAction("Screenshot", throwIfNotFound: true);
+        m_UserInterface_Save = m_UserInterface.FindAction("Save", throwIfNotFound: true);
+        m_UserInterface_Load = m_UserInterface.FindAction("Load", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -581,6 +621,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_UserInterface_Restart;
     private readonly InputAction m_UserInterface_Pause;
     private readonly InputAction m_UserInterface_Screenshot;
+    private readonly InputAction m_UserInterface_Save;
+    private readonly InputAction m_UserInterface_Load;
     public struct UserInterfaceActions
     {
         private @PlayerControls m_Wrapper;
@@ -588,6 +630,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Restart => m_Wrapper.m_UserInterface_Restart;
         public InputAction @Pause => m_Wrapper.m_UserInterface_Pause;
         public InputAction @Screenshot => m_Wrapper.m_UserInterface_Screenshot;
+        public InputAction @Save => m_Wrapper.m_UserInterface_Save;
+        public InputAction @Load => m_Wrapper.m_UserInterface_Load;
         public InputActionMap Get() { return m_Wrapper.m_UserInterface; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -606,6 +650,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Screenshot.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnScreenshot;
                 @Screenshot.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnScreenshot;
                 @Screenshot.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnScreenshot;
+                @Save.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnSave;
+                @Save.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnSave;
+                @Save.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnSave;
+                @Load.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnLoad;
+                @Load.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnLoad;
+                @Load.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnLoad;
             }
             m_Wrapper.m_UserInterfaceActionsCallbackInterface = instance;
             if (instance != null)
@@ -619,6 +669,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Screenshot.started += instance.OnScreenshot;
                 @Screenshot.performed += instance.OnScreenshot;
                 @Screenshot.canceled += instance.OnScreenshot;
+                @Save.started += instance.OnSave;
+                @Save.performed += instance.OnSave;
+                @Save.canceled += instance.OnSave;
+                @Load.started += instance.OnLoad;
+                @Load.performed += instance.OnLoad;
+                @Load.canceled += instance.OnLoad;
             }
         }
     }
@@ -642,5 +698,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnRestart(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnScreenshot(InputAction.CallbackContext context);
+        void OnSave(InputAction.CallbackContext context);
+        void OnLoad(InputAction.CallbackContext context);
     }
 }

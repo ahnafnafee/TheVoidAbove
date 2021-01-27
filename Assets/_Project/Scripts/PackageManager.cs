@@ -14,9 +14,10 @@ namespace _Project.Scripts
         // Start is called before the first frame update
         void Awake()
         {
-            hasPackage = true;
-            grabRange.SetActive(false);
-            package.GetComponent<Rigidbody>().detectCollisions = false;
+            hasPackage = false;
+            grabRange.SetActive(true);
+            package.GetComponent<Rigidbody>().detectCollisions = true;
+            package.transform.parent = null;
             startTimer = false;
         }
 

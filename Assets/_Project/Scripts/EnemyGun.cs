@@ -67,12 +67,23 @@ namespace _Project.Scripts
             float x = Random.Range(-spread, spread);
             float y = Random.Range(-spread, spread);
             
-            playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            //grab variables for kinematics
+            playerPos = player.transform.position;
+            Vector3 playerVelocity = player.GetComponent<Rigidbody>().velocity;
+            float t = (playerPos - transform.position).magnitude / bulletSpeed;
 
-            Vector3 directionWithoutSpread = playerPos - transform.position;
+            // Predict future position
+            Vector3 futurePos = playerPos + playerVelocity * t;
+
+            //Get the overall predicted direction before randomized spread
+            Vector3 directionWithoutSpread = (futurePos - transform.position);
+            
+            
             //Calculate new direction with spread
             Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0);
                     
+            //Fire
             GameObject newBullet = Instantiate(bullet, transform.position, bullet.transform.rotation);
             newBullet.GetComponent<Rigidbody>().velocity = directionWithSpread.normalized * bulletSpeed;        
         }

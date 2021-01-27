@@ -27,7 +27,7 @@ namespace _Project.Scripts
             inRange = false;
             _playerControls = new PlayerControls();
             _playerControls.Enable();
-            dropSize = GameObject.Find("GunMain2").transform.localScale;
+            //dropSize = GameObject.Find("GunMain2").transform.localScale;
             grabUI.SetActive(false);
         }
 

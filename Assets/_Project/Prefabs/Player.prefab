@@ -10780,6 +10780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   safeSpeed: 50
   dangerSpeed: 75
+  controlsActive: 1
   pushBackSpeed: 50
   maxSpeed: 150
   tiltAngle: 20

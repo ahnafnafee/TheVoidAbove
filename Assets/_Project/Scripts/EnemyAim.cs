@@ -35,7 +35,7 @@ namespace _Project.Scripts
             if (other.tag.Equals(target.tag))
             {
                 this.transform.parent.rotation = initialRotation;
-                this.transform.parent.GetComponent<EnemyMove>().StopAiming();
+                this.transform.parent.parent.GetComponent<EnemyMove>().StopAiming();
             }
         }
     }

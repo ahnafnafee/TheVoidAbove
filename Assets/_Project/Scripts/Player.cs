@@ -51,6 +51,11 @@ namespace _Project.Scripts
  
         private IEnumerator coroutine;
 
+
+        public GameObject getRespawn()
+        {
+            return respawnPoint;
+        }
         void Awake()
         {
             _playerControls = new PlayerControls();
@@ -63,7 +68,25 @@ namespace _Project.Scripts
         {
             Cursor.lockState = CursorLockMode.Locked;
             pHealth = GetComponent<Health>();
-            
+
+            #region Saving
+            PlayerControls.UserInterfaceActions UIactions = _playerControls.UserInterface;
+
+            UIactions.Save.performed += _ => SaveSystem.SaveGame(this);
+
+            UIactions.Load.performed += _ =>
+            {
+                SaveData data = SaveSystem.LoadGame();
+
+                Vector3 temp = new Vector3(data.Pposition[0], data.Pposition[1], data.Pposition[2]);
+                this.transform.position = temp;
+
+                GameObject enemy = GameObject.Find("Enemy");
+                Vector3 temp2 = new Vector3(data.Eposition[0], data.Eposition[1], data.Eposition[2]);
+                enemy.transform.position = temp2;
+            };
+            #endregion
+
         }
 
 
@@ -105,6 +128,8 @@ namespace _Project.Scripts
             feedFlash.color = tempColor;
 
             healthFillImage.fillAmount = pHealth.objectHealth / pHealth.health;
+
+            
         }
 
 

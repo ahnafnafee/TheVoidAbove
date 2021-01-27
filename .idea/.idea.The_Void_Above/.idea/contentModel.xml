@@ -25,13 +25,16 @@
             <e p="ButtonManager.cs" t="Include" />
             <e p="CombineMesh.cs" t="Include" />
             <e p="Compass.cs" t="Include" />
+            <e p="CutScene" t="Include">
+              <e p="FlowControl.cs" t="Include" />
+              <e p="TypeWriter.cs" t="Include" />
+            </e>
             <e p="DestroyFX.cs" t="Include" />
             <e p="DissolveEffect.cs" t="Include" />
             <e p="EnemyAim.cs" t="Include" />
             <e p="EnemyGun.cs" t="Include" />
             <e p="EnemyMove.cs" t="Include" />
             <e p="EnemyScript.cs" t="Include" />
-            <e p="FlowControl.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="GrabPackage.cs" t="Include" />
             <e p="Gun.cs" t="Include" />
@@ -64,8 +67,11 @@
             <e p="PlayerWin.cs" t="Include" />
             <e p="randomDebris.cs" t="Include" />
             <e p="Respawn.cs" t="Include" />
+            <e p="Saving" t="Include">
+              <e p="SaveData.cs" t="Include" />
+              <e p="SaveSystem.cs" t="Include" />
+            </e>
             <e p="Spawn planet.cs" t="Include" />
-            <e p="SpawnField.cs" t="Include" />
             <e p="SpawningArea.cs" t="Include" />
             <e p="SpawnTutorial.cs" t="Include" />
             <e p="StarField.cs" t="Include" />
