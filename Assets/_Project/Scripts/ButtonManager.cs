@@ -1,25 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ButtonManager : MonoBehaviour
+namespace _Project.Scripts
 {
-    public void startGame()
+    public class ButtonManager : MonoBehaviour
     {
-        SceneManager.LoadScene(1);
-    }
-    public void tutorial()
-    {
-        SceneManager.LoadScene(2);
-    }
+        public void MainMenu()
+        {
+            SceneManager.LoadScene(0);
+        }
 
-    public void mainMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
-    public void exitGame()
-    {
-        Application.Quit();
+        public void Tutorial()
+        {
+            SceneManager.LoadScene(1);
+        }
+
+        public void StartGame()
+        {
+            SceneManager.LoadScene(2);
+        }
+
+        public void ExitGame()
+        {
+            Application.Quit();
+        }
     }
 }

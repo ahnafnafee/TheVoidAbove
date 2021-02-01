@@ -716,6 +716,11 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 1374679764}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2926,6 +2931,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5110,6 +5120,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13008,6 +13023,11 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 1374679764}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15431,6 +15451,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17355,6 +17380,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23187,6 +23217,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23467,6 +23502,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28622,6 +28662,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34824,6 +34869,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37921,6 +37971,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41831,6 +41886,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45791,6 +45851,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -54809,6 +54874,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -58929,6 +58999,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -59725,6 +59800,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -64493,6 +64573,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67317,6 +67402,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68397,6 +68487,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -71485,6 +71580,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -75538,20 +75638,25 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 844529012}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 132.3687
+      value: 215.8
       objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 80.379486
+      value: 103.6
       objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -129
+      value: 74.1
       objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
@@ -77371,6 +77476,11 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 1374679764}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -81760,6 +81870,11 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 1374679764}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -88061,6 +88176,11 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 1374679764}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -91669,6 +91789,11 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 1374679764}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -93133,6 +93258,11 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 1374679764}
+    - target: {fileID: 2537495974722324653, guid: 5a8dc150598530c4fa5a53ba3014614f,
+        type: 3}
+      propertyPath: enemyRange
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3376510253926097818, guid: 5a8dc150598530c4fa5a53ba3014614f,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -407,6 +407,7 @@
             </e>
           </e>
         </e>
+        <e p="MeleeEnemyControl.cs" t="Include" />
         <e p="PathCreator" t="Include">
           <e p="Core" t="Include">
             <e p="Editor" t="Include">

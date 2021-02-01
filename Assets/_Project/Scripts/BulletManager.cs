@@ -29,13 +29,9 @@ namespace _Project.Scripts
             {
                 collision.transform.GetComponent<Health>().TakeDamage(10);
                 Destroy(gameObject);
+            }
 
-            }
-            else if(collision.transform.CompareTag("Enemy"))
-            {
-                Destroy(collision.transform);
-            }
-            
+            Debug.Log("hit something");
             ContactPoint contact = collision.contacts[0];
             Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
             Vector3 position = contact.point;

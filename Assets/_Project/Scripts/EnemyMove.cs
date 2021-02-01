@@ -7,6 +7,8 @@ namespace _Project.Scripts
     {
         [SerializeField]
         private float enemySpeed;
+
+        [SerializeField] private float enemyRange = 300f;
         private GameObject target;
         private bool right;
         private bool isAiming;
@@ -37,13 +39,14 @@ namespace _Project.Scripts
         // Update is called once per frame
         void Update()
         {
-            aimCheck();
+            AimCheck();
             if (isAiming == false)
             {
                 if (returnMove)
                 {
                     if(Vector3.Distance(origianlPosition, transform.position) >= 1f)
                     {
+                        transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
                         transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
                         Vector3 direction = origianlPosition - transform.position;
                         transform.Find("Anvil Enemy Gun up").rotation = Quaternion.Slerp(transform.Find("Anvil Enemy Gun up").rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * enemySpeed);
@@ -83,14 +86,18 @@ namespace _Project.Scripts
         }
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.name == "wallLeft")
+            if (other.tag.Equals("Turn"))
+            {
+                right = !right;
+            }
+            /*if (other.gameObject.name == "wallLeft")
             {
                 right = true;
             }
             if (other.gameObject.name == "wallRight")
             {
                 right = false;
-            }
+            }*/
         }
         
         private void OnCollisionEnter(Collision collision)
@@ -117,10 +124,11 @@ namespace _Project.Scripts
             gun.GetComponent<EnemyGun>().stopShooting();
             returnMove = true;
         }
-        public void aimCheck()
+
+        // FYI this method might be very expensive
+        public void AimCheck()
         {
-            Debug.Log((Vector3.Distance(target.transform.position, transform.position)));
-            if ((Vector3.Distance(target.transform.position, transform.position)) <= 300f)
+            if ((Vector3.Distance(target.transform.position, transform.position)) <= enemyRange)
             {
                 StartAiming();
             }

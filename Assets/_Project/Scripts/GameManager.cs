@@ -48,7 +48,7 @@ namespace _Project.Scripts
         void Update()
         {
             // Rotates skybox slowly for a dynamic feel
-            RenderSettings.skybox.SetFloat(Rotation, Time.time * skyboxRotSpeed);
+            //RenderSettings.skybox.SetFloat(Rotation, Time.time * skyboxRotSpeed);
         }
 
         #region Level User Interface
