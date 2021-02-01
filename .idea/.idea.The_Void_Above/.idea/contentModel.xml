@@ -31,7 +31,6 @@
             </e>
             <e p="DestroyFX.cs" t="Include" />
             <e p="DissolveEffect.cs" t="Include" />
-            <e p="EnemyAim.cs" t="Include" />
             <e p="EnemyGun.cs" t="Include" />
             <e p="EnemyMove.cs" t="Include" />
             <e p="EnemyScript.cs" t="Include" />
@@ -71,6 +70,7 @@
               <e p="SaveData.cs" t="Include" />
               <e p="SaveSystem.cs" t="Include" />
             </e>
+            <e p="Shootable.cs" t="Include" />
             <e p="Spawn planet.cs" t="Include" />
             <e p="SpawningArea.cs" t="Include" />
             <e p="SpawnTutorial.cs" t="Include" />
@@ -99,6 +99,19 @@
           </e>
         </e>
         <e p="Imported" t="Include">
+          <e p="Colorblind Effect" t="Include">
+            <e p="Assets" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Colorblind.cs" t="Include" />
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="Colorblind.shader" t="Include" />
+              </e>
+            </e>
+            <e p="Documentation" t="Include">
+              <e p="readme.txt" t="Include" />
+            </e>
+          </e>
           <e p="FPSMicroGame" t="Include">
             <e p="FPS" t="Include">
               <e p="Art" t="Include">

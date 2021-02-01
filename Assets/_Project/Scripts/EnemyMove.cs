@@ -9,7 +9,7 @@ namespace _Project.Scripts
         private float enemySpeed;
         private GameObject target;
         private bool right;
-        private bool isAiming = false;
+        private bool isAiming;
         private Health enemyHealth;
         [Tooltip("Image component displaying current health")]
         public Image healthFillImage;
@@ -19,27 +19,55 @@ namespace _Project.Scripts
         public GameObject hitParticlePrefab;
         [SerializeField] private GameObject gun;
 
+        public Vector3 origianlPosition;
+        public bool returnMove;
 
         // Start is called before the first frame update
         void Start()
         {
             target = GameObject.FindWithTag("Player");
+            isAiming = false;
             right = false;
+            returnMove = false;
             enemyHealth = GetComponent<Health>();
+            transform.Find("Anvil Enemy Gun up").rotation = Quaternion.Euler(0, 180, 0);
+            origianlPosition = transform.position;
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (!isAiming)
+            aimCheck();
+            if (isAiming == false)
             {
-                if (right)
+                if (returnMove)
                 {
-                    transform.position += new Vector3(0, 0, 2 * enemySpeed * Time.deltaTime);
+                    if(Vector3.Distance(origianlPosition, transform.position) >= 1f)
+                    {
+                        transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
+                        Vector3 direction = origianlPosition - transform.position;
+                        transform.Find("Anvil Enemy Gun up").rotation = Quaternion.Slerp(transform.Find("Anvil Enemy Gun up").rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * enemySpeed);
+                    }
+                    else
+                    {
+                        returnMove = false;
+                    }
                 }
                 else
                 {
-                    transform.position += new Vector3(0, 0, -2 * enemySpeed * Time.deltaTime);
+                    if (right == true)
+                    {
+                        transform.position += new Vector3(0, 0, 2 * enemySpeed * Time.deltaTime);
+                        Vector3 direction = (transform.position + new Vector3(0, 0, 2 * enemySpeed * Time.deltaTime)) - transform.position;
+                        transform.Find("Anvil Enemy Gun up").rotation = Quaternion.Slerp(transform.Find("Anvil Enemy Gun up").rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * enemySpeed);
+                    }
+                    else if (right == false)
+                    {
+                        transform.position += new Vector3(0, 0, -2 * enemySpeed * Time.deltaTime);
+                        Vector3 direction = (transform.position + new Vector3(0, 0, -2 * enemySpeed * Time.deltaTime)) - transform.position;
+                        transform.Find("Anvil Enemy Gun up").rotation = Quaternion.Slerp(transform.Find("Anvil Enemy Gun up").rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * enemySpeed);
+
+                    }
                 }
             }
             else if(isAiming)
@@ -55,9 +83,13 @@ namespace _Project.Scripts
         }
         private void OnTriggerEnter(Collider other)
         {
-            if (other.transform.tag.Equals("Turn"))
+            if (other.gameObject.name == "wallLeft")
             {
-                right = !right;
+                right = true;
+            }
+            if (other.gameObject.name == "wallRight")
+            {
+                right = false;
             }
         }
         
@@ -81,8 +113,24 @@ namespace _Project.Scripts
         }
         public void StopAiming()
         {
-            gun.GetComponent<EnemyGun>().stopShooting();
             isAiming = false;
+            gun.GetComponent<EnemyGun>().stopShooting();
+            returnMove = true;
+        }
+        public void aimCheck()
+        {
+            Debug.Log((Vector3.Distance(target.transform.position, transform.position)));
+            if ((Vector3.Distance(target.transform.position, transform.position)) <= 300f)
+            {
+                StartAiming();
+            }
+            else
+            {
+                if (isAiming)
+                {
+                    StopAiming();
+                }
+            }
         }
     }
 }
