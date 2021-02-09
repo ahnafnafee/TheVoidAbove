@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/02 - ControlsScreen.unity
     guid: 5999cdcaa7d09ef46bd1ba1d3062a061
   - enabled: 1
-    path: Assets/_Project/Scenes/03 - Scene_1.unity
-    guid: d50533e10080dbe44ac4a6599cb81c45
+    path: Assets/_Project/Scenes/03 - StoryCutscene.unity
+    guid: c0dce8225f09f114194b26eb64746b8f
   - enabled: 1
-    path: Assets/_Project/Scenes/04 - Scene_2.unity
+    path: Assets/_Project/Scenes/04 - Scene_1.unity
+    guid: 1825cbde8725c7243bac3dbd607f930e
+  - enabled: 1
+    path: Assets/_Project/Scenes/05 - Scene_2.unity
     guid: 5d83cb50827416d4cbdf4655a7676c69
   m_configObjects: {}

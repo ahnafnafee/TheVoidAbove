@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A03B63E4-DE85-4971-8E2B-6A382CEB1AA1}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{A03B63E4-DE85-4971-8E2B-6A382CEB1AA1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="shoot_event" ID="{3014E3F8-866E-4A4F-8239-BAF1ACBD3AC8}">
+					<ChildrenList>
+						<Action Name="" ID="{5B678CB4-BDB9-40F1-BD9F-6A41AA57BA0A}" ShortID="1020204696">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PM_SFG_VOL1_WEAPON_12_2_GUN_GUNSHOT_FUTURISTIC" ID="{15D4BB73-D18E-4982-98F7-F04F34E16ED2}" WorkUnitID="{7BF6478F-CE73-498E-873E-DF0B07E28198}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="main_menu_event" ID="{09AFA428-B567-422A-B9DB-E1F31B42F522}">
+					<ChildrenList>
+						<Action Name="" ID="{3AE8EB16-C0CC-4FD8-B8C3-451BBEE2B2D3}" ShortID="61921598">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="10"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Far-From-Home" ID="{271DA1A6-6B0F-4753-A369-CCDEA24072AC}" WorkUnitID="{7BF6478F-CE73-498E-873E-DF0B07E28198}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Level_one_event" ID="{049C554A-02F1-455A-8105-D2633F5C5649}">
+					<ChildrenList>
+						<Action Name="" ID="{92EEEE7D-8BDB-4F5A-B1B7-752F3EF60ECC}" ShortID="1009318604">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Back-in-Time" ID="{CC2E4230-EF01-4A80-967F-D57D9099AF53}" WorkUnitID="{7BF6478F-CE73-498E-873E-DF0B07E28198}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

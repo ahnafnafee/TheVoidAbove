@@ -8,6 +8,9 @@ namespace _Project.Scripts
     {
         [SerializeField]
         private double health;
+
+        [SerializeField]
+        private GameObject partner;
         
         // Start is called before the first frame update
         void Start()
@@ -31,7 +34,9 @@ namespace _Project.Scripts
                 }
                 else
                 {
-                    Destroy(this.transform.gameObject);
+                    Destroy(gameObject);
+                    if (partner != null)
+                        Destroy(partner.transform.gameObject);
                 }
             }
         }

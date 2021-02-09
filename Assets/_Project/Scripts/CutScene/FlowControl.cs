@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace _Project.Scripts
 {
@@ -13,6 +14,7 @@ namespace _Project.Scripts
         private List<GameObject> allText = new List<GameObject>();
         private float time_fade;
         private float timer;
+        private TypeWriter textScript;
 
         void Start()
         {
@@ -34,7 +36,8 @@ namespace _Project.Scripts
             if (timer > 0.0f)
             {
                 timer -= Time.deltaTime;
-                if (timer <= 0.0f) {
+                if (timer <= 0.0f)
+                {
                     NextPage();
                 }
             }
@@ -43,35 +46,55 @@ namespace _Project.Scripts
 
         public void ChangePic()
         {
-            allText[nubPic].SetActive(false);
-            nubPic ++;
-            if (nubPic >= allpic.Count)
+            textScript = allText[nubPic].GetComponent<TypeWriter>();
+            if (textScript.currentText == textScript.fullText)
             {
-                PicFadeOut();
+                allText[nubPic].SetActive(false);
+                nubPic++;
+                if (nubPic >= allpic.Count)
+                {
+                    PicFadeOut();
+                }
+                else
+                {
+                    allpic[nubPic].SetActive(true);
+                    allText[nubPic].SetActive(true);
+                }
             }
-            else {
-                allpic[nubPic].SetActive(true);
-                allText[nubPic].SetActive(true);
+            else
+            {
+                textScript.delay = 0f;
             }
         }
 
-        public void PicFadeOut() {
-            foreach (GameObject pic in allpic) {
+        public void PicFadeOut()
+        {
+            foreach (GameObject pic in allpic)
+            {
                 pic.GetComponent<Animator>().SetTrigger("Out");
             }
             timer = time_fade;
         }
 
-        public void NextPage() {
+        public void NextPage()
+        {
             allpic = new List<GameObject>();
             allText = new List<GameObject>();
             allpage[nubPage].SetActive(false);
             nubPage++;
             nubPic = 0;
-            allpage[nubPage].SetActive(true);
-            AddNewPics();
+            if (nubPage == allpage.Count)
+            {
+                SceneManager.LoadScene(3);
+            }
+            else
+            {
+                allpage[nubPage].SetActive(true);
+                AddNewPics();
+            }
         }
-        public void AddNewPics() {
+        public void AddNewPics()
+        {
             foreach (Transform child in allpage[nubPage].transform.GetChild(1).transform)
             {
                 allpic.Add(child.gameObject);

@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject respawnPoint;
     [SerializeField] private GameObject explosionFx;
     [SerializeField] private GameObject enemyCenter;
+    [SerializeField] private GameObject drop;
 
     [Header("Health Pack")]
     [SerializeField]
@@ -53,7 +54,15 @@ public class Health : MonoBehaviour
             {
                 var transform1 = enemyCenter.transform;
                 Instantiate(explosionFx, transform1.position, transform1.rotation);
-                Instantiate(healthPack, transform1.position, Quaternion.identity);
+
+                if (Random.Range(0, 10) <= 4)
+                {
+                    Instantiate(drop, transform1.position, Quaternion.identity);
+                }
+                else 
+                {
+                    Instantiate(healthPack, transform1.position, Quaternion.identity);
+                }
                 Destroy(gameObject);
             }
             

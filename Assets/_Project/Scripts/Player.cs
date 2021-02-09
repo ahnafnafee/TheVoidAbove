@@ -19,8 +19,11 @@ namespace _Project.Scripts
         [SerializeField] float safeSpeed = 25;
         //The speed where problems occur; between safe and danger is a dangerous hit, above is a lethal hit that's more severe
         [SerializeField] float dangerSpeed = 50;
+        public bool outOfBounds = false;
         public bool controlsActive = true;
         private ContactPoint contact;
+        private float time_powered;
+        private float time_powered_max;
 
         [Header("Player Movement")]
         [SerializeField] private float pushBackSpeed;
@@ -68,7 +71,8 @@ namespace _Project.Scripts
         {
             Cursor.lockState = CursorLockMode.Locked;
             pHealth = GetComponent<Health>();
-
+            time_powered = 0.0f;
+            time_powered_max = 15.0f;
             #region Saving
             PlayerControls.UserInterfaceActions UIactions = _playerControls.UserInterface;
 
@@ -129,7 +133,7 @@ namespace _Project.Scripts
 
             healthFillImage.fillAmount = pHealth.objectHealth / pHealth.health;
 
-            
+            if (time_powered > 0.0f) { time_powered -= Time.deltaTime; }
         }
 
 
@@ -241,13 +245,24 @@ namespace _Project.Scripts
         {
             if (other.CompareTag("OuterZone"))
             {
-                coroutine = gameOver(2);
-                StartCoroutine(coroutine);
-                transform.Find("PlayerBase").gameObject.SetActive(false);
+                Debug.Log("Starting timer to damage");
+                outOfBounds = true;
+                StartCoroutine(boundstimer());
+
+                /*transform.Find("PlayerBase").gameObject.SetActive(false);
                 Rigidbody _rb = GetComponent<Rigidbody>();
                 _rb.velocity = Vector3.zero;
                 _rb.angularVelocity = Vector3.zero;
-                gameOverUI.SetActive(true);
+                gameOverUI.SetActive(true);*/
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("OuterZone"))
+            {
+                StopCoroutine(drainhealth());
+                outOfBounds = false;
             }
         }
         
@@ -258,6 +273,24 @@ namespace _Project.Scripts
             yield return new WaitForSeconds(t);
 
             controlsActive = true;
+        }
+
+        private IEnumerator boundstimer()
+        {
+            yield return new WaitForSeconds(5);
+            Debug.Log("Time's up");
+            StartCoroutine(drainhealth());
+
+        }
+
+        private IEnumerator drainhealth()
+        {
+            while (outOfBounds)
+            {
+                Debug.Log("Damage.");
+                pHealth.TakeDamage(5);
+                yield return new WaitForSeconds(1);
+            }
         }
 
         private IEnumerator gameOver(float respawnTime)
@@ -277,6 +310,18 @@ namespace _Project.Scripts
             StartCoroutine(ControlLockTimer(10));
             Debug.Log("DEBUG Forcing package drop");
             this.GetComponent<PackageManager>().Drop(Vector3.zero);
+        }
+        public bool isPowered() {
+            if (time_powered > 0.0f)
+            {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        public void powerUp() {
+            time_powered = time_powered_max;
         }
     }
 }

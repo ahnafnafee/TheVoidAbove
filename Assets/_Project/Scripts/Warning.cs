@@ -7,13 +7,18 @@ public class Warning : MonoBehaviour
     [SerializeField]
     GameObject UI;
     
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        UI.SetActive(true);
+        if (other.CompareTag("OuterZone"))
+        {
+            UI.SetActive(false);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        UI.SetActive(false);
-        Debug.Log("Entered");
+        if (other.CompareTag("OuterZone")) {
+            UI.SetActive(true);
+        }
+
     }
 }

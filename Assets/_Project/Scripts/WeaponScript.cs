@@ -133,6 +133,7 @@ namespace _Project.Scripts
             currentBullet.GetComponent<Rigidbody>().AddForce(directionWithoutSpread.normalized * shootForce, ForceMode.Impulse);
             currentBullet.GetComponent<Rigidbody>().AddForce(mainCam.transform.up * upwardForce, ForceMode.Impulse);
 
+            AkSoundEngine.PostEvent("shoot_event",this.gameObject);
         }
 
         public void drop()

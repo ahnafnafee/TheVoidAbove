@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E0D1622B-D517-4F6D-977D-3B5A6A9A3E3A}" SchemaVersion="97">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{E0D1622B-D517-4F6D-977D-3B5A6A9A3E3A}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{420DE984-9FE9-4BFF-AE31-E18C693BFEDB}">
+					<ObjectInclusionList>
+						<ObjectRef Name="main_menu_event" ID="{09AFA428-B567-422A-B9DB-E1F31B42F522}" WorkUnitID="{A03B63E4-DE85-4971-8E2B-6A382CEB1AA1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Level_one_event" ID="{049C554A-02F1-455A-8105-D2633F5C5649}" WorkUnitID="{A03B63E4-DE85-4971-8E2B-6A382CEB1AA1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="shoot_event" ID="{3014E3F8-866E-4A4F-8239-BAF1ACBD3AC8}" WorkUnitID="{A03B63E4-DE85-4971-8E2B-6A382CEB1AA1}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

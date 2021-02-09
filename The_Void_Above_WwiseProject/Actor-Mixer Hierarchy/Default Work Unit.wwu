@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7BF6478F-CE73-498E-873E-DF0B07E28198}" SchemaVersion="97">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{7BF6478F-CE73-498E-873E-DF0B07E28198}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="PM_SFG_VOL1_WEAPON_12_2_GUN_GUNSHOT_FUTURISTIC" ID="{15D4BB73-D18E-4982-98F7-F04F34E16ED2}" ShortID="584189212">
+					<PropertyList>
+						<Property Name="OutputBusVolume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BDC8773A-E602-4859-A216-CB88420F0E72}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2ECD609E-0353-4B12-9BB4-3A13EE8AC2B4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="PM_SFG_VOL1_WEAPON_12_2_GUN_GUNSHOT_FUTURISTIC" ID="{237243A3-B747-49E1-BF4F-744495B56845}">
+							<Language>SFX</Language>
+							<AudioFile>PM_SFG_VOL1_WEAPON_12_2_GUN_GUNSHOT_FUTURISTIC.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="222410976"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="PM_SFG_VOL1_WEAPON_12_2_GUN_GUNSHOT_FUTURISTIC" ID="{237243A3-B747-49E1-BF4F-744495B56845}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Far-From-Home" ID="{271DA1A6-6B0F-4753-A369-CCDEA24072AC}" ShortID="10286320">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BDC8773A-E602-4859-A216-CB88420F0E72}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2ECD609E-0353-4B12-9BB4-3A13EE8AC2B4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Far-From-Home" ID="{0DB6D685-CF2D-45AE-848C-3A7F1076EA7D}">
+							<PropertyList>
+								<Property Name="CrossfadeShape" Type="int16" Value="0"/>
+								<Property Name="FadeInDuration" Type="Real64" Value="113.077212087488"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="45.4965581673593"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Far-From-Home.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="361279540"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Far-From-Home" ID="{0DB6D685-CF2D-45AE-848C-3A7F1076EA7D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Firefly" ID="{63509E46-51D5-4FBF-88AA-AB4A846E301E}" ShortID="818351578">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BDC8773A-E602-4859-A216-CB88420F0E72}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2ECD609E-0353-4B12-9BB4-3A13EE8AC2B4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Firefly" ID="{DEFB3CD8-E865-4CBE-9CE0-4DBAD6C10B03}">
+							<Language>SFX</Language>
+							<AudioFile>Firefly.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="11132437"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Firefly" ID="{DEFB3CD8-E865-4CBE-9CE0-4DBAD6C10B03}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Starbeam" ID="{27EF97CB-F7D5-475E-A704-2CD5A3C090D2}" ShortID="678884648">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BDC8773A-E602-4859-A216-CB88420F0E72}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2ECD609E-0353-4B12-9BB4-3A13EE8AC2B4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Starbeam" ID="{A403A870-26DD-4D15-B203-A517B5CFA9E1}">
+							<Language>SFX</Language>
+							<AudioFile>Starbeam.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="808081515"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Starbeam" ID="{A403A870-26DD-4D15-B203-A517B5CFA9E1}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Back-in-Time" ID="{CC2E4230-EF01-4A80-967F-D57D9099AF53}" ShortID="381232965">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BDC8773A-E602-4859-A216-CB88420F0E72}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2ECD609E-0353-4B12-9BB4-3A13EE8AC2B4}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Back-in-Time" ID="{3D0B12B0-CCD2-41EB-A543-7CC1E2E5F600}">
+							<Language>SFX</Language>
+							<AudioFile>Back-in-Time.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="47686723"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Back-in-Time" ID="{3D0B12B0-CCD2-41EB-A543-7CC1E2E5F600}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

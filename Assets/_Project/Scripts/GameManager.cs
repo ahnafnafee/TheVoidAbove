@@ -55,11 +55,13 @@ namespace _Project.Scripts
 
         public void PauseScene()
         {
+            if (pauseMenu == null) return;
             Time.timeScale = Convert.ToInt32(isPaused);
             pauseMenu.SetActive(!isPaused);
             gameHud.SetActive(isPaused);
             isPaused = !isPaused;
             Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
+
         }
 
         public void SettingsScene()
@@ -77,12 +79,12 @@ namespace _Project.Scripts
 
         public void LoadLevel2()
         {
-            SceneManager.LoadSceneAsync(3);
+            SceneManager.LoadSceneAsync(4);
         }
 
         public void MenuScene()
         {
-            SceneManager.LoadSceneAsync("TitleScreen");
+            SceneManager.LoadSceneAsync(0);
         }
 
         #endregion

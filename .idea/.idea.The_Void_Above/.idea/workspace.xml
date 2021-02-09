@@ -21,25 +21,90 @@
   <component name="ChangeListManager">
     <list default="true" id="9b97dfe6-8e2b-4066-9c65-3dd6ee961227" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/SpaceSkybox_v4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/SpaceSkybox_v4.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/SpaceSkybox_v5.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/SpaceSkybox_v5.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Bullet 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Bullet 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/ControlsScreen.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/ControlsScreen.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1 - Copy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1 - Copy.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_2.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_2.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MeleeEnemyControl.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MeleeEnemyControl.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-4X0F1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-4X0F1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-5VECV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-5VECV.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-6EWE0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-6EWE0.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-6LO6H.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-6LO6H.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-7P4LL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-7P4LL.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-AAF31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-AAF31.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-E0IQC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-E0IQC.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-E2I40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-E2I40.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-HTSTH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-HTSTH.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-K5JUB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-K5JUB.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-PWF7S.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-PWF7S.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-RE4AS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-RE4AS.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-RNG8X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-RNG8X.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-RO8QJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-RO8QJ.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-TGF6G.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-TGF6G.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-UX9SX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-UX9SX.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-Y1MIZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-Y1MIZ.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-YMJ9T.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-YMJ9T.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-ZSPWZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-ZSPWZ.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/EVA35Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/EVA35Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Bold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Bold SDF 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/GunMain.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/GunMain.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/01 - TitleScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/01 - TitleScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/03 - Scene_1.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/03 - Scene_1.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_2.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_2.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/OLD - Scene_1.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/OLD - Scene_1.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1 - Copy.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1 - Copy.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/StoryCutscene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/StoryCutscene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Test_01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Test_01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/TitleScreen.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/TitleScreen.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/BulletManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/BulletManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/ButtonManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/ButtonManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/FlowControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/FlowControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/TypeWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/TypeWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika1.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika2.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika4.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika5.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika6.jpg.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/EnemyMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/EnemyMove.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Shootable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Shootable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Warning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Warning.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/WeaponScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/WeaponScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +142,6 @@
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PlayerWin.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Misc/DissolveScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/WeaponScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Textures/FF_Shader.shader" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Utils/DontGoThroughThings.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/BulletManager.cs" />
@@ -86,9 +150,14 @@
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Utils/MoveAlong.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Utils/GlobalVar.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/FlowControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/ButtonManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Respawn.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/EnemyMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/FlowControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/TypeWriter.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Shootable.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -150,7 +219,12 @@
       <workItem from="1611089069302" duration="493000" />
       <workItem from="1611089747004" duration="2801000" />
       <workItem from="1611708479816" duration="1093000" />
-      <workItem from="1612195483000" duration="4508000" />
+      <workItem from="1612195483000" duration="4594000" />
+      <workItem from="1612236082317" duration="583000" />
+      <workItem from="1612637096693" duration="724000" />
+      <workItem from="1612724844986" duration="728000" />
+      <workItem from="1612739701565" duration="4847000" />
+      <workItem from="1612755917560" duration="9834000" />
     </task>
     <servers />
   </component>

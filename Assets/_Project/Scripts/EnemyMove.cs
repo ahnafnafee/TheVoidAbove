@@ -5,24 +5,28 @@ namespace _Project.Scripts
 {
     public class EnemyMove : MonoBehaviour
     {
-        [SerializeField]
-        private float enemySpeed;
-
-        [SerializeField] private float enemyRange = 300f;
         private GameObject target;
         private bool right;
         private bool isAiming;
-        private Health enemyHealth;
-        [Tooltip("Image component displaying current health")]
-        public Image healthFillImage;
 
+        private Health enemyHealth;
+
+        private Transform enemyBody;
+
+        [Header("Enemy Attributes")]
+        [SerializeField] private float enemySpeed;
+        [SerializeField] private float enemyRange = 300f;
+        [SerializeField] private GameObject enemyObj;
+
+        [Header("Enemy Health")]
+        public Image healthFillImage;
         public GameObject enemyHealthObj;
 
-        public GameObject hitParticlePrefab;
+        [Header("Misc")]
+        [SerializeField] private GameObject hitParticlePrefab;
         [SerializeField] private GameObject gun;
-
-        public Vector3 origianlPosition;
-        public bool returnMove;
+        [SerializeField] private Vector3 origianlPosition;
+        [SerializeField] private bool returnMove;
 
         // Start is called before the first frame update
         void Start()
@@ -32,7 +36,7 @@ namespace _Project.Scripts
             right = false;
             returnMove = false;
             enemyHealth = GetComponent<Health>();
-            transform.Find("Anvil Enemy Gun up").rotation = Quaternion.Euler(0, 180, 0);
+            enemyObj.transform.rotation = Quaternion.Euler(0, 180, 0);
             origianlPosition = transform.position;
         }
 
@@ -40,16 +44,20 @@ namespace _Project.Scripts
         void Update()
         {
             AimCheck();
+
+            enemyBody = enemyObj.transform;
+
             if (isAiming == false)
             {
                 if (returnMove)
                 {
-                    if(Vector3.Distance(origianlPosition, transform.position) >= 1f)
+                    if (Vector3.Distance(origianlPosition, transform.position) >= 1f)
                     {
                         transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
-                        transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
+                        //transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
                         Vector3 direction = origianlPosition - transform.position;
-                        transform.Find("Anvil Enemy Gun up").rotation = Quaternion.Slerp(transform.Find("Anvil Enemy Gun up").rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * enemySpeed);
+                        if (direction != Vector3.zero)
+                            enemyBody.rotation = Quaternion.Slerp(enemyBody.rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * enemySpeed);
                     }
                     else
                     {
@@ -58,27 +66,30 @@ namespace _Project.Scripts
                 }
                 else
                 {
-                    if (right == true)
+                    if (right)
                     {
                         transform.position += new Vector3(0, 0, 2 * enemySpeed * Time.deltaTime);
                         Vector3 direction = (transform.position + new Vector3(0, 0, 2 * enemySpeed * Time.deltaTime)) - transform.position;
-                        transform.Find("Anvil Enemy Gun up").rotation = Quaternion.Slerp(transform.Find("Anvil Enemy Gun up").rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * enemySpeed);
+                        if (direction != Vector3.zero)
+                            enemyBody.rotation = Quaternion.Slerp(enemyBody.rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * enemySpeed);
                     }
-                    else if (right == false)
+                    else
                     {
                         transform.position += new Vector3(0, 0, -2 * enemySpeed * Time.deltaTime);
                         Vector3 direction = (transform.position + new Vector3(0, 0, -2 * enemySpeed * Time.deltaTime)) - transform.position;
-                        transform.Find("Anvil Enemy Gun up").rotation = Quaternion.Slerp(transform.Find("Anvil Enemy Gun up").rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * enemySpeed);
+                        if (direction != Vector3.zero)
+                            enemyBody.rotation = Quaternion.Slerp(enemyBody.rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * enemySpeed);
 
                     }
                 }
             }
-            else if(isAiming)
+            else if (isAiming)
             {
                 Vector3 direction = target.transform.position - transform.position;
                 transform.position = Vector3.MoveTowards(transform.position, target.transform.position, enemySpeed * Time.deltaTime);
-                transform.Find("Anvil Enemy Gun up").rotation = Quaternion.Slerp(transform.Find("Anvil Enemy Gun up").rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * enemySpeed);
-                //transform.Find("Anvil Enemy Gun up").LookAt(target.transform);
+                if (direction != Vector3.zero)
+                    enemyBody.rotation = Quaternion.Slerp(enemyBody.rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * enemySpeed);
+                //enemyBody.LookAt(target.transform);
             }
             
             enemyHealthObj.transform.LookAt(target.transform);
@@ -108,8 +119,17 @@ namespace _Project.Scripts
                 Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
                 Vector3 position = contact.point;
                 Instantiate(hitParticlePrefab, position, rotation);
-                
-                enemyHealth.TakeDamage(1);
+
+                if (collision.gameObject.name == "Bullet 3(Clone)")
+                {
+                    if (GameObject.Find("Player").GetComponent<Player>().isPowered())
+                    {
+                        enemyHealth.TakeDamage(2);
+                    }
+                    else { 
+                        enemyHealth.TakeDamage(1); 
+                    }
+                }
             }
         }
 

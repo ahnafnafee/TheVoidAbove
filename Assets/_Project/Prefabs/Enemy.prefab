@@ -34273,11 +34273,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 15
+  enemyRange: 300
+  enemyObj: {fileID: 7095313492610171407}
   healthFillImage: {fileID: 982766637}
   enemyHealthObj: {fileID: 651041558}
   hitParticlePrefab: {fileID: 2462045763441574653, guid: 281d425e8bcdde041b783be5ca06d228,
     type: 3}
   gun: {fileID: 1810849979208253521}
+  origianlPosition: {x: 0, y: 0, z: 0}
+  returnMove: 0
 --- !u!54 &-3818388280405966213
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34311,6 +34315,7 @@ MonoBehaviour:
   explosionFx: {fileID: 1879769179923522, guid: 81c475fccb118de4f99b5f2f2b52bb90,
     type: 3}
   enemyCenter: {fileID: 3386565427369659492}
+  drop: {fileID: 3814731919474609149, guid: c291475de59dcda46b85b183bb189cdb, type: 3}
   healthPack: {fileID: 6188982617957943217, guid: 14470e3fa6f6da140ab13f3d7bb457b9,
     type: 3}
   gameOverUI: {fileID: 0}
@@ -44301,7 +44306,7 @@ PrefabInstance:
     - target: {fileID: -1969763508576962672, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -1373836086814548232, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}
@@ -44401,7 +44406,7 @@ PrefabInstance:
     - target: {fileID: 4617126115217632195, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4847727960596526910, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}

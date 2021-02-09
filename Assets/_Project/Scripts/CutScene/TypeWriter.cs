@@ -7,7 +7,7 @@ public class TypeWriter : MonoBehaviour
 {
     public float delay = 0.1f;
     public string fullText;
-    private string currentText = "";
+    public string currentText = "";
     public bool enumControl = true;
 
     // Start is called before the first frame update
@@ -25,5 +25,10 @@ public class TypeWriter : MonoBehaviour
             this.GetComponent<Text>().text = currentText;
             yield return new WaitForSeconds(delay);
         }
+    }
+
+    private void Update()
+    {
+        
     }
 }
