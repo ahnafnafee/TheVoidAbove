@@ -5,6 +5,13 @@
 			<PropertyList>
 				<Property Name="Event Action List\{049C554A-02F1-455A-8105-D2633F5C5649}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{09AFA428-B567-422A-B9DB-E1F31B42F522}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{3014E3F8-866E-4A4F-8239-BAF1ACBD3AC8}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{616EDD43-0A91-4ACD-872A-D51DC8DF84CE}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{6AB7B30B-D42E-494A-BE55-357F18AD9080}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{82059275-3504-4912-B98C-F3E50AD47102}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{8E748FE3-0AB4-4EFA-A916-F504E46B8849}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{A138EBEA-DE22-4AC7-A444-70A45FE64156}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{EF0BA06F-8146-49C3-A4DB-43ADA7FC1001}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
@@ -62,7 +69,7 @@
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_7_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_8_1" Type="string" Value=""/>
-				<Property Name="SoundBank Manager\x64_Expand States" Type="string" Value=""/>
+				<Property Name="SoundBank Manager\x64_Expand States" Type="string" Value="K2LR4BfVbU+XfTtaapo+Og=="/>
 				<Property Name="SoundBankHeaderFilePath" Type="string" Value="GeneratedSoundBanks\"/>
 				<Property Name="SoundBankPaths" Type="string">
 					<ValueList>

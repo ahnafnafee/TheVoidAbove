@@ -6,8 +6,14 @@
 				<SoundBank Name="Main" ID="{420DE984-9FE9-4BFF-AE31-E18C693BFEDB}">
 					<ObjectInclusionList>
 						<ObjectRef Name="main_menu_event" ID="{09AFA428-B567-422A-B9DB-E1F31B42F522}" WorkUnitID="{A03B63E4-DE85-4971-8E2B-6A382CEB1AA1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="success" ID="{496BCE4E-14A6-44EC-BC72-A23EDBB34FBD}" WorkUnitID="{7BF6478F-CE73-498E-873E-DF0B07E28198}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Level_one_event" ID="{049C554A-02F1-455A-8105-D2633F5C5649}" WorkUnitID="{A03B63E4-DE85-4971-8E2B-6A382CEB1AA1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="heal_event" ID="{82059275-3504-4912-B98C-F3E50AD47102}" WorkUnitID="{A03B63E4-DE85-4971-8E2B-6A382CEB1AA1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="alt_shoot_event" ID="{EF0BA06F-8146-49C3-A4DB-43ADA7FC1001}" WorkUnitID="{A03B63E4-DE85-4971-8E2B-6A382CEB1AA1}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="shoot_event" ID="{3014E3F8-866E-4A4F-8239-BAF1ACBD3AC8}" WorkUnitID="{A03B63E4-DE85-4971-8E2B-6A382CEB1AA1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ammo_event" ID="{A138EBEA-DE22-4AC7-A444-70A45FE64156}" WorkUnitID="{A03B63E4-DE85-4971-8E2B-6A382CEB1AA1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="robot_death_event" ID="{616EDD43-0A91-4ACD-872A-D51DC8DF84CE}" WorkUnitID="{A03B63E4-DE85-4971-8E2B-6A382CEB1AA1}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="robot_shoot_event" ID="{8E748FE3-0AB4-4EFA-A916-F504E46B8849}" WorkUnitID="{A03B63E4-DE85-4971-8E2B-6A382CEB1AA1}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

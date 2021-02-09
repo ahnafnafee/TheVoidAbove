@@ -20,91 +20,106 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b97dfe6-8e2b-4066-9c65-3dd6ee961227" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MeleeEnemyControl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MeleeEnemyControl.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-4X0F1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-4X0F1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-5VECV.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-5VECV.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-6EWE0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-6EWE0.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-6LO6H.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-6LO6H.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-7P4LL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-7P4LL.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-AAF31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-AAF31.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-E0IQC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-E0IQC.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-E2I40.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-E2I40.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-HTSTH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-HTSTH.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-K5JUB.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-K5JUB.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-PWF7S.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-PWF7S.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-RE4AS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-RE4AS.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-RNG8X.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-RNG8X.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-RO8QJ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-RO8QJ.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-TGF6G.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-TGF6G.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-UX9SX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-UX9SX.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-Y1MIZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-Y1MIZ.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-YMJ9T.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-YMJ9T.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-ZSPWZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Screenshots/Screenshot-ZSPWZ.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/EVA35Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/EVA35Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Bold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Bold SDF 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/DecodedBanks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/DecodedBanks/English(US).meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/English(US).meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Init.bnk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Init.bnk.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Init.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Init.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Main.bnk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Main.bnk.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Main.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Main.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/PluginInfo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/PluginInfo.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/SoundbanksInfo.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Wwise_IDs.h" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Wwise_IDs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkConvolutionReverb.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkConvolutionReverb.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkFlanger.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkFlanger.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkGuitarDistortion.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkGuitarDistortion.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkHarmonizer.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkHarmonizer.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkMotion.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkMotion.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkPitchShifter.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkPitchShifter.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkRecorder.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkRecorder.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkReflect.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkReflect.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkSoundSeedAir.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkSoundSeedAir.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkSoundSeedGrain.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkSoundSeedGrain.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkSoundSeedImpact.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkSoundSeedImpact.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkStereoDelay.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkStereoDelay.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkSynthOne.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkSynthOne.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkTimeStretch.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkTimeStretch.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkTremolo.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/AkTremolo.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/Auro.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/Auro.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/MSSpatial.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/MSSpatial.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/MasteringSuite.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/MasteringSuite.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/McDSP.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/McDSP.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/iZotope.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/DSP/iZotope.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Debug/AkSoundEngine.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Debug/AkSoundEngine.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Debug/AkWaapiClient.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Debug/AkWaapiClient.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkSoundEngine.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkSoundEngine.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkWaapiClient.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkWaapiClient.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Release/AkSoundEngine.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Release/AkSoundEngine.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Release/AkWaapiClient.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Release/AkWaapiClient.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkConvolutionReverb.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkConvolutionReverb.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkFlanger.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkFlanger.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkGuitarDistortion.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkGuitarDistortion.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkHarmonizer.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkHarmonizer.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkMotion.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkMotion.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkPitchShifter.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkPitchShifter.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkRecorder.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkRecorder.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkReflect.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkReflect.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkSoundSeedAir.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkSoundSeedAir.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkSoundSeedGrain.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkSoundSeedGrain.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkSoundSeedImpact.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkSoundSeedImpact.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkStereoDelay.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkStereoDelay.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkSynthOne.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkSynthOne.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkTimeStretch.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkTimeStretch.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkTremolo.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/AkTremolo.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/Auro.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/Auro.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/MSSpatial.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/MSSpatial.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/MasteringSuite.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/MasteringSuite.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/McDSP.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/McDSP.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/iZotope.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/DSP/iZotope.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Debug/AkSoundEngine.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Debug/AkSoundEngine.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Debug/AkWaapiClient.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Debug/AkWaapiClient.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkSoundEngine.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkSoundEngine.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkWaapiClient.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkWaapiClient.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Release/AkSoundEngine.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Release/AkSoundEngine.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Release/AkWaapiClient.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Release/AkWaapiClient.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/GreenGlow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/GreenGlow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Ammo Drop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Ammo Drop.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/GunMain.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/GunMain.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/HealthPickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/HealthPickup.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/01 - TitleScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/01 - TitleScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/03 - Scene_1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/03 - Scene_1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_2.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_2.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/OLD - Scene_1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/OLD - Scene_1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1 - Copy.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1 - Copy.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/StoryCutscene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/StoryCutscene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Test_01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Test_01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/FlowControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/FlowControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/TypeWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/TypeWriter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika1.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika2.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika4.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika5.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/pika6.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/EnemyMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/EnemyMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/03 - StoryCutscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/03 - StoryCutscene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/DropControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/DropControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/EnemyGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/EnemyGun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/HealthPack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/HealthPack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PackageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PackageManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Shootable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Shootable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Warning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Warning.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/WeaponScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/WeaponScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.progrids/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.progrids/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/.cache/SoundBankInfoCache.dat" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/.cache/SoundBankInfoCache.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/Events/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/Events/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/Main.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/Main.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/Main.txt" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/Main.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/SoundbanksInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/SoundbanksInfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/Main.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/Main.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/Main.txt" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/Main.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/SoundBanks/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/SoundBanks/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/The_Void_Above_WwiseProject.aman.wsettings" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/The_Void_Above_WwiseProject.aman.wsettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/The_Void_Above_WwiseProject.nafee.validationcache" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/The_Void_Above_WwiseProject.nafee.validationcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/The_Void_Above_WwiseProject.nafee.wsettings" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/The_Void_Above_WwiseProject.nafee.wsettings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,6 +185,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -225,6 +241,7 @@
       <workItem from="1612724844986" duration="728000" />
       <workItem from="1612739701565" duration="4847000" />
       <workItem from="1612755917560" duration="9834000" />
+      <workItem from="1612850724141" duration="1441000" />
     </task>
     <servers />
   </component>
@@ -249,6 +266,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="359" y="147" key="SettingsEditor" timestamp="1612884186828">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="359" y="147" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1612884186828" />
     <state x="922" y="610" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1606977274199">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

@@ -63,7 +63,15 @@ public class Health : MonoBehaviour
                 {
                     Instantiate(healthPack, transform1.position, Quaternion.identity);
                 }
+
+
+                Debug.Log(this.gameObject.name);
+                if (this.gameObject.tag  == "Enemy")
+                {
+                    AkSoundEngine.PostEvent("robot_death_event",this.gameObject);
+                }
                 Destroy(gameObject);
+
             }
             
         }

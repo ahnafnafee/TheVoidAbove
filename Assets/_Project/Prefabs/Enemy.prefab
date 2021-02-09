@@ -9995,6 +9995,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1904275489549627759}
   - component: {fileID: 9175556909473582614}
+  - component: {fileID: 7966849259792419590}
+  - component: {fileID: 7984099223881885170}
   m_Layer: 0
   m_Name: Blaster
   m_TagString: Untagged
@@ -10034,6 +10036,62 @@ MonoBehaviour:
   bullet: {fileID: 7245286705283116746, guid: e5f48851c76332049a2c0ae1eaca1ee2, type: 3}
   bulletCount: 3
   spread: 3
+--- !u!114 &7966849259792419590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810849979208253521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ba603caf028b04c8987f1450ee695a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &7984099223881885170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810849979208253521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc8d70676377f946813c801cfbb581b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 53a2555266c46274587a880bbe548306,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  LargeModePositions: []
+  multiPositionArray: []
 --- !u!1 &1867253697455610142
 GameObject:
   m_ObjectHideFlags: 0
@@ -34237,9 +34295,12 @@ GameObject:
   - component: {fileID: 2537495974722324653}
   - component: {fileID: -3818388280405966213}
   - component: {fileID: 3715712635004098083}
+  - component: {fileID: 4711740618787365964}
+  - component: {fileID: 2205833454667848589}
+  - component: {fileID: 7412945683362383424}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34319,6 +34380,87 @@ MonoBehaviour:
   healthPack: {fileID: 6188982617957943217, guid: 14470e3fa6f6da140ab13f3d7bb457b9,
     type: 3}
   gameOverUI: {fileID: 0}
+--- !u!114 &4711740618787365964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302760016068645797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ba603caf028b04c8987f1450ee695a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &2205833454667848589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302760016068645797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc8d70676377f946813c801cfbb581b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: dee15a10ae79a644eb9f52fd9fc2597b,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &7412945683362383424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302760016068645797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d2166297572a34bb8474b8bf3115c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1903935fb25eccc468d5b829d1844238,
+      type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &4789166513023192522
 GameObject:
   m_ObjectHideFlags: 0
@@ -44306,7 +44448,7 @@ PrefabInstance:
     - target: {fileID: -1969763508576962672, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -1373836086814548232, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}
@@ -44376,7 +44518,7 @@ PrefabInstance:
     - target: {fileID: 2753902623494145137, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3195862062932135279, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}
@@ -44401,7 +44543,7 @@ PrefabInstance:
     - target: {fileID: 4537432283579797623, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4617126115217632195, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}

@@ -30,6 +30,7 @@ namespace _Project.Scripts
             if (other.tag.Equals("Player"))
             {
                 other.gameObject.GetComponent<Player>().powerUp();
+                AkSoundEngine.PostEvent("ammo_event", this.gameObject);
                 Destroy(this.gameObject);
             }
         }

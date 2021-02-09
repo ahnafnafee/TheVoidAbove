@@ -13,7 +13,10 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID LEVEL_ONE_EVENT = 306708153U;
+        static const AkUniqueID MAIN_MENU_EVENT = 3226024329U;
         static const AkUniqueID SHOOT_EVENT = 1429961119U;
+        static const AkUniqueID SUCCESS_PICKUP_EVENT = 3488125696U;
     } // namespace EVENTS
 
     namespace BANKS

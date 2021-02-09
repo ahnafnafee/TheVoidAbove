@@ -40,6 +40,72 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="success_pickup_event" ID="{6AB7B30B-D42E-494A-BE55-357F18AD9080}">
+					<ChildrenList>
+						<Action Name="" ID="{EEB070EF-FDE0-4D77-889D-C228BEDA9B2B}" ShortID="683502956">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="success" ID="{496BCE4E-14A6-44EC-BC72-A23EDBB34FBD}" WorkUnitID="{7BF6478F-CE73-498E-873E-DF0B07E28198}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="robot_death_event" ID="{616EDD43-0A91-4ACD-872A-D51DC8DF84CE}">
+					<ChildrenList>
+						<Action Name="" ID="{A18E3855-0C0F-4920-8083-8D1FE03DAB46}" ShortID="133392604">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="robot_death" ID="{EDF9F61E-08D5-495D-835A-284662347783}" WorkUnitID="{7BF6478F-CE73-498E-873E-DF0B07E28198}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="robot_shoot_event" ID="{8E748FE3-0AB4-4EFA-A916-F504E46B8849}">
+					<ChildrenList>
+						<Action Name="" ID="{995B78F8-0E0B-4ECD-BE18-499DB00F8717}" ShortID="625753902">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Enemy_gun" ID="{5B4B98A1-F17C-4623-8F1F-06E23D518F02}" WorkUnitID="{7BF6478F-CE73-498E-873E-DF0B07E28198}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="heal_event" ID="{82059275-3504-4912-B98C-F3E50AD47102}">
+					<ChildrenList>
+						<Action Name="" ID="{ED5ABE39-BF7D-490D-9F31-87CCF871054C}" ShortID="746606424">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="heal" ID="{54C7C0B1-A1EC-4917-BB87-7AA767922881}" WorkUnitID="{7BF6478F-CE73-498E-873E-DF0B07E28198}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="alt_shoot_event" ID="{EF0BA06F-8146-49C3-A4DB-43ADA7FC1001}">
+					<ChildrenList>
+						<Action Name="" ID="{0D526002-1546-4730-9009-CD6E18CE62B9}" ShortID="397786748">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="air_release" ID="{2827F3FA-C9A2-4EE5-AB5A-7FF3FAB52CD7}" WorkUnitID="{7BF6478F-CE73-498E-873E-DF0B07E28198}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ammo_event" ID="{A138EBEA-DE22-4AC7-A444-70A45FE64156}">
+					<ChildrenList>
+						<Action Name="" ID="{AAC7BDE5-4D9A-433E-893B-CD76C555C03A}" ShortID="495766270">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ammo_pickup" ID="{A9EC56CE-0C57-46B2-AB5B-374DC045B666}" WorkUnitID="{7BF6478F-CE73-498E-873E-DF0B07E28198}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -120,9 +120,11 @@ namespace _Project.Scripts
                 //If you're not stunned, allow to process
                 if (controlsActive)
                 {
-                    //When you click LMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
+                    //When you click RMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
+                    AkSoundEngine.PostEvent("alt_shoot_event", this.gameObject);
                     _rb.AddForce(-mainCam.transform.forward * pushBackSpeed, ForceMode.VelocityChange);
                     GameObject fx = Instantiate(rightClickFX, targetPoint.transform.position, targetPoint.transform.rotation);
+                  
                     Destroy(fx, 5);
                 }
             }

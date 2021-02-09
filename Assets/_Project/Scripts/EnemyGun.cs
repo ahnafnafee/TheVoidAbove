@@ -85,7 +85,8 @@ namespace _Project.Scripts
                     
             //Fire
             GameObject newBullet = Instantiate(bullet, transform.position, bullet.transform.rotation);
-            newBullet.GetComponent<Rigidbody>().velocity = directionWithSpread.normalized * bulletSpeed;        
+            newBullet.GetComponent<Rigidbody>().velocity = directionWithSpread.normalized * bulletSpeed;
+            AkSoundEngine.PostEvent("robot_shoot_event", this.gameObject);
         }
         
         public void startShooting()

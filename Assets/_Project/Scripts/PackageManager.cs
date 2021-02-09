@@ -55,6 +55,7 @@ namespace _Project.Scripts
             package.transform.rotation = this.transform.Find("PackagePosition").rotation;
             package.transform.parent = this.transform;
             hasPackage = true;
+            AkSoundEngine.PostEvent("success_pickup_event", gameObject);
             package.GetComponent<Rigidbody>().detectCollisions = false;
             package.GetComponent<Rigidbody>().isKinematic = true;
             grabRange.SetActive(false);

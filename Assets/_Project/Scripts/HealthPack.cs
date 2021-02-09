@@ -36,6 +36,7 @@ namespace _Project.Scripts
                 {
                     other.transform.GetComponent<Health>().objectHealth += gainedHealth;
                 }
+                AkSoundEngine.PostEvent("heal_event", this.gameObject);
                 Destroy(this.gameObject);
             }
         }
