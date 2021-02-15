@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace _Project.Scripts
 {
     public class PackageManager : MonoBehaviour
     {
-        public bool hasPackage { get; set; }
+        public bool hasPackage;
         
         public GameObject package;
         [SerializeField]
@@ -14,7 +15,16 @@ namespace _Project.Scripts
         // Start is called before the first frame update
         void Awake()
         {
-            hasPackage = false;
+            if (SceneManager.GetActiveScene().buildIndex == 3)
+            {
+                hasPackage = false;
+            }
+            else
+            {
+                hasPackage = true;
+                PickUp();
+            }
+
             grabRange.SetActive(true);
             package.GetComponent<Rigidbody>().detectCollisions = true;
             package.transform.parent = null;

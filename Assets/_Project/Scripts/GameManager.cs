@@ -14,6 +14,7 @@ namespace _Project.Scripts
         
         [Header("Screenshot")] private TakeScreenshot screenshot;
         [SerializeField] private GameObject gameHud;
+        [SerializeField] private GameObject inGameUI;
 
         private bool isPaused, isSettings;
 
@@ -27,6 +28,7 @@ namespace _Project.Scripts
             isSettings = false;
             pauseMenu.SetActive(false);
             gameHud.SetActive(true);
+            inGameUI.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;
             screenshot = GetComponent<TakeScreenshot>();
             playerControls.UserInterface.Pause.performed += _ => PauseScene();
@@ -59,6 +61,7 @@ namespace _Project.Scripts
             Time.timeScale = Convert.ToInt32(isPaused);
             pauseMenu.SetActive(!isPaused);
             gameHud.SetActive(isPaused);
+            inGameUI.SetActive(isPaused);
             isPaused = !isPaused;
             Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
 
@@ -74,12 +77,14 @@ namespace _Project.Scripts
 
         public void RestartScene()
         {
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+            FindObjectOfType<ProgressLoadScene>().LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
 
         public void LoadLevel2()
         {
-            SceneManager.LoadSceneAsync(4);
+            FindObjectOfType<ProgressLoadScene>().LoadScene(4);
+            //SceneManager.LoadSceneAsync(4);
         }
 
         public void MenuScene()

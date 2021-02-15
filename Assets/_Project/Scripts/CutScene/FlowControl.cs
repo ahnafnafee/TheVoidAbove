@@ -85,7 +85,9 @@ namespace _Project.Scripts
             nubPic = 0;
             if (nubPage == allpage.Count)
             {
-                SceneManager.LoadScene(3);
+                gameObject.SetActive(false);
+                FindObjectOfType<ProgressLoadScene>().LoadScene(3);
+                //SceneManager.LoadScene(3);
             }
             else
             {

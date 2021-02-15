@@ -1,6 +1,7 @@
 ﻿//using _Project.Scripts.InputActions;
 
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -46,6 +47,7 @@ namespace _Project.Scripts
         [Header("Player")] private Health pHealth;
         [Tooltip("Image component displaying current health")]
         public Image healthFillImage;
+        public TextMeshProUGUI healthPct;
 
         [Header("Feedback Flash")]
         [SerializeField] private Image feedFlash;
@@ -134,6 +136,7 @@ namespace _Project.Scripts
             feedFlash.color = tempColor;
 
             healthFillImage.fillAmount = pHealth.objectHealth / pHealth.health;
+            healthPct.text = (int) (healthFillImage.fillAmount * 100f) + "%";
 
             if (time_powered > 0.0f) { time_powered -= Time.deltaTime; }
         }

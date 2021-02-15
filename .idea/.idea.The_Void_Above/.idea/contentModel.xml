@@ -66,8 +66,11 @@
               <e p="PlayerCollide.cs" t="Include" />
             </e>
             <e p="PackageManager.cs" t="Include" />
+            <e p="PannelCheck.cs" t="Include" />
+            <e p="PannelOpen.cs" t="Include" />
             <e p="Player.cs" t="Include" />
             <e p="PlayerWin.cs" t="Include" />
+            <e p="ProgressLoadScene.cs" t="Include" />
             <e p="randomDebris.cs" t="Include" />
             <e p="Respawn.cs" t="Include" />
             <e p="Saving" t="Include">
@@ -353,6 +356,86 @@
               <e p="SHARED BY LUXURYPANDA.txt" t="Include" />
             </e>
           </e>
+          <e p="Shift - Complete Sci-Fi UI" t="Include">
+            <e p="Editor" t="Include">
+              <e p="ContextMenu.cs" t="Include" />
+              <e p="ExtendedColorPicker.cs" t="Include" />
+              <e p="InitShift.cs" t="Include" />
+              <e p="UIManagerEditor.cs" t="Include" />
+            </e>
+            <e p="Read Me.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Buttons" t="Include">
+                <e p="ChapterButton.cs" t="Include" />
+                <e p="FavoriteButton.cs" t="Include" />
+                <e p="MainButton.cs" t="Include" />
+                <e p="MainPanelButton.cs" t="Include" />
+                <e p="QuickMatchButton.cs" t="Include" />
+                <e p="SettingsButton.cs" t="Include" />
+                <e p="ShortcutButton.cs" t="Include" />
+                <e p="SpotlightButton.cs" t="Include" />
+              </e>
+              <e p="Event" t="Include">
+                <e p="HoldKeyEvent.cs" t="Include" />
+                <e p="PointerEnterEvents.cs" t="Include" />
+                <e p="PressKeyEvent.cs" t="Include" />
+                <e p="TimedEvent.cs" t="Include" />
+              </e>
+              <e p="Fix" t="Include">
+                <e p="LayoutGroupPositionFix.cs" t="Include" />
+                <e p="UIElementInFront.cs" t="Include" />
+              </e>
+              <e p="Input" t="Include">
+                <e p="GamepadChecker.cs" t="Include" />
+                <e p="ScrollGamepadManager.cs" t="Include" />
+                <e p="SliderGamepadManager.cs" t="Include" />
+                <e p="VirtualCursor.cs" t="Include" />
+                <e p="VirtualCursorAnimate.cs" t="Include" />
+              </e>
+              <e p="Other" t="Include">
+                <e p="CanvasManager.cs" t="Include" />
+                <e p="ExitToSystem.cs" t="Include" />
+                <e p="LaunchURL.cs" t="Include" />
+                <e p="QualityManager.cs" t="Include" />
+                <e p="ScrollForMore.cs" t="Include" />
+              </e>
+              <e p="Panel" t="Include">
+                <e p="FriendsPanelManager.cs" t="Include" />
+                <e p="MainPanelButtonParent.cs" t="Include" />
+                <e p="MainPanelManager.cs" t="Include" />
+                <e p="ModalWindowManager.cs" t="Include" />
+                <e p="ServerBrowserManager.cs" t="Include" />
+                <e p="SplashScreenManager.cs" t="Include" />
+              </e>
+              <e p="Rendering" t="Include">
+                <e p="BlurManager.cs" t="Include" />
+                <e p="GradientEffect.cs" t="Include" />
+                <e p="UIParticleRenderer.cs" t="Include" />
+              </e>
+              <e p="UI Element" t="Include">
+                <e p="CustomInputField.cs" t="Include" />
+                <e p="HorizontalSelector.cs" t="Include" />
+                <e p="SliderManager.cs" t="Include" />
+                <e p="SwitchManager.cs" t="Include" />
+                <e p="UIElementSound.cs" t="Include" />
+              </e>
+              <e p="UI Manager" t="Include">
+                <e p="UIManager.cs" t="Include" />
+                <e p="UIManagerBackground.cs" t="Include" />
+                <e p="UIManagerBGMusic.cs" t="Include" />
+                <e p="UIManagerGameLogo.cs" t="Include" />
+                <e p="UIManagerImage.cs" t="Include" />
+                <e p="UIManagerParticle.cs" t="Include" />
+                <e p="UIManagerText.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="Fast UI Blur.shader" t="Include" />
+              <e p="Masked UI Blur.shader" t="Include" />
+              <e p="UI Blur.shader" t="Include" />
+              <e p="UI Particle Additive.shader" t="Include" />
+            </e>
+          </e>
           <e p="SuperHot" t="Include">
             <e p="DOTween" t="Include">
               <e p="Modules" t="Include">
@@ -409,6 +492,65 @@
               </e>
               <e p="Simple Sine Wave.shader" t="Include" />
               <e p="Snow.shader" t="Include" />
+            </e>
+          </e>
+          <e p="VacuumShaders" t="Include">
+            <e p="Texture Adjustments" t="Include">
+              <e p="Example Scenes" t="Include">
+                <e p="Files" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Example_1_Texture.cs" t="Include" />
+                    <e p="Example_2_ImageEffect.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Shaders" t="Include">
+                <e p="Adjustments_BlurDirectional.shader" t="Include" />
+                <e p="Adjustments_BlurGaussian.shader" t="Include" />
+                <e p="Adjustments_BlurGrainy.shader" t="Include" />
+                <e p="Adjustments_BrightnessContrast.shader" t="Include" />
+                <e p="Adjustments_ChannelImport.shader" t="Include" />
+                <e p="Adjustments_ChannelInvert.shader" t="Include" />
+                <e p="Adjustments_ChannelSwap.shader" t="Include" />
+                <e p="Adjustments_ColorOverlay.shader" t="Include" />
+                <e p="Adjustments_ColorReplace.shader" t="Include" />
+                <e p="Adjustments_ColorSpace.shader" t="Include" />
+                <e p="Adjustments_Crop.shader" t="Include" />
+                <e p="Adjustments_EdgePadding.shader" t="Include" />
+                <e p="Adjustments_Flip.shader" t="Include" />
+                <e p="Adjustments_GenerateCheckerboard.shader" t="Include" />
+                <e p="Adjustments_GenerateGradient.shader" t="Include" />
+                <e p="Adjustments_GenerateGradientNoise.shader" t="Include" />
+                <e p="Adjustments_GenerateGrid.shader" t="Include" />
+                <e p="Adjustments_GeneratePixelatedNoise.shader" t="Include" />
+                <e p="Adjustments_GenerateShape.shader" t="Include" />
+                <e p="Adjustments_GenerateSimpleNoise.shader" t="Include" />
+                <e p="Adjustments_GradientRamp.shader" t="Include" />
+                <e p="Adjustments_Grayscale.shader" t="Include" />
+                <e p="Adjustments_HueSaturationLightness.shader" t="Include" />
+                <e p="Adjustments_Levels.shader" t="Include" />
+                <e p="Adjustments_LUT.shader" t="Include" />
+                <e p="Adjustments_Noise.shader" t="Include" />
+                <e p="Adjustments_PixelateRectangular.shader" t="Include" />
+                <e p="Adjustments_Rotate.shader" t="Include" />
+                <e p="Adjustments_Rotator.shader" t="Include" />
+                <e p="Adjustments_Sharpen.shader" t="Include" />
+                <e p="Adjustments_TextureBombing.shader" t="Include" />
+                <e p="Adjustments_Threshold.shader" t="Include" />
+                <e p="Adjustments_TilingOffset.shader" t="Include" />
+                <e p="Adjustments_Twirl.shader" t="Include" />
+                <e p="cginc" t="Include">
+                  <e p="Adjustments_Math.cginc" t="Include" />
+                </e>
+                <e p="Editor" t="Include">
+                  <e p="Offset.shader" t="Include" />
+                </e>
+                <e p="Resources" t="Include">
+                  <e p="Adjustments_BlitCopy.shader" t="Include" />
+                  <e p="Adjustments_IncludeChannel.shader" t="Include" />
+                  <e p="Adjustments_Mask.shader" t="Include" />
+                </e>
+              </e>
             </e>
           </e>
         </e>

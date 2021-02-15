@@ -109,6 +109,7 @@
 				</Sound>
 				<Sound Name="Back-in-Time" ID="{CC2E4230-EF01-4A80-967F-D57D9099AF53}" ShortID="381232965">
 					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-40</Value>
