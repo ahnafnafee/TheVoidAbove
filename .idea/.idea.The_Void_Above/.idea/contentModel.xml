@@ -32,6 +32,12 @@
               <e p="TypeWriter.cs" t="Include" />
             </e>
             <e p="DestroyFX.cs" t="Include" />
+            <e p="DialogueSystem" t="Include">
+              <e p="DialogueBaseClass.cs" t="Include" />
+              <e p="DialogueHolder.cs" t="Include" />
+              <e p="DialogueLine.cs" t="Include" />
+              <e p="TiggerControl.cs" t="Include" />
+            </e>
             <e p="DissolveEffect.cs" t="Include" />
             <e p="DropControl.cs" t="Include" />
             <e p="EnemyGun.cs" t="Include" />
@@ -97,6 +103,9 @@
           </e>
           <e p="Shader" t="Include">
             <e p="Add2.shader" t="Include" />
+            <e p="AtmosphericFog" t="Include">
+              <e p="AtmosphericFogRenderFeature.cs" t="Include" />
+            </e>
             <e p="FF_Shader.shader" t="Include" />
             <e p="Lit2.shader" t="Include" />
             <e p="Toon" t="Include">
@@ -289,6 +298,17 @@
               <e p="Fast UI Blur.shader" t="Include" />
               <e p="Masked UI Blur.shader" t="Include" />
               <e p="UI Blur.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Kino" t="Include">
+            <e p="Fog" t="Include">
+              <e p="Editor" t="Include">
+                <e p="FogEditor.cs" t="Include" />
+              </e>
+              <e p="Fog.cs" t="Include" />
+              <e p="Shader" t="Include">
+                <e p="Fog.shader" t="Include" />
+              </e>
             </e>
           </e>
           <e p="Plugins" t="Include">
