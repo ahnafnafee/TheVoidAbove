@@ -21,66 +21,45 @@
   <component name="ChangeListManager">
     <list default="true" id="9b97dfe6-8e2b-4066-9c65-3dd6ee961227" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/Colorblind Effect/Demo/Materials/Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Colorblind Effect/Demo/Materials/Blue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/Colorblind Effect/Demo/Materials/Cyan.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Colorblind Effect/Demo/Materials/Cyan.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/Colorblind Effect/Demo/Materials/Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Colorblind Effect/Demo/Materials/Green.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/Colorblind Effect/Demo/Materials/Magenta.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Colorblind Effect/Demo/Materials/Magenta.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/Colorblind Effect/Demo/Materials/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Colorblind Effect/Demo/Materials/Red.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/Colorblind Effect/Demo/Materials/White.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Colorblind Effect/Demo/Materials/White.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/Colorblind Effect/Demo/Materials/Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Colorblind Effect/Demo/Materials/Yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PathCreator/Examples/Scripts/PathFollower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PathCreator/Examples/Scripts/PathFollower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Real Stars Skybox.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene_01_lighting.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene_01_lighting.lighting" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP/UniversalRenderPipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/UniversalRenderPipelineAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkSoundEngine.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkSoundEngine.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkWaapiClient.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkWaapiClient.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkSoundEngine.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkSoundEngine.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkWaapiClient.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkWaapiClient.dll.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/EVA35Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/EVA35Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/Nebula-Hollow SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/Nebula-Hollow SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/Nebula-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/Nebula-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/conthrax-sb SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/conthrax-sb SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/ArrowMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/ArrowMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/Enemy/DullGreenAccent.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/Enemy/DullGreenAccent.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/Enemy/GreenAccent.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/Enemy/GreenAccent.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/Enemy/GreenGreyAccent.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/Enemy/GreenGreyAccent.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/Enemy/GreyAccent.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/Enemy/GreyAccent.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/Enemy/LightGreyAccent.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/Enemy/LightGreyAccent.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/SpaceSkybox_v3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/SpaceSkybox_v3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Init.bnk.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Init.bnk.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Init.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Init.txt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Main.bnk.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Main.bnk.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Main.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Main.txt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/PluginInfo.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/PluginInfo.xml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/SoundbanksInfo.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/SoundbanksInfo.xml.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/asteroid_mat_shootable.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/asteroid_mat_shootable.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/shootable_glow_mat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/shootable_glow_mat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/GameHUD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/GameHUD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/NextLevel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/NextLevel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/03 - StoryCutscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/03 - StoryCutscene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/PostProcessing/LevelChange Blur.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/PostProcessing/LevelChange Blur.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/AsteroidPaths.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/AsteroidPaths.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/GameOver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/GameOver.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/01 - TitleScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/01 - TitleScreen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/Global Volume Profile 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/Global Volume Profile 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/LightingData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/Lightmap-0_comp_dir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/Lightmap-0_comp_light.exr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/05 - Scene_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/05 - Scene_2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/05 - Scene_2.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/05 - Scene_2.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Global Volume Profile 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Global Volume Profile 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Lighting/Scene_2 Lighting.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Lighting/Scene_2 Lighting.lighting" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1/Global Volume Profile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1/Global Volume Profile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1/LightingData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1/LightingData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1/ReflectionProbe-0.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_1/ReflectionProbe-0.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_2/Global Volume Profile 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_2/Global Volume Profile 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_2/LightingData.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_2/LightingData.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_2/ReflectionProbe-0.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Scene_2/ReflectionProbe-0.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/FlowControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/FlowControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PackageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PackageManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Test_01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Test_01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Test_03.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Test_03.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PlayerWin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PlayerWin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/.cache/Mac/SFX/Wwise.dat" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/.cache/Mac/SFX/Wwise.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/.cache/SoundBankInfoCache.dat" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/.cache/SoundBankInfoCache.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/.cache/Windows/SFX/Wwise.dat" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/.cache/Windows/SFX/Wwise.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/Main.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/Main.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/Main.txt" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/Main.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/PluginInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/PluginInfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/SoundbanksInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/SoundbanksInfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/Main.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/Main.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/Main.txt" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/Main.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/PluginInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/PluginInfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/The_Void_Above_WwiseProject.aman.wsettings" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/The_Void_Above_WwiseProject.aman.wsettings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/The_Void_Above_WwiseProject.nafee.validationcache" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/The_Void_Above_WwiseProject.nafee.validationcache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,15 +71,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Utils/GlobalVar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Misc/DissolveScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/DestroyFX.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2500DD07-8A54-4A69-B6C9-23861AF6CD15/03/a52a2470/GUIStyle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/ProgressLoadScene.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/DissolveEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Misc/DestroyTunnel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Utils/MoveAlong.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Utils/DontGoThroughThings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Utils/GlobalVar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Misc/DestroyTunnel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/DissolveEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Utils/MoveAlong.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Misc/DissolveScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Imported/Kino/Fog/Fog.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2500DD07-8A54-4A69-B6C9-23861AF6CD15/03/a52a2470/GUIStyle.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -117,7 +97,6 @@
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Misc/DestroyTunnel.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Tutorial.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/HUD/HudInfo.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PlayerWin.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Misc/DissolveScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/WeaponScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Textures/FF_Shader.shader" />
@@ -141,6 +120,7 @@
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/ProgressLoadScene.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PackageManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PlayerWin.cs" />
       </list>
     </option>
   </component>
@@ -214,6 +194,7 @@
       <workItem from="1612905746951" duration="1742000" />
       <workItem from="1612910725650" duration="4805000" />
       <workItem from="1613323460557" duration="7266000" />
+      <workItem from="1613423464451" duration="4427000" />
     </task>
     <servers />
   </component>

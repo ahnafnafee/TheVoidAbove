@@ -10,7 +10,12 @@ namespace PathCreation.Examples
         public EndOfPathInstruction endOfPathInstruction;
         public float speed = 5;
         float distanceTravelled;
+        private Rigidbody _rb;
 
+        void Awake()
+        {
+            _rb = GetComponent<Rigidbody>();
+        }
         void Start() {
             if (pathCreator != null)
             {
@@ -19,13 +24,20 @@ namespace PathCreation.Examples
             }
         }
 
+        void FixedUpdate()
+        {
+
+        }
+
         void Update()
         {
             if (pathCreator != null)
             {
                 distanceTravelled += speed * Time.deltaTime;
+                _rb.velocity = (pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction) - transform.position).normalized * speed;
                 transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
                 transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
+                
             }
         }
 

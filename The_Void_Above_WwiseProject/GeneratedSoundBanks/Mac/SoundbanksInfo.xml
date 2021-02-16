@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3623719463">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2422982580">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -45,11 +45,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="306708153" Name="Level_one_event" ObjectPath="\Events\Default Work Unit\Level_one_event" DurationType="OneShot" DurationMin="224.465439" DurationMax="224.465439">
+				<Event Id="306708153" Name="Level_one_event" ObjectPath="\Events\Default Work Unit\Level_one_event" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="47686723" Language="SFX">
 							<ShortName>Back-in-Time.wav</ShortName>
-							<Path>SFX\Back-in-Time_10C4C929.wem</Path>
+							<Path>SFX\Back-in-Time_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

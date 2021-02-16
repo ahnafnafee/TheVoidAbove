@@ -14,6 +14,7 @@ namespace _Project.Scripts
         [SerializeField] private int nextScene;
         [SerializeField] private GameObject levelChangeInterface;
         [SerializeField] private GameObject gameHud;
+        [SerializeField] private GameObject inGameUI;
         private void Awake()
         {
             playerControls = new PlayerControls();
@@ -55,6 +56,7 @@ namespace _Project.Scripts
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             gameHud.SetActive(false);
+            inGameUI.SetActive(false);
             levelChangeInterface.SetActive(true);
         }
     }
