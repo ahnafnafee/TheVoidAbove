@@ -27,6 +27,7 @@ namespace _Project.Scripts
 
         private void OnTriggerEnter(Collider other)
         {
+            Debug.Log(other.tag);
             if (other.tag.Equals("Player"))
             {
                 other.gameObject.GetComponent<Player>().powerUp();

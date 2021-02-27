@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 686d9ebc785c9a947aafe267a5f9e5c9, type: 3}
+  m_Name: F1FF225A-65A7-42FB-92D9-D50CE96005AB
+  m_EditorClassIdentifier: 
+  objectName: blade_slice_event
+  id: 4240488451
+  guid: F1FF225A-65A7-42FB-92D9-D50CE96005AB

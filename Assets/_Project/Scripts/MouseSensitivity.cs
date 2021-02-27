@@ -1,4 +1,5 @@
 ﻿using System;
+using _Project.Scripts.Utils;
 using Cinemachine;
 using TMPro;
 using UnityEngine;
@@ -19,7 +20,7 @@ namespace _Project.Scripts
         [FormerlySerializedAs("InvertY")] public bool invertY = false;
         private CinemachineFreeLook _freeLookComponent;
         [SerializeField] private float lSpeed = default;
-        private const double Tolerance = 0.001f;
+        private const double k_Tolerance = 0.001f;
 
         [Header("GUI Texts")]
         [SerializeField] private TextMeshProUGUI xVal;
@@ -33,6 +34,9 @@ namespace _Project.Scripts
             lookSpeedX = _freeLookComponent.m_XAxis.m_MaxSpeed;
             lookSpeedY = _freeLookComponent.m_YAxis.m_MaxSpeed;
 
+            GlobalVar.mSensitivityX = lookSpeedX;
+            GlobalVar.mSensitivityY = lookSpeedY;
+
             xVal.text = Convert.ToString(lookSpeedX);
             yVal.text = Convert.ToString(lookSpeedY);
 
@@ -42,8 +46,12 @@ namespace _Project.Scripts
 
         private void UpdateAxis()
         {
+
             _freeLookComponent.m_XAxis.m_MaxSpeed = lookSpeedX;
+            _freeLookComponent.m_XAxis.m_MaxSpeed = GlobalVar.mSensitivityX;
+
             _freeLookComponent.m_YAxis.m_MaxSpeed = lookSpeedY;
+            _freeLookComponent.m_YAxis.m_MaxSpeed = GlobalVar.mSensitivityY;
         }
 
         private void Update()
@@ -51,8 +59,8 @@ namespace _Project.Scripts
             // Debug.Log($"X: {lookSpeedX}, Y: {lookSpeedY}");
 
             
-            if (((Math.Abs(lookSpeedX - _freeLookComponent.m_XAxis.m_MaxSpeed) > Tolerance) ||
-                 (Math.Abs(lookSpeedY - _freeLookComponent.m_YAxis.m_MaxSpeed) > Tolerance)))
+            if (((Math.Abs(lookSpeedX - _freeLookComponent.m_XAxis.m_MaxSpeed) > k_Tolerance) ||
+                 (Math.Abs(lookSpeedY - _freeLookComponent.m_YAxis.m_MaxSpeed) > k_Tolerance)))
             {
                 mEvent?.Invoke();
             }
@@ -61,12 +69,14 @@ namespace _Project.Scripts
         public void MouseSensitivityX (float speed)
         {
             xVal.text = Convert.ToString(speed);
+            GlobalVar.mSensitivityX = speed;
             lookSpeedX = speed;
         }
         
         public void MouseSensitivityY (float speed)
         {
             yVal.text = Convert.ToString(speed);
+            GlobalVar.mSensitivityY = speed;
             lookSpeedY = speed;
         }
     }

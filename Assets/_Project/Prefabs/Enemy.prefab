@@ -10054,7 +10054,7 @@ MonoBehaviour:
   isEnvironmentAware: 1
   isStaticObject: 0
   m_positionOffsetData:
-    KeepMe: 0
+    KeepMe: 1
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
@@ -34336,6 +34336,8 @@ MonoBehaviour:
   enemySpeed: 15
   enemyRange: 300
   enemyObj: {fileID: 7095313492610171407}
+  mark_aggro: {fileID: 9190467135906246704, guid: 95b160b4e50bdb349b5f7e027a92cf4e,
+    type: 3}
   healthFillImage: {fileID: 982766637}
   enemyHealthObj: {fileID: 651041558}
   hitParticlePrefab: {fileID: 2462045763441574653, guid: 281d425e8bcdde041b783be5ca06d228,
@@ -34371,7 +34373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2730817af845c1e4a899f67e3a3ffa5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectHealth: 15
+  objectHealth: 6
   respawnPoint: {fileID: 0}
   explosionFx: {fileID: 1879769179923522, guid: 81c475fccb118de4f99b5f2f2b52bb90,
     type: 3}
@@ -34398,7 +34400,7 @@ MonoBehaviour:
   isEnvironmentAware: 1
   isStaticObject: 0
   m_positionOffsetData:
-    KeepMe: 0
+    KeepMe: 1
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
@@ -44448,7 +44450,7 @@ PrefabInstance:
     - target: {fileID: -1969763508576962672, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -1373836086814548232, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}
@@ -44573,7 +44575,7 @@ PrefabInstance:
     - target: {fileID: 7899320132867024674, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7924825220888955445, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}

@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a076a9ff8ecd7c44ac9bf212c2d9ac82
     GuidInternal: 
-    m_lastTime: -8585886933473552963
+    m_lastTime: -8585875120606131370
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 9e60cd2e5303124b9bb43a13ee8ac2b4
     GuidInternal: 
-    m_lastTime: -8585886933631658295
+    m_lastTime: -8585875121583971091
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 2b62d1e017d56d4f977d3b5a6a9a3e3a
     GuidInternal: 
-    m_lastTime: -8585886933474420661
+    m_lastTime: -8585875120608231391
     List:
     - name: Main
       guid: 84e90d42e99fff4bae31e18c693bfedb
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e4633ba085de71498e2b6a382ceb1aa1
     GuidInternal: 
-    m_lastTime: -8585886933804452020
+    m_lastTime: -8585875123669605557
     List:
     - name: alt_shoot_event
       guid: 6fa00bef4681c349a4db43ada7fc1001
@@ -94,6 +94,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.415004
       minDuration: 0.415004
+    - name: blade_slice_event
+      guid: 5a22fff1a765fb4292d9d50ce96005ab
+      id: 4240488451
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: blade_slice_event
+        ObjectType: 3
+      Path: Default Work Unit\blade_slice_event
+      maxAttenuation: 0
+      maxDuration: 0.535004
+      minDuration: 0.535004
     - name: heal_event
       guid: 7592058204351249b98cf3e50ad47102
       id: 1994848198
@@ -116,8 +128,20 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Level_one_event
       maxAttenuation: 0
-      maxDuration: 224.46544
-      minDuration: 224.46544
+      maxDuration: -1
+      minDuration: -1
+    - name: level_two_event
+      guid: 292ef4aad0ddbe498b3ef016bca04f6b
+      id: 3129218639
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: level_two_event
+        ObjectType: 3
+      Path: Default Work Unit\level_two_event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: main_menu_event
       guid: 28a4af0967b52a42b9dbe1f31b42f522
       id: 3226024329
@@ -139,7 +163,7 @@ MonoBehaviour:
       - ElementName: robot_death_event
         ObjectType: 3
       Path: Default Work Unit\robot_death_event
-      maxAttenuation: 0
+      maxAttenuation: 600
       maxDuration: 2.211927
       minDuration: 2.211927
     - name: robot_shoot_event
@@ -151,7 +175,7 @@ MonoBehaviour:
       - ElementName: robot_shoot_event
         ObjectType: 3
       Path: Default Work Unit\robot_shoot_event
-      maxAttenuation: 0
+      maxAttenuation: 600
       maxDuration: 1.299375
       minDuration: 1.299375
     - name: shoot_event
@@ -166,6 +190,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.711594
       minDuration: 0.711594
+    - name: stop_event
+      guid: f90f5b3704976a40bf316e7ea0e8b54c
+      id: 2904546416
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: stop_event
+        ObjectType: 3
+      Path: Default Work Unit\stop_event
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: success_pickup_event
       guid: 0bb3b76a2ed44a49be55357f18ad9080
       id: 3488125696
@@ -178,6 +214,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.888889
       minDuration: 0.888889
+    - name: warp_event
+      guid: 2822960c56a88d459b43b7b06f6cc1ec
+      id: 266343890
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: warp_event
+        ObjectType: 3
+      Path: Default Work Unit\warp_event
+      maxAttenuation: 350
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -186,7 +234,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 87f59f6b0a58334d9be9fb4702a02aa6
     GuidInternal: 
-    m_lastTime: -8585886933804422103
+    m_lastTime: -8585875123669545578
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -196,7 +244,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f6cca8b2e62162419c1e545924fd3c0b
     GuidInternal: 
-    m_lastTime: -8585886933474370764
+    m_lastTime: -8585875120608131391
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -206,7 +254,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3bc436e01a4d3d4ab5e606f4e4f881ee
     GuidInternal: 
-    m_lastTime: -8585886933474350692
+    m_lastTime: -8585875120608091390
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -216,7 +264,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 7631ee4452c0f94384bf5e14f56e2d49
     GuidInternal: 
-    m_lastTime: -8585886933473582846
+    m_lastTime: -8585875120606181366
     List: []
   ExpandedItems:
   - /The_Void_Above_WwiseProject

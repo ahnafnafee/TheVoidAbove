@@ -12,6 +12,8 @@ TagManager:
   - Package
   - Bullet
   - Mine
+  - ObstaclePath
+  - MovingDebris
   layers:
   - Default
   - TransparentFX
@@ -23,7 +25,7 @@ TagManager:
   - 
   - RangeDetection
   - LightExclusion
-  - 
+  - WorldSpaceUI
   - 
   - 
   - 

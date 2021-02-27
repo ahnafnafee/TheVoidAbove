@@ -38,12 +38,11 @@ public class Health : MonoBehaviour
         else
         {
             // TODO: UI notification that player died
-            objectHealth = health;
 
             if (gameObject.CompareTag("Player"))
             {
                 transform.Find("PlayerBase").gameObject.SetActive(false);   
-                coroutine = gameOver(2);
+                coroutine = GameOver(2);
                 StartCoroutine(coroutine);
                 Rigidbody _rb = GetComponent<Rigidbody>();
                 _rb.velocity = Vector3.zero;
@@ -65,10 +64,10 @@ public class Health : MonoBehaviour
                 }
 
 
-                Debug.Log(this.gameObject.name);
-                if (this.gameObject.tag  == "Enemy")
+                Debug.Log(gameObject.name);
+                if (gameObject.CompareTag("Enemy"))
                 {
-                    AkSoundEngine.PostEvent("robot_death_event",this.gameObject);
+                    AkSoundEngine.PostEvent("robot_death_event", gameObject);
                 }
                 Destroy(gameObject);
 
@@ -77,14 +76,18 @@ public class Health : MonoBehaviour
         }
     }
 
-    private IEnumerator gameOver(float respawnTime)
+    private IEnumerator GameOver(float respawnTime)
     {
+        Debug.Log($"Health: {objectHealth}");
         yield return new WaitForSeconds(respawnTime);
         transform.Find("PlayerBase").gameObject.SetActive(true);
         Rigidbody _rb = GetComponent<Rigidbody>();
         transform.position = respawnPoint.transform.position;
         _rb.velocity = Vector3.zero;
         _rb.angularVelocity = Vector3.zero;
+
+        objectHealth = health;
+
         gameOverUI.SetActive(false);
     }
 }

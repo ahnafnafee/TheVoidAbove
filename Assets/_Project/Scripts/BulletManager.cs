@@ -6,10 +6,7 @@ namespace _Project.Scripts
     {
         public float bulletTimer;
         public GameObject hitParticlePrefab;
-        // Start is called before the first frame update
-        void Start()
-        {
-        }
+        public Transform enemyLocation;
 
         // Update is called once per frame
         void Update()
@@ -27,10 +24,10 @@ namespace _Project.Scripts
         {
             if (collision.transform.CompareTag("Player"))
             {
-                collision.transform.GetComponent<Health>().TakeDamage(10);
+                collision.transform.GetComponent<Health>().TakeDamage(6);
+                DI_System.CreateIndicator(enemyLocation);
                 Destroy(gameObject);
             }
-
             Debug.Log("hit something");
             ContactPoint contact = collision.contacts[0];
             Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);

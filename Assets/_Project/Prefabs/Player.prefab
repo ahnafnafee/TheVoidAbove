@@ -10785,7 +10785,7 @@ MonoBehaviour:
   outOfBounds: 0
   controlsActive: 1
   pushBackSpeed: 50
-  maxSpeed: 150
+  maxSpeed: 185
   tiltAngle: 20
   zSpeed: 4
   range: 90
@@ -10804,6 +10804,7 @@ MonoBehaviour:
   healthPct: {fileID: 0}
   feedFlash: {fileID: 0}
   gameOverUI: {fileID: 0}
+  ammoUI: {fileID: 0}
 --- !u!114 &5858091493567660743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21340,6 +21341,11 @@ PrefabInstance:
         type: 3}
       propertyPath: data.WwiseObjectReference
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979009158063492941, guid: ca43ae83ae08b4043bb4915b9d697fb5,
+        type: 3}
+      propertyPath: bulletTimer
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6979009158063492942, guid: ca43ae83ae08b4043bb4915b9d697fb5,
         type: 3}

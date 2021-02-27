@@ -1,4 +1,5 @@
 ﻿
+using _Project.Scripts.Utils;
 using UnityEngine;
 using TMPro;
 
@@ -68,6 +69,11 @@ public class GunScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
         //Reload automatically when trying to shoot without ammo
         if (readyToShoot && shooting && !reloading && bulletsLeft <= 0) Reload();
+
+        if (GlobalVar.isPaused)
+        {
+            return;
+        }
 
         //Shooting
         if (readyToShoot && shooting && !reloading && bulletsLeft > 0)

@@ -1,4 +1,5 @@
 ﻿using System;
+using _Project.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,7 @@ namespace _Project.Scripts
         [Header("Screenshot")] private TakeScreenshot screenshot;
         [SerializeField] private GameObject gameHud;
         [SerializeField] private GameObject inGameUI;
+        [SerializeField] private GameObject D_box;
 
         private bool isPaused, isSettings;
 
@@ -62,6 +64,14 @@ namespace _Project.Scripts
             pauseMenu.SetActive(!isPaused);
             gameHud.SetActive(isPaused);
             inGameUI.SetActive(isPaused);
+
+            GlobalVar.isPaused = !isPaused;
+
+            // TODO: DI_System needs build index check for different scenes
+            // Temporary fix below
+            if (SceneManager.GetActiveScene().buildIndex == 3)
+                D_box.GetComponent<CanvasGroup>().alpha = Convert.ToInt32(isPaused);
+            
             isPaused = !isPaused;
             Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
 

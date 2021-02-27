@@ -23,8 +23,7 @@ namespace _Project.Scripts
         public bool outOfBounds = false;
         public bool controlsActive = true;
         private ContactPoint contact;
-        private float time_powered;
-        private float time_powered_max;
+        private int nubAmmo;
 
         [Header("Player Movement")]
         [SerializeField] private float pushBackSpeed;
@@ -53,7 +52,9 @@ namespace _Project.Scripts
         [SerializeField] private Image feedFlash;
 
         [SerializeField] private GameObject gameOverUI;
- 
+
+        [SerializeField] private GameObject ammoUI;
+
         private IEnumerator coroutine;
 
 
@@ -73,8 +74,9 @@ namespace _Project.Scripts
         {
             Cursor.lockState = CursorLockMode.Locked;
             pHealth = GetComponent<Health>();
-            time_powered = 0.0f;
-            time_powered_max = 15.0f;
+            nubAmmo = 0;
+            // ammoUI = GameObject.Find("AmmoDrops");
+            ammoUI.GetComponent<UI_AmmoControl>().Display(nubAmmo);
             #region Saving
             PlayerControls.UserInterfaceActions UIactions = _playerControls.UserInterface;
 
@@ -138,7 +140,6 @@ namespace _Project.Scripts
             healthFillImage.fillAmount = pHealth.objectHealth / pHealth.health;
             healthPct.text = (int) (healthFillImage.fillAmount * 100f) + "%";
 
-            if (time_powered > 0.0f) { time_powered -= Time.deltaTime; }
         }
 
 
@@ -185,7 +186,7 @@ namespace _Project.Scripts
         {
 
             //Add anything you want to happen when the player collides in here. It updates akin to Update()
-            if (col.collider.CompareTag("Mine") || col.collider.CompareTag("Mine") || col.collider.CompareTag("Debris"))
+            if (col.collider.CompareTag("Mine") || col.collider.CompareTag("Mine") || col.collider.CompareTag("Debris") || col.collider.CompareTag("MovingDebris"))
             {
                 if (col.collider.CompareTag("Mine"))
                 {
@@ -252,7 +253,7 @@ namespace _Project.Scripts
             {
                 Debug.Log("Starting timer to damage");
                 outOfBounds = true;
-                StartCoroutine(boundstimer());
+                StartCoroutine(BoundsTimer());
 
                 /*transform.Find("PlayerBase").gameObject.SetActive(false);
                 Rigidbody _rb = GetComponent<Rigidbody>();
@@ -266,7 +267,7 @@ namespace _Project.Scripts
         {
             if (other.CompareTag("OuterZone"))
             {
-                StopCoroutine(drainhealth());
+                StopCoroutine(DrainHealth());
                 outOfBounds = false;
             }
         }
@@ -280,15 +281,15 @@ namespace _Project.Scripts
             controlsActive = true;
         }
 
-        private IEnumerator boundstimer()
+        private IEnumerator BoundsTimer()
         {
             yield return new WaitForSeconds(5);
             Debug.Log("Time's up");
-            StartCoroutine(drainhealth());
+            StartCoroutine(DrainHealth());
 
         }
 
-        private IEnumerator drainhealth()
+        private IEnumerator DrainHealth()
         {
             while (outOfBounds)
             {
@@ -296,17 +297,6 @@ namespace _Project.Scripts
                 pHealth.TakeDamage(5);
                 yield return new WaitForSeconds(1);
             }
-        }
-
-        private IEnumerator gameOver(float respawnTime)
-        {
-            yield return new WaitForSeconds(respawnTime);
-            transform.Find("PlayerBase").gameObject.SetActive(true);
-            Rigidbody _rb = GetComponent<Rigidbody>();
-            transform.position = respawnPoint.transform.position;
-            _rb.velocity = Vector3.zero;
-            _rb.angularVelocity = Vector3.zero;
-            gameOverUI.SetActive(false);
         }
 
         private void debugStun()
@@ -317,7 +307,7 @@ namespace _Project.Scripts
             this.GetComponent<PackageManager>().Drop(Vector3.zero);
         }
         public bool isPowered() {
-            if (time_powered > 0.0f)
+            if (nubAmmo > 0)
             {
                 return true;
             }
@@ -326,7 +316,17 @@ namespace _Project.Scripts
             }
         }
         public void powerUp() {
-            time_powered = time_powered_max;
+            nubAmmo = 5;
+            ammoUI.GetComponent<UI_AmmoControl>().Display(nubAmmo);
+        }
+
+        public void Shoot() {
+            if (nubAmmo > 0)
+            {
+                nubAmmo -= 1;
+                ammoUI.GetComponent<UI_AmmoControl>().Display(nubAmmo);
+            }
+            
         }
     }
 }

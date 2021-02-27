@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 
 
 namespace _Project.Scripts
@@ -10,15 +11,27 @@ namespace _Project.Scripts
     {
         [SerializeField]
         private float stayTimer;
+        [SerializeField]
+        private ObjectiveSystem objective;
+        [SerializeField]
+        private GameObject progessUI;
+        [SerializeField]
+        private Image progressBar;
+
+        [SerializeField]
+        private List<GameObject> enemies;
 
         private bool startTimer;
         private float timer;
         private bool isDone;
+        private bool spawned;
         // Start is called before the first frame update
         void Start()
         {
+            spawned = false;
             timer = stayTimer;
             isDone = false;
+            progressBar.fillAmount = 0;
             startTimer = false;
         }
 
@@ -30,12 +43,21 @@ namespace _Project.Scripts
                 if(stayTimer <= 0)
                 {
                     isDone = true;
+                    progessUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Hacking Complete";
+                    objective.Complete();
+                }
+                if(stayTimer <= timer / 2 && ! spawned)
+                {
+                    spawnEnemies(enemies);
+                    spawned = true;
                 }
                 stayTimer -= Time.deltaTime;
+                progressBar.fillAmount = stayTimer/timer;
             }
             else
             {
                 stayTimer = timer;
+                spawned = false;
             }
         }
 
@@ -43,6 +65,7 @@ namespace _Project.Scripts
         {
             if(other.tag.Equals("Player"))
             {
+                progessUI.SetActive(true);
                 startTimer = true;
             }
         }
@@ -51,13 +74,26 @@ namespace _Project.Scripts
         {
             if (other.tag.Equals("Player"))
             {
+                progessUI.SetActive(false);
                 startTimer = false;
+                spawned = false;
+                stayTimer = timer;
+                progressBar.fillAmount = 0;
             }
         }
 
         public bool checkDone()
         {
             return isDone;
+        }
+        public void spawnEnemies(List<GameObject> enemyList)
+        {
+            foreach(GameObject enemy in enemyList)
+            {
+                GameObject newObject = enemy;
+                Instantiate(newObject);
+                newObject.SetActive(true);
+            }
         }
     }
 }

@@ -60,14 +60,18 @@ namespace _Project.Scripts
         // Update is called once per frame
         void Update()
         {
-            
-            
+
             if(!dropped)
             {
                 PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
 
                 if (bulletTimer <= 0)
                 {
+                    if (GlobalVar.isPaused)
+                    {
+                        return;
+                    }
+
                     if (actions.Gun.triggered)
                     {
                         if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().controlsActive)
@@ -125,6 +129,7 @@ namespace _Project.Scripts
             
             //Instantiate bullet/projectile
             GameObject currentBullet = Instantiate(bullet, position, Quaternion.identity);
+            GameObject.Find("Player").GetComponent<Player>().Shoot();
             currentBullet.transform.forward = directionWithSpread.normalized;
 
             //Add forces to bullet

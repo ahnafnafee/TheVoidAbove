@@ -17,6 +17,7 @@ namespace _Project.Scripts
         [SerializeField] private float enemySpeed;
         [SerializeField] private float enemyRange = 300f;
         [SerializeField] private GameObject enemyObj;
+        public GameObject mark_aggro;
 
         [Header("Enemy Health")]
         public Image healthFillImage;
@@ -124,19 +125,24 @@ namespace _Project.Scripts
                 {
                     if (GameObject.Find("Player").GetComponent<Player>().isPowered())
                     {
-                        enemyHealth.TakeDamage(2);
+                        enemyHealth.TakeDamage(4);
                     }
                     else { 
                         enemyHealth.TakeDamage(1); 
                     }
+                    StartAiming();
                 }
             }
         }
 
         public void StartAiming()
         {
-            isAiming = true;
-            gun.GetComponent<EnemyGun>().startShooting();
+            if (!isAiming)
+            {
+                isAiming = true;
+                CreateMark();
+                gun.GetComponent<EnemyGun>().startShooting();
+            }
         }
         public void StopAiming()
         {
@@ -148,6 +154,7 @@ namespace _Project.Scripts
         // FYI this method might be very expensive
         public void AimCheck()
         {
+
             if ((Vector3.Distance(target.transform.position, transform.position)) <= enemyRange)
             {
                 StartAiming();
@@ -159,6 +166,14 @@ namespace _Project.Scripts
                     StopAiming();
                 }
             }
+
+        }
+        private void CreateMark()
+        {
+            Vector3 pos_new = transform.position + new Vector3(0f, 50f, 0f);
+            GameObject mark = Instantiate(mark_aggro, pos_new, transform.rotation);
+            mark.transform.SetParent(transform);
+
         }
     }
 }

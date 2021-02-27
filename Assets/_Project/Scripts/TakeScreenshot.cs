@@ -20,9 +20,16 @@ namespace _Project.Scripts
         bool m_ScreenshotTaken;
         bool m_IsFeatureDisable;
 
-        string getPath() => k_ScreenshotPath + fileName + "-" + RandomString(5)+".png";
+        string getPath() => screenshotPath + fileName + "-" + RandomString(5)+".png";
 
-        const string k_ScreenshotPath = "Assets/Screenshots/";
+        // const string k_ScreenshotPath2 = "Assets/Screenshots/";
+        string screenshotPath = "%USERPROFILE%/Pictures/TVA/";
+
+        void Start()
+        {
+            screenshotPath = Application.persistentDataPath;
+            screenshotPath += "/Screenshots/";
+        }
 
         void Update()
         {
@@ -31,7 +38,13 @@ namespace _Project.Scripts
 
             if (m_TakeScreenshot)
             {
+                if (!Directory.Exists(screenshotPath))
+                {
+                    Directory.CreateDirectory(screenshotPath);
+                }
+
                 // m_MenuCanvas.alpha = 0;
+                // Debug.Log(getPath());
                 ScreenCapture.CaptureScreenshot(getPath());
                 m_TakeScreenshot = false;
                 m_ScreenshotTaken = true;

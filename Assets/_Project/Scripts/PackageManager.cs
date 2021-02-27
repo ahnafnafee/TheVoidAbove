@@ -10,10 +10,20 @@ namespace _Project.Scripts
         public GameObject package;
         [SerializeField]
         private GameObject grabRange;
+        [SerializeField]
+        private ObjectiveSystem objective;
         private bool startTimer;
         private float pgTimer = 1;
         // Start is called before the first frame update
         void Awake()
+        {
+            grabRange.SetActive(true);
+            package.GetComponent<Rigidbody>().detectCollisions = true;
+            package.transform.parent = null;
+            startTimer = false;
+        }
+
+        void Start()
         {
             if (SceneManager.GetActiveScene().buildIndex == 3)
             {
@@ -24,11 +34,6 @@ namespace _Project.Scripts
                 hasPackage = true;
                 PickUp();
             }
-
-            grabRange.SetActive(true);
-            package.GetComponent<Rigidbody>().detectCollisions = true;
-            package.transform.parent = null;
-            startTimer = false;
         }
 
         // Update is called once per frame
@@ -49,6 +54,11 @@ namespace _Project.Scripts
         public void Drop(Vector3 vel)
         {
             hasPackage = false;
+
+            // Needs to be modular
+            if (SceneManager.GetActiveScene().buildIndex == 3)
+                objective.Pending();
+
             package.transform.parent = null;
             package.GetComponent<Rigidbody>().detectCollisions = true;
             package.GetComponent<Rigidbody>().isKinematic = false;
@@ -65,6 +75,10 @@ namespace _Project.Scripts
             package.transform.rotation = this.transform.Find("PackagePosition").rotation;
             package.transform.parent = this.transform;
             hasPackage = true;
+
+            if (SceneManager.GetActiveScene().buildIndex == 3)
+                objective.Complete();
+
             AkSoundEngine.PostEvent("success_pickup_event", gameObject);
             package.GetComponent<Rigidbody>().detectCollisions = false;
             package.GetComponent<Rigidbody>().isKinematic = true;

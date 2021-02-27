@@ -31,6 +31,11 @@
               <e p="Rotate_Manager.cs" t="Include" />
               <e p="TypeWriter.cs" t="Include" />
             </e>
+            <e p="DamageIndicator" t="Include">
+              <e p="DamageIndicator.cs" t="Include" />
+              <e p="DI_System.cs" t="Include" />
+              <e p="TestIndicatorRegister.cs" t="Include" />
+            </e>
             <e p="DestroyFX.cs" t="Include" />
             <e p="DialogueSystem" t="Include">
               <e p="DialogueBaseClass.cs" t="Include" />
@@ -60,6 +65,7 @@
             <e p="InputActions" t="Include">
               <e p="PlayerControls.cs" t="Include" />
             </e>
+            <e p="MarkControl.cs" t="Include" />
             <e p="MeleeEnemyControl.cs" t="Include" />
             <e p="Mines.cs" t="Include" />
             <e p="Misc" t="Include">
@@ -67,6 +73,7 @@
               <e p="DissolveScript.cs" t="Include" />
             </e>
             <e p="MouseSensitivity.cs" t="Include" />
+            <e p="ObjectiveSystem.cs" t="Include" />
             <e p="Old" t="Include">
               <e p="CameraControl.cs" t="Include" />
               <e p="PlayerCollide.cs" t="Include" />
@@ -91,6 +98,7 @@
             <e p="TakeScreenshot.cs" t="Include" />
             <e p="test.cs" t="Include" />
             <e p="Tutorial.cs" t="Include" />
+            <e p="UI_AmmoControl.cs" t="Include" />
             <e p="Utils" t="Include">
               <e p="DontGoThroughThings.cs" t="Include" />
               <e p="FunctionUpdater.cs" t="Include" />

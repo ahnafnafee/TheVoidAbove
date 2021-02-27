@@ -27,8 +27,8 @@ namespace DialogueSystem
             textHolder = GetComponent<Text>();
             textHolder.text = "";
 
-            imageHolder.sprite = characterSprite;
-            imageHolder.preserveAspect = true;
+            // imageHolder.sprite = characterSprite;
+            // imageHolder.preserveAspect = true;
         }
 
         private void Start()

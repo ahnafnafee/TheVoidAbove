@@ -29,9 +29,19 @@
     <explicitExcludes>
       <Path>.git</Path>
       <Path>.idea</Path>
+      <Path>Assets/Artwork</Path>
+      <Path>Assets/External</Path>
+      <Path>Assets/Imported/FPS Icons Pack</Path>
+      <Path>Assets/Imported/FPSMicroGame</Path>
+      <Path>Assets/Imported/Hexart UI</Path>
+      <Path>Assets/Imported/Kino</Path>
+      <Path>Assets/Imported/Shift - Complete Sci-Fi UI</Path>
+      <Path>Assets/Imported/VacuumShaders</Path>
+      <Path>Assets/Samples</Path>
       <Path>Build</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
+      <Path>Temp</Path>
       <Path>The_Void_Above_WwiseProject</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>

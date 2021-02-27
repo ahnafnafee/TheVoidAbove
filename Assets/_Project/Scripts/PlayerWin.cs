@@ -1,6 +1,9 @@
 ﻿//using _Project.Scripts.InputActions;
 
+using System;
 using System.Collections;
+using _Project.Scripts.Utils;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -15,6 +18,9 @@ namespace _Project.Scripts
         [SerializeField] private GameObject levelChangeInterface;
         [SerializeField] private GameObject gameHud;
         [SerializeField] private GameObject inGameUI;
+        [SerializeField] private CinemachineFreeLook _freeLookComponent;
+
+        private const double k_Tolerance = 0.001f;
         private void Awake()
         {
             playerControls = new PlayerControls();
@@ -23,6 +29,8 @@ namespace _Project.Scripts
 
         private void Start()
         {
+            _freeLookComponent.m_Lens.FieldOfView = 60;
+            GlobalVar.isPaused = false;
             playerControls.UserInterface.Restart.performed += _ => RestartScene();
         }
 
@@ -46,18 +54,30 @@ namespace _Project.Scripts
             if (pkgManager.hasPackage && other.transform.CompareTag("Player"))
             {
                 if (nextScene != 4)
-                    StartCoroutine(LoadInterface());
+                    StartCoroutine(LoadInterface(2, 140));
             }
         }
 
-        IEnumerator LoadInterface()
+        IEnumerator LoadInterface(float duration, float value)
         {
-            yield return new WaitForSeconds(3f);
+            var t = 0.0f;
+            var startFoV = _freeLookComponent.m_Lens.FieldOfView;
+            while (Math.Abs(t - duration) > k_Tolerance) {
+                t += Time.deltaTime;
+                if (t > duration) t = duration;
+                _freeLookComponent.m_Lens.FieldOfView = Mathf.Lerp(startFoV, value, t / duration);
+                yield return null;
+            }
+
+            // _freeLookComponent.m_Lens.FieldOfView = 140;
+            GlobalVar.isPaused = true;
+            // yield return new WaitForSeconds(3f);
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             gameHud.SetActive(false);
             inGameUI.SetActive(false);
             levelChangeInterface.SetActive(true);
+            AkSoundEngine.PostEvent("stop_event", this.gameObject);
         }
     }
 }
