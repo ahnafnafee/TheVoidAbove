@@ -10511,7 +10511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 257
+    m_Bits: 791
   m_IgnoreTag: Player
   m_TransparentLayers:
     serializedVersion: 2
@@ -10820,6 +10820,7 @@ MonoBehaviour:
   hasPackage: 0
   package: {fileID: 5858091493903956301}
   grabRange: {fileID: 5858091493664827337}
+  objective: {fileID: 0}
 --- !u!114 &5858091493567660742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11024,8 +11025,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.84
-  m_Center: {x: 0.000000018364387, y: 0, z: -0.05881319}
+  m_Radius: 7
+  m_Center: {x: -0.16, y: -1.19, z: 0.42}
 --- !u!1 &5858091493768999231
 GameObject:
   m_ObjectHideFlags: 0

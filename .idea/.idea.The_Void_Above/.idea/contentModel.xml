@@ -582,6 +582,113 @@
             </e>
           </e>
         </e>
+        <e p="Modern UI Pack" t="Include">
+          <e p="Editor" t="Include">
+            <e p="ContextMenu.cs" t="Include" />
+            <e p="ExtendedColorPicker.cs" t="Include" />
+            <e p="InitMUIP.cs" t="Include" />
+            <e p="UIManagerEditor.cs" t="Include" />
+          </e>
+          <e p="Read Me.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="Animated Icon" t="Include">
+              <e p="AnimatedIconHandler.cs" t="Include" />
+            </e>
+            <e p="Button" t="Include">
+              <e p="ButtonManager.cs" t="Include" />
+              <e p="ButtonManagerBasic.cs" t="Include" />
+              <e p="ButtonManagerBasicEditor.cs" t="Include" />
+              <e p="ButtonManagerBasicIcon.cs" t="Include" />
+              <e p="ButtonManagerBasicIconEditor.cs" t="Include" />
+              <e p="ButtonManagerBasicWithIcon.cs" t="Include" />
+              <e p="ButtonManagerBasicWithIconEditor.cs" t="Include" />
+              <e p="ButtonManagerEditor.cs" t="Include" />
+              <e p="ButtonManagerIcon.cs" t="Include" />
+              <e p="ButtonManagerIconEditor.cs" t="Include" />
+              <e p="ButtonManagerWithIcon.cs" t="Include" />
+              <e p="ButtonManagerWithIconEditor.cs" t="Include" />
+            </e>
+            <e p="Demo" t="Include">
+              <e p="DemoListShadow.cs" t="Include" />
+              <e p="DemoTopButton.cs" t="Include" />
+              <e p="LaunchURL.cs" t="Include" />
+            </e>
+            <e p="Dropdown" t="Include">
+              <e p="CustomDropdown.cs" t="Include" />
+              <e p="CustomDropdownEditor.cs" t="Include" />
+              <e p="DropdownMultiSelect.cs" t="Include" />
+              <e p="DropdownMultiSelectEditor.cs" t="Include" />
+            </e>
+            <e p="Fixes" t="Include">
+              <e p="LayoutGroupPositionFix.cs" t="Include" />
+            </e>
+            <e p="Horizontal Selector" t="Include">
+              <e p="HorizontalSelector.cs" t="Include" />
+              <e p="HorizontalSelectorEditor.cs" t="Include" />
+            </e>
+            <e p="Modal Window" t="Include">
+              <e p="ModalWindowManager.cs" t="Include" />
+              <e p="ModalWindowManagerEditor.cs" t="Include" />
+              <e p="ModalWindowTabs.cs" t="Include" />
+            </e>
+            <e p="Notification" t="Include">
+              <e p="NotificationManager.cs" t="Include" />
+              <e p="NotificationManagerEditor.cs" t="Include" />
+              <e p="NotificationStacking.cs" t="Include" />
+            </e>
+            <e p="Progress Bar" t="Include">
+              <e p="PBFilled.cs" t="Include" />
+              <e p="ProgressBar.cs" t="Include" />
+              <e p="ProgressBarEditor.cs" t="Include" />
+            </e>
+            <e p="Rendering" t="Include">
+              <e p="UIGradient.cs" t="Include" />
+              <e p="UIGradientEditor.cs" t="Include" />
+            </e>
+            <e p="Slider" t="Include">
+              <e p="RadialSlider.cs" t="Include" />
+              <e p="RadialSliderEditor.cs" t="Include" />
+              <e p="RangeMaxSlider.cs" t="Include" />
+              <e p="RangeMinSlider.cs" t="Include" />
+              <e p="RangeSlider.cs" t="Include" />
+              <e p="SliderManagerEditor.cs" t="Include" />
+            </e>
+            <e p="Switch" t="Include">
+              <e p="SwitchManager.cs" t="Include" />
+              <e p="SwitchManagerEditor.cs" t="Include" />
+            </e>
+            <e p="Tooltip" t="Include">
+              <e p="TooltipContent.cs" t="Include" />
+              <e p="TooltipManager.cs" t="Include" />
+              <e p="TooltipManagerEditor.cs" t="Include" />
+            </e>
+            <e p="UI Manager" t="Include">
+              <e p="UIManager.cs" t="Include" />
+              <e p="UIManagerAnimatedIcon.cs" t="Include" />
+              <e p="UIManagerButton.cs" t="Include" />
+              <e p="UIManagerButtonEditor.cs" t="Include" />
+              <e p="UIManagerDropdown.cs" t="Include" />
+              <e p="UIManagerHSelector.cs" t="Include" />
+              <e p="UIManagerInputField.cs" t="Include" />
+              <e p="UIManagerModalWindow.cs" t="Include" />
+              <e p="UIManagerNotification.cs" t="Include" />
+              <e p="UIManagerProgressBar.cs" t="Include" />
+              <e p="UIManagerProgressBarLoop.cs" t="Include" />
+              <e p="UIManagerProgressBarLoopEditor.cs" t="Include" />
+              <e p="UIManagerScrollbar.cs" t="Include" />
+              <e p="UIManagerSlider.cs" t="Include" />
+              <e p="UIManagerSliderEditor.cs" t="Include" />
+              <e p="UIManagerSwitch.cs" t="Include" />
+              <e p="UIManagerToggle.cs" t="Include" />
+              <e p="UIManagerTooltip.cs" t="Include" />
+            </e>
+            <e p="Window" t="Include">
+              <e p="WindowDragger.cs" t="Include" />
+              <e p="WindowManager.cs" t="Include" />
+              <e p="WindowManagerEditor.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="PathCreator" t="Include">
           <e p="Core" t="Include">
             <e p="Editor" t="Include">

@@ -23,70 +23,71 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Light SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Light SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Medium SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imported/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-SemiBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Shift - Complete Sci-Fi UI/Fonts/Rajdhani-SemiBold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Fading In.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Fading In.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Fading In.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Fading In.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Fading.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Fading.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Fading.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Fading.controller.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Standard In.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Standard In.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Standard In.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Standard In.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Standard.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Standard.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Standard.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Animations/Input Fields/Standard.controller.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/CustomInputField.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/CustomInputField.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/CustomInputField.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/CustomInputField.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/SliderManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/SliderManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/SliderManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/SliderManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/ToggleAnim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/ToggleAnim.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/ToggleAnim.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/ToggleAnim.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/UIElementInFront.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/UIElementInFront.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/UIElementInFront.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Scripts/UIElementInFront.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Textures/Borders/Basic.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Textures/Borders/Basic.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Textures/Borders/Basic/Square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Textures/Borders/Basic/Square.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Textures/Borders/Circles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Textures/Borders/Circles.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Textures/Borders/Rounded.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported/Hexart UI/Textures/Borders/Rounded.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene_01_lighting.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene_01_lighting.lighting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene_02_lighting.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene_02_lighting.lighting" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/URP/UniversalRenderPipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/UniversalRenderPipelineAsset.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/URP/UniversalRenderPipelineAsset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/UniversalRenderPipelineAsset_Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Animation/Fade_In.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Animation/Fade_In.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/Nebula-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/Nebula-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Bold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Bold SDF 1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/mat_bullet_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/mat_bullet_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Bullet 2.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Bullet 2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-ExtraBold SDF 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-ExtraBold SDF 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-ExtraBold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Medium SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/Turret_Road/TurretRoad-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Fonts/conthrax-sb SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Fonts/conthrax-sb SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Material/LowGlow_Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Material/LowGlow_Red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/PostProcessing/LevelChange Blur.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/PostProcessing/LevelChange Blur.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/DialogueSystem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/DialogueSystem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/DialogueSystem.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/DialogueSystem.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/EndPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/EndPlatform.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/FeedbackFlash.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/FeedbackFlash.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/GameHUD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/GameHUD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/HUD/Armor &amp; Health.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/HUD/Armor &amp; Health.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/HUD/Objectives.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/HUD/Objectives.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/HUD/UICanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/HUD/UICanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/NextLevel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/NextLevel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/PkgGrabInterface.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/PkgGrabInterface.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/PowerUps/AmmoPickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/PowerUps/AmmoPickup.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/PowerUps/HealthPickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/PowerUps/HealthPickup.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/PowerUps/Sphere.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/PowerUps/Sphere.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Scene_01/MiscDebris_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Scene_01/MiscDebris_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/StarFox/DialogueSystem.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/StarFox/DialogueSystem.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Sun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Sun.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/01 - TitleScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/01 - TitleScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/02 - ControlsScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/02 - ControlsScreen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/Global Volume Profile 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/Global Volume Profile 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/LightingData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/Lightmap-0_comp_dir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1/Lightmap-0_comp_light.exr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/05 - Scene_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/05 - Scene_2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/OLD - Scene_1 - 01-31.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/OLD - Scene_1 - 01-31.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Test_01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Test_01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/BulletManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/BulletManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/DialogueSystem/DialogueLine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/DialogueSystem/DialogueLine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/DropControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/DropControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/EnemyGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/EnemyGun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/EnemyMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/EnemyMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/05 - Scene_2/Global Volume Profile 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/05 - Scene_2/Global Volume Profile 2.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/GunScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/GunScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/InputActions/PlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/InputActions/PlayerControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/InputActions/PlayerControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/InputActions/PlayerControls.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/MeleeEnemyControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/MeleeEnemyControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/MouseSensitivity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/MouseSensitivity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PackageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PackageManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PannelCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PannelCheck.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PlayerWin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PlayerWin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/TakeScreenshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/TakeScreenshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Utils/GlobalVar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Utils/GlobalVar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/WeaponScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/WeaponScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Shader/FF_Shader_Red_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Shader/FF_Shader_Red_01.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Shader/FF_Shader_Red_03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Shader/FF_Shader_Red_03.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sprites/Vignette_02.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Sprites/Vignette_02.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/.cache/SoundBankInfoCache.dat" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/.cache/SoundBankInfoCache.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/Actor-Mixer Hierarchy/Default Work Unit.wwu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/Attenuations/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/Attenuations/Default Work Unit.wwu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/Events/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/Events/Default Work Unit.wwu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/Main.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/Main.bnk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/Main.txt" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/Main.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/PluginInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/PluginInfo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/SoundbanksInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Mac/SoundbanksInfo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/Main.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/Main.bnk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/Main.txt" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/Main.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/PluginInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/PluginInfo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/SoundBanks/Default Work Unit.wwu" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/SoundBanks/Default Work Unit.wwu" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/The_Void_Above_WwiseProject/The_Void_Above_WwiseProject.aman.wsettings" beforeDir="false" afterPath="$PROJECT_DIR$/The_Void_Above_WwiseProject/The_Void_Above_WwiseProject.aman.wsettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sprites/Space Background v2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sprites/Space Background v2.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +136,6 @@
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/TypeWriter.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Shootable.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/LoadScene.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/FlowControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Wwise/Deployment/API/Handwritten/Common/AkUtilities.cs" />
         <option value="$PROJECT_DIR$/Assets/Imported/Shift - Complete Sci-Fi UI/Editor/InitShift.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/ProgressLoadScene.cs" />
@@ -145,17 +145,18 @@
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/GunScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Utils/GlobalVar.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/WeaponScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/MouseSensitivity.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PanelCheck.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PannelOpen.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PannelCheck.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/ObjectiveSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PackageManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PlayerWin.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/BulletManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/FlowControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/MouseSensitivity.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PlayerWin.cs" />
       </list>
     </option>
   </component>
@@ -240,6 +241,8 @@
       <workItem from="1614043751770" duration="2641000" />
       <workItem from="1614177264505" duration="10792000" />
       <workItem from="1614222833900" duration="6040000" />
+      <workItem from="1614442705376" duration="7517000" />
+      <workItem from="1614541864636" duration="4509000" />
     </task>
     <servers />
   </component>

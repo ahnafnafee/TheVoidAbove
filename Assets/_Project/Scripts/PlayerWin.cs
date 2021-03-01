@@ -18,6 +18,7 @@ namespace _Project.Scripts
         [SerializeField] private GameObject levelChangeInterface;
         [SerializeField] private GameObject gameHud;
         [SerializeField] private GameObject inGameUI;
+        [SerializeField] private GameObject D_box;
         [SerializeField] private CinemachineFreeLook _freeLookComponent;
 
         private const double k_Tolerance = 0.001f;
@@ -69,6 +70,7 @@ namespace _Project.Scripts
                 yield return null;
             }
 
+
             // _freeLookComponent.m_Lens.FieldOfView = 140;
             GlobalVar.isPaused = true;
             // yield return new WaitForSeconds(3f);
@@ -76,6 +78,7 @@ namespace _Project.Scripts
             Cursor.lockState = CursorLockMode.None;
             gameHud.SetActive(false);
             inGameUI.SetActive(false);
+            D_box.GetComponent<CanvasGroup>().alpha = Convert.ToInt32(false);
             levelChangeInterface.SetActive(true);
             AkSoundEngine.PostEvent("stop_event", this.gameObject);
         }

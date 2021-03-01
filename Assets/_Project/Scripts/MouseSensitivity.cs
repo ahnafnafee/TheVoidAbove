@@ -68,14 +68,14 @@ namespace _Project.Scripts
 
         public void MouseSensitivityX (float speed)
         {
-            xVal.text = Convert.ToString(speed);
+            xVal.text = Convert.ToString(Math.Round(speed, 3, MidpointRounding.ToEven));
             GlobalVar.mSensitivityX = speed;
             lookSpeedX = speed;
         }
         
         public void MouseSensitivityY (float speed)
         {
-            yVal.text = Convert.ToString(speed);
+            yVal.text = Convert.ToString(Math.Round(speed, 3, MidpointRounding.ToEven));
             GlobalVar.mSensitivityY = speed;
             lookSpeedY = speed;
         }

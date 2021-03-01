@@ -21,6 +21,8 @@ namespace _Project.Scripts
         //The speed where problems occur; between safe and danger is a dangerous hit, above is a lethal hit that's more severe
         [SerializeField] float dangerSpeed = 50;
         public bool outOfBounds = false;
+
+        private bool inZap = false;
         public bool controlsActive = true;
         private ContactPoint contact;
         private int nubAmmo;
@@ -261,14 +263,38 @@ namespace _Project.Scripts
                 _rb.angularVelocity = Vector3.zero;
                 gameOverUI.SetActive(true);*/
             }
+
+            if (other.gameObject.name == "Zap_Zone")
+            {
+                inZap = false;
+                StopCoroutine(SwiftDeath(25));
+
+            }
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("OuterZone"))
             {
-                StopCoroutine(DrainHealth());
+                StopCoroutine(DrainHealth(5));
                 outOfBounds = false;
+            }
+
+            if (other.gameObject.name == "Zap_Zone")
+            {
+                inZap = true;
+                StartCoroutine(SwiftDeath(25));
+
+            }
+        }
+
+        private IEnumerator SwiftDeath(int damage)
+        {
+            while (inZap)
+            {
+                Debug.Log("Damage.");
+                pHealth.TakeDamage(damage);
+                yield return new WaitForSeconds(1);
             }
         }
         
@@ -285,16 +311,16 @@ namespace _Project.Scripts
         {
             yield return new WaitForSeconds(5);
             Debug.Log("Time's up");
-            StartCoroutine(DrainHealth());
+            StartCoroutine(DrainHealth(5));
 
         }
 
-        private IEnumerator DrainHealth()
+        private IEnumerator DrainHealth(int damage)
         {
             while (outOfBounds)
             {
                 Debug.Log("Damage.");
-                pHealth.TakeDamage(5);
+                pHealth.TakeDamage(damage);
                 yield return new WaitForSeconds(1);
             }
         }

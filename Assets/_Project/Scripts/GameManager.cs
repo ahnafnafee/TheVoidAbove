@@ -1,5 +1,6 @@
 ﻿using System;
 using _Project.Scripts.Utils;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,6 +19,11 @@ namespace _Project.Scripts
         [SerializeField] private GameObject inGameUI;
         [SerializeField] private GameObject D_box;
 
+        [SerializeField] private TextMeshProUGUI levelTime;
+
+        float theTime = 0f;
+        float speed = 1;
+
         private bool isPaused, isSettings;
 
         private static readonly int Rotation = Shader.PropertyToID("_Rotation");
@@ -26,6 +32,7 @@ namespace _Project.Scripts
         void Start()
         {
             Time.timeScale = 1;
+            theTime = 0;
             isPaused = false;
             isSettings = false;
             pauseMenu.SetActive(false);
@@ -53,6 +60,12 @@ namespace _Project.Scripts
         {
             // Rotates skybox slowly for a dynamic feel
             //RenderSettings.skybox.SetFloat(Rotation, Time.time * skyboxRotSpeed);
+
+            theTime += Time.deltaTime * speed;
+            string minutes = Mathf.Floor((theTime % 3600) / 60).ToString("00");
+            string seconds = (theTime % 60).ToString("00");
+            levelTime.text = minutes + ":" + seconds;
+
         }
 
         #region Level User Interface
@@ -69,8 +82,8 @@ namespace _Project.Scripts
 
             // TODO: DI_System needs build index check for different scenes
             // Temporary fix below
-            if (SceneManager.GetActiveScene().buildIndex == 3)
-                D_box.GetComponent<CanvasGroup>().alpha = Convert.ToInt32(isPaused);
+
+            D_box.GetComponent<CanvasGroup>().alpha = Convert.ToInt32(isPaused);
             
             isPaused = !isPaused;
             Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
