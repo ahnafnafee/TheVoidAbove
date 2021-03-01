@@ -27,7 +27,7 @@ namespace _Project.Scripts
                 switch (child.gameObject.name)
                 {
                     case "Border":
-                        child.gameObject.GetComponent<Image>().color = new Color32(13,255,153, 90);
+                        child.gameObject.GetComponent<Image>().color = new Color32(13,255,153, 255);
                         break;
                     case "Pending":
                         child.gameObject.SetActive(false);
@@ -36,7 +36,10 @@ namespace _Project.Scripts
                         child.gameObject.SetActive(true);
                         break;
                     case "Text":
-                        child.gameObject.GetComponent<TextMeshProUGUI>().color = new Color32(13,255,153, 90);
+                        child.gameObject.GetComponent<TextMeshProUGUI>().color = new Color32(13,255,153, 255);
+                        break;
+                    case "CrossOut":
+                        child.gameObject.SetActive(true);
                         break;
                 }
             }
@@ -59,6 +62,9 @@ namespace _Project.Scripts
                         break;
                     case "Text":
                         child.gameObject.GetComponent<TextMeshProUGUI>().color = new Color32(255,201,48, 255);
+                        break;
+                    case "CrossOut":
+                        child.gameObject.SetActive(false);
                         break;
                 }
             }

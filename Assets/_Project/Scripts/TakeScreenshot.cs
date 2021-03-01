@@ -12,6 +12,7 @@ namespace _Project.Scripts
         public string fileName = "Screenshot";
         
         private static Random random = new Random();
+        private PlayerControls playerControls;
 
         // public CanvasGroup m_MenuCanvas = null;
         Texture2D m_Texture;
@@ -29,6 +30,14 @@ namespace _Project.Scripts
         {
             screenshotPath = Application.persistentDataPath;
             screenshotPath += "/Screenshots/";
+
+            playerControls.UserInterface.Screenshot.performed += _ => OnTakeScreenshotButtonPressed();
+        }
+
+        private void Awake()
+        {
+            playerControls = new PlayerControls();
+            playerControls.Enable();
         }
 
         void Update()

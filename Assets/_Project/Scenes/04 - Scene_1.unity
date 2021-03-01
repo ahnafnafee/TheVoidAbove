@@ -1244,7 +1244,7 @@ MonoBehaviour:
       type: 2}
   useCallbacks: 0
   Callbacks: []
-  playingId: 507
+  playingId: 195
   soundEmitterObject: {fileID: 59289844}
   transitionDuration: 0
   eventIdInternal: 0
@@ -1427,7 +1427,7 @@ PrefabInstance:
     - target: {fileID: 4286440820141249632, guid: 13893320479654e428b34a98bc8de40e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4286440820141249632, guid: 13893320479654e428b34a98bc8de40e,
         type: 3}
@@ -38691,7 +38691,7 @@ PrefabInstance:
     - target: {fileID: 6301730405758426631, guid: 073f2cc1ef638344db36e4e6881070d4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0024414062
+      value: 0.00390625
       objectReference: {fileID: 0}
     - target: {fileID: 6611653118269364136, guid: 073f2cc1ef638344db36e4e6881070d4,
         type: 3}
@@ -46646,7 +46646,7 @@ PrefabInstance:
     - target: {fileID: 1948523515319807415, guid: 7709b454083d9594f82f2ef7aaef46b7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.7998047
+      value: 1.8007812
       objectReference: {fileID: 0}
     - target: {fileID: 2403928673203202639, guid: 7709b454083d9594f82f2ef7aaef46b7,
         type: 3}

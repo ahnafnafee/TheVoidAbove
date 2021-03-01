@@ -41,13 +41,13 @@ namespace _Project.Scripts
             Cursor.lockState = CursorLockMode.Locked;
             screenshot = GetComponent<TakeScreenshot>();
             playerControls.UserInterface.Pause.performed += _ => PauseScene();
-            playerControls.UserInterface.Screenshot.performed += _ => TakeScreenshot();
+            // playerControls.UserInterface.Screenshot.performed += _ => TakeScreenshot();
         }
 
-        private void TakeScreenshot()
-        {
-            screenshot.OnTakeScreenshotButtonPressed();
-        }
+        // private void TakeScreenshot()
+        // {
+        //     screenshot.OnTakeScreenshotButtonPressed();
+        // }
 
         private void Awake()
         {
