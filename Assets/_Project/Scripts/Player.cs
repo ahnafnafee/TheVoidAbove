@@ -1,8 +1,12 @@
 ﻿//using _Project.Scripts.InputActions;
 
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem.Interactions;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -13,7 +17,7 @@ namespace _Project.Scripts
         PlayerControls _playerControls;
 
         private Rigidbody _rb;
-        
+
         [Header("Player Collision")]
         Vector3 normal;
         //The speed where nothing happens to the player on collision; a safe contact with a surface
@@ -24,26 +28,34 @@ namespace _Project.Scripts
 
         private bool inZap = false;
         public bool controlsActive = true;
+        private bool dashUsed = false;
         private ContactPoint contact;
         private int nubAmmo;
+        [SerializeField] private Animator anim;
+        private enum State { Idle, Forward, Backward, Shoot };
+        private State state = State.Idle;
 
         [Header("Player Movement")]
         [SerializeField] private float pushBackSpeed;
+        [SerializeField] private float dashSpeed;
+        [SerializeField] private float dashCooldown = 2;
         [SerializeField] private float maxSpeed;
         [SerializeField] private float tiltAngle;
         [SerializeField] private float zSpeed;
         [SerializeField] private float range = 100f;
         [SerializeField] private float thrusterAcceleration;
-        [SerializeField] private float thrusterMaxSpeed,velocity,velocityThreshold,breakForce;
+        [SerializeField] private float thrusterMaxSpeed, velocity, velocityThreshold, breakForce;
 
-        [Header("Camera Controls")] [SerializeField]
+        [Header("Camera Controls")]
+        [SerializeField]
         private Camera mainCam;
 
-        [Header("Respawn Point")] [SerializeField]
+        [Header("Respawn Point")]
+        [SerializeField]
         private GameObject respawnPoint;
-        
+
         [Header("Weapon")] public WeaponScript weapon;
-        [SerializeField] GameObject rightClickFX,targetPoint;
+        [SerializeField] GameObject rightClickFX, targetPoint;
 
         [Header("Player")] private Health pHealth;
         [Tooltip("Image component displaying current health")]
@@ -59,6 +71,9 @@ namespace _Project.Scripts
 
         private IEnumerator coroutine;
 
+        [Header("Collision Tags")]
+        public string[] tagList = { "Mine", "Debris", "MovingDebris" };
+
 
         public GameObject getRespawn()
         {
@@ -70,8 +85,8 @@ namespace _Project.Scripts
             _playerControls.Enable();
             _rb = GetComponent<Rigidbody>();
         }
-        
-        
+
+
         void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -79,6 +94,7 @@ namespace _Project.Scripts
             nubAmmo = 0;
             // ammoUI = GameObject.Find("AmmoDrops");
             ammoUI.GetComponent<UI_AmmoControl>().Display(nubAmmo);
+
             #region Saving
             PlayerControls.UserInterfaceActions UIactions = _playerControls.UserInterface;
 
@@ -103,7 +119,7 @@ namespace _Project.Scripts
         void Update()
         {
             #region PlayerRotation
-            
+
             var lookPos = mainCam.transform.position - transform.position;
             lookPos.y = 0;
             var rotation = Quaternion.LookRotation(lookPos);
@@ -130,18 +146,21 @@ namespace _Project.Scripts
                     AkSoundEngine.PostEvent("alt_shoot_event", this.gameObject);
                     _rb.AddForce(-mainCam.transform.forward * pushBackSpeed, ForceMode.VelocityChange);
                     GameObject fx = Instantiate(rightClickFX, targetPoint.transform.position, targetPoint.transform.rotation);
-                  
+
                     Destroy(fx, 5);
                 }
             }
+
 
             var tempColor = feedFlash.color;
             tempColor.a = 1f - (pHealth.objectHealth / pHealth.health);
             feedFlash.color = tempColor;
 
             healthFillImage.fillAmount = pHealth.objectHealth / pHealth.health;
-            healthPct.text = (int) (healthFillImage.fillAmount * 100f) + "%";
+            healthPct.text = (int)(healthFillImage.fillAmount * 100f) + "%";
 
+            StateChange();
+            anim.SetInteger("state", (int)state);
         }
 
 
@@ -167,9 +186,78 @@ namespace _Project.Scripts
 
                 //Apply the force variable
                 _rb.AddForce(thrusterForce, ForceMode.Acceleration);
+
             }
 
-            //If you're at top speed, don't go any faster
+            //dash movement section
+            if (actions.RightDash.triggered)
+            {
+                if (controlsActive)
+                {
+                    if (!dashUsed)
+                    {
+                        _rb.AddForce(mainCam.transform.right * dashSpeed, ForceMode.VelocityChange);
+                        StartCoroutine(Dashtimer(dashCooldown));
+                    }
+                }
+            }
+            if (actions.LeftDash.triggered)
+            {
+                if (controlsActive)
+                {
+                    if (!dashUsed)
+                    {
+                        _rb.AddForce(-mainCam.transform.right * dashSpeed, ForceMode.VelocityChange);
+                        StartCoroutine(Dashtimer(dashCooldown));
+                    }
+                }
+            }
+            if (actions.ForeDash.triggered)
+            {
+                if (controlsActive)
+                {
+                    if (!dashUsed)
+                    {
+                        _rb.AddForce(mainCam.transform.forward * pushBackSpeed, ForceMode.VelocityChange);
+                        StartCoroutine(Dashtimer(dashCooldown));
+                    }
+                }
+            }
+            if (actions.AftDash.triggered)
+            {
+                if (controlsActive)
+                {
+                    if (!dashUsed)
+                    {
+                        _rb.AddForce(-mainCam.transform.forward * pushBackSpeed, ForceMode.VelocityChange);
+                        StartCoroutine(Dashtimer(dashCooldown));
+                    }
+                }
+            }
+            if (actions.UpDash.triggered)
+            {
+                if (controlsActive)
+                {
+                    if (!dashUsed)
+                    {
+                        _rb.AddForce(mainCam.transform.up * pushBackSpeed, ForceMode.VelocityChange);
+                        StartCoroutine(Dashtimer(dashCooldown));
+                    }
+                }
+            }
+            if (actions.DownDash.triggered)
+            {
+                if (controlsActive)
+                {
+                    if (!dashUsed)
+                    {
+                        _rb.AddForce(-mainCam.transform.up * pushBackSpeed, ForceMode.VelocityChange);
+                        StartCoroutine(Dashtimer(dashCooldown));
+                    }
+                }
+            }
+
+            // Braking velocity
             if (_rb.velocity.magnitude > maxSpeed)
             {
                 _rb.velocity = _rb.velocity.normalized * maxSpeed;
@@ -186,9 +274,14 @@ namespace _Project.Scripts
 
         void OnCollisionEnter(Collision col)
         {
+            var match = tagList
+                .FirstOrDefault(stringToCheck => stringToCheck.Contains(col.gameObject.tag));
 
-            //Add anything you want to happen when the player collides in here. It updates akin to Update()
-            if (col.collider.CompareTag("Mine") || col.collider.CompareTag("Mine") || col.collider.CompareTag("Debris") || col.collider.CompareTag("MovingDebris"))
+
+            // Debug.Log($"Tag: {col.gameObject.tag}");
+
+            // Add required tags in the declaration of tagList
+            if (match != null)
             {
                 if (col.collider.CompareTag("Mine"))
                 {
@@ -217,8 +310,8 @@ namespace _Project.Scripts
                     pHealth.TakeDamage(5);
                     if (!col.collider.CompareTag("Package"))
                     {
-                        StartCoroutine(ControlLockTimer(0.5f));
-                        Bounce();
+                        StartCoroutine(ControlLockTimer(0.45f));
+                        Bounce(col);
                     }
                     this.GetComponent<PackageManager>().Drop(col.relativeVelocity);
                 }
@@ -229,24 +322,36 @@ namespace _Project.Scripts
                     pHealth.TakeDamage(10);
                     if (!col.collider.CompareTag("Package"))
                     {
-                        StartCoroutine(ControlLockTimer(2));
-                        Bounce();
+                        StartCoroutine(ControlLockTimer(0.9f));
+                        Bounce(col);
                     }
                     this.GetComponent<PackageManager>().Drop(col.relativeVelocity);
                 }
 
-                void Bounce()
-                {
-                    foreach (ContactPoint contact in col.contacts)
-                    {
-                        normal += contact.normal;
-                    }
-
-                    normal.Normalize();
-                    _rb.velocity += Vector3.Reflect(-col.relativeVelocity * 0.4f, normal);
-                }
+                // void Bounce()
+                // {
+                //     foreach (ContactPoint contact in col.contacts)
+                //     {
+                //         normal += contact.normal;
+                //     }
+                //
+                //     normal.Normalize();
+                //     _rb.velocity += Vector3.Reflect(-col.relativeVelocity * 0.4f, normal);
+                // }
                 //_rb.velocity = Vector3.Reflect(_rb.velocity, normal);
             }
+        }
+
+        private void Bounce(Collision col)
+        {
+            // Debug.Log("Bouncing");
+            foreach (ContactPoint ct in col.contacts)
+            {
+                normal += ct.normal;
+            }
+
+            normal.Normalize();
+            _rb.velocity += Vector3.Reflect(-col.relativeVelocity * 0.4f, normal);
         }
 
         private void OnTriggerExit(Collider other)
@@ -297,7 +402,7 @@ namespace _Project.Scripts
                 yield return new WaitForSeconds(1);
             }
         }
-        
+
         private IEnumerator ControlLockTimer(float t)
         {
             controlsActive = false;
@@ -305,6 +410,17 @@ namespace _Project.Scripts
             yield return new WaitForSeconds(t);
 
             controlsActive = true;
+        }
+
+        private IEnumerator Dashtimer(float t)
+        {
+            Debug.Log("Dash has been used");
+            dashUsed = true;
+
+            yield return new WaitForSeconds(t);
+
+            Debug.Log("Dash is ready");
+            dashUsed = false;
         }
 
         private IEnumerator BoundsTimer()
@@ -332,27 +448,55 @@ namespace _Project.Scripts
             Debug.Log("DEBUG Forcing package drop");
             this.GetComponent<PackageManager>().Drop(Vector3.zero);
         }
-        public bool isPowered() {
+        public bool isPowered()
+        {
             if (nubAmmo > 0)
             {
                 return true;
             }
-            else {
+            else
+            {
                 return false;
             }
         }
-        public void powerUp() {
+        public void powerUp()
+        {
             nubAmmo = 5;
             ammoUI.GetComponent<UI_AmmoControl>().Display(nubAmmo);
         }
 
-        public void Shoot() {
+        public void Shoot()
+        {
             if (nubAmmo > 0)
             {
                 nubAmmo -= 1;
                 ammoUI.GetComponent<UI_AmmoControl>().Display(nubAmmo);
             }
-            
+
+        }
+
+        // Player animation states
+        private void StateChange()
+        {
+            PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
+
+
+            if (actions.ThrustersZ.ReadValue<float>() > 0)
+            {
+                state = State.Forward;
+            }
+            else if (actions.ThrustersZ.ReadValue<float>() < 0)
+            {
+                state = State.Backward;
+            }
+            else if (actions.Gun.triggered)
+            {
+                state = State.Shoot;
+            }
+            else if (_rb.velocity.magnitude < 5.0f)
+            {
+                state = State.Idle;
+            }
         }
     }
 }

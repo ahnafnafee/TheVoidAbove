@@ -20,14 +20,95 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b97dfe6-8e2b-4066-9c65-3dd6ee961227" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Base_Model_Resize_2.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/Base_Model_Resize_2.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Base_Model_Ver_5.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/Base_Model_Ver_5.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Base_Model_export.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/Base_Model_export.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Cargo Container.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Cargo Container.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Cargo Cube.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Cargo Cube.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Charging Station.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Charging Station.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Courier Handgun Model.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Courier Handgun Model.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Courier Package.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Courier Package.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/HealthPickup.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/HealthPickup.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Plant 1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Plant 1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Plant 2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Plant 2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Plant 3.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Plant 3.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/PlayerAnimation/player_MoveBackward.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/PlayerAnimation/player_MoveBackward.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/PlayerAnimation/player_MoveBackward.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/PlayerAnimation/player_MoveBackward.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/PlayerAnimation/player_MoveForeward.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/PlayerAnimation/player_MoveForeward.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/PlayerAnimation/player_MoveForeward.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/PlayerAnimation/player_MoveForeward.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/PlayerAnimation/player_idle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/PlayerAnimation/player_idle.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Reaver Melee Model.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/Reaver Melee Model.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Silo Machine Debris.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Silo Machine Debris.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Space Mine.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Space Mine.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Station Hull Piece WIP.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Station Hull Piece WIP.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Station_Hull_Piece_WIP.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Station_Hull_Piece_WIP.fbx.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Station_Hull_Piece_WIP.fbx.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Station_Hull_Piece_WIP.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Station_Hull_Piece_WIP_old.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Station_Hull_Piece_WIP_old.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Thruster Debris.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Thruster Debris.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Warp Gate.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/Warp Gate.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/arch.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/arch.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/arch_01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/arch_01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/arrow_02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/arrow_02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/asteroid_1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/asteroid_1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/asteroid_A.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/asteroid_A.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/base_model_ver-4.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/base_model_ver-4.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/debris_combine_sattelite1.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/debris_combine_sattelite1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/debris_combine_sattelite2.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/debris_combine_sattelite2.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/idle_new_final.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/idle_new_final.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/idle_pose.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Models/idle_pose.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Bullet 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Bullet 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Bullet 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Bullet 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/MeleeEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/MeleeEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/RespawnPad.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/RespawnPad.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/UI/PauseScreen.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/UI/PauseScreen.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/01 - TitleScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/01 - TitleScreen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/02 - ControlsScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/02 - ControlsScreen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/TakeScreenshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/TakeScreenshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/05 - Scene_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/05 - Scene_2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/06 - Scene_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/06 - Scene_3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/Test_01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/Test_01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/BulletManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/BulletManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/BulletScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/BulletScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/InputActions/PlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/InputActions/PlayerControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/InputActions/PlayerControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/InputActions/PlayerControls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PackageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PackageManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/PannelCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/PannelCheck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sprites/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Sprites/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Sprites/logo_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Sprites/logo_02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,16 +121,17 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/DestroyFX.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Utils/DontGoThroughThings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/ProgressLoadScene.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Utils/GlobalVar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/PannelCheck.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Misc/DestroyTunnel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/DissolveEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Utils/MoveAlong.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/ObjectiveSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Imported/Beam/Scripts/Beam.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/Misc/DissolveScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Imported/Kino/Fog/Fog.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2500DD07-8A54-4A69-B6C9-23861AF6CD15/03/a52a2470/GUIStyle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/ProgressLoadScene.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Project/Scripts/ObjectiveSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Imported/Kino/Fog/Fog.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -86,17 +168,18 @@
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/WeaponScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PanelCheck.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PannelOpen.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PannelCheck.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/ObjectiveSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PackageManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Health.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/BulletManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/CutScene/FlowControl.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/MouseSensitivity.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PlayerWin.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/TakeScreenshot.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/ObjectiveSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PannelCheck.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PackageManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/BulletScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/BulletManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/Player.cs" />
       </list>
     </option>
   </component>
@@ -183,7 +266,8 @@
       <workItem from="1614222833900" duration="6040000" />
       <workItem from="1614442705376" duration="7517000" />
       <workItem from="1614541864636" duration="4509000" />
-      <workItem from="1614614879937" duration="1017000" />
+      <workItem from="1614614879937" duration="1684000" />
+      <workItem from="1614631708446" duration="21166000" />
     </task>
     <servers />
   </component>

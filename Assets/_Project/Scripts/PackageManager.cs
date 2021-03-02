@@ -11,6 +11,8 @@ namespace _Project.Scripts
         [SerializeField]
         private GameObject grabRange;
         [SerializeField]
+        private Transform packagePos;
+        [SerializeField]
         private ObjectiveSystem objective;
         private bool startTimer;
         private float pgTimer = 1;
@@ -71,8 +73,8 @@ namespace _Project.Scripts
         {
             //TODO: Reference child object directly as hierarchical changes will create bugs
             
-            package.transform.position = this.transform.Find("PackagePosition").position;
-            package.transform.rotation = this.transform.Find("PackagePosition").rotation;
+            package.transform.position = packagePos.position;
+            package.transform.rotation = packagePos.rotation;
             package.transform.parent = this.transform;
             hasPackage = true;
 

@@ -27,6 +27,14 @@ namespace _Project.Scripts {
 
         private void OnCollisionEnter(Collision collision)
         {
+            Debug.Log($"Collider: {collision.gameObject.name}");
+
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), gameObject.GetComponent<Collider>());
+                return;
+            }
+
             ContactPoint contact = collision.contacts[0];
             Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
             Vector3 position = contact.point;

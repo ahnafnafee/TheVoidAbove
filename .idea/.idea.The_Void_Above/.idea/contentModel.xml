@@ -124,6 +124,22 @@
           </e>
         </e>
         <e p="Imported" t="Include">
+          <e p="Beam" t="Include">
+            <e p="Beams - Readme.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Beam.cs" t="Include" />
+              <e p="Simple Particle Scaler" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="ParticleScaler.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Simple Particle Scaler - Readme.txt" t="Include" />
+              </e>
+              <e p="SmoothCameraOrbit.cs" t="Include" />
+              <e p="Twist.cs" t="Include" />
+            </e>
+          </e>
           <e p="Colorblind Effect" t="Include">
             <e p="Assets" t="Include">
               <e p="Scripts" t="Include">

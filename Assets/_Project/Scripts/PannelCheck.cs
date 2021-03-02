@@ -18,6 +18,8 @@ namespace _Project.Scripts
         [SerializeField]
         private Image progressBar;
 
+        [SerializeField] private TextMeshProUGUI progressStatus;
+
         [SerializeField]
         private List<GameObject> enemies;
 
@@ -38,12 +40,15 @@ namespace _Project.Scripts
         // Update is called once per frame
         void Update()
         {
-            if(startTimer)
+            progressStatus.text = isDone ? "Hacking Complete" : "Hacking in Progress";
+
+            if(startTimer && !isDone)
             {
                 if(stayTimer <= 0)
                 {
                     isDone = true;
-                    progessUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Hacking Complete";
+                    // progressStatus.text = "Hacking Complete";
+                    // progessUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Hacking Complete";
                     objective.Complete();
                 }
                 if(stayTimer <= timer / 2 && ! spawned)
