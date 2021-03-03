@@ -1,0 +1,7 @@
+lambert1: full_blue
+lambert2: full_pink
+lambert3: full_gray
+lambert4: eyes
+lambert5: eyes
+lambert6: r_arm
+lambert7: l_shoulder

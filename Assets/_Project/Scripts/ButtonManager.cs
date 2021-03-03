@@ -18,6 +18,7 @@ namespace _Project.Scripts
         public void StartGame()
         {
             SceneManager.LoadScene(2);
+            AkSoundEngine.PostEvent("stop_event", GameObject.Find("WwiseGlobal"));
         }
 
         public void ExitGame()

@@ -1228,11 +1228,11 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: cf6622f41695dfc42b49c1f1e946eff6,
+    WwiseObjectReference: {fileID: 11400000, guid: 384a582c8f20bab48b6fdcdf753242f4,
       type: 2}
   useCallbacks: 0
   Callbacks: []
-  playingId: 1914
+  playingId: 449
   soundEmitterObject: {fileID: 59289844}
   transitionDuration: 0
   eventIdInternal: 0
@@ -21466,68 +21466,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157266607}
   m_Mesh: {fileID: 5247739683391682380, guid: a871a8096fbab77408e22fab3f75fec5, type: 3}
---- !u!1 &1167818269 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5907112301216726947, guid: df4cea05c78412b40872147310e51e01,
-    type: 3}
-  m_PrefabInstance: {fileID: 5756708597683496621}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1167818271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167818269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dc8d70676377f946813c801cfbb581b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 94424c8adfc3e11459fbcbe1d542ba18,
-      type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0
-  LargeModePositions: []
-  multiPositionArray: []
---- !u!114 &1167818272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167818269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6ba603caf028b04c8987f1450ee695a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 1
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 1
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &1170694460
 GameObject:
   m_ObjectHideFlags: 0
@@ -38142,6 +38080,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2022255164}
   - component: {fileID: 2022255163}
+  - component: {fileID: 2022255166}
+  - component: {fileID: 2022255165}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -38190,6 +38130,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2022255165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022255162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc8d70676377f946813c801cfbb581b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 683051f3ce31dbe4b9e54cde30314f53,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &2022255166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022255162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ba603caf028b04c8987f1450ee695a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &2027537044 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eaf855a6974d310459844d5195c46e6c,
@@ -82753,7 +82749,7 @@ PrefabInstance:
     - target: {fileID: 8048690902378030694, guid: aebff21b2ff332049957da443cf72886,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.072050616
+      value: 0.0720506
       objectReference: {fileID: 0}
     - target: {fileID: 8048690902378030694, guid: aebff21b2ff332049957da443cf72886,
         type: 3}
@@ -82763,7 +82759,7 @@ PrefabInstance:
     - target: {fileID: 8048690902378030694, guid: aebff21b2ff332049957da443cf72886,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.08116214
+      value: -0.081162125
       objectReference: {fileID: 0}
     - target: {fileID: 8048690902378030694, guid: aebff21b2ff332049957da443cf72886,
         type: 3}

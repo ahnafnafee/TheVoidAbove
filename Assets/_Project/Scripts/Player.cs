@@ -285,7 +285,7 @@ namespace _Project.Scripts
             {
                 if (col.collider.CompareTag("Mine"))
                 {
-                    pHealth.TakeDamage(30);
+                    pHealth.TakeDamage(30,false);
                     _rb.AddExplosionForce(10000f, transform.position, 100);
                     StartCoroutine(ControlLockTimer(0.5f));
                     this.GetComponent<PackageManager>().Drop(col.relativeVelocity);
@@ -306,8 +306,9 @@ namespace _Project.Scripts
 
                 else if (col.relativeVelocity.magnitude > safeSpeed & col.relativeVelocity.magnitude <= dangerSpeed)
                 {
+                    AkSoundEngine.PostEvent("impact_event", this.gameObject);
                     Debug.Log("Bad contact.");
-                    pHealth.TakeDamage(5);
+                    pHealth.TakeDamage(5,false);
                     if (!col.collider.CompareTag("Package"))
                     {
                         StartCoroutine(ControlLockTimer(0.45f));
@@ -318,8 +319,9 @@ namespace _Project.Scripts
                 //StartCoroutine(ControlLockTimer()); // Where s = the time in seconds to lock controls for            
                 else if (col.relativeVelocity.magnitude > dangerSpeed)
                 {
+                    AkSoundEngine.PostEvent("hard_impact_event", this.gameObject);
                     Debug.Log("LETHAL contact.");
-                    pHealth.TakeDamage(10);
+                    pHealth.TakeDamage(10,false);
                     if (!col.collider.CompareTag("Package"))
                     {
                         StartCoroutine(ControlLockTimer(0.9f));
@@ -398,7 +400,7 @@ namespace _Project.Scripts
             while (inZap)
             {
                 Debug.Log("Damage.");
-                pHealth.TakeDamage(damage);
+                pHealth.TakeDamage(damage,false);
                 yield return new WaitForSeconds(1);
             }
         }
@@ -436,7 +438,7 @@ namespace _Project.Scripts
             while (outOfBounds)
             {
                 Debug.Log("Damage.");
-                pHealth.TakeDamage(damage);
+                pHealth.TakeDamage(damage,false);
                 yield return new WaitForSeconds(1);
             }
         }

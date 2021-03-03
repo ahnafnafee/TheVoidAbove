@@ -8,6 +8,11 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_Project" t="Include">
+          <e p="Material" t="Include">
+            <e p="ReaverEnemy" t="Include">
+              <e p="Lambert List for Melee Enemy.txt" t="Include" />
+            </e>
+          </e>
           <e p="Models" t="Include">
             <e p="Exported" t="Include">
               <e p="Integrations" t="Include">
@@ -116,6 +121,7 @@
             </e>
             <e p="FF_Shader.shader" t="Include" />
             <e p="Lit2.shader" t="Include" />
+            <e p="NewSurfaceShader.shader" t="Include" />
             <e p="Toon" t="Include">
               <e p="SimpleURPToonLitOutlineExample.shader" t="Include" />
               <e p="SimpleURPToonLitOutlineExample_LightingEquation.hlsl" t="Include" />
@@ -598,6 +604,7 @@
             </e>
           </e>
         </e>
+        <e p="laser.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
           <e p="Editor" t="Include">
             <e p="ContextMenu.cs" t="Include" />

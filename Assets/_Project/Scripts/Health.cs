@@ -29,10 +29,14 @@ public class Health : MonoBehaviour
         health = objectHealth;
     }
     
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage,bool check=true)
     {
         if ((objectHealth - damage) > 0)
         {
+            if (check)
+            {
+                AkSoundEngine.PostEvent("bullet_impact_1_event", this.gameObject);
+            }
             objectHealth -= damage;
         }
         else

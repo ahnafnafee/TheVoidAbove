@@ -100,6 +100,7 @@ namespace _Project.Scripts
 
         public void RestartScene()
         {
+            AkSoundEngine.PostEvent("stop_event", GameObject.Find("WwiseGlobal"));
             FindObjectOfType<ProgressLoadScene>().LoadScene(SceneManager.GetActiveScene().buildIndex);
             //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
@@ -112,6 +113,7 @@ namespace _Project.Scripts
 
         public void MenuScene()
         {
+            AkSoundEngine.PostEvent("stop_event", GameObject.Find("WwiseGlobal"));
             SceneManager.LoadSceneAsync(0);
         }
 
