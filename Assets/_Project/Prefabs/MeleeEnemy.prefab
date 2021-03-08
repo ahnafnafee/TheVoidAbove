@@ -495,8 +495,11 @@ MonoBehaviour:
   angle_current: 0
   range_melee: 20
   range_attack: 35
-  time_attack: 1.35
+  time_attack: 2
   time_attack_current: 0
+  time_dash: 0
+  time_dash_current: 0
+  range_area: 400
   healthFillImage: {fileID: 1896364576482509947}
   hitParticlePrefab1: {fileID: 2462045763441574653, guid: ab6a9d51455d55242bed043e1b596665,
     type: 3}
@@ -504,6 +507,7 @@ MonoBehaviour:
     type: 3}
   mark_aggro: {fileID: 9190467135906246704, guid: 95b160b4e50bdb349b5f7e027a92cf4e,
     type: 3}
+  pos_ori: {x: 0, y: 0, z: 0}
 --- !u!114 &1473152954611265374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +562,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5966732030097398764}
     m_Modifications:
+    - target: {fileID: 285334655076656819, guid: e5f48851c76332049a2c0ae1eaca1ee2,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0.972549
+      objectReference: {fileID: 0}
+    - target: {fileID: 285334655076656819, guid: e5f48851c76332049a2c0ae1eaca1ee2,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 285334655076656819, guid: e5f48851c76332049a2c0ae1eaca1ee2,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0.95939946
+      objectReference: {fileID: 0}
     - target: {fileID: 408092320324652876, guid: e5f48851c76332049a2c0ae1eaca1ee2,
         type: 3}
       propertyPath: m_Mesh
@@ -757,6 +776,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5966732030097398764}
     m_Modifications:
+    - target: {fileID: 285334655076656819, guid: e5f48851c76332049a2c0ae1eaca1ee2,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0.972549
+      objectReference: {fileID: 0}
+    - target: {fileID: 285334655076656819, guid: e5f48851c76332049a2c0ae1eaca1ee2,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 285334655076656819, guid: e5f48851c76332049a2c0ae1eaca1ee2,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0.95939946
+      objectReference: {fileID: 0}
     - target: {fileID: 408092320324652876, guid: e5f48851c76332049a2c0ae1eaca1ee2,
         type: 3}
       propertyPath: m_Mesh

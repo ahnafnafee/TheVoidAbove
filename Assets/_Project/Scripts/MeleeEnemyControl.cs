@@ -18,24 +18,36 @@ namespace _Project.Scripts
 		public float angle_current;
 		public float range_melee;
 		public float range_attack;
-		public float time_attack;
-		public float time_attack_current;
+		public float time_attack = 0.5f;
+		public float time_attack_current = 0.8f;
+
+		public float time_dash;
+		public float time_dash_current;
+		public float range_area;
+
 
 		private Vector3 pos_player;
 		public Image healthFillImage;
 		[SerializeField] private GameObject hitParticlePrefab1;
 		[SerializeField] private GameObject hitParticlePrefab2;
 		public GameObject mark_aggro;
+		public Vector3 pos_ori;
 		private Health enemyHealth;
+		private int hit_count;
 		// Start is called before the first frame update
 		void Start()
 		{
+			time_dash = 3.0f;
+			time_dash_current = -0.1f;
+			pos_ori = transform.position;
+			hit_count = 0;
 			pos_player = GameObject.Find("Player").GetComponent<Player>().transform.position;
 			speed = 20;
 			speed_rush = 180;
 			status = 0;
-			damage = 2;
-			time_attack_current = time_attack;
+			damage = 5;
+			// time_attack = 0.5f;
+			// time_attack_current = time_attack;
 			angle_new = transform.rotation.y;
 			ChangeDirection();
 			enemyHealth = GetComponent<Health>();
@@ -44,6 +56,10 @@ namespace _Project.Scripts
 		// Update is called once per frame
 		void Update()
 		{
+			if (Vector3.Distance(pos_ori, transform.position) >= range_area)
+			{
+				status = 3;
+			}
 			switch (status)
 			{
 				case 0:
@@ -54,6 +70,9 @@ namespace _Project.Scripts
 					break;
 				case 2:
 					OnAttack();
+					break;
+				case 3:
+					Back();
 					break;
 				default:
 					break;
@@ -75,6 +94,7 @@ namespace _Project.Scripts
 				if (status == 0)
 				{
 					status = 1;
+					pos_player = GameObject.Find("Player").GetComponent<Player>().transform.position;
 					CreateMark();
 				}
 				Debug.Log("I see player");
@@ -115,6 +135,7 @@ namespace _Project.Scripts
 					if (status == 0)
 					{
 						status = 1;
+						pos_player = GameObject.Find("Player").GetComponent<Player>().transform.position;
 						CreateMark();
 					}
 				}
@@ -154,17 +175,33 @@ namespace _Project.Scripts
 		}
 		private void OnMoving()
 		{
+
+
 			if (Vector3.Distance(pos_player, transform.position) >= range_melee)
 			{
-				transform.position = Vector3.MoveTowards(transform.position, pos_player, speed_rush * Time.deltaTime);
-				//transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
-				Vector3 direction = GameObject.Find("Player").transform.position - transform.position;
-				if (direction != Vector3.zero)
-					transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * speed_rush);
+				if (time_dash_current > 0.0f)
+				{
+					pos_player = GameObject.Find("Player").GetComponent<Player>().transform.position;
+					time_dash_current -= Time.deltaTime;
+					transform.position = Vector3.MoveTowards(transform.position, pos_player, 0.22f * speed_rush * Time.deltaTime);
+					//transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
+					Vector3 direction = GameObject.Find("Player").transform.position - transform.position;
+					if (direction != Vector3.zero)
+						transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * speed_rush);
+				}
+				else
+				{
+					transform.position = Vector3.MoveTowards(transform.position, pos_player, speed_rush * Time.deltaTime);
+					//transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
+					Vector3 direction = GameObject.Find("Player").transform.position - transform.position;
+					if (direction != Vector3.zero)
+						transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * speed_rush);
+				}
 			}
 			else
 			{
 				status = 2;
+				time_dash_current = time_dash;
 				time_attack_current = time_attack;
 			}
 		}
@@ -193,6 +230,21 @@ namespace _Project.Scripts
 			GameObject mark = Instantiate(mark_aggro, pos_new, transform.rotation);
 			mark.transform.SetParent(transform);
 			pos_player = GameObject.Find("Player").GetComponent<Player>().transform.position;
+
+		}
+		private void Back()
+		{
+			if (Vector3.Distance(pos_ori, transform.position) >= 1.0f)
+			{
+				transform.position = Vector3.MoveTowards(transform.position, pos_ori, 0.7f*speed_rush * Time.deltaTime);
+				Vector3 direction = pos_ori - transform.position;
+				if (direction != Vector3.zero)
+					transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * speed_rush);
+				//transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
+			}
+			else {
+				status = 0;
+			}
 
 		}
 	}

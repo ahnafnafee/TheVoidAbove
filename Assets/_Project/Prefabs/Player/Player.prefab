@@ -21281,7 +21281,7 @@ MonoBehaviour:
   gameOverUI: {fileID: 0}
   cShake: {fileID: 1611031452521027003}
   shakeDuration: 0.25
-  shakeAmplitude: 5
+  shakeAmplitude: 6
 --- !u!114 &7932259770407649010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21610,7 +21610,7 @@ MonoBehaviour:
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
   m_AmplitudeGain: 0
-  m_FrequencyGain: 1
+  m_FrequencyGain: 2
   mNoiseOffsets: {x: -90.78708, y: -117.30896, z: -913.14}
 --- !u!1 &8048690901072620134
 GameObject:

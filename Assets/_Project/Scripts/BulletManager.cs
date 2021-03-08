@@ -4,7 +4,8 @@ namespace _Project.Scripts
 {
     public class BulletManager : MonoBehaviour
     {
-        public float lifeDuration = 10f;
+        public Vector3 start_pos;
+        public float lifeDuration;
         public float bulletTimer;
         public GameObject hitParticlePrefab;
         public Transform enemyLocation;
@@ -12,6 +13,7 @@ namespace _Project.Scripts
 
         private void Start()
         {
+            start_pos = transform.position;
             bulletTimer = lifeDuration;
         }
 
@@ -20,7 +22,7 @@ namespace _Project.Scripts
         {
             bulletTimer -= Time.deltaTime;
 
-            if(bulletTimer <= 0f)
+            if(Vector3.Distance(transform.position, start_pos)>=300f || bulletTimer <= 0f)
             {
                 Destroy(gameObject);
             }

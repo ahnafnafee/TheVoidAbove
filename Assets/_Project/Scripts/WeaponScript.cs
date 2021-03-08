@@ -96,6 +96,7 @@ namespace _Project.Scripts
 
             //check if ray hits something
             Vector3 targetPoint;
+            //
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
                 // Debug.Log(hit.transform.name);
@@ -104,17 +105,19 @@ namespace _Project.Scripts
             }
             else
             {
+                Physics.Raycast(ray, out hit, Mathf.Infinity);
                 // Debug.Log("Artifical");
                 // targetPoint = ray.GetPoint(75); //Just a point far away from the player
                 targetPoint = ray.origin + ray.direction * 10000.0f;
             }
-            
-            // transform.LookAt(targetPoint);
-            
+
             //Calculate direction from attackPoint to targetPoint
             var position = attackPoint.position;
+
+            // transform.LookAt(targetPoint);
             Vector3 directionWithoutSpread = targetPoint - position;
-            
+
+
             // For debugging bullet path
             Debug.DrawRay(position, directionWithoutSpread, Color.red, 7, false);
 
@@ -125,6 +128,9 @@ namespace _Project.Scripts
 
             //Calculate new direction with spread
             Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0);
+
+
+
 
             // UtilsClass.ShakeCamera(mainCam, camIntensity, camTimer, 1.0f);
             
