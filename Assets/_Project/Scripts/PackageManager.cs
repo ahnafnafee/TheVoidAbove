@@ -14,22 +14,40 @@ namespace _Project.Scripts
         private Transform packagePos;
         [SerializeField]
         private ObjectiveSystem objective;
+        [SerializeField]
+        private GameObject highlighter;
+        [SerializeField]
+        private MeshRenderer pkgBase;
+        [SerializeField]
+        private Material defaultMat;
+        [SerializeField]
+        private Material highlightMat;
         private bool startTimer;
         private float pgTimer = 1;
+        private Rigidbody pkgRb;
+
+        private bool isObjectiveNotNull;
+
         // Start is called before the first frame update
         void Awake()
         {
             grabRange.SetActive(true);
-            package.GetComponent<Rigidbody>().detectCollisions = true;
+            pkgRb = package.GetComponent<Rigidbody>();
+            pkgRb.detectCollisions = true;
             package.transform.parent = null;
             startTimer = false;
         }
 
         void Start()
         {
+            isObjectiveNotNull = objective != null;
+
+            // Needs to be modular
             if (SceneManager.GetActiveScene().buildIndex == 3)
             {
                 hasPackage = false;
+                highlighter.SetActive(true);
+                pkgBase.material = highlightMat;
             }
             else
             {
@@ -44,9 +62,9 @@ namespace _Project.Scripts
             if(startTimer)
             {
                 pgTimer -= Time.deltaTime;
-                if(pgTimer <= 0)
+                if (pgTimer <= 0)
                 {
-                    package.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+                    pkgRb.velocity = new Vector3(0, 0, 0);
                     pgTimer = 1;
                     startTimer = false;
                 }
@@ -57,14 +75,18 @@ namespace _Project.Scripts
         {
             hasPackage = false;
 
-            // Needs to be modular
-            if (SceneManager.GetActiveScene().buildIndex == 3)
+            if (isObjectiveNotNull)
                 objective.Pending();
 
+            highlighter.SetActive(true);
+            pkgBase.material = highlightMat;
+
             package.transform.parent = null;
-            package.GetComponent<Rigidbody>().detectCollisions = true;
-            package.GetComponent<Rigidbody>().isKinematic = false;
-            package.GetComponent<Rigidbody>().velocity += Vector3.Reflect(vel * 0.5f, vel.normalized);
+            package.GetComponent<Collider>().enabled = true;
+
+            pkgRb.detectCollisions = true;
+            pkgRb.isKinematic = false;
+            pkgRb.velocity += Vector3.Reflect(vel * 0.5f, vel.normalized);
             startTimer = true;
             grabRange.SetActive(true);
         }
@@ -72,18 +94,23 @@ namespace _Project.Scripts
         public void PickUp()
         {
             //TODO: Reference child object directly as hierarchical changes will create bugs
-            
+
+            hasPackage = true;
+
+            highlighter.SetActive(false);
+            pkgBase.material = defaultMat;
+
             package.transform.position = packagePos.position;
             package.transform.rotation = packagePos.rotation;
             package.transform.parent = this.transform;
-            hasPackage = true;
 
             if (SceneManager.GetActiveScene().buildIndex == 3)
                 objective.Complete();
 
             AkSoundEngine.PostEvent("success_pickup_event", gameObject);
-            package.GetComponent<Rigidbody>().detectCollisions = false;
-            package.GetComponent<Rigidbody>().isKinematic = true;
+            package.GetComponent<Collider>().enabled = false;
+            pkgRb.detectCollisions = false;
+            pkgRb.isKinematic = true;
             grabRange.SetActive(false);
         }
     }

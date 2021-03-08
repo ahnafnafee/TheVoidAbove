@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using _Project.Scripts.Utils;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,8 +21,14 @@ public class Health : MonoBehaviour
     [SerializeField]
     private GameObject healthPack;
 
+    [Header("UI")]
     [SerializeField]
-    private GameObject gameOverUI; 
+    private GameObject gameOverUI;
+
+    [Header("Camera Shake")]
+    [SerializeField] private CameraShake cShake;
+    [SerializeField] private float shakeDuration = 0.2f;
+    [SerializeField] private float shakeAmplitude = 3f;
 
     private IEnumerator coroutine;
 
@@ -36,6 +44,12 @@ public class Health : MonoBehaviour
             if (check)
             {
                 AkSoundEngine.PostEvent("bullet_impact_1_event", this.gameObject);
+            }
+
+            // Adding camera shakes here
+            if (gameObject.CompareTag("Player"))
+            {
+                cShake.Shake(shakeAmplitude, shakeDuration);
             }
             objectHealth -= damage;
         }
@@ -93,5 +107,10 @@ public class Health : MonoBehaviour
         objectHealth = health;
 
         gameOverUI.SetActive(false);
+    }
+
+
+    public void UpdateRespawnPoint(GameObject g) {
+        respawnPoint = g;
     }
 }

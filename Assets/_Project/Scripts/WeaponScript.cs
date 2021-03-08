@@ -16,6 +16,7 @@ namespace _Project.Scripts
         public bool allowInvoke = true;
         public Transform attackPoint;
         [SerializeField] private GameObject bullet;
+        [SerializeField] private GameObject poweredBullet;
 
         int bulletsLeft, bulletsShot;
 
@@ -128,7 +129,10 @@ namespace _Project.Scripts
             // UtilsClass.ShakeCamera(mainCam, camIntensity, camTimer, 1.0f);
             
             //Instantiate bullet/projectile
-            GameObject currentBullet = Instantiate(bullet, position, Quaternion.identity);
+            var currentBullet = Instantiate(GameObject.Find("Player").GetComponent<Player>().isPowered() ? poweredBullet : bullet, position, Quaternion.identity);
+
+            // GameObject currentBullet = Instantiate(bullet, position, Quaternion.identity);
+
             GameObject.Find("Player").GetComponent<Player>().Shoot();
             currentBullet.transform.forward = directionWithSpread.normalized;
 
@@ -139,6 +143,14 @@ namespace _Project.Scripts
             currentBullet.GetComponent<Rigidbody>().AddForce(mainCam.transform.up * upwardForce, ForceMode.Impulse);
 
             AkSoundEngine.PostEvent("shoot_event",this.gameObject);
+            StartCoroutine(DelayTrail(currentBullet, 0.01f));
+        }
+
+        private IEnumerator DelayTrail(GameObject obj, float seconds)
+        {
+            yield return new WaitForSeconds(seconds);
+            if (obj != null)
+                obj.GetComponent<TrailRenderer>().enabled = true;
         }
 
         public void drop()

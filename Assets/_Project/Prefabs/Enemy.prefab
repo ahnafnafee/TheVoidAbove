@@ -34340,7 +34340,9 @@ MonoBehaviour:
     type: 3}
   healthFillImage: {fileID: 982766637}
   enemyHealthObj: {fileID: 651041558}
-  hitParticlePrefab: {fileID: 2462045763441574653, guid: 281d425e8bcdde041b783be5ca06d228,
+  hitParticlePrefab1: {fileID: 2462045763441574653, guid: ab6a9d51455d55242bed043e1b596665,
+    type: 3}
+  hitParticlePrefab2: {fileID: 2462045763441574653, guid: 294e0e591e9bd7e42951d6117ab817ad,
     type: 3}
   gun: {fileID: 1810849979208253521}
   origianlPosition: {x: 0, y: 0, z: 0}
@@ -34382,6 +34384,9 @@ MonoBehaviour:
   healthPack: {fileID: 6188982617957943217, guid: 14470e3fa6f6da140ab13f3d7bb457b9,
     type: 3}
   gameOverUI: {fileID: 0}
+  cShake: {fileID: 0}
+  shakeDuration: 0.2
+  shakeAmplitude: 3
 --- !u!114 &4711740618787365964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44520,7 +44525,7 @@ PrefabInstance:
     - target: {fileID: 2753902623494145137, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3195862062932135279, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}
@@ -44550,7 +44555,7 @@ PrefabInstance:
     - target: {fileID: 4617126115217632195, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4847727960596526910, guid: 8011cc344beec7e4dbac41e3478e9c4a,
         type: 3}

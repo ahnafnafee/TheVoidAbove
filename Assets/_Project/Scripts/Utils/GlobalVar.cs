@@ -10,6 +10,7 @@
         // public static int currentHealth;
 
         public static bool isPaused = false;
+        public static bool isWin = false;
         public static float mSensitivityX = 0;
         public static float mSensitivityY = 0;
 

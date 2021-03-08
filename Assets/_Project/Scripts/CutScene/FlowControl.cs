@@ -18,6 +18,7 @@ namespace _Project.Scripts
 
         void Start()
         {
+            Time.timeScale = 1;
             time_fade = 0.40f;
             timer = 0.0f;
             nubPage = 0;
@@ -71,7 +72,7 @@ namespace _Project.Scripts
         {
             foreach (GameObject pic in allpic)
             {
-                pic.GetComponent<Animator>().SetTrigger("Out");
+                pic.GetComponent<Animator>().SetBool("Out", true);
             }
             timer = time_fade;
         }
@@ -107,6 +108,11 @@ namespace _Project.Scripts
             }
             allpic[nubPic].SetActive(true);
             allText[nubPic].SetActive(true);
+        }
+
+        public void SkipButton()
+        {
+            FindObjectOfType<ProgressLoadScene>().LoadScene(3);
         }
     }
 }

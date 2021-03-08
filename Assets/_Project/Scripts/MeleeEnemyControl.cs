@@ -23,7 +23,8 @@ namespace _Project.Scripts
 
 		private Vector3 pos_player;
 		public Image healthFillImage;
-		[SerializeField] private GameObject hitParticlePrefab;
+		[SerializeField] private GameObject hitParticlePrefab1;
+		[SerializeField] private GameObject hitParticlePrefab2;
 		public GameObject mark_aggro;
 		private Health enemyHealth;
 		// Start is called before the first frame update
@@ -97,16 +98,18 @@ namespace _Project.Scripts
 				ContactPoint contact = collision.contacts[0];
 				Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
 				Vector3 position = contact.point;
-				Instantiate(hitParticlePrefab, position, rotation);
 
-				if (collision.gameObject.name == "Bullet 3(Clone)")
+
+				if (collision.gameObject.name.Contains("Bullet 3"))
 				{
 					if (GameObject.Find("Player").GetComponent<Player>().isPowered())
 					{
+						Instantiate(hitParticlePrefab2, position, rotation);
 						enemyHealth.TakeDamage(4);
 					}
 					else
 					{
+						Instantiate(hitParticlePrefab1, position, rotation);
 						enemyHealth.TakeDamage(1);
 					}
 					if (status == 0)

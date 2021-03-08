@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine.Serialization;
 
 public class HudManager : MonoBehaviour
@@ -42,6 +43,12 @@ public class HudManager : MonoBehaviour
         }
     }
 
+    public void UpdateHudList(string sHud)
+    {
+        var hudToRemove = huds.Single(r => r.m_Text == sHud);
+        huds.Remove(hudToRemove);
+    }
+
     void OnDestroy()
     {
         _instance = null;
@@ -79,89 +86,103 @@ public class HudManager : MonoBehaviour
             return;
         }
 
+        // Debug.Log(
+            // $"Hud {huds[i].m_Text}, Onscreen : {HudUtility.isOnScreen(HudUtility.ScreenPosition(huds[i].m_Target), huds[i].m_Target)}");
+
         //Check target if OnScreen
         if (HudUtility.isOnScreen(HudUtility.ScreenPosition(huds[i].m_Target), huds[i].m_Target))
         {
             //Calculate Position of target
             Vector3 RelativePosition = huds[i].m_Target.position + huds[i].Offset;
-            if ((Vector3.Dot(this.localPlayer.forward, RelativePosition - this.localPlayer.position) > 0f))
+
+            // Dot product is returning false for some reason
+
+            // Vector3 locPlayer = localPlayer.forward;
+            // locPlayer = new Vector3(Mathf.Abs(locPlayer.x), Mathf.Abs(locPlayer.y), Mathf.Abs(locPlayer.z));
+
+            // Debug.Log($"Dot: {Vector3.Dot(locPlayer, RelativePosition - localPlayer.position) > 0f}");
+            // Debug.Log($"LocPlayer: {locPlayer}");
+
+            // OLD VERSION
+            // if ((Vector3.Dot(this.localPlayer.forward, RelativePosition - this.localPlayer.position) > 0f))
+
+            // if ((!(Vector3.Dot(locPlayer, RelativePosition - this.localPlayer.position) > 0f))) return;
+
+            //Calculate the 2D position of the position where the icon should be drawn
+            Vector3 point = HudUtility.mCamera.WorldToViewportPoint(RelativePosition);
+
+            //The viewportPoint coordinates are between 0 and 1, so we have to convert them into screen space here
+            Vector2 drawPosition = new Vector2(point.x * Screen.width, Screen.height * (1 - point.y));
+
+            if (!huds[i].Arrow.ShowArrow)
             {
-                //Calculate the 2D position of the position where the icon should be drawn
-                Vector3 point = HudUtility.mCamera.WorldToViewportPoint(RelativePosition);
+                //Clamp the position to the edge of the screen in case the icon would be drawn outside the screen
+                drawPosition.x = Mathf.Clamp(drawPosition.x, clampBorder, Screen.width - clampBorder);
+                drawPosition.y = Mathf.Clamp(drawPosition.y, clampBorder, Screen.height - clampBorder);
+            }
+            //Calculate distance from player to way point
+            float Distance = Vector3.Distance(this.localPlayer.position, RelativePosition);
+            //Cache distance
+            float CompleteDistance = Distance;
 
-                //The viewportPoint coordinates are between 0 and 1, so we have to convert them into screen space here
-                Vector2 drawPosition = new Vector2(point.x * Screen.width, Screen.height * (1 - point.y));
+            //Max Hud Increment
+            if (Distance > huds[i].m_MaxSize) // if more than "50" no increase more
+            {
+                Distance = 50;
+            }
+            float n = iconSize;
+            //Calculate depend of type
+            if (huds[i].m_HudType == HudType.Decreasing)
+            {
+                n = (((50 + Distance) / (25)) * 0.9f) + 0.1f;
+            }
+            else if (huds[i].m_HudType == HudType.Increasing)
+            {
+                n = (((50 - Distance) / (25)) * 0.9f) + 0.1f;
+            }
+            //Calculate Size of Hud
+            float sizeX = huds[i].m_Icon.width * n;
+            if (sizeX >= huds[i].m_MaxSize)
+            {
+                sizeX = huds[i].m_MaxSize;
+            }
+            float sizeY = huds[i].m_Icon.height * n;
+            if (sizeY >= huds[i].m_MaxSize)
+            {
+                sizeY = huds[i].m_MaxSize;
+            }
+            float TextUperIcon = sizeY / 2 + 5;
 
-                if (!huds[i].Arrow.ShowArrow)
-                {
-                    //Clamp the position to the edge of the screen in case the icon would be drawn outside the screen
-                    drawPosition.x = Mathf.Clamp(drawPosition.x, clampBorder, Screen.width - clampBorder);
-                    drawPosition.y = Mathf.Clamp(drawPosition.y, clampBorder, Screen.height - clampBorder);
-                }
-                //Calculate distance from player to way point
-                float Distance = Vector3.Distance(this.localPlayer.position, RelativePosition);
-                //Cache distance
-                float CompleteDistance = Distance;
+            //palpating effect
+            if (huds[i].isPalpitin)
+            {
+                Palpating(huds[i]);
+            }
 
-                //Max Hud Increment
-                if (Distance > huds[i].m_MaxSize) // if more than "50" no increase more
+            //Draw Huds
+            GUI.color = huds[i].m_Color;
+            GUI.DrawTexture(new Rect(drawPosition.x - (sizeX / 2), drawPosition.y - (sizeY / 2), sizeX, sizeY), huds[i].m_Icon);
+            if (!huds[i].ShowDistance)
+            {
+                if (!string.IsNullOrEmpty(huds[i].m_Text))
                 {
-                    Distance = 50;
+                    Vector2 size = TextStyle.CalcSize(new GUIContent(huds[i].m_Text));
+                    GUI.Label(new Rect(drawPosition.x - (size.x / 2) + 10, (drawPosition.y - (size.y / 2)) - TextUperIcon, size.x, size.y), huds[i].m_Text, TextStyle);
                 }
-                float n = iconSize;
-                //Calculate depend of type
-                if (huds[i].m_HudType == HudType.Decreasing)
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(huds[i].m_Text))
                 {
-                    n = (((50 + Distance) / (25)) * 0.9f) + 0.1f;
-                }
-                else if (huds[i].m_HudType == HudType.Increasing)
-                {
-                    n = (((50 - Distance) / (25)) * 0.9f) + 0.1f;
-                }
-                //Calculate Size of Hud
-                float sizeX = huds[i].m_Icon.width * n;
-                if (sizeX >= huds[i].m_MaxSize)
-                {
-                    sizeX = huds[i].m_MaxSize;
-                }
-                float sizeY = huds[i].m_Icon.height * n;
-                if (sizeY >= huds[i].m_MaxSize)
-                {
-                    sizeY = huds[i].m_MaxSize;
-                }
-                float TextUperIcon = sizeY / 2 + 5;
-
-                //palpating effect
-                if (huds[i].isPalpitin)
-                {
-                    Palpating(huds[i]);
-                }
-
-                //Draw Huds
-                GUI.color = huds[i].m_Color;
-                GUI.DrawTexture(new Rect(drawPosition.x - (sizeX / 2), drawPosition.y - (sizeY / 2), sizeX, sizeY), huds[i].m_Icon);
-                if (!huds[i].ShowDistance)
-                {
-                    if (!string.IsNullOrEmpty(huds[i].m_Text))
-                    {
-                        Vector2 size = TextStyle.CalcSize(new GUIContent(huds[i].m_Text));
-                        GUI.Label(new Rect(drawPosition.x - (size.x / 2) + 10, (drawPosition.y - (size.y / 2)) - TextUperIcon, size.x, size.y), huds[i].m_Text, TextStyle);
-                    }
+                    string text = huds[i].m_Text + "\n<color=white>[" + string.Format("{0:N0}m", CompleteDistance) + "]</color>";
+                    Vector2 size = TextStyle.CalcSize(new GUIContent(text));
+                    GUI.Label(new Rect(drawPosition.x - (size.x / 2) + 10, (drawPosition.y - (size.y / 2)) - TextUperIcon, size.x, size.y), text, TextStyle);
                 }
                 else
                 {
-                    if (!string.IsNullOrEmpty(huds[i].m_Text))
-                    {
-                        string text = huds[i].m_Text + "\n<color=whitte>[" + string.Format("{0:N0}m", CompleteDistance) + "]</color>";
-                        Vector2 size = TextStyle.CalcSize(new GUIContent(text));
-                        GUI.Label(new Rect(drawPosition.x - (size.x / 2) + 10, (drawPosition.y - (size.y / 2)) - TextUperIcon, size.x, size.y), text, TextStyle);
-                    }
-                    else
-                    {
-                        string text = "<color=whitte>[" + string.Format("{0:N0}m", CompleteDistance) + "]</color>";
-                        Vector2 size = TextStyle.CalcSize(new GUIContent(text));
-                        GUI.Label(new Rect(drawPosition.x - (size.x / 2) + 10, ((drawPosition.y - (size.y / 2)) - TextUperIcon), size.x, size.y), text, TextStyle);
-                    }
+                    string text = "<color=white>[" + string.Format("{0:N0}m", CompleteDistance) + "]</color>";
+                    Vector2 size = TextStyle.CalcSize(new GUIContent(text));
+                    GUI.Label(new Rect(drawPosition.x - (size.x / 2) + 10, ((drawPosition.y - (size.y / 2)) - TextUperIcon), size.x, size.y), text, TextStyle);
                 }
             }
         }
@@ -243,7 +264,7 @@ public class HudManager : MonoBehaviour
                     float Distance = Vector3.Distance(localPlayer.position, huds[i].m_Target.position);
                     if (!string.IsNullOrEmpty(huds[i].m_Text))
                     {
-                        string text = huds[i].m_Text + "\n <color=whitte>[" + string.Format("{0:N0}m", Distance) + "]</color>";
+                        string text = huds[i].m_Text + "\n <color=white>[" + string.Format("{0:N0}m", Distance) + "]</color>";
                         Vector2 size = TextStyle.CalcSize(new GUIContent(text));
                         ClampedTextPosition.x = Mathf.Clamp(ClampedTextPosition.x, (size.x + offScreenIconSize) + 30, ((Screen.width - offScreenIconSize) - 10) - size.x);
                         ClampedTextPosition.y = Mathf.Clamp(ClampedTextPosition.y, (size.y + offScreenIconSize) + 35, ((Screen.height - size.y) - offScreenIconSize) - 20);
@@ -251,7 +272,7 @@ public class HudManager : MonoBehaviour
                     }
                     else
                     {
-                        string text = "<color=whitte>[" + string.Format("{0:N0}m", Distance) + "]</color>";
+                        string text = "<color=white>[" + string.Format("{0:N0}m", Distance) + "]</color>";
                         Vector2 size = TextStyle.CalcSize(new GUIContent(text));
                         ClampedTextPosition.x = Mathf.Clamp(ClampedTextPosition.x, (size.x + offScreenIconSize) + 30, ((Screen.width - offScreenIconSize) - 10) - size.x);
                         ClampedTextPosition.y = Mathf.Clamp(ClampedTextPosition.y, (size.y + offScreenIconSize) + 35, ((Screen.height - size.y) - offScreenIconSize) - 20);

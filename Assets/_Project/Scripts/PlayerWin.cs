@@ -32,6 +32,7 @@ namespace _Project.Scripts
         {
             _freeLookComponent.m_Lens.FieldOfView = 60;
             GlobalVar.isPaused = false;
+            GlobalVar.isWin = false;
             playerControls.UserInterface.Restart.performed += _ => RestartScene();
         }
 
@@ -72,13 +73,15 @@ namespace _Project.Scripts
 
 
             // _freeLookComponent.m_Lens.FieldOfView = 140;
-            GlobalVar.isPaused = true;
+            GlobalVar.isWin = true;
             // yield return new WaitForSeconds(3f);
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             gameHud.SetActive(false);
             inGameUI.SetActive(false);
-            D_box.GetComponent<CanvasGroup>().alpha = Convert.ToInt32(false);
+
+            if (D_box != null)
+                D_box.GetComponent<CanvasGroup>().alpha = Convert.ToInt32(false);
             levelChangeInterface.SetActive(true);
             AkSoundEngine.PostEvent("stop_event", this.gameObject);
         }

@@ -21,6 +21,11 @@ namespace _Project.Scripts
         [SerializeField] private TextMeshProUGUI progressStatus;
 
         [SerializeField]
+        private HudManager hudManager;
+        [SerializeField]
+        private string objName;
+
+        [SerializeField]
         private List<GameObject> enemies;
 
         private bool startTimer;
@@ -47,8 +52,8 @@ namespace _Project.Scripts
                 if(stayTimer <= 0)
                 {
                     isDone = true;
-                    // progressStatus.text = "Hacking Complete";
-                    // progessUI.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Hacking Complete";
+                    Destroy(gameObject.GetComponent<Hud>());
+                    hudManager.UpdateHudList(objName);
                     objective.Complete();
                 }
                 if(stayTimer <= timer / 2 && ! spawned)
@@ -62,7 +67,6 @@ namespace _Project.Scripts
             else
             {
                 stayTimer = timer;
-                spawned = false;
             }
         }
 
@@ -81,7 +85,6 @@ namespace _Project.Scripts
             {
                 progessUI.SetActive(false);
                 startTimer = false;
-                spawned = false;
                 stayTimer = timer;
                 progressBar.fillAmount = 0;
             }

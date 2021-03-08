@@ -24,7 +24,8 @@ namespace _Project.Scripts
         public GameObject enemyHealthObj;
 
         [Header("Misc")]
-        [SerializeField] private GameObject hitParticlePrefab;
+        [SerializeField] private GameObject hitParticlePrefab1;
+        [SerializeField] private GameObject hitParticlePrefab2;
         [SerializeField] private GameObject gun;
         [SerializeField] private Vector3 origianlPosition;
         [SerializeField] private bool returnMove;
@@ -87,7 +88,8 @@ namespace _Project.Scripts
             else if (isAiming)
             {
                 Vector3 direction = target.transform.position - transform.position;
-                transform.position = Vector3.MoveTowards(transform.position, target.transform.position, enemySpeed * Time.deltaTime);
+                if(Vector3.Distance(transform.position, target.transform.position) >= 10.0f)
+                    transform.position = Vector3.MoveTowards(transform.position, target.transform.position, enemySpeed * Time.deltaTime);
                 if (direction != Vector3.zero)
                     enemyBody.rotation = Quaternion.Slerp(enemyBody.rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * enemySpeed);
                 //enemyBody.LookAt(target.transform);
@@ -119,15 +121,16 @@ namespace _Project.Scripts
                 ContactPoint contact = collision.contacts[0];
                 Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
                 Vector3 position = contact.point;
-                Instantiate(hitParticlePrefab, position, rotation);
 
-                if (collision.gameObject.name == "Bullet 3(Clone)")
+                if (collision.gameObject.name.Contains("Bullet 3"))
                 {
                     if (GameObject.Find("Player").GetComponent<Player>().isPowered())
                     {
+                        Instantiate(hitParticlePrefab2, position, rotation);
                         enemyHealth.TakeDamage(4);
                     }
-                    else { 
+                    else {
+                        Instantiate(hitParticlePrefab1, position, rotation);
                         enemyHealth.TakeDamage(1); 
                     }
                     StartAiming();
@@ -159,13 +162,13 @@ namespace _Project.Scripts
             {
                 StartAiming();
             }
-            else
-            {
-                if (isAiming)
-                {
-                    StopAiming();
-                }
-            }
+            //else
+            //{
+            //    if (isAiming)
+            //    {
+            //        StopAiming();
+            //    }
+            //}
 
         }
         private void CreateMark()

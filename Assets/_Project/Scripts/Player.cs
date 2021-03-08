@@ -381,6 +381,11 @@ namespace _Project.Scripts
 
         private void OnTriggerEnter(Collider other)
         {
+            if (other.CompareTag("CheckPoint"))
+            {
+                GetComponent<Health>().UpdateRespawnPoint(other.gameObject);
+            }
+
             if (other.CompareTag("OuterZone"))
             {
                 StopCoroutine(DrainHealth(5));

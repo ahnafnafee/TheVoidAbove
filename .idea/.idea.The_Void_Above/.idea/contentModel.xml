@@ -52,6 +52,7 @@
             <e p="DropControl.cs" t="Include" />
             <e p="EnemyGun.cs" t="Include" />
             <e p="EnemyMove.cs" t="Include" />
+            <e p="EnemyObjective.cs" t="Include" />
             <e p="EnemyScript.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="GrabPackage.cs" t="Include" />
@@ -105,6 +106,7 @@
             <e p="Tutorial.cs" t="Include" />
             <e p="UI_AmmoControl.cs" t="Include" />
             <e p="Utils" t="Include">
+              <e p="CameraShake.cs" t="Include" />
               <e p="DontGoThroughThings.cs" t="Include" />
               <e p="FunctionUpdater.cs" t="Include" />
               <e p="GlobalVar.cs" t="Include" />

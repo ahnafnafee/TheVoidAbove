@@ -18,7 +18,6 @@ namespace _Project.Scripts
         [SerializeField] private GameObject gameHud;
         [SerializeField] private GameObject inGameUI;
         [SerializeField] private GameObject D_box;
-
         [SerializeField] private TextMeshProUGUI levelTime;
 
         float theTime = 0f;
@@ -41,13 +40,7 @@ namespace _Project.Scripts
             Cursor.lockState = CursorLockMode.Locked;
             screenshot = GetComponent<TakeScreenshot>();
             playerControls.UserInterface.Pause.performed += _ => PauseScene();
-            // playerControls.UserInterface.Screenshot.performed += _ => TakeScreenshot();
         }
-
-        // private void TakeScreenshot()
-        // {
-        //     screenshot.OnTakeScreenshotButtonPressed();
-        // }
 
         private void Awake()
         {
@@ -62,9 +55,9 @@ namespace _Project.Scripts
             //RenderSettings.skybox.SetFloat(Rotation, Time.time * skyboxRotSpeed);
 
             theTime += Time.deltaTime * speed;
-            string minutes = Mathf.Floor((theTime % 3600) / 60).ToString("00");
-            string seconds = (theTime % 60).ToString("00");
-            levelTime.text = minutes + ":" + seconds;
+            var minutes = Mathf.FloorToInt(theTime / 60F);
+            var seconds = Mathf.FloorToInt(theTime - minutes * 60);
+            levelTime.text = $"{minutes:00}:{seconds:00}";
 
         }
 
@@ -73,6 +66,7 @@ namespace _Project.Scripts
         public void PauseScene()
         {
             if (pauseMenu == null) return;
+            if (GlobalVar.isWin) return;
             Time.timeScale = Convert.ToInt32(isPaused);
             pauseMenu.SetActive(!isPaused);
             gameHud.SetActive(isPaused);
@@ -83,7 +77,8 @@ namespace _Project.Scripts
             // TODO: DI_System needs build index check for different scenes
             // Temporary fix below
 
-            D_box.GetComponent<CanvasGroup>().alpha = Convert.ToInt32(isPaused);
+            if (D_box != null)
+                D_box.GetComponent<CanvasGroup>().alpha = Convert.ToInt32(isPaused);
             
             isPaused = !isPaused;
             Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
@@ -105,9 +100,9 @@ namespace _Project.Scripts
             //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
 
-        public void LoadLevel2()
+        public void LoadLevel()
         {
-            FindObjectOfType<ProgressLoadScene>().LoadScene(4);
+            FindObjectOfType<ProgressLoadScene>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             //SceneManager.LoadSceneAsync(4);
         }
 

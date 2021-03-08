@@ -29,7 +29,7 @@ public static class HudUtility
 
         if ((slope > GetScreenSlope) || (slope < -GetScreenSlope))
         {
-            height = (MidlleHeight - HalfSize(size)) / vertical;
+            height = (MiddleHeight - HalfSize(size)) / vertical;
             if (vertical < 0)
             {
                 vector.y = HalfSize(size);
@@ -53,7 +53,7 @@ public static class HudUtility
         {
             vector.x = mCamera.pixelWidth - HalfSize(size);
         }
-        vector.y = MidlleHeight + (vertical * height);
+        vector.y = MiddleHeight + (vertical * height);
         return vector;
     }
 
@@ -71,11 +71,12 @@ public static class HudUtility
         }
     }
 
-    public static float MidlleHeight
+    public static float MiddleHeight
     {
         get
         {
-            return Camera.main.pixelHeight / 2;
+            Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+            return cam.pixelHeight / 2;
         }
     }
 
@@ -83,7 +84,8 @@ public static class HudUtility
     {
         get
         {
-            return Camera.main.pixelWidth / 2;
+            Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+            return cam.pixelWidth / 2;
         }
     }
 
@@ -97,13 +99,14 @@ public static class HudUtility
     {
         get
         {
-            if (Camera.main != null)
+            Camera cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+            if (cam != null)
             {
-                return Camera.main;
+                return cam;
             }
             else
             {
-                return Camera.current;
+                return cam;
             }
         }
     }

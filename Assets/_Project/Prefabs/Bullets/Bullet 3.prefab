@@ -122,7 +122,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7245286705283116746}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeDuration: 10
   bulletTimer: 10
-  hitParticlePrefab: {fileID: 2462045763441574653, guid: bc20e11fe125f0c4985a160e93e1a272,
+  hitParticlePrefab: {fileID: 2462045763441574653, guid: ab6a9d51455d55242bed043e1b596665,
     type: 3}
   enemyLocation: {fileID: 0}
   isPlayer: 1
