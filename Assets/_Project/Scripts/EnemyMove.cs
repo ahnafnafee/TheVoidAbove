@@ -15,7 +15,8 @@ namespace _Project.Scripts
 
         [Header("Enemy Attributes")]
         [SerializeField] private float enemySpeed;
-        [SerializeField] private float enemyRange = 300f;
+        [SerializeField] private float enemyRange = 200f;
+        [SerializeField] private float areaRange = 400f;
         [SerializeField] private GameObject enemyObj;
         public GameObject mark_aggro;
 
@@ -157,18 +158,20 @@ namespace _Project.Scripts
         // FYI this method might be very expensive
         public void AimCheck()
         {
-
-            if ((Vector3.Distance(target.transform.position, transform.position)) <= enemyRange)
+            if ((Vector3.Distance(target.transform.position, transform.position)) <= areaRange)
             {
-                StartAiming();
+                if ((Vector3.Distance(target.transform.position, transform.position)) <= enemyRange)
+                {
+                    StartAiming();
+                }
             }
-            //else
-            //{
-            //    if (isAiming)
-            //    {
-            //        StopAiming();
-            //    }
-            //}
+            else
+            {
+                if (isAiming)
+                {
+                    StopAiming();
+                }
+            }
 
         }
         private void CreateMark()

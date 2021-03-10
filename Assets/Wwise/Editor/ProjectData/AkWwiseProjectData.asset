@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: a076a9ff8ecd7c44ac9bf212c2d9ac82
     GuidInternal: 
-    m_lastTime: -8585865509785939498
+    m_lastTime: -8585863160799059638
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -30,7 +30,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 9e60cd2e5303124b9bb43a13ee8ac2b4
     GuidInternal: 
-    m_lastTime: -8585865509894825879
+    m_lastTime: -8585863160858770890
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -49,7 +49,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 2b62d1e017d56d4f977d3b5a6a9a3e3a
     GuidInternal: 
-    m_lastTime: -8585865509786300617
+    m_lastTime: -8585863160799449640
     List:
     - name: Main
       guid: 84e90d42e99fff4bae31e18c693bfedb
@@ -68,7 +68,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e4633ba085de71498e2b6a382ceb1aa1
     GuidInternal: 
-    m_lastTime: -8585865510055721288
+    m_lastTime: -8585863160980442259
     List:
     - name: alt_shoot_event
       guid: 6fa00bef4681c349a4db43ada7fc1001
@@ -282,7 +282,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 87f59f6b0a58334d9be9fb4702a02aa6
     GuidInternal: 
-    m_lastTime: -8585865510055682246
+    m_lastTime: -8585863160980392258
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -292,7 +292,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f6cca8b2e62162419c1e545924fd3c0b
     GuidInternal: 
-    m_lastTime: -8585865509786222535
+    m_lastTime: -8585863160799369638
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -302,7 +302,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 3bc436e01a4d3d4ab5e606f4e4f881ee
     GuidInternal: 
-    m_lastTime: -8585865509786183489
+    m_lastTime: -8585863160799329638
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -312,7 +312,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 7631ee4452c0f94384bf5e14f56e2d49
     GuidInternal: 
-    m_lastTime: -8585865509785978532
+    m_lastTime: -8585863160799099643
     List: []
   ExpandedItems:
   - /The_Void_Above_WwiseProject

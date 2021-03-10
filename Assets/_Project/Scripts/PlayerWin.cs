@@ -18,6 +18,7 @@ namespace _Project.Scripts
         [SerializeField] private GameObject levelChangeInterface;
         [SerializeField] private GameObject gameHud;
         [SerializeField] private GameObject inGameUI;
+        [SerializeField] private GameObject returnHUD;
         [SerializeField] private GameObject D_box;
         [SerializeField] private CinemachineFreeLook _freeLookComponent;
 
@@ -38,6 +39,7 @@ namespace _Project.Scripts
 
         void RestartScene()
         {
+            AkSoundEngine.PostEvent("stop_event", GameObject.Find("WwiseGlobal"));
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         }
 
@@ -77,6 +79,10 @@ namespace _Project.Scripts
             // yield return new WaitForSeconds(3f);
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
+
+            if (returnHUD.activeSelf)
+                returnHUD.SetActive(!returnHUD.activeSelf);
+
             gameHud.SetActive(false);
             inGameUI.SetActive(false);
 

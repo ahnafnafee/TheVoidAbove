@@ -108,6 +108,7 @@ namespace _Project.Scripts
                 objective.Complete();
 
             AkSoundEngine.PostEvent("success_pickup_event", gameObject);
+            Debug.Log(gameObject.name);
             package.GetComponent<Collider>().enabled = false;
             pkgRb.detectCollisions = false;
             pkgRb.isKinematic = true;

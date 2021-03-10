@@ -16,7 +16,7 @@ public class SuperHotScript : MonoBehaviour
     public Transform bulletSpawner;
 
     [Header("Weapon")]
-    public WeaponScript weapon;
+    public WeaponScriptOld weapon;
     public Transform weaponHolder;
     public LayerMask weaponLayer;
 
@@ -34,8 +34,8 @@ public class SuperHotScript : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        if (weaponHolder.GetComponentInChildren<WeaponScript>() != null)
-            weapon = weaponHolder.GetComponentInChildren<WeaponScript>();
+        if (weaponHolder.GetComponentInChildren<WeaponScriptOld>() != null)
+            weapon = weaponHolder.GetComponentInChildren<WeaponScriptOld>();
     }
 
     // Update is called once per frame
@@ -74,7 +74,7 @@ public class SuperHotScript : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && weapon == null)
             {
-                hit.transform.GetComponent<WeaponScript>().Pickup();
+                hit.transform.GetComponent<WeaponScriptOld>().Pickup();
             }
         }
 

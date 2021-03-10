@@ -43,6 +43,7 @@ namespace _Project.Scripts
         [SerializeField]
         private bool dropped;
 
+        private Player player;
         private void Awake()
         {
             _playerControls = new PlayerControls();
@@ -51,6 +52,7 @@ namespace _Project.Scripts
             //make sure magazine is full
             bulletsLeft = magazineSize;
             readyToShoot = true;
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         }
 
         private void Start()
@@ -75,9 +77,10 @@ namespace _Project.Scripts
 
                     if (actions.Gun.triggered)
                     {
-                        if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().controlsActive)
+                        if (player.controlsActive)
                         {
-                            Shoot();
+                            //Shoot();
+                            player.state = Player.State.Shoot;
                             bulletTimer = timer;
                         }
                     }
@@ -86,7 +89,7 @@ namespace _Project.Scripts
             }
         }
 
-        private void Shoot()
+        public void Shoot()
         {
             // readyToShoot = false;
 

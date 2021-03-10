@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using _Project.Scripts.Utils;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 namespace _Project.Scripts
 {
@@ -17,8 +19,13 @@ namespace _Project.Scripts
         [Header("Screenshot")] private TakeScreenshot screenshot;
         [SerializeField] private GameObject gameHud;
         [SerializeField] private GameObject inGameUI;
+        [SerializeField] private GameObject returnHUD;
         [SerializeField] private GameObject D_box;
         [SerializeField] private TextMeshProUGUI levelTime;
+
+        [Header("Sound")]
+        [SerializeField] private float mVolume = 100f;
+        [SerializeField] private TextMeshProUGUI volumeText;
 
         float theTime = 0f;
         float speed = 1;
@@ -34,9 +41,14 @@ namespace _Project.Scripts
             theTime = 0;
             isPaused = false;
             isSettings = false;
+
             pauseMenu.SetActive(false);
             gameHud.SetActive(true);
             inGameUI.SetActive(true);
+
+            mVolume = GlobalVar.masterVolume;
+            volumeText.text = Convert.ToString(Math.Round(mVolume, 3, MidpointRounding.ToEven));
+
             Cursor.lockState = CursorLockMode.Locked;
             screenshot = GetComponent<TakeScreenshot>();
             playerControls.UserInterface.Pause.performed += _ => PauseScene();
@@ -61,7 +73,13 @@ namespace _Project.Scripts
 
         }
 
-        #region Level User Interface
+        public void VolumeControl (float level)
+        {
+            volumeText.text = Convert.ToString(Math.Round(level, 3, MidpointRounding.ToEven));
+            AkSoundEngine.SetRTPCValue("masterVolume", level);
+            GlobalVar.masterVolume = level;
+            mVolume = level;
+        }
 
         public void PauseScene()
         {
@@ -69,6 +87,10 @@ namespace _Project.Scripts
             if (GlobalVar.isWin) return;
             Time.timeScale = Convert.ToInt32(isPaused);
             pauseMenu.SetActive(!isPaused);
+
+            if (returnHUD.activeSelf)
+                returnHUD.SetActive(!returnHUD.activeSelf);
+
             gameHud.SetActive(isPaused);
             inGameUI.SetActive(isPaused);
 
@@ -102,6 +124,7 @@ namespace _Project.Scripts
 
         public void LoadLevel()
         {
+            // PrefabUtility.SaveAsPrefabAsset(GameObject.FindGameObjectWithTag("Player").gameObject, "Assets/_Project/Prefabs/Player/Player.prefab");
             FindObjectOfType<ProgressLoadScene>().LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             //SceneManager.LoadSceneAsync(4);
         }
@@ -112,7 +135,5 @@ namespace _Project.Scripts
             SceneManager.LoadSceneAsync(0);
         }
 
-        #endregion
-        
     }
 }

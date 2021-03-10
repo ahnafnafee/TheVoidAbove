@@ -38,8 +38,8 @@ ModelImporter:
       name: PlayerShoot
       takeName: Take 001
       internalID: 0
-      firstFrame: 0
-      lastFrame: 20
+      firstFrame: 10
+      lastFrame: 17
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -577,6 +577,11 @@ PrefabInstance:
       propertyPath: m_Parameters.colorGradient.key0.b
       value: 0.95939946
       objectReference: {fileID: 0}
+    - target: {fileID: 285334655076656819, guid: e5f48851c76332049a2c0ae1eaca1ee2,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 408092320324652876, guid: e5f48851c76332049a2c0ae1eaca1ee2,
         type: 3}
       propertyPath: m_Mesh
@@ -600,7 +605,7 @@ PrefabInstance:
     - target: {fileID: 6202763213831713486, guid: e5f48851c76332049a2c0ae1eaca1ee2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.0829275
+      value: 14.6170845
       objectReference: {fileID: 0}
     - target: {fileID: 6202763213831713486, guid: e5f48851c76332049a2c0ae1eaca1ee2,
         type: 3}
@@ -791,6 +796,11 @@ PrefabInstance:
       propertyPath: m_Parameters.colorGradient.key0.b
       value: 0.95939946
       objectReference: {fileID: 0}
+    - target: {fileID: 285334655076656819, guid: e5f48851c76332049a2c0ae1eaca1ee2,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 408092320324652876, guid: e5f48851c76332049a2c0ae1eaca1ee2,
         type: 3}
       propertyPath: m_Mesh
@@ -814,7 +824,7 @@ PrefabInstance:
     - target: {fileID: 6202763213831713486, guid: e5f48851c76332049a2c0ae1eaca1ee2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.200005
+      value: 16.5
       objectReference: {fileID: 0}
     - target: {fileID: 6202763213831713486, guid: e5f48851c76332049a2c0ae1eaca1ee2,
         type: 3}

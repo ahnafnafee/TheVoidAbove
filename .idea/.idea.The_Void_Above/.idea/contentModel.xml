@@ -97,11 +97,11 @@
               <e p="SaveSystem.cs" t="Include" />
             </e>
             <e p="Shootable.cs" t="Include" />
+            <e p="shootReference.cs" t="Include" />
             <e p="Spawn planet.cs" t="Include" />
             <e p="SpawningArea.cs" t="Include" />
             <e p="SpawnTutorial.cs" t="Include" />
             <e p="StarField.cs" t="Include" />
-            <e p="TakeScreenshot.cs" t="Include" />
             <e p="test.cs" t="Include" />
             <e p="Tutorial.cs" t="Include" />
             <e p="UI_AmmoControl.cs" t="Include" />
@@ -111,6 +111,7 @@
               <e p="FunctionUpdater.cs" t="Include" />
               <e p="GlobalVar.cs" t="Include" />
               <e p="MoveAlong.cs" t="Include" />
+              <e p="TakeScreenshot.cs" t="Include" />
               <e p="UtilsClass.cs" t="Include" />
             </e>
             <e p="Warning.cs" t="Include" />
@@ -131,6 +132,7 @@
             </e>
           </e>
         </e>
+        <e p="Audio_volume.cs" t="Include" />
         <e p="Imported" t="Include">
           <e p="Beam" t="Include">
             <e p="Beams - Readme.txt" t="Include" />
@@ -507,7 +509,7 @@
               <e p="EnemyScript.cs" t="Include" />
               <e p="SuperHot.cs" t="Include" />
               <e p="SuperHotScript.cs" t="Include" />
-              <e p="WeaponScript.cs" t="Include" />
+              <e p="WeaponScriptOld.cs" t="Include" />
             </e>
             <e p="VRSampleScenes" t="Include">
               <e p="Models" t="Include">

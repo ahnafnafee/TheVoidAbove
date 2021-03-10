@@ -31,14 +31,15 @@ namespace _Project.Scripts
         private bool dashUsed = false;
         private ContactPoint contact;
         private int nubAmmo;
+        private TrailRenderer dashTrail;
         [SerializeField] private Animator anim;
-        private enum State { Idle, Forward, Backward, Shoot };
-        private State state = State.Idle;
+        public enum State { Idle, Forward, Backward, Shoot, FS, BS };
+        public  State state = State.Idle;
+        public State lastState;
 
         [Header("Player Movement")]
-        [SerializeField] private float pushBackSpeed;
-        [SerializeField] private float dashSpeed;
-        [SerializeField] private float dashCooldown = 2;
+        [SerializeField] private float dashSpeed = 70f;
+        [SerializeField] private float dashCooldown = 1.5f;
         [SerializeField] private float maxSpeed;
         [SerializeField] private float tiltAngle;
         [SerializeField] private float zSpeed;
@@ -55,7 +56,7 @@ namespace _Project.Scripts
         private GameObject respawnPoint;
 
         [Header("Weapon")] public WeaponScript weapon;
-        [SerializeField] GameObject rightClickFX, targetPoint;
+        [SerializeField] GameObject targetPoint;
 
         [Header("Player")] private Health pHealth;
         [Tooltip("Image component displaying current health")]
@@ -74,6 +75,15 @@ namespace _Project.Scripts
         [Header("Collision Tags")]
         public string[] tagList = { "Mine", "Debris", "MovingDebris" };
 
+        [Header("UI")]
+        [SerializeField] private GameObject returnHUD;
+
+        [Header("Dash")]
+        [Tooltip("Image component displaying dash")]
+        [SerializeField] private Image dashFillImage;
+        [SerializeField] private float dashTime = 3.0f;
+        private float dTimer;
+
 
         public GameObject getRespawn()
         {
@@ -84,6 +94,7 @@ namespace _Project.Scripts
             _playerControls = new PlayerControls();
             _playerControls.Enable();
             _rb = GetComponent<Rigidbody>();
+            dashTrail = GameObject.Find("chest").GetComponent<TrailRenderer>();
         }
 
 
@@ -94,6 +105,10 @@ namespace _Project.Scripts
             nubAmmo = 0;
             // ammoUI = GameObject.Find("AmmoDrops");
             ammoUI.GetComponent<UI_AmmoControl>().Display(nubAmmo);
+            returnHUD.SetActive(false);
+
+            // Dash Init
+            dTimer = dashTime;
 
             #region Saving
             PlayerControls.UserInterfaceActions UIactions = _playerControls.UserInterface;
@@ -133,28 +148,13 @@ namespace _Project.Scripts
                 Time.deltaTime * zSpeed);
 
             #endregion
-            if (actions.debugStun.triggered)
-            {
-                debugStun();
-            }
-            if (actions.PushBack.triggered)
-            {
-                //If you're not stunned, allow to process
-                if (controlsActive)
-                {
-                    //When you click RMB, fire the gun (nothing happens like shooting a projectile) and fire the player backwards
-                    AkSoundEngine.PostEvent("alt_shoot_event", this.gameObject);
-                    _rb.AddForce(-mainCam.transform.forward * pushBackSpeed, ForceMode.VelocityChange);
-                    GameObject fx = Instantiate(rightClickFX, targetPoint.transform.position, targetPoint.transform.rotation);
 
-                    Destroy(fx, 5);
-                }
-            }
-
+            // DashTimer();
 
             var tempColor = feedFlash.color;
             tempColor.a = 1f - (pHealth.objectHealth / pHealth.health);
             feedFlash.color = tempColor;
+
 
             healthFillImage.fillAmount = pHealth.objectHealth / pHealth.health;
             healthPct.text = (int)(healthFillImage.fillAmount * 100f) + "%";
@@ -190,79 +190,50 @@ namespace _Project.Scripts
             }
 
             //dash movement section
-            if (actions.RightDash.triggered)
+            if (actions.Dash.triggered)
             {
+                //If you're not stunned, allow to process
                 if (controlsActive)
                 {
                     if (!dashUsed)
                     {
-                        _rb.AddForce(mainCam.transform.right * dashSpeed, ForceMode.VelocityChange);
-                        StartCoroutine(Dashtimer(dashCooldown));
-                    }
-                }
-            }
-            if (actions.LeftDash.triggered)
-            {
-                if (controlsActive)
-                {
-                    if (!dashUsed)
-                    {
-                        _rb.AddForce(-mainCam.transform.right * dashSpeed, ForceMode.VelocityChange);
-                        StartCoroutine(Dashtimer(dashCooldown));
-                    }
-                }
-            }
-            if (actions.ForeDash.triggered)
-            {
-                if (controlsActive)
-                {
-                    if (!dashUsed)
-                    {
-                        _rb.AddForce(mainCam.transform.forward * pushBackSpeed, ForceMode.VelocityChange);
-                        StartCoroutine(Dashtimer(dashCooldown));
-                    }
-                }
-            }
-            if (actions.AftDash.triggered)
-            {
-                if (controlsActive)
-                {
-                    if (!dashUsed)
-                    {
-                        _rb.AddForce(-mainCam.transform.forward * pushBackSpeed, ForceMode.VelocityChange);
-                        StartCoroutine(Dashtimer(dashCooldown));
-                    }
-                }
-            }
-            if (actions.UpDash.triggered)
-            {
-                if (controlsActive)
-                {
-                    if (!dashUsed)
-                    {
-                        _rb.AddForce(mainCam.transform.up * pushBackSpeed, ForceMode.VelocityChange);
-                        StartCoroutine(Dashtimer(dashCooldown));
-                    }
-                }
-            }
-            if (actions.DownDash.triggered)
-            {
-                if (controlsActive)
-                {
-                    if (!dashUsed)
-                    {
-                        _rb.AddForce(-mainCam.transform.up * pushBackSpeed, ForceMode.VelocityChange);
-                        StartCoroutine(Dashtimer(dashCooldown));
+                        _rb.velocity = Vector3.zero;
+                        Vector3 dashdir = (actions.ThrustersY.ReadValue<float>() * mainCam.transform.up + actions.ThrustersX.ReadValue<float>() * mainCam.transform.right + (actions.ThrustersZ.ReadValue<float>() * mainCam.transform.forward)).normalized;
+                        AkSoundEngine.PostEvent("alt_shoot_event", this.gameObject);
+
+                        if (dashdir != Vector3.zero)
+                        {
+                            _rb.AddForce(dashdir * dashSpeed, ForceMode.VelocityChange);
+                            // dashUsed = true;
+                            // DashTimer(3);
+                            StartCoroutine(DashTimer(dashTime));
+                            StartCoroutine(dashTrails(dashTrail));
+                        }
+                        else
+                        {
+                            _rb.AddForce(-mainCam.transform.forward * dashSpeed, ForceMode.VelocityChange);
+                            // dashUsed = true;
+                            // DashTimer(3);
+                            StartCoroutine(DashTimer(dashTime));
+                            StartCoroutine(dashTrails(dashTrail));
+                        }
+
                     }
                 }
             }
 
+            if (actions.ManualBrake.ReadValue<float>().Equals(1))
+            {
+                _rb.AddForce(-_rb.velocity * 1f, ForceMode.Acceleration);
+            }
+           
+            
             // Braking velocity
             if (_rb.velocity.magnitude > maxSpeed)
             {
                 _rb.velocity = _rb.velocity.normalized * maxSpeed;
             }
-
+            
             if (_rb.velocity.magnitude < velocityThreshold
                 && actions.ThrustersY.ReadValue<float>() == 0
                 && actions.ThrustersX.ReadValue<float>() == 0
@@ -287,16 +258,10 @@ namespace _Project.Scripts
                 {
                     pHealth.TakeDamage(30,false);
                     _rb.AddExplosionForce(10000f, transform.position, 100);
-                    StartCoroutine(ControlLockTimer(0.5f));
+                    StartCoroutine(ControlLockTimer(2f));
                     this.GetComponent<PackageManager>().Drop(col.relativeVelocity);
 
                     Destroy(col.gameObject);
-                    // if (!col.collider.CompareTag("Package"))
-                    // {
-                    //     StartCoroutine(ControlLockTimer(1.5f));
-                    //     Bounce();
-                    // }
-                    // GetComponent<PackageManager>().Drop(col.relativeVelocity);
 
                 }
                 if (col.relativeVelocity.magnitude <= safeSpeed)
@@ -311,7 +276,7 @@ namespace _Project.Scripts
                     pHealth.TakeDamage(5,false);
                     if (!col.collider.CompareTag("Package"))
                     {
-                        StartCoroutine(ControlLockTimer(0.45f));
+                        StartCoroutine(ControlLockTimer(1f));
                         Bounce(col);
                     }
                     this.GetComponent<PackageManager>().Drop(col.relativeVelocity);
@@ -324,23 +289,12 @@ namespace _Project.Scripts
                     pHealth.TakeDamage(10,false);
                     if (!col.collider.CompareTag("Package"))
                     {
-                        StartCoroutine(ControlLockTimer(0.9f));
+                        StartCoroutine(ControlLockTimer(3f));
                         Bounce(col);
                     }
                     this.GetComponent<PackageManager>().Drop(col.relativeVelocity);
                 }
 
-                // void Bounce()
-                // {
-                //     foreach (ContactPoint contact in col.contacts)
-                //     {
-                //         normal += contact.normal;
-                //     }
-                //
-                //     normal.Normalize();
-                //     _rb.velocity += Vector3.Reflect(-col.relativeVelocity * 0.4f, normal);
-                // }
-                //_rb.velocity = Vector3.Reflect(_rb.velocity, normal);
             }
         }
 
@@ -360,15 +314,11 @@ namespace _Project.Scripts
         {
             if (other.CompareTag("OuterZone"))
             {
-                Debug.Log("Starting timer to damage");
+                // Debug.Log("Starting timer to damage");
+                returnHUD.SetActive(true);
                 outOfBounds = true;
                 StartCoroutine(BoundsTimer());
 
-                /*transform.Find("PlayerBase").gameObject.SetActive(false);
-                Rigidbody _rb = GetComponent<Rigidbody>();
-                _rb.velocity = Vector3.zero;
-                _rb.angularVelocity = Vector3.zero;
-                gameOverUI.SetActive(true);*/
             }
 
             if (other.gameObject.name == "Zap_Zone")
@@ -388,6 +338,7 @@ namespace _Project.Scripts
 
             if (other.CompareTag("OuterZone"))
             {
+                returnHUD.SetActive(false);
                 StopCoroutine(DrainHealth(5));
                 outOfBounds = false;
             }
@@ -413,21 +364,55 @@ namespace _Project.Scripts
         private IEnumerator ControlLockTimer(float t)
         {
             controlsActive = false;
+            tiltAngle = 0;
 
             yield return new WaitForSeconds(t);
 
             controlsActive = true;
+            tiltAngle = 4;
         }
 
-        private IEnumerator Dashtimer(float t)
+        // Had to change it to traditional method to update UI - Ahnaf
+
+        private IEnumerator DashTimer(float t)
         {
             Debug.Log("Dash has been used");
             dashUsed = true;
 
-            yield return new WaitForSeconds(t);
+            float timer;
 
+            for (timer = t; timer >= 0; timer -= Time.deltaTime)
+            {
+                dashFillImage.fillAmount = (dTimer - timer) / dTimer;
+                yield return null;
+            }
+
+            dashFillImage.fillAmount = 1;
             Debug.Log("Dash is ready");
             dashUsed = false;
+        }
+
+        // private void DashTimer()
+        // {
+        //     if (dashUsed)
+        //     {
+        //         if (dashTime <= 0)
+        //         {
+        //             dashFillImage.fillAmount = 1;
+        //             dashTime = dTimer;
+        //             dashUsed = false;
+        //             return;
+        //         }
+        //         dashTime -= Time.deltaTime;
+        //         dashFillImage.fillAmount = (dTimer - dashTime) / dTimer;
+        //     }
+        // }
+
+        private IEnumerator dashTrails(TrailRenderer trail)
+        {
+            trail.time = 0.3f;
+            yield return new WaitForSeconds(0.3f);
+            trail.time = 0;
         }
 
         private IEnumerator BoundsTimer()
@@ -482,6 +467,8 @@ namespace _Project.Scripts
 
         }
 
+
+
         // Player animation states
         private void StateChange()
         {
@@ -491,19 +478,55 @@ namespace _Project.Scripts
             if (actions.ThrustersZ.ReadValue<float>() > 0)
             {
                 state = State.Forward;
+                lastState = State.Forward;
+                if (actions.Gun.triggered)
+                {
+                    state = State.FS;
+                }
             }
             else if (actions.ThrustersZ.ReadValue<float>() < 0)
             {
                 state = State.Backward;
+                lastState = State.Backward;
+                if (actions.Gun.triggered)
+                {
+                    state = State.BS;
+                }
             }
-            else if (actions.Gun.triggered)
+            else if ((_rb.velocity.magnitude > 5.0f && lastState == State.Forward))
             {
-                state = State.Shoot;
+                state = State.Forward;
             }
-            else if (_rb.velocity.magnitude < 5.0f)
+            else if ((_rb.velocity.magnitude > 5.0f && lastState == State.Backward))
             {
-                state = State.Idle;
+                state = State.Backward;
             }
+            else
+            {
+                if (_rb.velocity.magnitude < 5.0f)
+                {
+                    lastState = State.Idle;
+                    state = State.Idle;
+
+                }
+            }
+
+            if (actions.Gun.triggered)
+            {
+                if (lastState == State.Forward)
+                {
+                    state = State.FS;
+                }
+                else if(lastState == State.Backward)
+                {
+                    state = State.BS;
+                }
+                else
+                {
+                    state = State.Shoot;
+                }
+            }
+
         }
     }
 }

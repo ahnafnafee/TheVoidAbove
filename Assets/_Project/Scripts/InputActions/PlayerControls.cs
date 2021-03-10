@@ -75,14 +75,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": ""Press""
                 },
                 {
-                    ""name"": ""ThrustersYDash"",
-                    ""type"": ""Value"",
-                    ""id"": ""4f736106-ca5e-4db6-b4e1-d1a84b03e467"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": ""Press""
-                },
-                {
                     ""name"": ""Look"",
                     ""type"": ""PassThrough"",
                     ""id"": ""aaed1b93-b7c6-4e80-923d-23644379e895"",
@@ -99,7 +91,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": ""Press(pressPoint=0.1)""
                 },
                 {
-                    ""name"": ""PushBack"",
+                    ""name"": ""Dash"",
                     ""type"": ""Button"",
                     ""id"": ""0583a930-db09-4826-a685-60ca592e3205"",
                     ""expectedControlType"": ""Button"",
@@ -115,57 +107,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": ""Press""
                 },
                 {
-                    ""name"": ""RightDash"",
-                    ""type"": ""Value"",
-                    ""id"": ""2812a028-98fa-4008-b07f-b03d4229e38b"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": ""Press""
-                },
-                {
-                    ""name"": ""LeftDash"",
-                    ""type"": ""Value"",
-                    ""id"": ""6ef92a02-6c17-4935-a635-5dffe38ec567"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": ""Press""
-                },
-                {
-                    ""name"": ""ForeDash"",
-                    ""type"": ""Value"",
-                    ""id"": ""2bb8b037-92ef-47c0-bc2f-be4ea35f08ae"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": ""Press""
-                },
-                {
-                    ""name"": ""AftDash"",
-                    ""type"": ""Value"",
-                    ""id"": ""f42c2d21-41d8-46a4-af78-7fedb71ac3ce"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": ""Press""
-                },
-                {
-                    ""name"": ""UpDash"",
-                    ""type"": ""Value"",
-                    ""id"": ""a009d285-4f3b-4f23-93cc-d87b391eddcd"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": ""Press""
-                },
-                {
-                    ""name"": ""DownDash"",
-                    ""type"": ""Value"",
-                    ""id"": ""3ca2ff3a-3d74-43c9-b588-747306f8ba36"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": ""Press""
-                },
-                {
-                    ""name"": ""debugStun"",
+                    ""name"": ""ManualBrake"",
                     ""type"": ""Button"",
-                    ""id"": ""e3aad9f1-c645-4e11-abdc-be2dbf280f69"",
+                    ""id"": ""bac429f1-cac1-40b4-be58-a5305ebc65a0"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press""
@@ -366,7 +310,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""PushBack"",
+                    ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -382,21 +326,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""7ac1f96a-e847-4eca-afc9-e83ccfb9d2d5"",
-                    ""path"": ""<Keyboard>/equals"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""debugStun"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
                     ""name"": ""1D Axis"",
                     ""id"": ""65c71bf0-6968-4060-ac6c-8ccfb46da657"",
                     ""path"": ""1DAxis"",
-                    ""interactions"": ""MultiTap"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""ThrustersZDash"",
@@ -437,112 +370,13 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""e97c4b86-5250-4e78-a1aa-adfc29f33ff3"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": ""MultiTap"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ThrustersYDash"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""da8ca790-3456-46ec-b833-cb256281e07a"",
-                    ""path"": ""<Keyboard>/shift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ThrustersYDash"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""6a0ab7e9-f780-4977-8193-6face1264d55"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ThrustersYDash"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""1D Axis Gamepad"",
-                    ""id"": ""38a87e55-886e-4b9f-8c2a-6d69738db283"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ThrustersYDash"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
                     ""name"": """",
-                    ""id"": ""dca22fea-0f5e-447f-8cea-9b80672fd3a0"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": ""MultiTap"",
+                    ""id"": ""2cc873a2-d59d-44d9-95d2-68dfa1ad411a"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""RightDash"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""36803571-76d3-4b87-b221-cdcef43415d6"",
-                    ""path"": ""<Keyboard>/shift"",
-                    ""interactions"": ""MultiTap"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""DownDash"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3533eac3-86dc-471f-ac51-61404e222f7d"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": ""MultiTap"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""UpDash"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""44be7387-903b-428e-80d3-34bf0dd78446"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": ""MultiTap"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""AftDash"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""24fe92b8-2580-4ee8-b8f7-6ba0a9956840"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": ""MultiTap"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""LeftDash"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""dae4dedc-0bc6-431d-aac8-71954f656843"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": ""MultiTap"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ForeDash"",
+                    ""action"": ""ManualBrake"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -663,18 +497,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_PlayerStandard_ThrustersZ = m_PlayerStandard.FindAction("ThrustersZ", throwIfNotFound: true);
         m_PlayerStandard_ThrustersZDash = m_PlayerStandard.FindAction("ThrustersZDash", throwIfNotFound: true);
         m_PlayerStandard_ThrustersY = m_PlayerStandard.FindAction("ThrustersY", throwIfNotFound: true);
-        m_PlayerStandard_ThrustersYDash = m_PlayerStandard.FindAction("ThrustersYDash", throwIfNotFound: true);
         m_PlayerStandard_Look = m_PlayerStandard.FindAction("Look", throwIfNotFound: true);
         m_PlayerStandard_PickUp = m_PlayerStandard.FindAction("PickUp", throwIfNotFound: true);
-        m_PlayerStandard_PushBack = m_PlayerStandard.FindAction("PushBack", throwIfNotFound: true);
+        m_PlayerStandard_Dash = m_PlayerStandard.FindAction("Dash", throwIfNotFound: true);
         m_PlayerStandard_MouseLook = m_PlayerStandard.FindAction("MouseLook", throwIfNotFound: true);
-        m_PlayerStandard_RightDash = m_PlayerStandard.FindAction("RightDash", throwIfNotFound: true);
-        m_PlayerStandard_LeftDash = m_PlayerStandard.FindAction("LeftDash", throwIfNotFound: true);
-        m_PlayerStandard_ForeDash = m_PlayerStandard.FindAction("ForeDash", throwIfNotFound: true);
-        m_PlayerStandard_AftDash = m_PlayerStandard.FindAction("AftDash", throwIfNotFound: true);
-        m_PlayerStandard_UpDash = m_PlayerStandard.FindAction("UpDash", throwIfNotFound: true);
-        m_PlayerStandard_DownDash = m_PlayerStandard.FindAction("DownDash", throwIfNotFound: true);
-        m_PlayerStandard_debugStun = m_PlayerStandard.FindAction("debugStun", throwIfNotFound: true);
+        m_PlayerStandard_ManualBrake = m_PlayerStandard.FindAction("ManualBrake", throwIfNotFound: true);
         // UserInterface
         m_UserInterface = asset.FindActionMap("UserInterface", throwIfNotFound: true);
         m_UserInterface_Restart = m_UserInterface.FindAction("Restart", throwIfNotFound: true);
@@ -738,18 +565,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerStandard_ThrustersZ;
     private readonly InputAction m_PlayerStandard_ThrustersZDash;
     private readonly InputAction m_PlayerStandard_ThrustersY;
-    private readonly InputAction m_PlayerStandard_ThrustersYDash;
     private readonly InputAction m_PlayerStandard_Look;
     private readonly InputAction m_PlayerStandard_PickUp;
-    private readonly InputAction m_PlayerStandard_PushBack;
+    private readonly InputAction m_PlayerStandard_Dash;
     private readonly InputAction m_PlayerStandard_MouseLook;
-    private readonly InputAction m_PlayerStandard_RightDash;
-    private readonly InputAction m_PlayerStandard_LeftDash;
-    private readonly InputAction m_PlayerStandard_ForeDash;
-    private readonly InputAction m_PlayerStandard_AftDash;
-    private readonly InputAction m_PlayerStandard_UpDash;
-    private readonly InputAction m_PlayerStandard_DownDash;
-    private readonly InputAction m_PlayerStandard_debugStun;
+    private readonly InputAction m_PlayerStandard_ManualBrake;
     public struct PlayerStandardActions
     {
         private @PlayerControls m_Wrapper;
@@ -761,18 +581,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @ThrustersZ => m_Wrapper.m_PlayerStandard_ThrustersZ;
         public InputAction @ThrustersZDash => m_Wrapper.m_PlayerStandard_ThrustersZDash;
         public InputAction @ThrustersY => m_Wrapper.m_PlayerStandard_ThrustersY;
-        public InputAction @ThrustersYDash => m_Wrapper.m_PlayerStandard_ThrustersYDash;
         public InputAction @Look => m_Wrapper.m_PlayerStandard_Look;
         public InputAction @PickUp => m_Wrapper.m_PlayerStandard_PickUp;
-        public InputAction @PushBack => m_Wrapper.m_PlayerStandard_PushBack;
+        public InputAction @Dash => m_Wrapper.m_PlayerStandard_Dash;
         public InputAction @MouseLook => m_Wrapper.m_PlayerStandard_MouseLook;
-        public InputAction @RightDash => m_Wrapper.m_PlayerStandard_RightDash;
-        public InputAction @LeftDash => m_Wrapper.m_PlayerStandard_LeftDash;
-        public InputAction @ForeDash => m_Wrapper.m_PlayerStandard_ForeDash;
-        public InputAction @AftDash => m_Wrapper.m_PlayerStandard_AftDash;
-        public InputAction @UpDash => m_Wrapper.m_PlayerStandard_UpDash;
-        public InputAction @DownDash => m_Wrapper.m_PlayerStandard_DownDash;
-        public InputAction @debugStun => m_Wrapper.m_PlayerStandard_debugStun;
+        public InputAction @ManualBrake => m_Wrapper.m_PlayerStandard_ManualBrake;
         public InputActionMap Get() { return m_Wrapper.m_PlayerStandard; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -803,42 +616,21 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @ThrustersY.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersY;
                 @ThrustersY.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersY;
                 @ThrustersY.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersY;
-                @ThrustersYDash.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersYDash;
-                @ThrustersYDash.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersYDash;
-                @ThrustersYDash.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersYDash;
                 @Look.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLook;
                 @Look.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLook;
                 @Look.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLook;
                 @PickUp.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnPickUp;
                 @PickUp.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnPickUp;
                 @PickUp.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnPickUp;
-                @PushBack.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnPushBack;
-                @PushBack.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnPushBack;
-                @PushBack.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnPushBack;
+                @Dash.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnDash;
+                @Dash.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnDash;
+                @Dash.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnDash;
                 @MouseLook.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnMouseLook;
                 @MouseLook.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnMouseLook;
                 @MouseLook.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnMouseLook;
-                @RightDash.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnRightDash;
-                @RightDash.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnRightDash;
-                @RightDash.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnRightDash;
-                @LeftDash.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLeftDash;
-                @LeftDash.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLeftDash;
-                @LeftDash.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnLeftDash;
-                @ForeDash.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnForeDash;
-                @ForeDash.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnForeDash;
-                @ForeDash.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnForeDash;
-                @AftDash.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnAftDash;
-                @AftDash.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnAftDash;
-                @AftDash.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnAftDash;
-                @UpDash.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnUpDash;
-                @UpDash.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnUpDash;
-                @UpDash.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnUpDash;
-                @DownDash.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnDownDash;
-                @DownDash.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnDownDash;
-                @DownDash.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnDownDash;
-                @debugStun.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnDebugStun;
-                @debugStun.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnDebugStun;
-                @debugStun.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnDebugStun;
+                @ManualBrake.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnManualBrake;
+                @ManualBrake.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnManualBrake;
+                @ManualBrake.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnManualBrake;
             }
             m_Wrapper.m_PlayerStandardActionsCallbackInterface = instance;
             if (instance != null)
@@ -864,42 +656,21 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @ThrustersY.started += instance.OnThrustersY;
                 @ThrustersY.performed += instance.OnThrustersY;
                 @ThrustersY.canceled += instance.OnThrustersY;
-                @ThrustersYDash.started += instance.OnThrustersYDash;
-                @ThrustersYDash.performed += instance.OnThrustersYDash;
-                @ThrustersYDash.canceled += instance.OnThrustersYDash;
                 @Look.started += instance.OnLook;
                 @Look.performed += instance.OnLook;
                 @Look.canceled += instance.OnLook;
                 @PickUp.started += instance.OnPickUp;
                 @PickUp.performed += instance.OnPickUp;
                 @PickUp.canceled += instance.OnPickUp;
-                @PushBack.started += instance.OnPushBack;
-                @PushBack.performed += instance.OnPushBack;
-                @PushBack.canceled += instance.OnPushBack;
+                @Dash.started += instance.OnDash;
+                @Dash.performed += instance.OnDash;
+                @Dash.canceled += instance.OnDash;
                 @MouseLook.started += instance.OnMouseLook;
                 @MouseLook.performed += instance.OnMouseLook;
                 @MouseLook.canceled += instance.OnMouseLook;
-                @RightDash.started += instance.OnRightDash;
-                @RightDash.performed += instance.OnRightDash;
-                @RightDash.canceled += instance.OnRightDash;
-                @LeftDash.started += instance.OnLeftDash;
-                @LeftDash.performed += instance.OnLeftDash;
-                @LeftDash.canceled += instance.OnLeftDash;
-                @ForeDash.started += instance.OnForeDash;
-                @ForeDash.performed += instance.OnForeDash;
-                @ForeDash.canceled += instance.OnForeDash;
-                @AftDash.started += instance.OnAftDash;
-                @AftDash.performed += instance.OnAftDash;
-                @AftDash.canceled += instance.OnAftDash;
-                @UpDash.started += instance.OnUpDash;
-                @UpDash.performed += instance.OnUpDash;
-                @UpDash.canceled += instance.OnUpDash;
-                @DownDash.started += instance.OnDownDash;
-                @DownDash.performed += instance.OnDownDash;
-                @DownDash.canceled += instance.OnDownDash;
-                @debugStun.started += instance.OnDebugStun;
-                @debugStun.performed += instance.OnDebugStun;
-                @debugStun.canceled += instance.OnDebugStun;
+                @ManualBrake.started += instance.OnManualBrake;
+                @ManualBrake.performed += instance.OnManualBrake;
+                @ManualBrake.canceled += instance.OnManualBrake;
             }
         }
     }
@@ -978,18 +749,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnThrustersZ(InputAction.CallbackContext context);
         void OnThrustersZDash(InputAction.CallbackContext context);
         void OnThrustersY(InputAction.CallbackContext context);
-        void OnThrustersYDash(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnPickUp(InputAction.CallbackContext context);
-        void OnPushBack(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
         void OnMouseLook(InputAction.CallbackContext context);
-        void OnRightDash(InputAction.CallbackContext context);
-        void OnLeftDash(InputAction.CallbackContext context);
-        void OnForeDash(InputAction.CallbackContext context);
-        void OnAftDash(InputAction.CallbackContext context);
-        void OnUpDash(InputAction.CallbackContext context);
-        void OnDownDash(InputAction.CallbackContext context);
-        void OnDebugStun(InputAction.CallbackContext context);
+        void OnManualBrake(InputAction.CallbackContext context);
     }
     public interface IUserInterfaceActions
     {

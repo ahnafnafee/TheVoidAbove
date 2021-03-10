@@ -31,14 +31,14 @@ namespace _Project.Scripts
         public void Start()
         {
             _freeLookComponent = GetComponent<CinemachineFreeLook>();
-            lookSpeedX = _freeLookComponent.m_XAxis.m_MaxSpeed;
-            lookSpeedY = _freeLookComponent.m_YAxis.m_MaxSpeed;
+            // lookSpeedX = _freeLookComponent.m_XAxis.m_MaxSpeed;
+            // lookSpeedY = _freeLookComponent.m_YAxis.m_MaxSpeed;
 
-            GlobalVar.mSensitivityX = lookSpeedX;
-            GlobalVar.mSensitivityY = lookSpeedY;
+            lookSpeedX = GlobalVar.mSensitivityX;
+            lookSpeedY = GlobalVar.mSensitivityY;
 
-            xVal.text = Convert.ToString(lookSpeedX);
-            yVal.text = Convert.ToString(lookSpeedY);
+            xVal.text = Convert.ToString(Math.Round(lookSpeedX, 3, MidpointRounding.ToEven));
+            yVal.text = Convert.ToString(Math.Round(lookSpeedY, 3, MidpointRounding.ToEven));
 
             mEvent.AddListener(UpdateAxis);
 

@@ -46,8 +46,10 @@ namespace _Project.Scripts
 			speed_rush = 180;
 			status = 0;
 			damage = 5;
-			// time_attack = 0.5f;
-			// time_attack_current = time_attack;
+			range_melee = 30f;
+			range_attack = 45f;
+			time_attack = 1.2f;
+			time_attack_current = time_attack;
 			angle_new = transform.rotation.y;
 			ChangeDirection();
 			enemyHealth = GetComponent<Health>();

@@ -14,8 +14,8 @@ public class EnemyScript : MonoBehaviour
         anim = GetComponent<Animator>();
         StartCoroutine(RandomAnimation());
 
-        if (weaponHolder.GetComponentInChildren<WeaponScript>() != null)
-            weaponHolder.GetComponentInChildren<WeaponScript>().active = false;
+        if (weaponHolder.GetComponentInChildren<WeaponScriptOld>() != null)
+            weaponHolder.GetComponentInChildren<WeaponScriptOld>().active = false;
 
     }
 
@@ -38,9 +38,9 @@ public class EnemyScript : MonoBehaviour
         }
         dead = true;
 
-        if (weaponHolder.GetComponentInChildren<WeaponScript>() != null)
+        if (weaponHolder.GetComponentInChildren<WeaponScriptOld>() != null)
         {
-            WeaponScript w = weaponHolder.GetComponentInChildren<WeaponScript>();
+            WeaponScriptOld w = weaponHolder.GetComponentInChildren<WeaponScriptOld>();
             w.Release();
 
         }
@@ -51,8 +51,8 @@ public class EnemyScript : MonoBehaviour
         if (dead)
             return;
 
-        if (weaponHolder.GetComponentInChildren<WeaponScript>() != null)
-            weaponHolder.GetComponentInChildren<WeaponScript>().Shoot(GetComponentInChildren<ParticleSystem>().transform.position, transform.rotation, true);
+        if (weaponHolder.GetComponentInChildren<WeaponScriptOld>() != null)
+            weaponHolder.GetComponentInChildren<WeaponScriptOld>().Shoot(GetComponentInChildren<ParticleSystem>().transform.position, transform.rotation, true);
     }
 
     IEnumerator RandomAnimation()
