@@ -14,6 +14,13 @@
             </e>
           </e>
           <e p="Models" t="Include">
+            <e p="Environment" t="Include">
+              <e p="Debris Assets" t="Include">
+                <e p="textures" t="Include">
+                  <e p="Lambert List for Debris.txt" t="Include" />
+                </e>
+              </e>
+            </e>
             <e p="Exported" t="Include">
               <e p="Integrations" t="Include">
                 <e p="Autodesk" t="Include">
@@ -71,6 +78,7 @@
             <e p="InputActions" t="Include">
               <e p="PlayerControls.cs" t="Include" />
             </e>
+            <e p="laser.cs" t="Include" />
             <e p="MarkControl.cs" t="Include" />
             <e p="MeleeEnemyControl.cs" t="Include" />
             <e p="Mines.cs" t="Include" />
@@ -129,6 +137,19 @@
               <e p="SimpleURPToonLitOutlineExample.shader" t="Include" />
               <e p="SimpleURPToonLitOutlineExample_LightingEquation.hlsl" t="Include" />
               <e p="SimpleURPToonLitOutlineExample_Shared.hlsl" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Addons" t="Include">
+          <e p="CameraPathCreator" t="Include">
+            <e p="Demo" t="Include">
+              <e p="CPC_DEMO_UpDown.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="CPC_CameraPath.cs" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="CPC_CameraPathInspector.cs" t="Include" />
+              </e>
             </e>
           </e>
         </e>
@@ -608,7 +629,6 @@
             </e>
           </e>
         </e>
-        <e p="laser.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
           <e p="Editor" t="Include">
             <e p="ContextMenu.cs" t="Include" />
@@ -753,6 +773,7 @@
               </e>
               <e p="GeneratePathExample.cs" t="Include" />
               <e p="PathFollower.cs" t="Include" />
+              <e p="PathFollowerOLD.cs" t="Include" />
               <e p="PathPlacer.cs" t="Include" />
               <e p="PathSceneTool.cs" t="Include" />
               <e p="PathSpawner.cs" t="Include" />
@@ -770,6 +791,7 @@
             <e p="SyntyStudios_Triplanar_ObjectSpace.shader" t="Include" />
           </e>
         </e>
+        <e p="ShildControl.cs" t="Include" />
         <e p="StreamingAssets" t="Include">
           <e p="Audio" t="Include">
             <e p="GeneratedSoundBanks" t="Include">

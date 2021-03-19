@@ -11,6 +11,8 @@ namespace _Project.Scripts
         private GameObject pannel1;
         [SerializeField]
         private GameObject pannel2;
+        [SerializeField]
+        private GameObject zapZone;
         // Start is called before the first frame update
         void Start()
         {
@@ -20,8 +22,9 @@ namespace _Project.Scripts
         // Update is called once per frame
         void Update()
         {
-            if(pannel1.GetComponent<PannelCheck>().checkDone() && pannel2.GetComponent<PannelCheck>().checkDone())
+            if (pannel1.GetComponent<PannelCheck>().checkDone() && pannel2.GetComponent<PannelCheck>().checkDone())
             {
+                zapZone.SetActive(false);
                 Destroy(this.gameObject);
             }
         }

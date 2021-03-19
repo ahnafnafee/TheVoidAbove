@@ -34,8 +34,9 @@ namespace _Project.Scripts
         private TrailRenderer dashTrail;
         [SerializeField] private Animator anim;
         public enum State { Idle, Forward, Backward, Shoot, FS, BS };
-        public  State state = State.Idle;
+        public State state = State.Idle;
         public State lastState;
+        private float transitionSpeed = 0.1f;
 
         [Header("Player Movement")]
         [SerializeField] private float dashSpeed = 70f;
@@ -83,6 +84,11 @@ namespace _Project.Scripts
         [SerializeField] private Image dashFillImage;
         [SerializeField] private float dashTime = 3.0f;
         private float dTimer;
+        Vector2 input;
+        public float lerpDuration = .2f;
+        private float startValue = 0;
+        private float endValue = 10;
+
 
 
         public GameObject getRespawn()
@@ -133,13 +139,23 @@ namespace _Project.Scripts
 
         void Update()
         {
+            PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
+
+            /*input.x = actions.ThrustersX.ReadValue<float>();
+            input.y = actions.ThrustersZ.ReadValue<float>();*/
+
+            //Debug.Log(input);
+            /*StartCoroutine(Lerp(input.x, true));
+            StartCoroutine(Lerp(input.y, false));
+            anim.SetFloat("inputx", input.x);
+            anim.SetFloat("inputy", input.y);*/
+
             #region PlayerRotation
 
             var lookPos = mainCam.transform.position - transform.position;
             lookPos.y = 0;
             var rotation = Quaternion.LookRotation(lookPos);
 
-            PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
             float xRot = actions.ThrustersX.ReadValue<float>() * tiltAngle;
             float zRot = actions.ThrustersZ.ReadValue<float>() * tiltAngle;
 
@@ -150,7 +166,6 @@ namespace _Project.Scripts
             #endregion
 
             // DashTimer();
-
             var tempColor = feedFlash.color;
             tempColor.a = 1f - (pHealth.objectHealth / pHealth.health);
             feedFlash.color = tempColor;
@@ -243,6 +258,27 @@ namespace _Project.Scripts
             }
         }
 
+        IEnumerator Lerp(float valueToLerp, bool isX)
+        {
+            float timeElapsed = 0;
+            endValue = -valueToLerp;
+
+            while (valueToLerp != endValue)
+            {
+                //valueToLerp -= .05f;
+                endValue = Mathf.Lerp(endValue, valueToLerp, timeElapsed / lerpDuration);
+                timeElapsed += Time.deltaTime;
+                Debug.Log(endValue);
+                if (isX) {
+                    anim.SetFloat("inputx", endValue);
+                }else
+                {
+                    anim.SetFloat("inputy", endValue);
+                }
+
+                yield return null;
+            }
+        }
         void OnCollisionEnter(Collision col)
         {
             var match = tagList
@@ -264,6 +300,7 @@ namespace _Project.Scripts
                     Destroy(col.gameObject);
 
                 }
+              
                 if (col.relativeVelocity.magnitude <= safeSpeed)
                 {
                     Debug.Log("Safe contact.");
@@ -321,7 +358,7 @@ namespace _Project.Scripts
 
             }
 
-            if (other.gameObject.name == "Zap_Zone")
+            if (other.gameObject.name.Contains("Zap_Zone"))
             {
                 inZap = false;
                 StopCoroutine(SwiftDeath(25));
@@ -335,7 +372,10 @@ namespace _Project.Scripts
             {
                 GetComponent<Health>().UpdateRespawnPoint(other.gameObject);
             }
-
+            if (other.CompareTag("laser"))
+            {
+                pHealth.TakeDamage(10);
+            }
             if (other.CompareTag("OuterZone"))
             {
                 returnHUD.SetActive(false);
@@ -343,7 +383,7 @@ namespace _Project.Scripts
                 outOfBounds = false;
             }
 
-            if (other.gameObject.name == "Zap_Zone")
+            if (other.gameObject.name.Contains("Zap_Zone"))
             {
                 inZap = true;
                 StartCoroutine(SwiftDeath(25));
@@ -493,17 +533,17 @@ namespace _Project.Scripts
                     state = State.BS;
                 }
             }
-            else if ((_rb.velocity.magnitude > 5.0f && lastState == State.Forward))
+            else if ((_rb.velocity.magnitude > 2.0f && lastState == State.Forward))
             {
                 state = State.Forward;
             }
-            else if ((_rb.velocity.magnitude > 5.0f && lastState == State.Backward))
+            else if ((_rb.velocity.magnitude > 2.0f && lastState == State.Backward))
             {
                 state = State.Backward;
             }
             else
             {
-                if (_rb.velocity.magnitude < 5.0f)
+                if (_rb.velocity.magnitude < 2.0f)
                 {
                     lastState = State.Idle;
                     state = State.Idle;
@@ -517,9 +557,13 @@ namespace _Project.Scripts
                 {
                     state = State.FS;
                 }
-                else if(lastState == State.Backward)
+                else if (lastState == State.Backward)
                 {
                     state = State.BS;
+                }
+                else if (lastState == State.Idle)
+                {
+                    state = State.Shoot;
                 }
                 else
                 {

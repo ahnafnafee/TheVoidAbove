@@ -972,8 +972,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.04
-  fullText: '"With our advanced robots, you will get you package fast and safe! *static
-    noises*"'
+  fullText: '*kzzzt*-sophisticated courier androids -*krrrzttt* - fast and effective
+    deliveries!'
   currentText: 
   enumControl: 1
 --- !u!114 &382999048
@@ -2204,7 +2204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.04
-  fullText: '"Our shipping service is outta this galaxy! *static noises*"'
+  fullText: '"Our shipping service is outta this galaxy! *krrzzrrrt*"'
   currentText: 
   enumControl: 1
 --- !u!114 &680842024
@@ -2866,7 +2866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.04
-  fullText: '"Wait a minute! This don''t look safe at ..."'
+  fullText: '*hmzt* Analysis indicates parcel has a dangerous concentration of--'
   currentText: 
   enumControl: 1
 --- !u!114 &927029323
@@ -3353,7 +3353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.04
-  fullText: '"Boom!"'
+  fullText: '*KABOOM*'
   currentText: 
   enumControl: 1
 --- !u!114 &1219139893
@@ -4384,7 +4384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.04
-  fullText: '"Next In Line!"'
+  fullText: '"Next Courier!"'
   currentText: 
   enumControl: 1
 --- !u!114 &1806341388

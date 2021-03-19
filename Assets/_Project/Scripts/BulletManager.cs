@@ -4,6 +4,7 @@ namespace _Project.Scripts
 {
     public class BulletManager : MonoBehaviour
     {
+        public int damage = 6;
         public Vector3 start_pos;
         public float lifeDuration;
         public float bulletTimer;
@@ -38,9 +39,14 @@ namespace _Project.Scripts
                 return;
             }
 
+            if (!isPlayer && collision.gameObject.CompareTag("Enemy"))
+            {
+                Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), gameObject.GetComponent<Collider>());
+                return;
+            }
             if (collision.transform.CompareTag("Player"))
             {
-                collision.transform.GetComponent<Health>().TakeDamage(6);
+                collision.transform.GetComponent<Health>().TakeDamage(damage);
                 DI_System.CreateIndicator(enemyLocation);
                 Destroy(gameObject);
             }

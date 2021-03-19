@@ -46,7 +46,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""name"": ""ThrustersX"",
                     ""type"": ""Value"",
                     ""id"": ""5f16383b-f210-40ec-97d3-ed2c3d02e658"",
-                    ""expectedControlType"": ""Axis"",
+                    ""expectedControlType"": ""Analog"",
                     ""processors"": """",
                     ""interactions"": ""Press""
                 },
@@ -54,7 +54,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""name"": ""ThrustersZ"",
                     ""type"": ""Value"",
                     ""id"": ""511d6d2a-f29a-4572-8dab-e79c48f2ef08"",
-                    ""expectedControlType"": ""Axis"",
+                    ""expectedControlType"": ""Analog"",
                     ""processors"": """",
                     ""interactions"": ""Press""
                 },

@@ -20,24 +20,31 @@ namespace _Project.Scripts
 		public float range_attack;
 		public float time_attack = 0.5f;
 		public float time_attack_current = 0.8f;
-
+		public float time_wait;
 		public float time_dash;
 		public float time_dash_current;
 		public float range_area;
+		public float offset;
 
 
 		private Vector3 pos_player;
 		public Image healthFillImage;
 		[SerializeField] private GameObject hitParticlePrefab1;
 		[SerializeField] private GameObject hitParticlePrefab2;
+		[SerializeField] private Animator anim;
 		public GameObject mark_aggro;
+		public GameObject mark_back;
 		public Vector3 pos_ori;
 		private Health enemyHealth;
 		private int hit_count;
+		public enum State { Idle, Dash, Attack };
+		public State state = State.Idle;
+
 		// Start is called before the first frame update
 		void Start()
 		{
-			time_dash = 3.0f;
+			time_wait = 3f;
+			time_dash = 2.0f;
 			time_dash_current = -0.1f;
 			pos_ori = transform.position;
 			hit_count = 0;
@@ -46,9 +53,10 @@ namespace _Project.Scripts
 			speed_rush = 180;
 			status = 0;
 			damage = 5;
-			range_melee = 30f;
-			range_attack = 45f;
-			time_attack = 1.2f;
+			range_melee = 20f;
+			range_attack = 65f;
+			//time_attack = 0.5f;
+			time_attack = 0.7f;
 			time_attack_current = time_attack;
 			angle_new = transform.rotation.y;
 			ChangeDirection();
@@ -65,22 +73,35 @@ namespace _Project.Scripts
 			switch (status)
 			{
 				case 0:
+					state = State.Idle;
 					OnFinding();
+					//state = State.Attack;
 					break;
 				case 1:
+					state = State.Dash;
 					OnMoving();
+					//state = State.Dash;
+					//state = State.Attack;
 					break;
 				case 2:
+					state = State.Attack;
 					OnAttack();
+					//state = State.Attack;
 					break;
 				case 3:
+					state = State.Dash;
 					Back();
+					//state = State.Dash;
+					//state = State.Attack;
 					break;
 				default:
+					state = State.Idle;
+					//state = State.Attack;
 					break;
 			}
 
 			healthFillImage.fillAmount = enemyHealth.objectHealth / enemyHealth.health;
+			anim.SetInteger("state", (int)state);
 		}
 		private void ChangeDirection()
 		{
@@ -185,7 +206,7 @@ namespace _Project.Scripts
 				{
 					pos_player = GameObject.Find("Player").GetComponent<Player>().transform.position;
 					time_dash_current -= Time.deltaTime;
-					transform.position = Vector3.MoveTowards(transform.position, pos_player, 0.22f * speed_rush * Time.deltaTime);
+					//transform.position = Vector3.MoveTowards(transform.position, pos_player, 0.22f * speed_rush * Time.deltaTime);
 					//transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
 					Vector3 direction = GameObject.Find("Player").transform.position - transform.position;
 					if (direction != Vector3.zero)
@@ -193,6 +214,7 @@ namespace _Project.Scripts
 				}
 				else
 				{
+					pos_player = GameObject.Find("Player").GetComponent<Player>().transform.position;
 					transform.position = Vector3.MoveTowards(transform.position, pos_player, speed_rush * Time.deltaTime);
 					//transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
 					Vector3 direction = GameObject.Find("Player").transform.position - transform.position;
@@ -202,15 +224,37 @@ namespace _Project.Scripts
 			}
 			else
 			{
-				status = 2;
-				time_dash_current = time_dash;
-				time_attack_current = time_attack;
+				if (time_dash_current > 0.0f)
+				{
+					time_dash_current -= Time.deltaTime;
+
+				}
+				else
+				{
+					status = 2;
+					time_dash_current = time_dash;
+					time_attack_current = time_attack;
+				}
 			}
 		}
 
 		private void OnAttack()
 		{
+			Transform target = GameObject.Find("Player").transform;
+			Vector3 targetDirection = target.position - transform.position;
 
+			// The step size is equal to speed times frame time.
+			float singleStep = speed * Time.deltaTime;
+
+			// Rotate the forward vector towards the target direction by one step
+			Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+			newDirection -= new Vector3(0f, offset, 0f);
+
+			// Draw a ray pointing at our target in
+			Debug.DrawRay(transform.position, newDirection, Color.red);
+
+			// Calculate a rotation a step closer to the target and applies rotation to this object
+			transform.rotation = Quaternion.LookRotation(newDirection);
 			if (time_attack_current > 0.0f)
 			{
 				time_attack_current -= Time.deltaTime;
@@ -236,19 +280,35 @@ namespace _Project.Scripts
 		}
 		private void Back()
 		{
+			Vector3 pos_new = transform.position + new Vector3(0f, 30f, 0f);
+			GameObject mark = Instantiate(mark_back, pos_new, transform.rotation);
+			mark.transform.SetParent(transform);
 			if (Vector3.Distance(pos_ori, transform.position) >= 1.0f)
 			{
-				transform.position = Vector3.MoveTowards(transform.position, pos_ori, 0.7f*speed_rush * Time.deltaTime);
-				Vector3 direction = pos_ori - transform.position;
-				if (direction != Vector3.zero)
-					transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * speed_rush);
-				//transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
+				if (time_wait <= 0.0f)
+				{
+					Destroy(mark);
+					transform.position = Vector3.MoveTowards(transform.position, pos_ori, 0.7f * speed_rush * Time.deltaTime);
+					Vector3 direction = pos_ori - transform.position;
+					if (direction != Vector3.zero)
+						transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 2 * Time.deltaTime * speed_rush);
+					//transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
+				}
+				else {
+					time_wait -= Time.deltaTime;
+				}
 			}
 			else {
 				status = 0;
+				time_wait = 3.0f;
 			}
 
 		}
+
+		/*private void StateChange()
+        {
+
+        }*/
 	}
 }
 

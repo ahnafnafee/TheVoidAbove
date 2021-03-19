@@ -57,8 +57,7 @@ namespace _Project.Scripts
         {
             if (pkgManager.hasPackage && other.transform.CompareTag("Player"))
             {
-                if (nextScene != 4)
-                    StartCoroutine(LoadInterface(2, 140));
+                StartCoroutine(LoadInterface(2, 140));
             }
         }
 

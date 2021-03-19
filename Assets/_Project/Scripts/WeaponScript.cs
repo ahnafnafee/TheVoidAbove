@@ -79,8 +79,8 @@ namespace _Project.Scripts
                     {
                         if (player.controlsActive)
                         {
-                            //Shoot();
-                            player.state = Player.State.Shoot;
+                            Shoot();
+                            //player.state = Player.State.Shoot;
                             bulletTimer = timer;
                         }
                     }

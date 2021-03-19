@@ -311,6 +311,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2870982183980678778, guid: e46baabf5ed008e42ae00a48a5c844f0,
+        type: 3}
+      propertyPath: m_Name
+      value: Health & Dash
+      objectReference: {fileID: 0}
     - target: {fileID: 2870982183980678779, guid: e46baabf5ed008e42ae00a48a5c844f0,
         type: 3}
       propertyPath: m_AnchoredPosition.y

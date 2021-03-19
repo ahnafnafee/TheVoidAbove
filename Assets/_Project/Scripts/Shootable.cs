@@ -11,7 +11,15 @@ namespace _Project.Scripts
 
         [SerializeField]
         private GameObject partner;
-        
+        [SerializeField] 
+        private GameObject drop;
+        [SerializeField]
+        private GameObject healthDrop;
+        [SerializeField]
+        private GameObject explosionFx;
+        [SerializeField]
+        private bool droppableObject;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -34,6 +42,20 @@ namespace _Project.Scripts
                 }
                 else
                 {
+                    if (droppableObject) 
+                    { 
+                        var transform1 = this.transform;
+                        Instantiate(explosionFx, transform1.position, transform1.rotation);
+
+                        if (Random.Range(0, 10) <= 4)
+                        {
+                            Instantiate(drop, transform1.position, Quaternion.identity);
+                        }
+                        else
+                        {
+                            Instantiate(healthDrop, transform1.position, Quaternion.identity);
+                        }
+                    }
                     Destroy(gameObject);
                     if (partner != null)
                         Destroy(partner.transform.gameObject);

@@ -19,6 +19,8 @@ namespace _Project.Scripts
         [SerializeField] private float areaRange = 400f;
         [SerializeField] private GameObject enemyObj;
         public GameObject mark_aggro;
+        public GameObject mark_back;
+        public float time_wait;
 
         [Header("Enemy Health")]
         public Image healthFillImage;
@@ -34,6 +36,7 @@ namespace _Project.Scripts
         // Start is called before the first frame update
         void Start()
         {
+            time_wait = 3f;
             target = GameObject.FindWithTag("Player");
             isAiming = false;
             right = false;
@@ -125,6 +128,7 @@ namespace _Project.Scripts
 
                 if (collision.gameObject.name.Contains("Bullet 3"))
                 {
+                    Debug.Log("I am hitting the body");
                     if (GameObject.Find("Player").GetComponent<Player>().isPowered())
                     {
                         Instantiate(hitParticlePrefab2, position, rotation);
@@ -169,7 +173,21 @@ namespace _Project.Scripts
             {
                 if (isAiming)
                 {
-                    StopAiming();
+                    Vector3 pos_new = transform.position + new Vector3(0f, 50f, 0f);
+                    GameObject mark = Instantiate(mark_back, pos_new, transform.rotation);
+                    mark.transform.localScale += new Vector3(1.5f,1.2f,1.5f);
+                    mark.transform.SetParent(transform);
+                    if (time_wait <= 0.0f)
+                    {
+                        Destroy(mark);
+                        StopAiming();
+                        time_wait = 3.0f;
+                        //transform.position = Vector3.MoveTowards(transform.position, origianlPosition, 2*  enemySpeed * Time.deltaTime);
+                    }
+                    else
+                    {
+                        time_wait -= Time.deltaTime;
+                    }
                 }
             }
 

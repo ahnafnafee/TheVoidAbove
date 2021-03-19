@@ -1,0 +1,6 @@
+lambert 1 - crate texture
+lambert 2 - plant 3 texture
+lambert 3 - plant 1 texture
+lambert 4 - plant 2 texture
+lambert 5 - cargo container texture
+lambert 6 - silo texture
