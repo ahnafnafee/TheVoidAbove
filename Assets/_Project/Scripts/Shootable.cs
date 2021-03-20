@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Project.Scripts
 {
@@ -11,8 +12,8 @@ namespace _Project.Scripts
 
         [SerializeField]
         private GameObject partner;
-        [SerializeField] 
-        private GameObject drop;
+        [FormerlySerializedAs("drop")] [SerializeField]
+        private GameObject ammoDrop;
         [SerializeField]
         private GameObject healthDrop;
         [SerializeField]
@@ -20,46 +21,40 @@ namespace _Project.Scripts
         [SerializeField]
         private bool droppableObject;
 
-        // Start is called before the first frame update
+        private List<GameObject> drops;
+        private readonly System.Random random = new System.Random();
+
+
         void Start()
         {
-            
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            drops = new List<GameObject>(new[]{ammoDrop, healthDrop});
         }
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.transform.CompareTag("Bullet"))
-            {
-                if (health > 0)
-                {
-                    health -= 1;
-                }
-                else
-                {
-                    if (droppableObject) 
-                    { 
-                        var transform1 = this.transform;
-                        Instantiate(explosionFx, transform1.position, transform1.rotation);
+            if (!collision.transform.CompareTag("Bullet")) return;
 
-                        if (Random.Range(0, 10) <= 4)
-                        {
-                            Instantiate(drop, transform1.position, Quaternion.identity);
-                        }
-                        else
-                        {
-                            Instantiate(healthDrop, transform1.position, Quaternion.identity);
-                        }
-                    }
-                    Destroy(gameObject);
-                    if (partner != null)
-                        Destroy(partner.transform.gameObject);
+            if (health > 0)
+            {
+                health -= 1;
+            }
+            else
+            {
+                var transform1 = transform;
+
+                if (explosionFx != null)
+                    Instantiate(explosionFx, transform1.position, transform1.rotation);
+
+                if (droppableObject)
+                {
+                    var powerUp = drops[random.Next(drops.Count)];
+                    Instantiate(powerUp, transform1.position, Quaternion.identity);
                 }
+
+                Destroy(gameObject);
+
+                if (partner != null)
+                    Destroy(partner.transform.gameObject);
             }
         }
     }

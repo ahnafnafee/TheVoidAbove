@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using _Project.Scripts.Utils;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour
@@ -15,11 +16,11 @@ public class Health : MonoBehaviour
     [SerializeField] private GameObject respawnPoint;
     [SerializeField] private GameObject explosionFx;
     [SerializeField] private GameObject enemyCenter;
-    [SerializeField] private GameObject drop;
 
-    [Header("Health Pack")]
-    [SerializeField]
-    private GameObject healthPack;
+
+    [Header("Power Ups")]
+    [SerializeField] private GameObject healthPack;
+    [FormerlySerializedAs("drop")] [SerializeField] private GameObject ammoDrop;
 
     [Header("UI")]
     [SerializeField]
@@ -31,10 +32,13 @@ public class Health : MonoBehaviour
     [SerializeField] private float shakeAmplitude = 3f;
 
     private IEnumerator coroutine;
+    private List<GameObject> drops;
+    private readonly System.Random random = new System.Random();
 
     void Start()
     {
         health = objectHealth;
+        drops = new List<GameObject>(new[]{ammoDrop, healthPack});
     }
     
     public void TakeDamage(int damage,bool check=true)
@@ -71,16 +75,9 @@ public class Health : MonoBehaviour
             {
                 var transform1 = enemyCenter.transform;
                 Instantiate(explosionFx, transform1.position, transform1.rotation);
-
-                if (Random.Range(0, 10) <= 4)
-                {
-                    Instantiate(drop, transform1.position, Quaternion.identity);
-                }
-                else 
-                {
-                    Instantiate(healthPack, transform1.position, Quaternion.identity);
-                }
-
+                
+                var powerUp = drops[random.Next(drops.Count)];
+                Instantiate(powerUp, transform1.position, Quaternion.identity);
 
                 Debug.Log(gameObject.name);
                 if (gameObject.CompareTag("Enemy"))

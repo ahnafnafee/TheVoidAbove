@@ -3,6 +3,7 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes>
+      <Path>Assets</Path>
       <Path>Library/PackageCache/com.autodesk.fbx@3.1.0-preview.2</Path>
       <Path>Library/PackageCache/com.unity.cinemachine@2.6.3</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.3.9</Path>
@@ -42,6 +43,7 @@
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Recordings</Path>
+      <Path>Temp</Path>
       <Path>The_Void_Above_WwiseProject</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>
