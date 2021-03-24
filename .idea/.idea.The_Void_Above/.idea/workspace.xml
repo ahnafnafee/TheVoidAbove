@@ -23,6 +23,24 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The_Void_Above/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/FR2_Cache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FR2_Cache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/DecodedBanks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/DecodedBanks/English(US).meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/English(US).meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Init.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Init.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Init.bnk.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Init.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Init.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Init.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Main.bnk" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Main.bnk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Main.bnk.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Main.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Main.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/Main.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/PluginInfo.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/SoundbanksInfo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/SoundbanksInfo.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkSoundEngine.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkSoundEngine.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkWaapiClient.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86/Profile/AkWaapiClient.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkSoundEngine.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkSoundEngine.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkWaapiClient.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Wwise/Deployment/Plugins/Windows/x86_64/Profile/AkWaapiClient.dll.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/PlayerAnimation.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/PlayerAnimation/NewAnimations.controller" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Models/PlayerAnimation/NewAnimations.controller.meta" beforeDir="false" />
@@ -59,8 +77,12 @@
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Bullets/Bullet 3.prefab" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Bullets/Bullet 3.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/06 - Scene_3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/06 - Scene_3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 - Scene_1.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/05 - Scene_2.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/05 - Scene_2.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/06 - Scene_3.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/06 - Scene_3.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/InputActions/PlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/InputActions/PlayerControls.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/InputActions/PlayerControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/InputActions/PlayerControls.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Player/Player.cs" afterDir="false" />
@@ -68,8 +90,10 @@
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/Utils/GlobalVar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/Utils/GlobalVar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +275,7 @@
       <workItem from="1616178118909" duration="5986000" />
       <workItem from="1616255184232" duration="3955000" />
       <workItem from="1616296780890" duration="1316000" />
-      <workItem from="1616522710473" duration="14460000" />
+      <workItem from="1616522710473" duration="15073000" />
     </task>
     <servers />
   </component>

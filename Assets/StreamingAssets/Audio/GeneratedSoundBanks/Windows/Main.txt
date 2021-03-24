@@ -1,0 +1,22 @@
+Event	ID	Name			Wwise Object Path	Notes
+	306708153	Level_one_event			\Default Work Unit\Level_one_event	
+	314326302	ammo_event			\Default Work Unit\ammo_event	
+	789130295	alt_shoot_event			\Default Work Unit\alt_shoot_event	
+	1429961119	shoot_event			\Default Work Unit\shoot_event	
+	1994848198	heal_event			\Default Work Unit\heal_event	
+	2630202646	robot_shoot_event			\Default Work Unit\robot_shoot_event	
+	3226024329	main_menu_event			\Default Work Unit\main_menu_event	
+	3488125696	success_pickup_event			\Default Work Unit\success_pickup_event	
+	3929926097	robot_death_event			\Default Work Unit\robot_death_event	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	29999488	heal	E:\Classes\GMAP378\The_Void_Above\The_Void_Above_WwiseProject\.cache\Windows\SFX\heal_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\heal		705664
+	47686723	Back-in-Time	E:\Classes\GMAP378\The_Void_Above\The_Void_Above_WwiseProject\.cache\Windows\SFX\Back-in-Time_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Back-in-Time		39595768
+	77814749	ammo_pickup	E:\Classes\GMAP378\The_Void_Above\The_Void_Above_WwiseProject\.cache\Windows\SFX\ammo_pickup_65CCC189.wem		\Actor-Mixer Hierarchy\Default Work Unit\ammo_pickup		79748
+	222410976	PM_SFG_VOL1_WEAPON_12_2_GUN_GUNSHOT_FUTURISTIC	E:\Classes\GMAP378\The_Void_Above\The_Void_Above_WwiseProject\.cache\Windows\SFX\PM_SFG_VOL1_WEAPON_12_2_GUN_GUNSHOT_FUTURISTIC_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\PM_SFG_VOL1_WEAPON_12_2_GUN_GUNSHOT_FUTURISTIC		136688
+	361279540	Far-From-Home	E:\Classes\GMAP378\The_Void_Above\The_Void_Above_WwiseProject\.cache\Windows\SFX\Far-From-Home_C83E4728.wem		\Actor-Mixer Hierarchy\Default Work Unit\Far-From-Home		39747252
+	617074757	Enemy_gun	E:\Classes\GMAP378\The_Void_Above\The_Void_Above_WwiseProject\.cache\Windows\SFX\Enemy_gun_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy_gun		249544
+	898835057	air_release	E:\Classes\GMAP378\The_Void_Above\The_Void_Above_WwiseProject\.cache\Windows\SFX\air_release_AD58736B.wem		\Actor-Mixer Hierarchy\Default Work Unit\air_release		344916
+	945445666	success	E:\Classes\GMAP378\The_Void_Above\The_Void_Above_WwiseProject\.cache\Windows\SFX\success_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\success		156864
+	976025798	robot_death	E:\Classes\GMAP378\The_Void_Above\The_Void_Above_WwiseProject\.cache\Windows\SFX\robot_death_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\robot_death		390248
+
