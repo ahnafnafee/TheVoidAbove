@@ -13,7 +13,7 @@
         public static bool isWin = false;
         public static float masterVolume = 100f;
         public static float mSensitivityX = 0.112f;
-        public static float mSensitivityY = 0.005f;
+        public static float mSensitivityY = 0.0042f;
 
         // public static bool AltInterfaceOpen = false;
         // public static bool IsLoss = false;

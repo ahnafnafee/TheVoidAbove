@@ -43,6 +43,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": ""Press""
                 },
                 {
+                    ""name"": ""Aim"",
+                    ""type"": ""Button"",
+                    ""id"": ""934f8376-c827-4f9a-b6e1-a9a8c1913cc5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=2)""
+                },
+                {
                     ""name"": ""ThrustersX"",
                     ""type"": ""Value"",
                     ""id"": ""5f16383b-f210-40ec-97d3-ed2c3d02e658"",
@@ -379,6 +387,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""ManualBrake"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""412829d8-531f-4aa2-b916-f2d27f521859"",
+                    ""path"": ""<Mouse>/middleButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -493,6 +512,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_PlayerStandard_LookY = m_PlayerStandard.FindAction("LookY", throwIfNotFound: true);
         m_PlayerStandard_LookX = m_PlayerStandard.FindAction("LookX", throwIfNotFound: true);
         m_PlayerStandard_Gun = m_PlayerStandard.FindAction("Gun", throwIfNotFound: true);
+        m_PlayerStandard_Aim = m_PlayerStandard.FindAction("Aim", throwIfNotFound: true);
         m_PlayerStandard_ThrustersX = m_PlayerStandard.FindAction("ThrustersX", throwIfNotFound: true);
         m_PlayerStandard_ThrustersZ = m_PlayerStandard.FindAction("ThrustersZ", throwIfNotFound: true);
         m_PlayerStandard_ThrustersZDash = m_PlayerStandard.FindAction("ThrustersZDash", throwIfNotFound: true);
@@ -561,6 +581,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerStandard_LookY;
     private readonly InputAction m_PlayerStandard_LookX;
     private readonly InputAction m_PlayerStandard_Gun;
+    private readonly InputAction m_PlayerStandard_Aim;
     private readonly InputAction m_PlayerStandard_ThrustersX;
     private readonly InputAction m_PlayerStandard_ThrustersZ;
     private readonly InputAction m_PlayerStandard_ThrustersZDash;
@@ -577,6 +598,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @LookY => m_Wrapper.m_PlayerStandard_LookY;
         public InputAction @LookX => m_Wrapper.m_PlayerStandard_LookX;
         public InputAction @Gun => m_Wrapper.m_PlayerStandard_Gun;
+        public InputAction @Aim => m_Wrapper.m_PlayerStandard_Aim;
         public InputAction @ThrustersX => m_Wrapper.m_PlayerStandard_ThrustersX;
         public InputAction @ThrustersZ => m_Wrapper.m_PlayerStandard_ThrustersZ;
         public InputAction @ThrustersZDash => m_Wrapper.m_PlayerStandard_ThrustersZDash;
@@ -604,6 +626,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Gun.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnGun;
                 @Gun.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnGun;
                 @Gun.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnGun;
+                @Aim.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnAim;
+                @Aim.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnAim;
+                @Aim.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnAim;
                 @ThrustersX.started -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersX;
                 @ThrustersX.performed -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersX;
                 @ThrustersX.canceled -= m_Wrapper.m_PlayerStandardActionsCallbackInterface.OnThrustersX;
@@ -644,6 +669,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Gun.started += instance.OnGun;
                 @Gun.performed += instance.OnGun;
                 @Gun.canceled += instance.OnGun;
+                @Aim.started += instance.OnAim;
+                @Aim.performed += instance.OnAim;
+                @Aim.canceled += instance.OnAim;
                 @ThrustersX.started += instance.OnThrustersX;
                 @ThrustersX.performed += instance.OnThrustersX;
                 @ThrustersX.canceled += instance.OnThrustersX;
@@ -745,6 +773,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnLookY(InputAction.CallbackContext context);
         void OnLookX(InputAction.CallbackContext context);
         void OnGun(InputAction.CallbackContext context);
+        void OnAim(InputAction.CallbackContext context);
         void OnThrustersX(InputAction.CallbackContext context);
         void OnThrustersZ(InputAction.CallbackContext context);
         void OnThrustersZDash(InputAction.CallbackContext context);

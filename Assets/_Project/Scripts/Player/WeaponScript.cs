@@ -152,7 +152,7 @@ namespace _Project.Scripts
             currentBullet.GetComponent<Rigidbody>().AddForce(mainCam.transform.up * upwardForce, ForceMode.Impulse);
 
             AkSoundEngine.PostEvent("shoot_event",this.gameObject);
-            StartCoroutine(DelayTrail(currentBullet, 0.01f));
+            StartCoroutine(DelayTrail(currentBullet, 0.05f));
         }
 
         private IEnumerator DelayTrail(GameObject obj, float seconds)

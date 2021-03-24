@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -89,6 +91,12 @@ namespace _Project.Scripts
         private float startValue = 0;
         private float endValue = 10;
 
+        [Header("Weapon Aim")]
+        private float inputX, inputY, xDir, yDir, wDir;
+        private bool isShooting = false;
+        [SerializeField] private float aimDuration = 0.3f;
+        [SerializeField] private Rig aimLayer;
+
 
 
         public GameObject getRespawn()
@@ -141,15 +149,6 @@ namespace _Project.Scripts
         {
             PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
 
-            /*input.x = actions.ThrustersX.ReadValue<float>();
-            input.y = actions.ThrustersZ.ReadValue<float>();*/
-
-            //Debug.Log(input);
-            /*StartCoroutine(Lerp(input.x, true));
-            StartCoroutine(Lerp(input.y, false));
-            anim.SetFloat("inputx", input.x);
-            anim.SetFloat("inputy", input.y);*/
-
             #region PlayerRotation
 
             var lookPos = mainCam.transform.position - transform.position;
@@ -174,17 +173,62 @@ namespace _Project.Scripts
             healthFillImage.fillAmount = pHealth.objectHealth / pHealth.health;
             healthPct.text = (int)(healthFillImage.fillAmount * 100f) + "%";
 
-            StateChange();
-            anim.SetInteger("state", (int)state);
+            // if (actions.Gun.triggered)
+            // {
+            //     StartCoroutine(AimRig(aimDuration));
+            // }
+            // else
+            // {
+            //     if (!isShooting)
+            //     {
+            //         StartCoroutine(DownRig(aimDuration));
+            //     }
+            // }
+
+            inputY = Mathf.SmoothDamp(anim.GetFloat("inputY"), actions.ThrustersZ.ReadValue<float>(), ref yDir, 0.1f);
+            anim.SetFloat("inputY", inputY);
+
+
+            // StateChange();
+            // anim.SetInteger("state", (int)state);
+        }
+
+        IEnumerator AimRig(float seconds)
+        {
+            isShooting = true;
+
+            while (seconds >= 0)
+            {
+                // Debug.Log($"Shooting?: {isShooting}");
+                aimLayer.weight += Time.deltaTime / aimDuration;
+                seconds -= Time.deltaTime;
+                yield return null;
+            }
+            isShooting = false;
+        }
+
+        IEnumerator DownRig(float seconds)
+        {
+            float resetTime = 0.01f;
+            float resetDuration = 0.01f;
+
+            while (resetTime >= 0)
+            {
+                // Debug.Log($"Shooting?: {isShooting}");
+                aimLayer.weight -= Time.deltaTime / resetDuration;
+                resetTime -= Time.deltaTime;
+                yield return null;
+            }
         }
 
 
         void FixedUpdate()
         {
-            var velocity1 = _rb.velocity;
-            velocity = velocity1.magnitude;
+            var rbVelocity = _rb.velocity;
+            velocity = rbVelocity.magnitude;
+
             PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
-            Vector3 oppVelo = -velocity1;
+            Vector3 oppVelo = -rbVelocity;
             //Apply forces based on the WASD/spc/shift controls in character controller 
             if (controlsActive)
             {
@@ -258,27 +302,6 @@ namespace _Project.Scripts
             }
         }
 
-        IEnumerator Lerp(float valueToLerp, bool isX)
-        {
-            float timeElapsed = 0;
-            endValue = -valueToLerp;
-
-            while (valueToLerp != endValue)
-            {
-                //valueToLerp -= .05f;
-                endValue = Mathf.Lerp(endValue, valueToLerp, timeElapsed / lerpDuration);
-                timeElapsed += Time.deltaTime;
-                Debug.Log(endValue);
-                if (isX) {
-                    anim.SetFloat("inputx", endValue);
-                }else
-                {
-                    anim.SetFloat("inputy", endValue);
-                }
-
-                yield return null;
-            }
-        }
         void OnCollisionEnter(Collision col)
         {
             var match = tagList
@@ -351,16 +374,16 @@ namespace _Project.Scripts
         {
             if (other.CompareTag("OuterZone"))
             {
-                // Debug.Log("Starting timer to damage");
                 returnHUD.SetActive(true);
                 outOfBounds = true;
                 StartCoroutine(BoundsTimer());
-
+                Debug.Log($"In OnTriggerExit OuterZone outofbounds: {outOfBounds} inZap: {inZap}");
             }
 
             if (other.gameObject.name.Contains("Zap_Zone"))
             {
                 inZap = false;
+                Debug.Log($"In OnTriggerExit Zap_Zone outofbounds: {outOfBounds} inZap: {inZap}");
                 StopCoroutine(SwiftDeath(25));
 
             }
@@ -381,11 +404,13 @@ namespace _Project.Scripts
                 returnHUD.SetActive(false);
                 StopCoroutine(DrainHealth(5));
                 outOfBounds = false;
+                Debug.Log($"In OnTriggerEnter OuterZone outofbounds: {outOfBounds} inZap: {inZap}");
             }
 
             if (other.gameObject.name.Contains("Zap_Zone"))
             {
                 inZap = true;
+                Debug.Log($"In OnTriggerEnter Zap_Zone outofbounds: {outOfBounds} inZap: {inZap}");
                 StartCoroutine(SwiftDeath(25));
 
             }
@@ -513,6 +538,12 @@ namespace _Project.Scripts
         private void StateChange()
         {
             PlayerControls.PlayerStandardActions actions = _playerControls.PlayerStandard;
+
+            inputX = Mathf.SmoothDamp(anim.GetFloat("inputX"), inputX, ref xDir, 0.1f);
+            anim.SetFloat("inputX", inputX);
+
+            inputY = Mathf.SmoothDamp(anim.GetFloat("inputY"), inputY, ref yDir, 0.1f);
+            anim.SetFloat("inputY", inputY);
 
 
             if (actions.ThrustersZ.ReadValue<float>() > 0)
