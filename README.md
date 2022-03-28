@@ -56,3 +56,6 @@ The Void Above can be broken down into three distinct features:
 - Delivering the package is the PURPOSE of the game, but it's also loosely attached. If a player collides at a hard enough speed or is struck with enough force, it will detach. They must retrieve it again and continue in order to exit the level
 - Players are provided with helpful WAYPOINTS that will guide them to their next objective, if they are ever lost or confused, they can always rely on the waypoint to guide them.
 - Players are equipped with a basic PISTOL. The enemies are also equipped and attack in a similar manner in an attempt to damage the player for going through their territory. 
+
+---
+You can find our devlog here: https://voidgaminginc.wixsite.com/thevoidabove/blog
