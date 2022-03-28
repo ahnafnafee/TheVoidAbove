@@ -19,6 +19,8 @@ For more information, you can visit: https://voidgaminginc.wixsite.com/thevoidab
 
 ## Overview
 
+<img src="https://static.wixstatic.com/media/b3d0a3_71cf27a1c51947bba98254f7c3bbb9a0~mv2.png/v1/fill/w_980,h_458,al_c,usm_0.66_1.00_0.01,enc_auto/b3d0a3_71cf27a1c51947bba98254f7c3bbb9a0~mv2.png" alt="Logo"  width="500px" height="auto" />
+
 The Void Above is a new action/adventure game from the developers, Void Gaming.
 
 The Void Above takes aspects from Journey and Death Stranding. Our game will have a focus on both action and adventure where the player can explore the beautiful landscape while fighting enemies along the way.
@@ -37,6 +39,8 @@ In The Void Above you play as a courier who must deliver an important package in
 
 ## Unique Selling Points
 
+<img src="https://static.wixstatic.com/media/b3d0a3_7f2cf8047d7a4a64bde6255925220900~mv2.jpg/v1/fill/w_980,h_458,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b3d0a3_7f2cf8047d7a4a64bde6255925220900~mv2.jpg" alt="Logo"  width="500px" height="auto" />
+
 The Void Above can be broken down into three distinct features:
 
 - Aesthetically Pleasing Environment
@@ -44,6 +48,8 @@ The Void Above can be broken down into three distinct features:
 - Multiple Enemy Types
 
 ## Gameplay & Mechanics
+
+<img src="https://static.wixstatic.com/media/b3d0a3_c51d04bb3e324957b0f9272f8a8dd742~mv2.png/v1/fill/w_980,h_424,al_c,usm_0.66_1.00_0.01,enc_auto/b3d0a3_c51d04bb3e324957b0f9272f8a8dd742~mv2.png" alt="Logo"  width="500px" height="auto" />
 
 - The primary method of travel are THRUSTERS; players navigate the expanse of space and carefully dodge debris and EVADE ENEMIES. Their speed is restricted in regard to the thrusters, but there is a lot of control over direction when using them
 - The player is also capable of QUICK DASHES to navigate levels and evade enemies or moving hazards, augmenting the amount of control they have over their movement
